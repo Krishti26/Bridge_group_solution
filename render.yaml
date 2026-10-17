@@ -1,0 +1,58 @@
+services:
+  - type: web
+    name: bridge-group-solution
+    env: static
+    buildCommand: echo "Static site ready"
+    staticPublishPath: bgs-website
+    routes:
+      - type: rewrite
+        source: /about
+        destination: /about.html
+      - type: rewrite
+        source: /contact
+        destination: /contact.html
+      - type: rewrite
+        source: /gallery
+        destination: /gallery.html
+      - type: rewrite
+        source: /portfolio
+        destination: /portfolio.html
+      - type: rewrite
+        source: /why-bgs
+        destination: /why-bgs.html
+      - type: rewrite
+        source: /blogs
+        destination: /blogs.html
+      - type: rewrite
+        source: /careers
+        destination: /careers.html
+      - type: rewrite
+        source: /services/crm
+        destination: /services/crm.html
+      - type: rewrite
+        source: /services/web
+        destination: /services/web.html
+      - type: rewrite
+        source: /services/data
+        destination: /services/data.html
+      - type: rewrite
+        source: /services/erp
+        destination: /services/erp.html
+      - type: rewrite
+        source: /services/project
+        destination: /services/project.html
+      - type: rewrite
+        source: /services/app
+        destination: /services/app.html
+      - type: rewrite
+        source: /legal/privacy-policy
+        destination: /legal/privacy-policy.html
+      - type: rewrite
+        source: /legal/terms-and-conditions
+        destination: /legal/terms-and-conditions.html
+      - type: rewrite
+        source: /legal/cookie-policy
+        destination: /legal/cookie-policy.html
+      - type: rewrite
+        source: /legal/disclaimer
+        destination: /legal/disclaimer.html
