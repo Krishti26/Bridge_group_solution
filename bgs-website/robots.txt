@@ -1,0 +1,15 @@
+# ===================================================================
+# Bridge Group Solutions - Production Robots Configuration
+# https://www.bridgegroupsolutions.com
+# ===================================================================
+
+User-agent: *
+Allow: /
+Disallow: /cpresources/
+Disallow: /templates/
+Disallow: /docs/
+Disallow: /metadata.json
+Disallow: /render.yaml
+
+# Official XML Sitemap
+Sitemap: https://www.bridgegroupsolutions.com/sitemap.xml

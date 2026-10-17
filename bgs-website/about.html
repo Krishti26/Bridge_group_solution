@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Core typography preload -->
+<link rel="preload" href="assets/amphora-fonts/The%20Future/TheFuture-Regular.subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/amphora-fonts/The%20Future/TheFuture-Medium.subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/amphora-fonts/The%20Future/TheFuture-Bold.subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/amphora-fonts/Tiempos%20Headline/TiemposHeadline-400-Regular-Italic.woff2" as="font" type="font/woff2" crossorigin>
+
+
+<!-- Reveal the finished layout without showing a loading animation. -->
+<style>html.layout-pending body { visibility:hidden !important; }</style>
+<script>
+(() => {
+  const root = document.documentElement;
+  root.classList.add('layout-pending');
+  let observer;
+  const reveal = () => {
+    root.classList.remove('layout-pending');
+    if (observer) observer.disconnect();
+  };
+  const ready = () => {
+    if (root.classList.contains('bgs-layout-ready') && document.querySelector('.bgs-main-navbar')) reveal();
+  };
+  observer = new MutationObserver(ready);
+  observer.observe(root, {childList:true, subtree:true, attributes:true, attributeFilter:['class']});
+  document.addEventListener('DOMContentLoaded', ready, {once:true});
+  setTimeout(reveal, 2500);
+})();
+</script>
+
+
+
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	<meta content="web_standard" name="shell-type">
+	<title>Meet Our Experts and Advisors | About Bridge Group Solutions</title>
+	<meta name="description" content="Learn about Bridge Group Solutions, an enterprise engineering venture studio empowering modern businesses with resilient digital technologies." />
+	<meta name="keywords" content="About Bridge Group Solutions, BGS team, technology advisors, software engineering leadership, enterprise digital consultants, venture studio" />
+	
+		<meta property="og:title" content="Meet Our Experts and Advisors | About Bridge Group Solutions" />
+	<meta property="og:description" content="Learn about Bridge Group Solutions, an enterprise engineering venture studio empowering modern businesses with resilient digital technologies." />
+	<meta property="og:url" content="https://www.bridgegroupsolutions.com/about.html" />
+	<meta property="og:image" content="https://www.bridgegroupsolutions.com/assets/logo.webp" />
+	<meta property="og:type" content="website" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Meet Our Experts and Advisors | About Bridge Group Solutions" />
+	<meta name="twitter:description" content="Learn about Bridge Group Solutions, an enterprise engineering venture studio empowering modern businesses with resilient digital technologies." />
+	<meta name="twitter:image" content="https://www.bridgegroupsolutions.com/assets/logo.webp" />
+	<link rel="canonical" href="https://www.bridgegroupsolutions.com/about.html" />
+	<link rel="icon" type="image/svg+xml" href="assets/logo.webp" />
+
+	<!-- Schema.org Structured Data (JSON-LD) -->
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": "https://www.bridgegroupsolutions.com/about.html#webpage",
+      "url": "https://www.bridgegroupsolutions.com/about.html",
+      "name": "Meet Our Experts and Advisors | About Bridge Group Solutions",
+      "description": "Learn about Bridge Group Solutions, an enterprise engineering venture studio empowering modern businesses with resilient digital technologies.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.bridgegroupsolutions.com/#website",
+        "url": "https://www.bridgegroupsolutions.com",
+        "name": "Bridge Group Solutions"
+      },
+      "about": {
+        "@type": "Organization",
+        "@id": "https://www.bridgegroupsolutions.com/#organization",
+        "name": "Bridge Group Solutions",
+        "url": "https://www.bridgegroupsolutions.com",
+        "logo": "https://www.bridgegroupsolutions.com/assets/logo.webp"
+      }
+    }
+  ]
+}
+	</script>
+
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com" rel="preconnect">
+	<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+	<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+	<!-- Tabler Icons CDN -->
+	<link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" rel="stylesheet"/>
+
+	<style>
+		@layer base {
+			html, body { margin: 0; padding: 0; }
+			body { overscroll-behavior: none; }
+			main > :first-child { margin-top: 0 !important; }
+			main > :last-child { margin-bottom: 0 !important; }
+		}
+		::-webkit-scrollbar { display: none; }
+	</style>
+
+	<!-- Tailwind CSS CDN & Custom Config matching Index -->
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script id="tailwind-config">
+		tailwind.config = {
+			darkMode: "class",
+			theme: {
+				extend: {
+					colors: {
+						"surface-container-highest": "#e2e2e4",
+						"on-secondary-container": "#5c647a",
+						"on-surface": "#1a1c1d",
+						"on-error": "#ffffff",
+						"primary-fixed": "#ffdad3",
+						"background": "#f9f9fb",
+						"primary-fixed-dim": "#ffb4a4",
+						"inverse-primary": "#ffb4a4",
+						"surface-bright": "#f9f9fb",
+						"on-tertiary-fixed-variant": "#424656",
+						"tertiary-fixed-dim": "#c3c6d8",
+						"tertiary-fixed": "#dfe1f5",
+						"outline-variant": "#e2bfb7",
+						"error-container": "#ffdad6",
+						"on-primary-container": "#fffbff",
+						"on-tertiary-container": "#fefcff",
+						"error": "#ba1a1a",
+						"tertiary": "#585b6b",
+						"secondary": "#565e74",
+						"surface-container-lowest": "#ffffff",
+						"surface-container-low": "#f3f3f5",
+						"secondary-fixed": "#dae2fd",
+						"secondary-fixed-dim": "#bec6e0",
+						"on-background": "#1a1c1d",
+						"on-secondary": "#ffffff",
+						"on-surface-variant": "#5a413b",
+						"outline": "#8e706a",
+						"secondary-container": "#dae2fd",
+						"surface": "#f9f9fb",
+						"surface-container": "#eeeef0",
+						"inverse-surface": "#2f3132",
+						"tertiary-container": "#707485",
+						"on-tertiary": "#ffffff",
+						"surface-tint": "#b12e11",
+						"inverse-on-surface": "#f0f0f2",
+						"on-primary-fixed": "#3d0600",
+						"surface-dim": "#d9dadc",
+						"on-error-container": "#93000a",
+						"on-primary": "#ffffff",
+						"on-primary-fixed-variant": "#8c1800",
+						"on-secondary-fixed": "#131b2e",
+						"primary-container": "#d04426",
+						"surface-container-high": "#e8e8ea",
+						"primary": "#ad2b0e",
+						"on-secondary-fixed-variant": "#3f465c",
+						"on-tertiary-fixed": "#171b29",
+						"surface-variant": "#e2e2e4"
+					},
+					borderRadius: {
+						"DEFAULT": "0.25rem",
+						"lg": "0.5rem",
+						"xl": "0.75rem",
+						"full": "9999px"
+					},
+					spacing: {
+						"space-sm": "0.5rem",
+						"space-md": "1rem",
+						"space-xs": "0.25rem",
+						"gutter": "1.5rem",
+						"space-lg": "1.5rem",
+						"margin-mobile": "1.25rem",
+						"gutter-mobile": "1rem",
+						"space-xl": "2.5rem",
+						"margin": "3rem"
+					},
+					fontFamily: {
+						"body-md": ["Plus Jakarta Sans"],
+						"body-sm": ["Plus Jakarta Sans"],
+						"label-pill": ["Plus Jakarta Sans"],
+						"display-hero": ["Plus Jakarta Sans"],
+						"headline-lg": ["Plus Jakarta Sans"],
+						"headline-md": ["Plus Jakarta Sans"],
+						"label-eyebrow": ["Space Grotesk"],
+						"body-lg": ["Plus Jakarta Sans"],
+						"display-hero-mobile": ["Plus Jakarta Sans"],
+						"headline-sm": ["Plus Jakarta Sans"],
+						"stat-metric": ["Plus Jakarta Sans"],
+						"label-code": ["Space Grotesk"]
+					},
+					fontSize: {
+						"body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+						"body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }],
+						"label-pill": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+						"display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+						"headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+						"headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+						"label-eyebrow": ["11px", { "lineHeight": "14px", "letterSpacing": "0.12em", "fontWeight": "700" }],
+						"body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+						"display-hero-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+						"headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+						"stat-metric": ["40px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+						"label-code": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }]
+					}
+				}
+			}
+		}
+	</script>
+
+	<!-- Design Tokens & Theme -->
+	<link rel="stylesheet" href="assets/bgs-modern-theme.css?v=26" />
+	<!-- Dedicated CSS file for about.html -->
+	<link rel="stylesheet" href="assets/about.css?v=7" />
+<link rel="stylesheet" href="assets/amphora-reference.css">
+<link rel="stylesheet" href="assets/amphora-bgs.css?v=28">
+<script defer src="assets/amphora-bgs.js?v=28"></script>
+<link rel="stylesheet" href="assets/spotlight-atlas.css">
+<script defer src="assets/spotlight-atlas.js"></script>
+<link rel="stylesheet" href="assets/history-milestones.css">
+<script defer src="assets/history-milestones.js"></script>
+</head>
+
+<body class="amphora-theme bg-surface font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+
+	<!-- NAVIGATION HEADER MATCHING INDEX (ABOUT MARKED ACTIVE) -->
+	<!-- Reusable Navbar Component -->
+	<div id="navbar"></div>
+
+
+
+
+
+	<main class="w-full pt-20 bg-surface">
+		<div class="flex flex-col w-full overflow-hidden">
+
+			<!-- 1. HERO SECTION WITH ATMOSPHERIC RADIAL LIGHTING -->
+			<section class="relative w-full max-w-[1320px] mx-auto px-6 md:px-12 pt-6 sm:pt-8 pb-12 md:pb-16">
+				<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[650px] pointer-events-none -z-10 overflow-hidden">
+					<div class="absolute top-0 right-10 w-[550px] h-[550px] rounded-full blur-3xl opacity-60" style="background: radial-gradient(circle, rgba(235, 87, 55, 0.22) 0%, rgba(255, 120, 73, 0.12) 40%, rgba(147, 51, 234, 0.05) 75%, transparent 100%);"></div>
+					<div class="absolute top-20 -left-20 w-[500px] h-[500px] rounded-full blur-3xl opacity-50" style="background: radial-gradient(circle, rgba(255, 170, 60, 0.18) 0%, rgba(235, 87, 55, 0.08) 50%, transparent 80%);"></div>
+					<div class="absolute top-44 left-1/3 w-[400px] h-[400px] rounded-full blur-2xl opacity-40" style="background: radial-gradient(circle, rgba(124, 58, 237, 0.12) 0%, rgba(235, 87, 55, 0.06) 60%, transparent 100%);"></div>
+				</div>
+
+				<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+					<!-- Hero Left Column -->
+					<div class="lg:col-span-7 flex flex-col items-start space-y-6">
+						<div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-surface-container-low shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
+							<span class="relative flex h-2 w-2">
+								<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+								<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+							</span>
+							<span class="font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-widest">Our Client Says</span>
+							<span class="font-label-code text-label-code text-secondary pl-1">EST. 2014</span>
+						</div>
+
+						<h1 class="font-display-hero text-[26px] sm:text-[36px] md:text-display-hero text-on-surface tracking-tight leading-[1.18] sm:leading-[1.12] md:leading-[1.08] font-bold">
+							Growing together through trust, partnerships, and a <span class="text-primary italic font-semibold">shared global vision.</span>
+						</h1>
+
+						<p class="font-body-lg text-body-lg text-secondary max-w-2xl leading-relaxed">
+							The products we create don’t adapt to markets—they reshape them. The founders we support know that evolution isn’t optional—it’s the foundation of success. Vision creates possibilities. Velocity turns them into reality.
+						</p>
+
+						<!-- Section Nav Jump Links & CTAs -->
+						<div class="flex flex-wrap items-center gap-3 pt-2">
+							<a class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-white font-label-pill text-label-pill shadow-[0_8px_25px_rgba(235,87,55,0.4)] hover:shadow-[0_14px_35px_rgba(235,87,55,0.55)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 border border-white/25" href="#domestic-clients" style="background: linear-gradient(135deg, #ad2b0e 0%, #eb5737 60%, #ff7849 100%);">
+								<span>Domestic Clients</span>
+								<span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+							</a>
+							<a class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-surface-container-lowest text-on-surface font-label-pill text-label-pill shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_24px_rgba(235,87,55,0.15)] hover:border-primary/40 hover:-translate-y-0.5 transition-all duration-200 border border-surface-container-high" href="#global-clients">
+								<span>Global Clients</span>
+								<span class="material-symbols-outlined text-[16px] text-primary">public</span>
+							</a>
+							<a class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-surface-container-lowest text-on-surface font-label-pill text-label-pill shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_24px_rgba(235,87,55,0.15)] hover:border-primary/40 hover:-translate-y-0.5 transition-all duration-200 border border-surface-container-high" href="#ethos">
+								<span>Our Ethos</span>
+								<span class="material-symbols-outlined text-[16px] text-primary">psychology</span>
+							</a>
+						</div>
+
+						<!-- Social Proof Micro Badge -->
+						<div class="pt-4 flex items-center gap-5">
+							<div class="flex -space-x-2 overflow-hidden">
+								<div class="inline-block h-9 w-9 rounded-full bg-surface-container-high ring-2 ring-surface flex items-center justify-center font-label-code text-[11px] text-secondary font-bold">16+</div>
+								<div class="inline-block h-9 w-9 rounded-full bg-primary-fixed ring-2 ring-surface flex items-center justify-center font-label-code text-[11px] text-on-primary-fixed font-bold">INTL</div>
+								<div class="inline-block h-9 w-9 rounded-full bg-secondary-fixed ring-2 ring-surface flex items-center justify-center font-label-code text-[11px] text-on-secondary-fixed font-bold">10Y+</div>
+							</div>
+							<div class="flex flex-col">
+								<div class="flex items-center gap-2">
+									<span class="font-label-pill text-label-pill font-bold text-on-surface">Global Enterprise Footprint</span>
+									<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-code text-[10px] font-bold">WORLDWIDE</span>
+								</div>
+								<span class="font-body-sm text-body-sm text-secondary">Trusted by leading enterprises across India, Africa, Europe, Americas, and Asia</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- Hero Right Column: Telemetry & Global Engagement Fabric -->
+					<div class="lg:col-span-5 relative w-full flex items-center justify-center">
+						<div class="w-full max-w-[500px] p-5 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_25px_60px_rgba(235,87,55,0.12),0_10px_30px_rgba(15,23,42,0.06)] relative overflow-hidden flex flex-col gap-5 sm:gap-6 border border-primary/20">
+							<div class="absolute -top-16 -right-16 w-56 h-56 rounded-full blur-2xl pointer-events-none" style="background: radial-gradient(circle, rgba(235,87,55,0.3) 0%, rgba(255,165,0,0.15) 50%, transparent 80%);"></div>
+							<div class="absolute -bottom-16 -left-16 w-48 h-48 rounded-full blur-2xl pointer-events-none" style="background: radial-gradient(circle, rgba(124,58,237,0.15) 0%, transparent 70%);"></div>
+
+							<div class="flex items-center justify-between border-b pb-4 relative z-10">
+								<div class="flex items-center gap-2.5">
+									<div class="w-8 h-8 rounded-lg flex items-center justify-center shadow-sm" style="background: linear-gradient(135deg, #eb5737 0%, #ff7849 100%);">
+										<span class="material-symbols-outlined text-white text-[18px]">public</span>
+									</div>
+									<span class="font-headline-sm text-[15px] font-bold text-on-surface">BGS Global Footprint</span>
+								</div>
+								<div class="flex items-center gap-2 px-3 py-1 rounded-full shadow-sm border border-primary/20" style="background: linear-gradient(135deg, rgba(255,218,211,0.7) 0%, rgba(255,238,232,0.9) 100%);">
+									<span class="h-2 w-2 rounded-full animate-ping" style="background-color: #eb5737;"></span>
+									<span class="font-label-code text-[11px] font-bold tracking-wider" style="color: #ad2b0e;">ACTIVE ENGAGEMENTS</span>
+								</div>
+							</div>
+
+							<!-- Metric Stats Matrix -->
+							<div class="grid grid-cols-2 gap-3 relative py-2 z-10">
+								<div class="p-4 rounded-2xl flex flex-col justify-between group border border-secondary-container/40" style="background: linear-gradient(180deg, #f4f6fb 0%, #eaedf5 100%);">
+									<span class="font-label-eyebrow text-[10px] text-secondary uppercase font-bold">DOMESTIC HUBS</span>
+									<span class="font-stat-metric text-[30px] font-extrabold text-on-surface my-1">10</span>
+									<span class="font-body-sm text-[11px] text-secondary">Indian Enterprise Clients</span>
+								</div>
+
+								<div class="p-4 rounded-2xl flex flex-col justify-between shadow-sm border border-primary/30 relative overflow-hidden group" style="background: linear-gradient(145deg, #ffdad3 0%, #ffece7 100%);">
+									<span class="font-label-eyebrow text-[10px] text-primary uppercase font-bold">INTERNATIONAL</span>
+									<span class="font-stat-metric text-[30px] font-extrabold text-primary my-1">6+</span>
+									<span class="font-body-sm text-[11px] text-on-primary-fixed">Global Continents &amp; Nations</span>
+								</div>
+							</div>
+
+							<div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col gap-2 relative z-10 border border-surface-container-high">
+								<div class="flex items-center justify-between text-[12px] font-label-code text-secondary font-semibold">
+									<span>PAN-INDIA &amp; MULTI-REGION</span>
+									<span class="text-primary font-bold">100% RELIABILITY</span>
+								</div>
+								<div class="w-full h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+									<div class="h-full rounded-full bg-primary" style="width: 100%;"></div>
+								</div>
+							</div>
+
+							<div class="p-3 rounded-xl flex items-center justify-between text-secondary font-label-code text-[11px] border border-primary/20 relative z-10" style="background: linear-gradient(90deg, rgba(255,218,211,0.25) 0%, rgba(255,255,255,0.9) 100%);">
+								<div class="flex items-center gap-2">
+									<span class="material-symbols-outlined text-[16px] text-primary">bolt</span>
+									<span>Vision creates possibilities. Velocity turns them into reality.</span>
+								</div>
+								<span class="px-2 py-0.5 rounded-full text-white font-bold text-[10px] shadow-sm" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">ACTIVE</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+<section id="spotlight-atlas" aria-labelledby="atlas-heading"><div class="atlas-shell"><div class="atlas-layout"><header class="atlas-intro"><span class="atlas-eyebrow">ACROSS NATIONS</span><h2 id="atlas-heading">Delivering High-Impact <em>Digital Solutions</em></h2><div class="atlas-badges"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m12 2 3 2 4 .5.5 4 2 3-2 3-.5 4-4 .5-3 2-3-2-4-.5-.5-4-2-3 2-3 .5-4L9 4Z"/><path d="m8 12 3 3 5-6"/></svg>Domestic &amp; Global</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6Z"/></svg>Enterprise Excellence</span></div></header><div class="atlas-map" role="group" aria-label="World map highlighting India"><img src="assets/atlas-world.svg" alt="" width="940" height="400"><svg class="atlas-overlay" viewBox="0 0 940 400" aria-hidden="true"><defs><linearGradient id="atlas-route-gradient"><stop stop-color="#7359e8"/><stop offset=".55" stop-color="#cb78b0"/><stop offset="1" stop-color="#d99967"/></linearGradient></defs><g class="atlas-connections"></g><g class="atlas-leaders"><path class="atlas-leader" d="M667.4 178.53 L754 105"/><path class="atlas-leader" d="M527.35 306.4 L379 363"/><path class="atlas-leader" d="M491.7 207.3 L394 155"/><path class="atlas-leader" d="M501.42 125.33 L484 27"/><path class="atlas-leader" d="M915.15 274.28 L864 335"/><path class="atlas-leader" d="M310.95 326.05 L199 325"/><path class="atlas-leader" d="M578.4 124.2 L674 30"/><path class="atlas-leader" d="M571.23 207.12 L714 290"/><path class="atlas-leader" d="M569.45 192.05 L689 223"/><path class="atlas-leader" d="M542.88 277.55 L549 365"/><path class="atlas-leader" d="M722.48 190.32 L844 175"/><path class="atlas-leader" d="M467.45 210.12 L304 230"/></g><circle class="atlas-node" data-node="0" cx="667.40" cy="178.53" r="3"/><circle class="atlas-node" data-node="1" cx="527.35" cy="306.40" r="3"/><circle class="atlas-node" data-node="2" cx="491.70" cy="207.30" r="3"/><circle class="atlas-node" data-node="3" cx="501.42" cy="125.33" r="3"/><circle class="atlas-node" data-node="4" cx="915.15" cy="274.28" r="3"/><circle class="atlas-node" data-node="5" cx="310.95" cy="326.05" r="3"/><circle class="atlas-node" data-node="6" cx="578.40" cy="124.20" r="3"/><circle class="atlas-node" data-node="7" cx="571.23" cy="207.12" r="3"/><circle class="atlas-node" data-node="8" cx="569.45" cy="192.05" r="3"/><circle class="atlas-node" data-node="9" cx="542.88" cy="277.55" r="3"/><circle class="atlas-node" data-node="10" cx="722.48" cy="190.32" r="3"/><circle class="atlas-node" data-node="11" cx="467.45" cy="210.12" r="3"/><g class="atlas-spotlight"><circle class="atlas-halo" r="18"/><circle class="atlas-ring" r="10"/><circle r="4" fill="#7359e8" stroke="white" stroke-width="2"/></g></svg><button class="atlas-map-card" type="button" style="--label-x:73.404%;--label-y:22.500%;--arrival:0.50s" data-label="0" data-x="667.40" data-y="178.53" aria-pressed="true"><span class="atlas-flag" aria-hidden="true">🇮🇳</span><span>India</span></button><button class="atlas-map-card" type="button" style="--label-x:33.511%;--label-y:87.000%;--arrival:0.62s" data-label="1" data-x="527.35" data-y="306.40" aria-pressed="false"><span class="atlas-flag" aria-hidden="true">🇿🇦</span><span>South Africa</span></button><button class="atlas-map-card" type="button" style="--label-x:35.106%;--label-y:35.000%;--arrival:0.74s" data-label="2" data-x="491.70" data-y="207.30" aria-pressed="false"><span class="atlas-flag" aria-hidden="true">🇳🇬</span><span>Nigeria</span></button><button class="atlas-map-card" type="button" style="--label-x:44.681%;--label-y:3.000%;--arrival:0.86s" data-label="3" data-x="501.42" data-y="125.33" aria-pressed="false"><span class="atlas-flag" aria-hidden="true">🇮🇹</span><span>Italy</span></button><button class="atlas-map-card" type="button" style="--label-x:85.106%;--label-y:80.000%;--arrival:0.98s" data-label="4" data-x="915.15" data-y="274.28" aria-pressed="false"><span class="atlas-flag" aria-hidden="true">🇫🇯</span><span>Fiji</span></button><button class="atlas-map-card" type="button" style="--label-x:14.362%;--label-y:77.500%;--arrival:1.10s" data-label="5" data-x="310.95" data-y="326.05" aria-pressed="false"><span class="atlas-flag" aria-hidden="true">🇦🇷</span><span>Argentina</span></button><button class="atlas-map-card" type="button" style="--label-x:64.894%;--label-y:3.750%;--arrival:1.22s" data-label="6" data-x="578.40" data-y="124.20" aria-pressed="false"><span class="atlas-flag" aria-hidden="true">🇬🇪</span><span>Georgia</span></button><button class="atlas-map-card" type="button" style="--label-x:69.149%;--label-y:68.750%;--arrival:1.34s" data-label="7" data-x="571.23" data-y="207.12" aria-pressed="false"><span class="atlas-flag" aria-hidden="true">🇪🇹</span><span>Ethiopia</span></button><button class="atlas-map-card" type="button" style="--label-x:66.489%;--label-y:52.000%;--arrival:1.46s" data-label="8" data-x="569.45" data-y="192.05" aria-pressed="false"><span class="atlas-flag" aria-hidden="true">🇪🇷</span><span>Eritrea</span></button><button class="atlas-map-card" type="button" style="--label-x:51.596%;--label-y:87.500%;--arrival:1.58s" data-label="9" data-x="542.88" data-y="277.55" aria-pressed="false"><span class="atlas-flag" aria-hidden="true">🇿🇼</span><span>Zimbabwe</span></button><button class="atlas-map-card" type="button" style="--label-x:82.979%;--label-y:40.000%;--arrival:1.70s" data-label="10" data-x="722.48" data-y="190.32" aria-pressed="false"><span class="atlas-flag" aria-hidden="true">🇹🇭</span><span>Thailand</span></button><button class="atlas-map-card" type="button" style="--label-x:25.532%;--label-y:53.750%;--arrival:1.82s" data-label="11" data-x="467.45" data-y="210.12" aria-pressed="false"><span class="atlas-flag" aria-hidden="true">🇬🇭</span><span>Ghana</span></button><div class="atlas-tooltip"><span aria-hidden="true">🇮🇳</span><span>India</span></div></div></div><div class="atlas-navigation"><div class="atlas-countries" aria-label="Select a country"><button class="atlas-country" type="button" data-country="0" data-x="667.40" data-y="178.53" aria-pressed="true"><span class="atlas-flag" aria-hidden="true">🇮🇳</span><span>India</span></button><button class="atlas-country" type="button" data-country="1" data-x="527.35" data-y="306.40" aria-pressed="false"><span class="atlas-flag" aria-hidden="true">🇿🇦</span><span>South Africa</span></button><button class="atlas-country" type="button" data-country="2" data-x="491.70" data-y="207.30" aria-pressed="false"><span class="atlas-flag" aria-hidden="true">🇳🇬</span><span>Nigeria</span></button><button class="atlas-country" type="button" data-country="3" data-x="501.42" data-y="125.33" aria-pressed="false"><span class="atlas-flag" aria-hidden="true">🇮🇹</span><span>Italy</span></button><button class="atlas-country" type="button" data-country="4" data-x="915.15" data-y="274.28" aria-pressed="false"><span class="atlas-flag" aria-hidden="true">🇫🇯</span><span>Fiji</span></button><button class="atlas-country" type="button" data-country="5" data-x="310.95" data-y="326.05" aria-pressed="false"><span class="atlas-flag" aria-hidden="true">🇦🇷</span><span>Argentina</span></button><button class="atlas-country" type="button" data-country="6" data-x="578.40" data-y="124.20" aria-pressed="false"><span class="atlas-flag" aria-hidden="true">🇬🇪</span><span>Georgia</span></button><button class="atlas-country" type="button" data-country="7" data-x="571.23" data-y="207.12" aria-pressed="false"><span class="atlas-flag" aria-hidden="true">🇪🇹</span><span>Ethiopia</span></button><button class="atlas-country" type="button" data-country="8" data-x="569.45" data-y="192.05" aria-pressed="false"><span class="atlas-flag" aria-hidden="true">🇪🇷</span><span>Eritrea</span></button><button class="atlas-country" type="button" data-country="9" data-x="542.88" data-y="277.55" aria-pressed="false"><span class="atlas-flag" aria-hidden="true">🇿🇼</span><span>Zimbabwe</span></button><button class="atlas-country" type="button" data-country="10" data-x="722.48" data-y="190.32" aria-pressed="false"><span class="atlas-flag" aria-hidden="true">🇹🇭</span><span>Thailand</span></button><button class="atlas-country" type="button" data-country="11" data-x="467.45" data-y="210.12" aria-pressed="false"><span class="atlas-flag" aria-hidden="true">🇬🇭</span><span>Ghana</span></button></div><div class="atlas-controls"><button type="button" aria-label="Previous countries">←</button><button type="button" aria-label="Next countries">→</button></div></div><p class="atlas-status" aria-live="polite"></p></div></section>
+
+			<!-- 3. DOMESTIC CLIENTS SECTION -->
+			<section id="domestic-clients" class="w-full max-w-[1320px] mx-auto px-6 md:px-12 py-14 md:py-20">
+				<div class="flex flex-col items-center text-center max-w-3xl mx-auto gap-4 mb-10 sm:mb-12">
+					<div class="flex flex-col items-center text-center">
+						<span class="font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-widest">DOMESTIC CLIENTS</span>
+						<h2 class="font-headline-lg text-[32px] md:text-[40px] text-on-surface font-bold tracking-tight mt-2 text-center">
+							Our Domestic <span class="text-primary italic font-semibold">Client Partnerships</span>
+						</h2>
+						<p class="font-body-md text-body-md text-secondary mt-2 leading-relaxed max-w-2xl text-center">
+							A growing network of forward-thinking businesses that trust us to deliver impactful digital solutions—combining strategy, innovation, and execution to drive measurable growth and long-term success.
+						</p>
+					</div>
+					<div class="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-low border border-surface-container-high shrink-0">
+						<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+						<span class="font-label-code text-label-code text-on-surface font-bold">5 DOMESTIC ENTERPRISES</span>
+					</div>
+				</div>
+
+				<!-- 5 Domestic Clients Bento Grid -->
+				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 sm:gap-6">
+					<!-- Client 1: Future Seed Earth Foundation -->
+					<div class="bento-card p-5 sm:p-6 rounded-2xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.14)] border border-surface-container-high hover:border-primary/40 flex flex-col justify-between h-full group">
+						<div class="flex flex-col">
+							<div class="client-img-wrap mb-4 sm:mb-5">
+								<img src="assets/future.png" class="client-logo-img" alt="Future Seed Earth Foundation" loading="lazy" />
+							</div>
+							<div class="flex items-center justify-between mb-2.5">
+								<span class="client-badge px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-code text-[10px] font-bold transition-colors">INDIA</span>
+								<span class="font-label-code text-[11px] text-secondary font-bold">01 / 05</span>
+							</div>
+							<h3 class="font-headline-md text-[15px] sm:text-[16px] font-bold text-on-surface mb-2 uppercase leading-snug group-hover:text-primary transition-colors">
+								Future Seed Earth Foundation (India)
+							</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-4 line-clamp-2">
+								High-impact NGO digital portal and automated donor management systems supporting pan-India sustainability missions.
+							</p>
+						</div>
+						<div class="pt-3.5 border-t border-surface-container-high flex flex-wrap gap-1.5 items-center justify-between">
+							<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">SUSTAINABILITY</span>
+							<span class="inline-flex items-center gap-1 text-primary text-xs font-semibold">
+								<span class="material-symbols-outlined text-[15px]">verified</span>
+							</span>
+						</div>
+					</div>
+
+					<!-- Client 2: Grow Well IMF LLP -->
+					<div class="bento-card p-5 sm:p-6 rounded-2xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.14)] border border-surface-container-high hover:border-primary/40 flex flex-col justify-between h-full group">
+						<div class="flex flex-col">
+							<div class="client-img-wrap mb-4 sm:mb-5">
+								<img src="assets/growwell.webp" class="client-logo-img" alt="Grow Well IMF LLP" loading="lazy" />
+							</div>
+							<div class="flex items-center justify-between mb-2.5">
+								<span class="client-badge px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-code text-[10px] font-bold transition-colors">INDIA</span>
+								<span class="font-label-code text-[11px] text-secondary font-bold">02 / 05</span>
+							</div>
+							<h3 class="font-headline-md text-[15px] sm:text-[16px] font-bold text-on-surface mb-2 uppercase leading-snug group-hover:text-primary transition-colors">
+								Grow Well IMF LLP (India)
+							</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-4 line-clamp-2">
+								Regulatory-compliant wealth management platform, client self-service onboarding, and secure financial tracking.
+							</p>
+						</div>
+						<div class="pt-3.5 border-t border-surface-container-high flex flex-wrap gap-1.5 items-center justify-between">
+							<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">FINTECH</span>
+							<span class="inline-flex items-center gap-1 text-primary text-xs font-semibold">
+								<span class="material-symbols-outlined text-[15px]">verified</span>
+							</span>
+						</div>
+					</div>
+
+					<!-- Client 3: Finn Jobs -->
+					<div class="bento-card p-5 sm:p-6 rounded-2xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.14)] border border-surface-container-high hover:border-primary/40 flex flex-col justify-between h-full group">
+						<div class="flex flex-col">
+							<div class="client-img-wrap mb-4 sm:mb-5">
+								<img src="assets/finn.png" class="client-logo-img" alt="Finn Jobs" loading="lazy" />
+							</div>
+							<div class="flex items-center justify-between mb-2.5">
+								<span class="client-badge px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-code text-[10px] font-bold transition-colors">INDIA</span>
+								<span class="font-label-code text-[11px] text-secondary font-bold">03 / 05</span>
+							</div>
+							<h3 class="font-headline-md text-[15px] sm:text-[16px] font-bold text-on-surface mb-2 uppercase leading-snug group-hover:text-primary transition-colors">
+								Finn Jobs (India)
+							</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-4 line-clamp-2">
+								High-velocity recruitment portal with automated candidate matching algorithms and employer hiring telemetry.
+							</p>
+						</div>
+						<div class="pt-3.5 border-t border-surface-container-high flex flex-wrap gap-1.5 items-center justify-between">
+							<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">HR TECH</span>
+							<span class="inline-flex items-center gap-1 text-primary text-xs font-semibold">
+								<span class="material-symbols-outlined text-[15px]">verified</span>
+							</span>
+						</div>
+					</div>
+
+					<!-- Client 4: Shree Digital Solutions -->
+					<div class="bento-card p-5 sm:p-6 rounded-2xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.14)] border border-surface-container-high hover:border-primary/40 flex flex-col justify-between h-full group">
+						<div class="flex flex-col">
+							<div class="client-img-wrap mb-4 sm:mb-5">
+								<img src="assets/SDS.png" class="client-logo-img" alt="Shree Digital Solutions" loading="lazy" />
+							</div>
+							<div class="flex items-center justify-between mb-2.5">
+								<span class="client-badge px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-code text-[10px] font-bold transition-colors">INDIA</span>
+								<span class="font-label-code text-[11px] text-secondary font-bold">04 / 05</span>
+							</div>
+							<h3 class="font-headline-md text-[15px] sm:text-[16px] font-bold text-on-surface mb-2 uppercase leading-snug group-hover:text-primary transition-colors">
+								Shree Digital Solutions (India)
+							</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-4 line-clamp-2">
+								Enterprise multi-tenant application infrastructure and digital process automation frameworks driving efficiency.
+							</p>
+						</div>
+						<div class="pt-3.5 border-t border-surface-container-high flex flex-wrap gap-1.5 items-center justify-between">
+							<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">ENTERPRISE</span>
+							<span class="inline-flex items-center gap-1 text-primary text-xs font-semibold">
+								<span class="material-symbols-outlined text-[15px]">verified</span>
+							</span>
+						</div>
+					</div>
+
+					<!-- Client 5: TechNova Systems -->
+					<div class="bento-card p-5 sm:p-6 rounded-2xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.14)] border border-surface-container-high hover:border-primary/40 flex flex-col justify-between h-full group">
+						<div class="flex flex-col">
+							<div class="client-img-wrap mb-4 sm:mb-5">
+								<img src="assets/technova.png" class="client-logo-img" alt="TechNova Systems" loading="lazy" />
+							</div>
+							<div class="flex items-center justify-between mb-2.5">
+								<span class="client-badge px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-code text-[10px] font-bold transition-colors">INDIA</span>
+								<span class="font-label-code text-[11px] text-secondary font-bold">05 / 05</span>
+							</div>
+							<h3 class="font-headline-md text-[15px] sm:text-[16px] font-bold text-on-surface mb-2 uppercase leading-snug group-hover:text-primary transition-colors">
+								TechNova Systems (India)
+							</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-4 line-clamp-2">
+								Custom software architecture and high-performance database optimization for distributed operational squads.
+							</p>
+						</div>
+						<div class="pt-3.5 border-t border-surface-container-high flex flex-wrap gap-1.5 items-center justify-between">
+							<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">SOFTWARE</span>
+							<span class="inline-flex items-center gap-1 text-primary text-xs font-semibold">
+								<span class="material-symbols-outlined text-[15px]">verified</span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 4. GLOBAL CLIENTS SECTION -->
+			<section id="global-clients" class="w-full bg-surface-container-low/60 py-14 md:py-20">
+				<div class="max-w-[1320px] mx-auto px-6 md:px-12 flex flex-col gap-10 sm:gap-12">
+					<div class="flex flex-col items-center text-center max-w-3xl mx-auto gap-4 mb-2 sm:mb-4">
+						<div class="flex flex-col items-center text-center">
+							<span class="font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-widest">GLOBAL CLIENTS</span>
+							<h2 class="font-headline-lg text-[32px] md:text-[40px] text-on-surface font-bold tracking-tight mt-2 text-center">
+								Our Global <span class="text-primary italic font-semibold">Client Network</span>
+							</h2>
+							<p class="font-body-md text-body-md text-secondary mt-2 leading-relaxed max-w-2xl text-center">
+								The businesses we work with—driven by ambition and focused on growth—leveraging our expertise to build, scale, and lead in their industries.
+							</p>
+						</div>
+						<div class="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-lowest shadow-sm border border-surface-container-high shrink-0">
+							<span class="material-symbols-outlined text-primary text-[18px]">public</span>
+							<span class="font-label-code text-label-code text-on-surface font-bold">11 GLOBAL ENTERPRISES</span>
+						</div>
+					</div>
+
+					<!-- 11 Global Clients Bento Grid (Styled Identically to Domestic Clients) -->
+					<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 sm:gap-6">
+						<!-- Global Client 1: Ubuntu Tech Services -->
+						<div class="bento-card global-client-card p-5 sm:p-6 rounded-2xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.14)] border border-surface-container-high hover:border-primary/40 flex flex-col justify-between h-full group">
+							<div class="flex flex-col">
+								<div class="client-img-wrap mb-4 sm:mb-5">
+									<img src="assets/ubuntu-tech.jpg" class="client-logo-img" alt="Ubuntu Tech Services" loading="lazy" />
+								</div>
+								<div class="flex items-center justify-between mb-2.5">
+									<span class="client-badge px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-code text-[10px] font-bold transition-colors">SOUTH AFRICA</span>
+									<span class="font-label-code text-[11px] text-secondary font-bold">01 / 11</span>
+								</div>
+								<h3 class="font-headline-md text-[15px] sm:text-[16px] font-bold text-on-surface mb-2 uppercase leading-snug group-hover:text-primary transition-colors">
+									Ubuntu Tech Services (South Africa)
+								</h3>
+								<p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-4 line-clamp-2">
+									Cross-border cloud integration, legacy modernization, and high-availability enterprise software maintenance workflows.
+								</p>
+							</div>
+							<div class="pt-3.5 border-t border-surface-container-high flex flex-wrap gap-1.5 items-center justify-between">
+								<div class="flex flex-wrap gap-1.5">
+									<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">SERVICES</span>
+									<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">ENTERPRISE</span>
+								</div>
+								<span class="inline-flex items-center gap-1 text-primary text-xs font-semibold">
+									<span class="material-symbols-outlined text-[15px]">verified</span>
+								</span>
+							</div>
+						</div>
+
+						<!-- Global Client 2: Lagos Data Hub -->
+						<div class="bento-card global-client-card p-5 sm:p-6 rounded-2xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.14)] border border-surface-container-high hover:border-primary/40 flex flex-col justify-between h-full group">
+							<div class="flex flex-col">
+								<div class="client-img-wrap mb-4 sm:mb-5">
+									<img src="assets/datahub.png?v=2" class="client-logo-img" alt="Lagos Data Hub" loading="lazy" />
+								</div>
+								<div class="flex items-center justify-between mb-2.5">
+									<span class="client-badge px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-code text-[10px] font-bold transition-colors">NIGERIA</span>
+									<span class="font-label-code text-[11px] text-secondary font-bold">02 / 11</span>
+								</div>
+								<h3 class="font-headline-md text-[15px] sm:text-[16px] font-bold text-on-surface mb-2 uppercase leading-snug group-hover:text-primary transition-colors">
+									Lagos Data Hub (Nigeria)
+								</h3>
+								<p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-4 line-clamp-2">
+									Real-time event streaming and analytical data warehousing built for high-throughput commerce networks.
+								</p>
+							</div>
+							<div class="pt-3.5 border-t border-surface-container-high flex flex-wrap gap-1.5 items-center justify-between">
+								<div class="flex flex-wrap gap-1.5">
+									<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">ANALYTICS</span>
+									<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">DATA HUB</span>
+								</div>
+								<span class="inline-flex items-center gap-1 text-primary text-xs font-semibold">
+									<span class="material-symbols-outlined text-[15px]">verified</span>
+								</span>
+							</div>
+						</div>
+
+						<!-- Global Client 3: Milano Fintech Group -->
+						<div class="bento-card global-client-card p-5 sm:p-6 rounded-2xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.14)] border border-surface-container-high hover:border-primary/40 flex flex-col justify-between h-full group">
+							<div class="flex flex-col">
+								<div class="client-img-wrap mb-4 sm:mb-5">
+									<img src="assets/milano.webp" class="client-logo-img" alt="Milano Fintech Group" loading="lazy" />
+								</div>
+								<div class="flex items-center justify-between mb-2.5">
+									<span class="client-badge px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-code text-[10px] font-bold transition-colors">ITALY</span>
+									<span class="font-label-code text-[11px] text-secondary font-bold">03 / 11</span>
+								</div>
+								<h3 class="font-headline-md text-[15px] sm:text-[16px] font-bold text-on-surface mb-2 uppercase leading-snug group-hover:text-primary transition-colors">
+									Milano Fintech Group (Italy)
+								</h3>
+								<p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-4 line-clamp-2">
+									Ultra-secure European financial dashboard with PSD2 compliance, biometric verification, and rapid transaction APIs.
+								</p>
+							</div>
+							<div class="pt-3.5 border-t border-surface-container-high flex flex-wrap gap-1.5 items-center justify-between">
+								<div class="flex flex-wrap gap-1.5">
+									<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">FINTECH</span>
+									<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">PSD2</span>
+								</div>
+								<span class="inline-flex items-center gap-1 text-primary text-xs font-semibold">
+									<span class="material-symbols-outlined text-[15px]">verified</span>
+								</span>
+							</div>
+						</div>
+
+						<!-- Global Client 4: Fiji Smart Solutions -->
+						<div class="bento-card global-client-card p-5 sm:p-6 rounded-2xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.14)] border border-surface-container-high hover:border-primary/40 flex flex-col justify-between h-full group">
+							<div class="flex flex-col">
+								<div class="client-img-wrap mb-4 sm:mb-5">
+									<img src="assets/solutions.jpg" class="client-logo-img" alt="Fiji Smart Solutions" loading="lazy" />
+								</div>
+								<div class="flex items-center justify-between mb-2.5">
+									<span class="client-badge px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-code text-[10px] font-bold transition-colors">FIJI</span>
+									<span class="font-label-code text-[11px] text-secondary font-bold">04 / 11</span>
+								</div>
+								<h3 class="font-headline-md text-[15px] sm:text-[16px] font-bold text-on-surface mb-2 uppercase leading-snug group-hover:text-primary transition-colors">
+									Fiji Smart Solutions (Fiji)
+								</h3>
+								<p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-4 line-clamp-2">
+									Resilient cloud ERP and localized supply chain tracking for island-wide commercial logistics and retail distribution hubs.
+								</p>
+							</div>
+							<div class="pt-3.5 border-t border-surface-container-high flex flex-wrap gap-1.5 items-center justify-between">
+								<div class="flex flex-wrap gap-1.5">
+									<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">SUPPLY CHAIN</span>
+									<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">ERP</span>
+								</div>
+								<span class="inline-flex items-center gap-1 text-primary text-xs font-semibold">
+									<span class="material-symbols-outlined text-[15px]">verified</span>
+								</span>
+							</div>
+						</div>
+
+						<!-- Global Client 5: Buenos Aires Analytics -->
+						<div class="bento-card global-client-card p-5 sm:p-6 rounded-2xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.14)] border border-surface-container-high hover:border-primary/40 flex flex-col justify-between h-full group">
+							<div class="flex flex-col">
+								<div class="client-img-wrap mb-4 sm:mb-5">
+									<img src="assets/data.jpg" class="client-logo-img" alt="Buenos Aires Analytics" loading="lazy" />
+								</div>
+								<div class="flex items-center justify-between mb-2.5">
+									<span class="client-badge px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-code text-[10px] font-bold transition-colors">ARGENTINA</span>
+									<span class="font-label-code text-[11px] text-secondary font-bold">05 / 11</span>
+								</div>
+								<h3 class="font-headline-md text-[15px] sm:text-[16px] font-bold text-on-surface mb-2 uppercase leading-snug group-hover:text-primary transition-colors">
+									Buenos Aires Analytics (Argentina)
+								</h3>
+								<p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-4 line-clamp-2">
+									High-throughput telemetry pipelines, predictive consumer behavior modeling, and interactive executive reporting.
+								</p>
+							</div>
+							<div class="pt-3.5 border-t border-surface-container-high flex flex-wrap gap-1.5 items-center justify-between">
+								<div class="flex flex-wrap gap-1.5">
+									<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">TELEMETRY</span>
+									<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">ANALYTICS</span>
+								</div>
+								<span class="inline-flex items-center gap-1 text-primary text-xs font-semibold">
+									<span class="material-symbols-outlined text-[15px]">verified</span>
+								</span>
+							</div>
+						</div>
+
+						<!-- Global Client 6: Tbilisi Tech Labs -->
+						<div class="bento-card global-client-card p-5 sm:p-6 rounded-2xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.14)] border border-surface-container-high hover:border-primary/40 flex flex-col justify-between h-full group">
+							<div class="flex flex-col">
+								<div class="client-img-wrap mb-4 sm:mb-5">
+									<img src="assets/a1.png" class="client-logo-img" alt="Tbilisi Tech Labs" loading="lazy" />
+								</div>
+								<div class="flex items-center justify-between mb-2.5">
+									<span class="client-badge px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-code text-[10px] font-bold transition-colors">GEORGIA</span>
+									<span class="font-label-code text-[11px] text-secondary font-bold">06 / 11</span>
+								</div>
+								<h3 class="font-headline-md text-[15px] sm:text-[16px] font-bold text-on-surface mb-2 uppercase leading-snug group-hover:text-primary transition-colors">
+									Tbilisi Tech Labs (Georgia)
+								</h3>
+								<p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-4 line-clamp-2">
+									Scalable cloud middleware and automated diagnostic pipelines engineered for high-concurrency European research computing and analytics.
+								</p>
+							</div>
+							<div class="pt-3.5 border-t border-surface-container-high flex flex-wrap gap-1.5 items-center justify-between">
+								<div class="flex flex-wrap gap-1.5">
+									<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">CLOUD API</span>
+									<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">RESEARCH</span>
+								</div>
+								<span class="inline-flex items-center gap-1 text-primary text-xs font-semibold">
+									<span class="material-symbols-outlined text-[15px]">verified</span>
+								</span>
+							</div>
+						</div>
+
+						<!-- Global Client 7: Addis Data Systems -->
+						<div class="bento-card global-client-card p-5 sm:p-6 rounded-2xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.14)] border border-surface-container-high hover:border-primary/40 flex flex-col justify-between h-full group">
+							<div class="flex flex-col">
+								<div class="client-img-wrap mb-4 sm:mb-5">
+									<img src="assets/date.png" class="client-logo-img" alt="Addis Data Systems" loading="lazy" />
+								</div>
+								<div class="flex items-center justify-between mb-2.5">
+									<span class="client-badge px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-code text-[10px] font-bold transition-colors">ETHIOPIA</span>
+									<span class="font-label-code text-[11px] text-secondary font-bold">07 / 11</span>
+								</div>
+								<h3 class="font-headline-md text-[15px] sm:text-[16px] font-bold text-on-surface mb-2 uppercase leading-snug group-hover:text-primary transition-colors">
+									Addis Data Systems (Ethiopia)
+								</h3>
+								<p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-4 line-clamp-2">
+									Centralized financial telemetry and business intelligence platform unifying transactional records across multi-region banking hubs.
+								</p>
+							</div>
+							<div class="pt-3.5 border-t border-surface-container-high flex flex-wrap gap-1.5 items-center justify-between">
+								<div class="flex flex-wrap gap-1.5">
+									<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">DATA BI</span>
+									<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">FINANCIAL</span>
+								</div>
+								<span class="inline-flex items-center gap-1 text-primary text-xs font-semibold">
+									<span class="material-symbols-outlined text-[15px]">verified</span>
+								</span>
+							</div>
+						</div>
+
+						<!-- Global Client 8: Asmara IT Solutions -->
+						<div class="bento-card global-client-card p-5 sm:p-6 rounded-2xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.14)] border border-surface-container-high hover:border-primary/40 flex flex-col justify-between h-full group">
+							<div class="flex flex-col">
+								<div class="client-img-wrap mb-4 sm:mb-5">
+									<img src="assets/IT.png" class="client-logo-img" alt="Asmara IT Solutions" loading="lazy" />
+								</div>
+								<div class="flex items-center justify-between mb-2.5">
+									<span class="client-badge px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-code text-[10px] font-bold transition-colors">ERITREA</span>
+									<span class="font-label-code text-[11px] text-secondary font-bold">08 / 11</span>
+								</div>
+								<h3 class="font-headline-md text-[15px] sm:text-[16px] font-bold text-on-surface mb-2 uppercase leading-snug group-hover:text-primary transition-colors">
+									Asmara IT Solutions (Eritrea)
+								</h3>
+								<p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-4 line-clamp-2">
+									High-availability network architectures and enterprise portal solutions modernizing sovereign institutional services.
+								</p>
+							</div>
+							<div class="pt-3.5 border-t border-surface-container-high flex flex-wrap gap-1.5 items-center justify-between">
+								<div class="flex flex-wrap gap-1.5">
+									<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">NETWORKING</span>
+									<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">PORTALS</span>
+								</div>
+								<span class="inline-flex items-center gap-1 text-primary text-xs font-semibold">
+									<span class="material-symbols-outlined text-[15px]">verified</span>
+								</span>
+							</div>
+						</div>
+
+						<!-- Global Client 9: Harare Digital Hub -->
+						<div class="bento-card global-client-card p-5 sm:p-6 rounded-2xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.14)] border border-surface-container-high hover:border-primary/40 flex flex-col justify-between h-full group">
+							<div class="flex flex-col">
+								<div class="client-img-wrap mb-4 sm:mb-5">
+									<img src="assets/digital.png" class="client-logo-img" alt="Harare Digital Hub" loading="lazy" />
+								</div>
+								<div class="flex items-center justify-between mb-2.5">
+									<span class="client-badge px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-code text-[10px] font-bold transition-colors">ZIMBABWE</span>
+									<span class="font-label-code text-[11px] text-secondary font-bold">09 / 11</span>
+								</div>
+								<h3 class="font-headline-md text-[15px] sm:text-[16px] font-bold text-on-surface mb-2 uppercase leading-snug group-hover:text-primary transition-colors">
+									Harare Digital Hub (Zimbabwe)
+								</h3>
+								<p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-4 line-clamp-2">
+									End-to-end corporate workflow automation and cross-platform mobile application frameworks accelerating civic and business commerce.
+								</p>
+							</div>
+							<div class="pt-3.5 border-t border-surface-container-high flex flex-wrap gap-1.5 items-center justify-between">
+								<div class="flex flex-wrap gap-1.5">
+									<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">AUTOMATION</span>
+									<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">MOBILE</span>
+								</div>
+								<span class="inline-flex items-center gap-1 text-primary text-xs font-semibold">
+									<span class="material-symbols-outlined text-[15px]">verified</span>
+								</span>
+							</div>
+						</div>
+
+						<!-- Global Client 10: Bangkok Smart Tech -->
+						<div class="bento-card global-client-card p-5 sm:p-6 rounded-2xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.14)] border border-surface-container-high hover:border-primary/40 flex flex-col justify-between h-full group">
+							<div class="flex flex-col">
+								<div class="client-img-wrap mb-4 sm:mb-5">
+									<img src="assets/tch.png" class="client-logo-img" alt="Bangkok Smart Tech" loading="lazy" />
+								</div>
+								<div class="flex items-center justify-between mb-2.5">
+									<span class="client-badge px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-code text-[10px] font-bold transition-colors">THAILAND</span>
+									<span class="font-label-code text-[11px] text-secondary font-bold">10 / 11</span>
+								</div>
+								<h3 class="font-headline-md text-[15px] sm:text-[16px] font-bold text-on-surface mb-2 uppercase leading-snug group-hover:text-primary transition-colors">
+									Bangkok Smart Tech (Thailand)
+								</h3>
+								<p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-4 line-clamp-2">
+									Next-generation IoT fleet monitoring and real-time logistics tracking engine deployed across Southeast Asian distribution nodes.
+								</p>
+							</div>
+							<div class="pt-3.5 border-t border-surface-container-high flex flex-wrap gap-1.5 items-center justify-between">
+								<div class="flex flex-wrap gap-1.5">
+									<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">SMART IOT</span>
+									<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">LOGISTICS</span>
+								</div>
+								<span class="inline-flex items-center gap-1 text-primary text-xs font-semibold">
+									<span class="material-symbols-outlined text-[15px]">verified</span>
+								</span>
+							</div>
+						</div>
+
+						<!-- Global Client 11: Accra Business Analytics -->
+						<div class="bento-card global-client-card p-5 sm:p-6 rounded-2xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.14)] border border-surface-container-high hover:border-primary/40 flex flex-col justify-between h-full group">
+							<div class="flex flex-col">
+								<div class="client-img-wrap mb-4 sm:mb-5">
+									<img src="assets/ba.png" class="client-logo-img" alt="Accra Business Analytics" loading="lazy" />
+								</div>
+								<div class="flex items-center justify-between mb-2.5">
+									<span class="client-badge px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-code text-[10px] font-bold transition-colors">GHANA</span>
+									<span class="font-label-code text-[11px] text-secondary font-bold">11 / 11</span>
+								</div>
+								<h3 class="font-headline-md text-[15px] sm:text-[16px] font-bold text-on-surface mb-2 uppercase leading-snug group-hover:text-primary transition-colors">
+									Accra Business Analytics (Ghana)
+								</h3>
+								<p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-4 line-clamp-2">
+									Predictive revenue modeling, churn analytics, and automated ERP reporting pipelines driving rapid enterprise scaling in West Africa.
+								</p>
+							</div>
+							<div class="pt-3.5 border-t border-surface-container-high flex flex-wrap gap-1.5 items-center justify-between">
+								<div class="flex flex-wrap gap-1.5">
+									<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">PREDICTIVE ML</span>
+									<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">ERP SYNC</span>
+								</div>
+								<span class="inline-flex items-center gap-1 text-primary text-xs font-semibold">
+									<span class="material-symbols-outlined text-[15px]">verified</span>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 5. OUR ETHOS SECTION -->
+			<section id="ethos" class="w-full max-w-[1320px] mx-auto px-6 md:px-12 py-14 md:py-20">
+				<div class="flex flex-col gap-8 sm:gap-10">
+					<!-- Header -->
+					<div class="flex flex-col items-center text-center max-w-5xl mx-auto">
+						<span class="font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-widest">OUR ETHOS</span>
+						<h2 class="font-headline-lg text-[32px] md:text-[42px] text-on-surface font-bold tracking-tight mt-2 text-center max-w-4xl">
+							We Design, Build &amp; Scale Technology That Works — <span class="text-primary italic font-semibold">Seamlessly.</span>
+						</h2>
+						<p class="font-body-lg text-[16px] sm:text-[17.5px] md:text-[18.5px] text-secondary mt-4 leading-[1.75] max-w-4xl text-center font-normal">
+							Bridge Group Solutions combines deep technical expertise with strategic thinking to deliver end-to-end solutions. From development to analytics and enterprise systems, we ensure every product is built to perform, adapt, and grow with your business. Our focus is not just delivery — it’s delivering excellence at every stage.
+						</p>
+					</div>
+
+					<!-- Ethos Bento 2-Column Split -->
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mt-4 sm:mt-6 items-start">
+						<!-- Ethos Card 1 -->
+						<div class="bento-card ethos-card p-6 sm:p-7 md:p-8 rounded-2xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.14)] border border-surface-container-high hover:border-primary/40 flex flex-col justify-between h-full">
+							<div class="flex flex-col">
+								<div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl ethos-icon-box bg-primary-fixed flex items-center justify-center text-on-primary-fixed shadow-sm mb-5">
+									<span class="material-symbols-outlined text-[24px]">trending_up</span>
+								</div>
+								<h3 class="font-headline-md text-[20px] sm:text-[22px] font-bold text-on-surface mb-3 uppercase leading-snug">
+									We don’t just provide services — we engineer growth through technology.
+								</h3>
+								<p class="font-body-md text-body-md text-secondary leading-relaxed">
+									By combining development, analytics, and enterprise solutions, we create systems that streamline operations, enhance decision-making, and unlock new opportunities. Every solution we deliver is tailored, scalable, and built for long-term success.
+								</p>
+								<p class="font-body-md text-body-md text-secondary leading-relaxed mt-3.5">
+									We give founders what they need to focus: operational support that removes distraction, resources that arrive when required, and relationships that convert to results.
+								</p>
+							</div>
+							<div class="mt-6 pt-4 border-t border-surface-container-high/80 flex items-center justify-between">
+								<span class="font-label-code text-[11px] text-primary font-bold">OPERATIONAL EXCELLENCE</span>
+								<span class="material-symbols-outlined text-secondary text-[16px]">verified</span>
+							</div>
+						</div>
+
+						<!-- Ethos Card 2: Engineered for Speed -->
+						<div class="bento-card ethos-card p-6 sm:p-7 md:p-8 rounded-2xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.14)] border border-surface-container-high hover:border-primary/40 flex flex-col justify-between h-full">
+							<div class="flex flex-col">
+								<div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl ethos-icon-box bg-primary-fixed flex items-center justify-center text-on-primary-fixed shadow-sm mb-5">
+									<span class="material-symbols-outlined text-[24px]">speed</span>
+								</div>
+								<h3 class="font-headline-md text-[20px] sm:text-[22px] font-bold text-on-surface mb-3 uppercase leading-snug">
+									The future moves fast—and building it demands speed. That’s where Bridge Group Solutions comes in.
+								</h3>
+								<p class="font-body-md text-body-md text-secondary leading-relaxed">
+									We deliver smart, scalable solutions that help you adapt quickly and stay ahead in a fast-changing world. Our architecture eliminates bottlenecks, empowers high-velocity iteration, and equips leaders with enduring technical advantage.
+								</p>
+							</div>
+							<div class="mt-6 pt-4 border-t border-surface-container-high/80 flex items-center justify-between">
+								<span class="font-label-code text-[11px] text-primary font-bold">HIGH-VELOCITY EXECUTION</span>
+								<span class="material-symbols-outlined text-secondary text-[16px]">rocket_launch</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 6. OUR EVOLUTION: A DECADE OF ENGINEERING MILESTONES (NEW COMPONENT 1) -->
+			<section id="company-timeline" class="history-milestones" aria-labelledby="hm-heading"><div class="hm-shell"><header class="hm-heading"><span class="hm-eyebrow">CHRONOLOGY OF INNOVATION</span><h2 id="hm-heading">Our History: A Decade of <em>Engineering Excellence</em></h2><p>From our founding in 2014 to engineering multi-tenant enterprise platforms across 14 nations, trace the key inflection points in our architectural journey.</p><span class="hm-date">2014 — 2026 &amp; Beyond</span></header><nav class="hm-navigation" aria-label="History milestones"><button type="button" class="hm-prev" aria-label="Previous milestone">←</button><div class="hm-years"><button type="button" data-index="0" aria-label="Go to 2014 milestone" aria-pressed="true">2014</button><button type="button" data-index="1" aria-label="Go to 2015 milestone" aria-pressed="false">2015</button><button type="button" data-index="2" aria-label="Go to 2016 milestone" aria-pressed="false">2016</button><button type="button" data-index="3" aria-label="Go to 2018 milestone" aria-pressed="false">2018</button><button type="button" data-index="4" aria-label="Go to 2021 milestone" aria-pressed="false">2021</button><button type="button" data-index="5" aria-label="Go to 2022 milestone" aria-pressed="false">2022</button><button type="button" data-index="6" aria-label="Go to 2024 milestone" aria-pressed="false">2024</button><button type="button" data-index="7" aria-label="Go to 2025 milestone" aria-pressed="false">2025</button><button type="button" data-index="8" aria-label="Go to 2026 milestone" aria-pressed="false">2026</button></div><button type="button" class="hm-next" aria-label="Next milestone">→</button></nav><div class="hm-viewport" tabindex="0" role="region" aria-label="Ascending milestones, scroll horizontally"><div class="hm-track"><svg class="hm-path" viewBox="0 0 3150 660" aria-hidden="true"><defs><linearGradient id="hm-gradient"><stop stop-color="#7359e8"/><stop offset=".55" stop-color="#cb78b0"/><stop offset="1" stop-color="#d99967"/></linearGradient></defs><path class="hm-path-base" d="M174 552 C290 552 408 540 524 540 C640 540 758 528 874 528 C990 528 1108 516 1224 516 C1340 516 1458 504 1574 504 C1690 504 1808 492 1924 492 C2040 492 2158 480 2274 480 C2390 480 2508 468 2624 468 C2740 468 2858 456 2974 456"/><path class="hm-path-progress" pathLength="100" d="M174 552 C290 552 408 540 524 540 C640 540 758 528 874 528 C990 528 1108 516 1224 516 C1340 516 1458 504 1574 504 C1690 504 1808 492 1924 492 C2040 492 2158 480 2274 480 C2390 480 2508 468 2624 468 C2740 468 2858 456 2974 456"/><circle class="hm-glow" cx="174" cy="552" r="4"/></svg><ol class="hm-list"><li class="hm-step" style="--step:0"><article class="hm-card" tabindex="0" aria-labelledby="hm-title-2014"><div class="hm-top"><span class="hm-year">2014</span><span class="hm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4m0 1c4-4 9 4 14 0v9c-5 4-10-4-14 0"/></svg></span></div><span class="hm-label">FOUNDATION &bull; INCEPTION</span><h3 id="hm-title-2014">The Beginning of a Vision</h3><p>Founded in Delhi NCR with an ambitious charter: delivering high-velocity bespoke software architectures, custom databases, and resilient client infrastructure.</p><div class="hm-support">Foundational Engineering Architecture</div></article><span class="hm-node" aria-hidden="true"></span></li><li class="hm-step" style="--step:1"><article class="hm-card" tabindex="0" aria-labelledby="hm-title-2015"><div class="hm-top"><span class="hm-year">2015</span><span class="hm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 17 6-6 4 4 8-10m-6 0h6v6"/></svg></span></div><span class="hm-label">EXPANSION &bull; CAPACITY</span><h3 id="hm-title-2015">Scaling New Heights</h3><p>Rapidly expanded our engineering team, taking on multi-tier commercial applications and scaling our delivery bandwidth across fast-growing industry sectors.</p><div class="hm-support">Rapid Team &amp; Portfolio Scale</div></article><span class="hm-node" aria-hidden="true"></span></li><li class="hm-step" style="--step:2"><article class="hm-card" tabindex="0" aria-labelledby="hm-title-2016"><div class="hm-top"><span class="hm-year">2016</span><span class="hm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8 5-4 4 3 4-3 5 4-5 10h-8ZM8 10l4 4 5-5"/></svg></span></div><span class="hm-label">ALLIANCES &bull; ECOSYSTEM</span><h3 id="hm-title-2016">Strategic Partnerships &amp; Microsoft Enablement</h3><p>Formed vital enterprise technology alliances, deepening specialized integration capabilities across Microsoft enterprise stacks, cloud workflows, and secure infrastructure.</p><div class="hm-support">Enterprise Stack Integration</div></article><span class="hm-node" aria-hidden="true"></span></li><li class="hm-step" style="--step:3"><article class="hm-card" tabindex="0" aria-labelledby="hm-title-2018"><div class="hm-top"><span class="hm-year">2018</span><span class="hm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h15l-3-3m6 13H6l3 3M18 7l-3 3M6 17l3-3"/></svg></span></div><span class="hm-label">MODERNIZATION &bull; AGILITY</span><h3 id="hm-title-2018">Embracing Digital Transformation</h3><p>Spearheaded end-to-end digital modernization programs, transitioning enterprise clients from legacy software silos to agile architectures and automated data flows.</p><div class="hm-support">Full-Stack Enterprise Agility</div></article><span class="hm-node" aria-hidden="true"></span></li><li class="hm-step" style="--step:4"><article class="hm-card" tabindex="0" aria-labelledby="hm-title-2021"><div class="hm-top"><span class="hm-year">2021</span><span class="hm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18a5 5 0 0 1-1-10 7 7 0 0 1 13-1 5.5 5.5 0 0 1 0 11Zm3-6 3 3 5-5"/></svg></span></div><span class="hm-label">CLOUD &bull; RESILIENCE</span><h3 id="hm-title-2021">Cloud Expansion &amp; Remote-Ready Solutions</h3><p>Engineered mission-critical cloud-native platforms and remote-ready architectures, ensuring zero-downtime resilience and seamless distributed collaboration for global clients.</p><div class="hm-support">99.99% Resilient Cloud Operations</div></article><span class="hm-node" aria-hidden="true"></span></li><li class="hm-step" style="--step:5"><article class="hm-card" tabindex="0" aria-labelledby="hm-title-2022"><div class="hm-top"><span class="hm-year">2022</span><span class="hm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="m8 14-2 8 6-3 6 3-2-8m-7-5 2 2 4-4"/></svg></span></div><span class="hm-label">ACCREDITATION &bull; EXCELLENCE</span><h3 id="hm-title-2022">Recognition as Elite Microsoft Technology Partner</h3><p>Earned distinguished recognition as an Elite Microsoft Technology Partner, affirming our architectural mastery in enterprise cloud migrations, Dynamics CRM, and security compliance.</p><div class="hm-support">Elite Certified Partner Distinction</div></article><span class="hm-node" aria-hidden="true"></span></li><li class="hm-step" style="--step:6"><article class="hm-card" tabindex="0" aria-labelledby="hm-title-2024"><div class="hm-top"><span class="hm-year">2024</span><span class="hm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m13 2-9 12h7l-1 8 10-13h-7Z"/></svg></span></div><span class="hm-label">VELOCITY &bull; RESULTS</span><h3 id="hm-title-2024">Growth, Innovation, Impact</h3><p>Accelerated cross-functional squad velocity, engineering transformative digital solutions for 150+ enterprises with measurable business ROI and enduring operational impact.</p><div class="hm-support">150+ Successful Enterprise Deployments</div></article><span class="hm-node" aria-hidden="true"></span></li><li class="hm-step" style="--step:7"><article class="hm-card" tabindex="0" aria-labelledby="hm-title-2025"><div class="hm-top"><span class="hm-year">2025</span><span class="hm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v4m0 12v4M2 12h4m12 0h4M5 5l3 3m8 8 3 3M5 19l3-3m8-8 3-3"/></svg></span></div><span class="hm-label">INTELLIGENCE &bull; EXPANSION</span><h3 id="hm-title-2025">Next-Gen AI &amp; Global Scaling</h3><p>Pioneering generative AI workflows, intelligent pipeline automation, and deploying follow-the-sun engineering pods across North America, EMEA, and APAC.</p><div class="hm-support">Global Pods Across 14 Nations</div></article><span class="hm-node" aria-hidden="true"></span></li><li class="hm-step" style="--step:8"><article class="hm-card" tabindex="0" aria-labelledby="hm-title-2026"><div class="hm-top"><span class="hm-year">2026</span><span class="hm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 8 4v6c0 6-8 10-8 10S4 18 4 12V6Zm-4 10 3 3 5-6"/></svg></span></div><span class="hm-label">SOVEREIGN &bull; LEADERSHIP</span><h3 id="hm-title-2026">Autonomous Enterprise &amp; Sovereign Architecture</h3><p>Leading the next wave of autonomous self-healing software, zero-trust infrastructure, and sovereign cloud platforms built for massive transactional scale.</p><div class="hm-support">200+ Enterprise Deployments &bull; 99.99% Reliability</div></article><span class="hm-node" aria-hidden="true"></span></li></ol></div></div><label class="hm-scroll-label">Explore the journey<input class="hm-scroll" type="range" min="0" max="100" value="0" aria-label="Scroll through history"></label><div class="hm-continuation"><span>Continue…</span><span aria-hidden="true">→</span></div></div></section>
+
+			<!-- FREQUENTLY ASKED QUESTIONS (FAQ) -->
+			<section class="w-full py-16 md:py-24 faq-section" id="faq">
+				<div class="max-w-[1320px] mx-auto px-6 md:px-12">
+					<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+						<!-- Left Sticky Narrative Column -->
+						<div class="lg:col-span-4 lg:sticky lg:top-28">
+							<div class="flex flex-col gap-4">
+								<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 border border-red-100 text-primary w-fit shadow-xs">
+									<span class="h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+									<span class="font-label-code text-[11px] text-primary font-bold tracking-wider uppercase">ABOUT BGS &bull; FAQ</span>
+								</div>
+
+								<h2 class="font-display-hero text-[30px] sm:text-[36px] md:text-[42px] leading-[1.18] font-bold text-on-surface tracking-tight">
+									Frequently Asked <span class="text-primary italic font-semibold">Questions.</span>
+								</h2>
+
+								<p class="font-body-md text-sm sm:text-base text-secondary leading-relaxed font-normal">
+									Key insights into our origins, executive governance, engineering pedigree, and international delivery footprint across 30+ countries.
+								</p>
+
+								<!-- Quick Contact Card -->
+								<div class="mt-4 p-6 rounded-2xl bg-white border border-slate-200/90 shadow-sm flex flex-col gap-4">
+									<div class="flex items-center gap-3">
+										<div class="w-10 h-10 rounded-xl bg-orange-50 text-primary flex items-center justify-center shrink-0 border border-orange-100">
+											<span class="material-symbols-outlined text-[20px]">corporate_fare</span>
+										</div>
+										<div class="flex flex-col">
+											<span class="font-headline-sm text-[15px] font-bold text-on-surface">Explore Strategic Alliances</span>
+											<span class="font-body-sm text-[12px] text-secondary">Confidential executive discussions</span>
+										</div>
+									</div>
+
+									<p class="font-body-sm text-[13px] text-secondary leading-relaxed">
+										Interested in vendor onboarding, enterprise technology consulting, or strategic partnership opportunities?
+									</p>
+
+									<a href="contact.html" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full text-white font-label-pill text-xs font-semibold shadow-[0_6px_20px_rgba(235,87,55,0.35)] hover:shadow-[0_10px_28px_rgba(235,87,55,0.5)] hover:-translate-y-0.5 active:translate-y-0 transition-all" style="background: linear-gradient(135deg, rgb(173, 43, 14) 0%, rgb(235, 87, 55) 60%, rgb(255, 120, 73) 100%);">
+										<span>Connect with BGS Leadership</span>
+										<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<!-- Right Accordion Column (8 Items) -->
+						<div class="lg:col-span-8 flex flex-col gap-3.5">
+							<!-- FAQ 1 -->
+							<div class="faq-item active">
+								<button type="button" class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="true" aria-controls="faq-ans-about-1">
+									<div class="flex items-center gap-3.5">
+										<span class="faq-number-badge">01</span>
+										<span class="faq-question-text">When was Bridge Group Solutions established, and what is the company's journey?</span>
+									</div>
+									<div class="faq-icon-wrapper">
+										<span class="material-symbols-outlined text-[18px]">expand_more</span>
+									</div>
+								</button>
+								<div class="faq-collapse" id="faq-ans-about-1">
+									<div class="faq-collapse-inner">
+										<div class="faq-answer-content">
+											Established in 2014, Bridge Group Solutions originated as a specialized technology outsourcing and engineering firm in India. Over more than a decade of disciplined execution, BGS has expanded into an international digital transformation partner, delivering enterprise software, ERPs, CRM platforms, and data systems to organizations across 30+ countries worldwide with corporate desks in Delhi NCR and Mumbai.
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- FAQ 2 -->
+							<div class="faq-item">
+								<button type="button" class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-ans-about-2">
+									<div class="flex items-center gap-3.5">
+										<span class="faq-number-badge">02</span>
+										<span class="faq-question-text">What industries and market sectors does Bridge Group Solutions specialize in?</span>
+									</div>
+									<div class="faq-icon-wrapper">
+										<span class="material-symbols-outlined text-[18px]">expand_more</span>
+									</div>
+								</button>
+								<div class="faq-collapse" id="faq-ans-about-2">
+									<div class="faq-collapse-inner">
+										<div class="faq-answer-content">
+											We engineer mission-critical systems across diverse high-complexity industries, including Financial Technology &amp; Quantitative Asset Management, Healthcare &amp; Telehealth, Supply Chain &amp; Global Logistics, E-Commerce &amp; Retail, Educational Technology, Manufacturing ERP, and Enterprise Cloud SaaS.
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- FAQ 3 -->
+							<div class="faq-item">
+								<button type="button" class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-ans-about-3">
+									<div class="flex items-center gap-3.5">
+										<span class="faq-number-badge">03</span>
+										<span class="faq-question-text">How does BGS manage cross-border engagements across multiple time zones?</span>
+									</div>
+									<div class="faq-icon-wrapper">
+										<span class="material-symbols-outlined text-[18px]">expand_more</span>
+									</div>
+								</button>
+								<div class="faq-collapse" id="faq-ans-about-3">
+									<div class="faq-collapse-inner">
+										<div class="faq-answer-content">
+											We operate an integrated global delivery model pairing every client with dedicated technical account managers who provide real-time overlap during your business day (covering US EST/PST, UK GMT, European CET, and Australia AEST). Asynchronous sprint summaries, automated CI/CD builds, and continuous communication portals keep project momentum moving around the clock.
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- FAQ 4 -->
+							<div class="faq-item">
+								<button type="button" class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-ans-about-4">
+									<div class="flex items-center gap-3.5">
+										<span class="faq-number-badge">04</span>
+										<span class="faq-question-text">What sets Bridge Group Solutions apart from traditional IT outsourcing agencies?</span>
+									</div>
+									<div class="faq-icon-wrapper">
+										<span class="material-symbols-outlined text-[18px]">expand_more</span>
+									</div>
+								</button>
+								<div class="faq-collapse" id="faq-ans-about-4">
+									<div class="faq-collapse-inner">
+										<div class="faq-answer-content">
+											Unlike conventional transactional agencies or template-based shops, BGS operates as an architectural co-pilot. We enforce senior developer staffing ratios, require senior architect reviews on every pull request, build strictly bespoke zero-compromise codebases, and stake our reputation on contractual SLA delivery velocity.
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- FAQ 5 -->
+							<div class="faq-item">
+								<button type="button" class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-ans-about-5">
+									<div class="flex items-center gap-3.5">
+										<span class="faq-number-badge">05</span>
+										<span class="faq-question-text">What is the foundational engineering and leadership ethos at BGS?</span>
+									</div>
+									<div class="faq-icon-wrapper">
+										<span class="material-symbols-outlined text-[18px]">expand_more</span>
+									</div>
+								</button>
+								<div class="faq-collapse" id="faq-ans-about-5">
+									<div class="faq-collapse-inner">
+										<div class="faq-answer-content">
+											Our governance combines deep institutional pedigree in quantitative finance, artificial intelligence, defense systems, and tech venture scaling. Our engineering ethos is anchored in four core values: Purpose-Driven Architecture, Future-Ready Scalability, High-Velocity Execution, and Uncompromising System Reliability.
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- FAQ 6 -->
+							<div class="faq-item">
+								<button type="button" class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-ans-about-6">
+									<div class="flex items-center gap-3.5">
+										<span class="faq-number-badge">06</span>
+										<span class="faq-question-text">Does Bridge Group Solutions collaborate with early-stage startups or only enterprise clients?</span>
+									</div>
+									<div class="faq-icon-wrapper">
+										<span class="material-symbols-outlined text-[18px]">expand_more</span>
+									</div>
+								</button>
+								<div class="faq-collapse" id="faq-ans-about-6">
+									<div class="faq-collapse-inner">
+										<div class="faq-answer-content">
+											We support companies at every growth inflection point. For early-stage venture-backed startups, we build lean, investor-ready MVPs with high iteration velocity. For scaling mid-market enterprises and Fortune 500 corporations, we deliver robust enterprise ERPs, high-throughput microservices, comprehensive security compliance, and dedicated engineering pods.
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- FAQ 7 -->
+							<div class="faq-item">
+								<button type="button" class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-ans-about-7">
+									<div class="flex items-center gap-3.5">
+										<span class="faq-number-badge">07</span>
+										<span class="faq-question-text">How can an organization explore strategic technology alliances or enterprise vendor onboarding?</span>
+									</div>
+									<div class="faq-icon-wrapper">
+										<span class="material-symbols-outlined text-[18px]">expand_more</span>
+									</div>
+								</button>
+								<div class="faq-collapse" id="faq-ans-about-7">
+									<div class="faq-collapse-inner">
+										<div class="faq-answer-content">
+											We actively form strategic technology partnerships and enterprise alliances. Connect directly with our executive leadership desk through our <a href="contact.html" class="text-primary font-semibold underline underline-offset-2 hover:text-[#ad2b0e]">Contact page</a> or via email at <a href="mailto:contactus@bridgegroupsolutions.com" class="text-primary font-semibold underline underline-offset-2 hover:text-[#ad2b0e]">contactus@bridgegroupsolutions.com</a>. We will initiate mutual NDA documentation and schedule an executive discussion.
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+		</div>
+	</main>
+
+	<!-- Reusable Footer Component -->
+	<div id="footer"></div>
+
+
+
+
+
+	<!-- Interactive Scripts -->
+	<script>
+		function toggleFaq(button) {
+			var item = button.closest('.faq-item');
+			if (!item) return;
+			var isActive = item.classList.contains('active');
+			var allFaqs = document.querySelectorAll('.faq-item');
+			allFaqs.forEach(function(el) {
+				el.classList.remove('active');
+				var btn = el.querySelector('.faq-trigger');
+				if (btn) btn.setAttribute('aria-expanded', 'false');
+			});
+			if (!isActive) {
+				item.classList.add('active');
+				button.setAttribute('aria-expanded', 'true');
+			}
+		}
+
+		function toggleMobileMenu() {
+			var menu = document.getElementById("mobile-nav-menu");
+			var icon = document.getElementById("mobile-menu-icon");
+			if (menu) {
+				var isHidden = menu.classList.toggle("hidden");
+				if (icon) {
+					icon.textContent = isHidden ? "menu" : "close";
+				}
+			}
+		}
+
+		function toggleMobileServices() {
+			var dropdown = document.getElementById("mobile-services-dropdown");
+			var arrow = document.getElementById("mobile-services-arrow");
+			var btn = document.getElementById("mobile-services-btn");
+			if (dropdown) {
+				var isHidden = dropdown.classList.toggle("hidden");
+				if (arrow) {
+					if (isHidden) {
+						arrow.classList.remove("rotate-180");
+					} else {
+						arrow.classList.add("rotate-180");
+					}
+				}
+				if (btn) {
+					btn.setAttribute("aria-expanded", isHidden ? "false" : "true");
+				}
+			}
+		}
+	</script>
+	<!-- Reusable Component Loader (Navbar & Footer) -->
+	<script src="assets/bgs-components.js"></script>
+</body>
+</html>

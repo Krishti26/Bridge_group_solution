@@ -1,0 +1,26 @@
+# macOS / OS artifacts
+.DS_Store
+Thumbs.db
+__MACOSX/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+
+# SSL Certificates
+certs/
+*.pem
+
+# Backups and temporary test output
+*.bak
+*.anim_bak
+*.color_bak
+screenshots/
+chrome_profile_*/

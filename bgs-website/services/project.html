@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Core typography preload -->
+<link rel="preload" href="../assets/amphora-fonts/The%20Future/TheFuture-Regular.subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/amphora-fonts/The%20Future/TheFuture-Medium.subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/amphora-fonts/The%20Future/TheFuture-Bold.subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/amphora-fonts/Tiempos%20Headline/TiemposHeadline-400-Regular-Italic.woff2" as="font" type="font/woff2" crossorigin>
+
+
+<!-- Reveal the finished layout without showing a loading animation. -->
+<style>html.layout-pending body { visibility:hidden !important; }</style>
+<script>
+(() => {
+  const root = document.documentElement;
+  root.classList.add('layout-pending');
+  let observer;
+  const reveal = () => {
+    root.classList.remove('layout-pending');
+    if (observer) observer.disconnect();
+  };
+  const ready = () => {
+    if (root.classList.contains('bgs-layout-ready') && document.querySelector('.bgs-main-navbar')) reveal();
+  };
+  observer = new MutationObserver(ready);
+  observer.observe(root, {childList:true, subtree:true, attributes:true, attributeFilter:['class']});
+  document.addEventListener('DOMContentLoaded', ready, {once:true});
+  setTimeout(reveal, 2500);
+})();
+</script>
+
+
+
+	<meta charset="utf-8"/>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
+	<title>Dedicated Engineering Pods & Teams | Bridge Group Solutions</title>
+	<meta name="description" content="Scale your engineering velocity with dedicated agile pods, managed offshore software engineering teams, and end-to-end technical delivery." />
+	<meta name="keywords" content="Dedicated engineering pods, offshore software development, managed tech teams, agile software outsourcing, Bridge Group Solutions delivery" />
+	
+			<!-- Open Graph Meta Tags -->
+	<meta property="og:title" content="Dedicated Engineering Pods & Teams | Bridge Group Solutions" />
+	<meta property="og:description" content="Scale your engineering velocity with dedicated agile pods, managed offshore software engineering teams, and end-to-end technical delivery." />
+	<meta property="og:url" content="https://www.bridgegroupsolutions.com/services/project.html" />
+	<meta property="og:image" content="https://www.bridgegroupsolutions.com/assets/logo.webp" />
+	<meta property="og:type" content="website" />
+
+	<!-- X (Twitter) Meta Tags -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Dedicated Engineering Pods & Teams | Bridge Group Solutions" />
+	<meta name="twitter:description" content="Scale your engineering velocity with dedicated agile pods, managed offshore software engineering teams, and end-to-end technical delivery." />
+	<meta name="twitter:image" content="https://www.bridgegroupsolutions.com/assets/logo.webp" />
+	<link rel="canonical" href="https://www.bridgegroupsolutions.com/services/project.html"/>
+	<link rel="icon" type="image/webp" href="../assets/logo.webp"/>
+
+	<!-- Schema.org Structured Data (JSON-LD) -->
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://www.bridgegroupsolutions.com/services/project.html#service",
+      "serviceType": "IT Project Outsourcing & Staff Augmentation",
+      "name": "IT Project Outsourcing & Augmentation | Bridge Group Solutions",
+      "description": "Accelerate time-to-market with dedicated senior engineering squads, agile delivery governance, and flexible IT outsourcing partnerships.",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://www.bridgegroupsolutions.com/#organization",
+        "name": "Bridge Group Solutions",
+        "url": "https://www.bridgegroupsolutions.com",
+        "logo": "https://www.bridgegroupsolutions.com/assets/logo.webp"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.bridgegroupsolutions.com/services/project.html#webpage",
+      "url": "https://www.bridgegroupsolutions.com/services/project.html",
+      "name": "IT Project Outsourcing & Augmentation | Bridge Group Solutions",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.bridgegroupsolutions.com/#website",
+        "url": "https://www.bridgegroupsolutions.com",
+        "name": "Bridge Group Solutions"
+      }
+    }
+  ]
+}
+	</script>
+
+
+	<!-- Fonts matching index.html -->
+	<link rel="preconnect" href="https://fonts.googleapis.com"/>
+	<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+	<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+	<!-- Tabler Icons CDN -->
+	<link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" rel="stylesheet"/>
+
+	<!-- Base Layer Styles -->
+	<style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style>
+
+	<!-- Tailwind CSS CDN + Design Tokens -->
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script id="tailwind-config">
+		tailwind.config = {
+			darkMode: "class",
+			theme: {
+				extend: {
+					colors: {
+						"surface-container-highest": "#e2e2e4",
+						"on-secondary-container": "#5c647a",
+						"on-surface": "#1a1c1d",
+						"on-error": "#ffffff",
+						"primary-fixed": "#ffdad3",
+						"background": "#f9f9fb",
+						"primary-fixed-dim": "#ffb4a4",
+						"inverse-primary": "#ffb4a4",
+						"surface-bright": "#f9f9fb",
+						"on-tertiary-fixed-variant": "#424656",
+						"tertiary-fixed-dim": "#c3c6d8",
+						"tertiary-fixed": "#dfe1f5",
+						"outline-variant": "#e2bfb7",
+						"error-container": "#ffdad6",
+						"on-primary-container": "#fffbff",
+						"on-tertiary-container": "#fefcff",
+						"error": "#ba1a1a",
+						"tertiary": "#585b6b",
+						"secondary": "#565e74",
+						"surface-container-lowest": "#ffffff",
+						"surface-container-low": "#f3f3f5",
+						"secondary-fixed": "#dae2fd",
+						"secondary-fixed-dim": "#bec6e0",
+						"on-background": "#1a1c1d",
+						"on-secondary": "#ffffff",
+						"on-surface-variant": "#5a413b",
+						"outline": "#8e706a",
+						"secondary-container": "#dae2fd",
+						"surface": "#f9f9fb",
+						"surface-container": "#eeeef0",
+						"inverse-surface": "#2f3132",
+						"tertiary-container": "#707485",
+						"on-tertiary": "#ffffff",
+						"surface-tint": "#b12e11",
+						"inverse-on-surface": "#f0f0f2",
+						"on-primary-fixed": "#3d0600",
+						"surface-dim": "#d9dadc",
+						"on-error-container": "#93000a",
+						"on-primary": "#ffffff",
+						"on-primary-fixed-variant": "#8c1800",
+						"on-secondary-fixed": "#131b2e",
+						"primary-container": "#d04426",
+						"surface-container-high": "#e8e8ea",
+						"primary": "#ad2b0e",
+						"on-secondary-fixed-variant": "#3f465c",
+						"on-tertiary-fixed": "#171b29",
+						"surface-variant": "#e2e2e4"
+					},
+					borderRadius: {
+						"DEFAULT": "0.25rem",
+						"lg": "0.5rem",
+						"xl": "0.75rem",
+						"full": "9999px"
+					},
+					spacing: {
+						"space-sm": "0.5rem",
+						"space-md": "1rem",
+						"space-xs": "0.25rem",
+						"gutter": "1.5rem",
+						"space-lg": "1.5rem",
+						"margin-mobile": "1.25rem",
+						"gutter-mobile": "1rem",
+						"space-xl": "2.5rem",
+						"margin": "3rem"
+					},
+					fontFamily: {
+						"body-md": ["Plus Jakarta Sans"],
+						"body-sm": ["Plus Jakarta Sans"],
+						"label-pill": ["Plus Jakarta Sans"],
+						"display-hero": ["Plus Jakarta Sans"],
+						"headline-lg": ["Plus Jakarta Sans"],
+						"headline-md": ["Plus Jakarta Sans"],
+						"label-eyebrow": ["Space Grotesk"],
+						"body-lg": ["Plus Jakarta Sans"],
+						"display-hero-mobile": ["Plus Jakarta Sans"],
+						"headline-sm": ["Plus Jakarta Sans"],
+						"stat-metric": ["Plus Jakarta Sans"],
+						"label-code": ["Space Grotesk"]
+					},
+					fontSize: {
+						"body-md": ["15px", {"lineHeight": "24px", "fontWeight": "400"}],
+						"body-sm": ["13px", {"lineHeight": "20px", "fontWeight": "400"}],
+						"label-pill": ["12px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+						"display-hero": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+						"headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+						"headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+						"label-eyebrow": ["11px", {"lineHeight": "14px", "letterSpacing": "0.12em", "fontWeight": "700"}],
+						"body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+						"display-hero-mobile": ["36px", {"lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+						"headline-sm": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+						"stat-metric": ["40px", {"lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+						"label-code": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}]
+					}
+				}
+			}
+		}
+	</script>
+
+	<!-- Design Tokens & Theme -->
+	<link rel="stylesheet" href="../assets/bgs-modern-theme.css"/>
+	<!-- Dedicated Stylesheet -->
+	<link rel="stylesheet" href="../assets/services-project.css"/>
+<link rel="stylesheet" href="../assets/amphora-reference.css">
+<link rel="stylesheet" href="../assets/amphora-bgs.css">
+<script defer src="../assets/amphora-bgs.js"></script>
+<link rel="stylesheet" href="../assets/process-wheel.css">
+<script defer src="../assets/process-wheel.js"></script>
+</head>
+
+<body class="amphora-theme bg-surface font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+
+	<!-- GLOBAL STICKY HEADER -->
+	<!-- Reusable Navbar Component -->
+	<div id="navbar"></div>
+
+
+
+
+
+	<main class="w-full pt-20 bg-surface min-h-screen">
+		<div class="flex flex-col w-full overflow-hidden">
+
+			<!-- 1. HERO SECTION WITH AGILE OUTSOURCING VISUAL -->
+			<section class="relative w-full max-w-[1320px] mx-auto px-6 md:px-12 pt-12 pb-16 md:pb-24">
+				<!-- Atmospheric Glows -->
+				<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[650px] pointer-events-none -z-10 overflow-hidden">
+					<div class="absolute top-0 right-10 w-[550px] h-[550px] rounded-full blur-3xl opacity-60" style="background: radial-gradient(circle, rgba(92, 147, 159, 0.22) 0%, rgba(235, 87, 55, 0.12) 40%, rgba(245, 158, 11, 0.05) 75%, transparent 100%);"></div>
+					<div class="absolute top-20 -left-20 w-[500px] h-[500px] rounded-full blur-3xl opacity-50" style="background: radial-gradient(circle, rgba(235, 87, 55, 0.15) 0%, rgba(92, 147, 159, 0.08) 50%, transparent 80%);"></div>
+				</div>
+
+				<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+					<!-- Hero Left Column -->
+					<div class="lg:col-span-6 flex flex-col items-start space-y-6">
+						<!-- Eyebrow Badge -->
+						<div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-surface-container-low shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
+							<span class="relative flex h-2 w-2">
+								<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+								<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+							</span>
+							<span class="font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-widest font-semibold">Global Outsourcing Partner</span>
+						</div>
+
+						<!-- Headline -->
+						<h1 class="font-display-hero text-display-hero text-on-surface tracking-tight leading-[1.08]">
+							OUT<span class="text-secondary">SOURCE</span><br class="hidden sm:inline">
+							<span class="text-primary italic font-semibold">SMARTER</span>
+						</h1>
+
+						<!-- Description -->
+						<p class="font-body-lg text-body-lg text-secondary max-w-xl leading-relaxed">
+							Bridge Group Solutions eliminates the overhead of in-house hiring. We deliver enterprise-grade IT projects — web platforms, mobile apps, data analytics — with transparent communication and zero compromise on quality.
+						</p>
+
+						<!-- Dual CTAs -->
+						<div class="flex flex-wrap items-center gap-4 pt-2">
+							<a class="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full text-white font-label-pill text-label-pill shadow-[0_8px_25px_rgba(235,87,55,0.4)] hover:shadow-[0_14px_35px_rgba(235,87,55,0.55)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 border border-white/25 font-semibold" href="../contact.html" style="background: linear-gradient(135deg, #ad2b0e 0%, #eb5737 60%, #ff7849 100%);">
+								<span>Start Your Project &rarr;</span>
+							</a>
+							<a class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-surface-container-lowest text-on-surface font-label-pill text-label-pill shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_24px_rgba(235,87,55,0.15)] hover:border-primary/40 hover:-translate-y-0.5 transition-all duration-200 border border-surface-container-high font-semibold" href="#services">
+								<span>View Services</span>
+								<span class="material-symbols-outlined text-[18px] text-primary">arrow_downward</span>
+							</a>
+						</div>
+					</div>
+
+					<!-- Hero Right Column: Agile Outsource Visual Deck -->
+					<div class="lg:col-span-6 relative w-full flex items-center justify-center">
+						<div class="w-full max-w-[560px] relative group">
+							<!-- Ambient Radial Glow -->
+							<div class="absolute -inset-2 rounded-3xl bg-gradient-to-r from-primary/20 to-teal-500/15 blur-xl opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
+
+							<div class="relative p-6 sm:p-8 rounded-3xl bg-surface-container-lowest shadow-[0_25px_60px_rgba(235,87,55,0.12),0_10px_30px_rgba(15,23,42,0.06)] border border-surface-container-high overflow-hidden flex flex-col gap-6">
+								<!-- Header -->
+								<div class="flex items-center justify-between border-b border-surface-container-high pb-4">
+									<div class="flex items-center gap-2.5">
+										<div class="flex gap-1.5">
+											<span class="w-3 h-3 rounded-full bg-red-400 inline-block"></span>
+											<span class="w-3 h-3 rounded-full bg-amber-400 inline-block"></span>
+											<span class="w-3 h-3 rounded-full bg-emerald-400 inline-block"></span>
+										</div>
+										<span class="font-headline-sm text-[15px] font-bold text-on-surface ml-2">Global Outsource Telemetry</span>
+									</div>
+									<div class="flex items-center gap-2 px-3 py-1 rounded-full shadow-sm border border-emerald-200 bg-emerald-50">
+										<span class="h-2 w-2 rounded-full bg-emerald-500 animate-ping"></span>
+										<span class="font-label-code text-[11px] font-bold text-emerald-800">ACTIVE PODS</span>
+									</div>
+								</div>
+
+								<!-- 3 Outsource Proof Metrics -->
+								<div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+									<!-- Card 1 -->
+									<div class="p-4 rounded-2xl bg-surface-container-low border border-surface-container-high/60 flex flex-col">
+										<span class="font-label-eyebrow text-[10px] text-secondary uppercase font-bold tracking-wider">COST SAVED</span>
+										<span class="font-stat-metric text-[22px] sm:text-[24px] font-extrabold text-primary mt-1">$48,200</span>
+										<span class="text-[11px] text-secondary mt-0.5">per month avg.</span>
+									</div>
+
+									<!-- Card 2 -->
+									<div class="p-4 rounded-2xl bg-surface-container-low border border-surface-container-high/60 flex flex-col">
+										<span class="font-label-eyebrow text-[10px] text-secondary uppercase font-bold tracking-wider">ON-TIME RATE</span>
+										<span class="font-stat-metric text-[22px] sm:text-[24px] font-extrabold text-on-surface mt-1">98.4%</span>
+										<div class="w-full bg-surface-container-highest rounded-full h-1.5 mt-2 overflow-hidden">
+											<div class="bg-primary h-1.5 rounded-full" style="width: 98.4%"></div>
+										</div>
+									</div>
+
+									<!-- Card 3 -->
+									<div class="p-4 rounded-2xl bg-surface-container-low border border-surface-container-high/60 flex flex-col">
+										<span class="font-label-eyebrow text-[10px] text-secondary uppercase font-bold tracking-wider">ACTIVE CLIENTSS</span>
+										<span class="font-stat-metric text-[20px] sm:text-[22px] font-extrabold text-on-surface mt-1">24 SQUADS</span>
+										<div class="flex items-center gap-1 mt-2">
+											<span class="w-2.5 h-2.5 rounded-full bg-primary/70 inline-block"></span>
+											<span class="w-2.5 h-2.5 rounded-full bg-amber-500/70 inline-block"></span>
+											<span class="w-2.5 h-2.5 rounded-full bg-emerald-500/70 inline-block"></span>
+											<span class="text-[10px] text-secondary font-medium ml-1">+20 more</span>
+										</div>
+									</div>
+								</div>
+
+								<!-- Bottom Guarantee Banner -->
+								<div class="flex items-center justify-between p-3.5 rounded-2xl bg-surface-container-low/70 border border-surface-container-high">
+									<div class="flex items-center gap-2 text-xs font-semibold text-on-surface">
+										<span class="material-symbols-outlined text-[18px] text-primary">verified_user</span>
+										<span>NDA &amp; IP Protection Protocol</span>
+									</div>
+									<span class="text-[11px] font-bold text-secondary">SOC 2 ALIGNED</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 2. TICKER SECTION -->
+			<section class="w-full py-4 overflow-hidden relative" style="background: linear-gradient(135deg, #1a1c1d 0%, #2f3132 100%);">
+				<div class="flex items-center space-x-8 whitespace-nowrap animate-marquee">
+					<div class="inline-flex items-center gap-8 text-[13px] sm:text-[14px] font-medium tracking-wide text-white/90">
+						<span>&#10022; IT Project Outsourcing</span>
+						<span class="text-white/30">&mdash;</span>
+						<span>&#10022; Dedicated Dev CLIENTSs</span>
+						<span class="text-white/30">&mdash;</span>
+						<span>&#10022; Offshore Development</span>
+						<span class="text-white/30">&mdash;</span>
+						<span>&#10022; Agile Delivery</span>
+						<span class="text-white/30">&mdash;</span>
+						<span>&#10022; End-to-End Management</span>
+						<span class="text-white/30">&mdash;</span>
+						<span>&#10022; Quality Assurance</span>
+						<span class="text-white/30">&mdash;</span>
+						<span>&#10022; Data Analytics</span>
+						<span class="text-white/30">&mdash;</span>
+						<span>&#10022; App Development</span>
+						<span class="text-white/30">&mdash;</span>
+						<!-- Duplicate for loop -->
+						<span>&#10022; IT Project Outsourcing</span>
+						<span class="text-white/30">&mdash;</span>
+						<span>&#10022; Dedicated Dev CLIENTSs</span>
+						<span class="text-white/30">&mdash;</span>
+						<span>&#10022; Offshore Development</span>
+						<span class="text-white/30">&mdash;</span>
+						<span>&#10022; Agile Delivery</span>
+						<span class="text-white/30">&mdash;</span>
+						<span>&#10022; End-to-End Management</span>
+						<span class="text-white/30">&mdash;</span>
+						<span>&#10022; Quality Assurance</span>
+						<span class="text-white/30">&mdash;</span>
+						<span>&#10022; Data Analytics</span>
+						<span class="text-white/30">&mdash;</span>
+						<span>&#10022; App Development</span>
+					</div>
+				</div>
+			</section>
+
+			<!-- 3. SERVICES SECTION -->
+			<section id="services" class="w-full bg-surface-container-low/60 py-20 md:py-24 border-y border-surface-container-high/60">
+				<div class="max-w-[1320px] mx-auto px-6 md:px-12 flex flex-col gap-12">
+					<!-- Section Header -->
+					<div class="flex flex-col items-center text-center max-w-3xl mx-auto">
+						<span class="font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-widest">WHAT WE OFFER</span>
+						<h2 class="font-headline-lg text-[32px] md:text-[40px] text-on-surface font-bold tracking-tight mt-1">
+							Our <span class="text-primary italic font-semibold">Core Services</span>
+						</h2>
+						<p class="font-body-md text-body-md text-secondary mt-3 max-w-xl mx-auto">
+							End-to-end outsourcing built for businesses that need speed, quality, and flexibility — all in one partner.
+						</p>
+					</div>
+
+					<!-- 6 Services Cards Grid -->
+					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+						<!-- Card 01 -->
+						<div class="p-8 rounded-3xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(245,158,11,0.18)] hover:border-amber-400 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between border border-surface-container-high group" data-card-color="amber">
+							<div>
+								<div class="flex items-center justify-between mb-6">
+									<span class="font-label-code text-[28px] font-bold text-amber-600/40 group-hover:text-amber-600 transition-colors">01</span>
+									<span class="px-3 py-1 rounded-full text-xs font-semibold bg-amber-100 text-amber-700 border border-amber-200">Development</span>
+								</div>
+								<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-3 group-hover:text-amber-600 transition-colors">
+									IT Project Outsourcing
+								</h3>
+								<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+									Full-cycle delivery of technology projects — enterprise platforms, custom tools, API integrations, and web systems built precisely to your specifications.
+								</p>
+							</div>
+						</div>
+
+						<!-- Card 02 -->
+						<div class="p-8 rounded-3xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(14,165,233,0.18)] hover:border-sky-400 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between border border-surface-container-high group" data-card-color="sky">
+							<div>
+								<div class="flex items-center justify-between mb-6">
+									<span class="font-label-code text-[28px] font-bold text-sky-600/40 group-hover:text-sky-600 transition-colors">02</span>
+									<span class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-100 text-sky-700 border border-sky-200">Team Augmentation</span>
+								</div>
+								<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-3 group-hover:text-sky-600 transition-colors">
+									Dedicated Dev Teams
+								</h3>
+								<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+									Handpicked engineering squads embedded directly into your workflow. Aligned with your stack, culture, and velocity — scaling up or down on demand.
+								</p>
+							</div>
+						</div>
+
+						<!-- Card 03 -->
+						<div class="p-8 rounded-3xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(20,184,166,0.18)] hover:border-teal-400 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between border border-surface-container-high group" data-card-color="teal">
+							<div>
+								<div class="flex items-center justify-between mb-6">
+									<span class="font-label-code text-[28px] font-bold text-teal-600/40 group-hover:text-teal-600 transition-colors">03</span>
+									<span class="px-3 py-1 rounded-full text-xs font-semibold bg-teal-500/10 text-teal-700 border border-teal-200">Offshore</span>
+								</div>
+								<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-3 group-hover:text-teal-600 transition-colors">
+									Offshore Development
+								</h3>
+								<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+									Access world-class engineering talent globally — without the overhead of local hiring. Enterprise quality at offshore economics, zero compromise.
+								</p>
+							</div>
+						</div>
+
+						<!-- Card 04 -->
+						<div class="p-8 rounded-3xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(139,92,246,0.18)] hover:border-violet-400 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between border border-surface-container-high group" data-card-color="violet">
+							<div>
+								<div class="flex items-center justify-between mb-6">
+									<span class="font-label-code text-[28px] font-bold text-violet-600/40 group-hover:text-violet-600 transition-colors">04</span>
+									<span class="px-3 py-1 rounded-full text-xs font-semibold bg-violet-100 text-violet-700 border border-violet-200">Management</span>
+								</div>
+								<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-3 group-hover:text-violet-600 transition-colors">
+									End-to-End Management
+								</h3>
+								<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+									From requirements gathering and architecture to QA and deployment — our PMs own the full delivery lifecycle so you never have to chase status.
+								</p>
+							</div>
+						</div>
+
+						<!-- Card 05 -->
+						<div class="p-8 rounded-3xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(99,102,241,0.18)] hover:border-indigo-400 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between border border-surface-container-high group" data-card-color="indigo">
+							<div>
+								<div class="flex items-center justify-between mb-6">
+									<span class="font-label-code text-[28px] font-bold text-indigo-600/40 group-hover:text-indigo-600 transition-colors">05</span>
+									<span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700 border border-indigo-200">DevOps</span>
+								</div>
+								<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-3 group-hover:text-indigo-600 transition-colors">
+									Cloud &amp; DevOps Engineering Pods
+								</h3>
+								<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+									Specialized site reliability and cloud architecture engineers implementing GitOps, Kubernetes clusters, and automated CI/CD for rock-solid deployments.
+								</p>
+							</div>
+						</div>
+
+						<!-- Card 06 -->
+						<div class="p-8 rounded-3xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(16,185,129,0.18)] hover:border-emerald-400 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between border border-surface-container-high group" data-card-color="emerald">
+							<div>
+								<div class="flex items-center justify-between mb-6">
+									<span class="font-label-code text-[28px] font-bold text-emerald-600/40 group-hover:text-emerald-600 transition-colors">06</span>
+									<span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-700 border border-emerald-200">QA</span>
+								</div>
+								<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-3 group-hover:text-emerald-600 transition-colors">
+									QA &amp; Automated Testing Pods
+								</h3>
+								<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+									Comprehensive manual and automated test suites covering functional testing, API regression, performance stress testing, and vulnerability auditing.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 4. TECH MARQUEE -->
+			<section class="w-full py-6 border-y border-surface-container-high bg-surface-container-lowest overflow-hidden">
+				<div class="flex items-center space-x-4 whitespace-nowrap animate-marquee">
+					<div class="inline-flex items-center gap-4 text-xs font-semibold tracking-wider uppercase text-secondary">
+						<span class="px-4 py-2 rounded-full bg-surface-container-low border border-surface-container-high flex items-center gap-2"><span class="text-primary">&#11041;</span> React</span>
+						<span class="px-4 py-2 rounded-full bg-surface-container-low border border-surface-container-high flex items-center gap-2"><span class="text-primary">&#11041;</span> Node.js</span>
+						<span class="px-4 py-2 rounded-full bg-surface-container-low border border-surface-container-high flex items-center gap-2"><span class="text-primary">&#11041;</span> Python</span>
+						<span class="px-4 py-2 rounded-full bg-surface-container-low border border-surface-container-high flex items-center gap-2"><span class="text-primary">&#11041;</span> Flutter</span>
+						<span class="px-4 py-2 rounded-full bg-surface-container-low border border-surface-container-high flex items-center gap-2"><span class="text-primary">&#11041;</span> AWS</span>
+						<span class="px-4 py-2 rounded-full bg-surface-container-low border border-surface-container-high flex items-center gap-2"><span class="text-primary">&#11041;</span> PostgreSQL</span>
+						<span class="px-4 py-2 rounded-full bg-surface-container-low border border-surface-container-high flex items-center gap-2"><span class="text-primary">&#11041;</span> Docker</span>
+						<span class="px-4 py-2 rounded-full bg-surface-container-low border border-surface-container-high flex items-center gap-2"><span class="text-primary">&#11041;</span> Kubernetes</span>
+						<span class="px-4 py-2 rounded-full bg-surface-container-low border border-surface-container-high flex items-center gap-2"><span class="text-primary">&#11041;</span> Vue.js</span>
+						<span class="px-4 py-2 rounded-full bg-surface-container-low border border-surface-container-high flex items-center gap-2"><span class="text-primary">&#11041;</span> Swift</span>
+						<span class="px-4 py-2 rounded-full bg-surface-container-low border border-surface-container-high flex items-center gap-2"><span class="text-primary">&#11041;</span> Kotlin</span>
+						<span class="px-4 py-2 rounded-full bg-surface-container-low border border-surface-container-high flex items-center gap-2"><span class="text-primary">&#11041;</span> GraphQL</span>
+						<!-- Duplicate for loop -->
+						<span class="px-4 py-2 rounded-full bg-surface-container-low border border-surface-container-high flex items-center gap-2"><span class="text-primary">&#11041;</span> React</span>
+						<span class="px-4 py-2 rounded-full bg-surface-container-low border border-surface-container-high flex items-center gap-2"><span class="text-primary">&#11041;</span> Node.js</span>
+						<span class="px-4 py-2 rounded-full bg-surface-container-low border border-surface-container-high flex items-center gap-2"><span class="text-primary">&#11041;</span> Python</span>
+						<span class="px-4 py-2 rounded-full bg-surface-container-low border border-surface-container-high flex items-center gap-2"><span class="text-primary">&#11041;</span> Flutter</span>
+						<span class="px-4 py-2 rounded-full bg-surface-container-low border border-surface-container-high flex items-center gap-2"><span class="text-primary">&#11041;</span> AWS</span>
+						<span class="px-4 py-2 rounded-full bg-surface-container-low border border-surface-container-high flex items-center gap-2"><span class="text-primary">&#11041;</span> PostgreSQL</span>
+						<span class="px-4 py-2 rounded-full bg-surface-container-low border border-surface-container-high flex items-center gap-2"><span class="text-primary">&#11041;</span> Docker</span>
+						<span class="px-4 py-2 rounded-full bg-surface-container-low border border-surface-container-high flex items-center gap-2"><span class="text-primary">&#11041;</span> Kubernetes</span>
+						<span class="px-4 py-2 rounded-full bg-surface-container-low border border-surface-container-high flex items-center gap-2"><span class="text-primary">&#11041;</span> Vue.js</span>
+						<span class="px-4 py-2 rounded-full bg-surface-container-low border border-surface-container-high flex items-center gap-2"><span class="text-primary">&#11041;</span> Swift</span>
+						<span class="px-4 py-2 rounded-full bg-surface-container-low border border-surface-container-high flex items-center gap-2"><span class="text-primary">&#11041;</span> Kotlin</span>
+						<span class="px-4 py-2 rounded-full bg-surface-container-low border border-surface-container-high flex items-center gap-2"><span class="text-primary">&#11041;</span> GraphQL</span>
+					</div>
+				</div>
+			</section>
+
+			<!-- 5. FEATURES BELT SECTION -->
+			<section id="features" class="w-full max-w-[1320px] mx-auto px-6 md:px-12 py-20 md:py-24">
+				<!-- Section Header -->
+				<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+					<div>
+						<span class="font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-widest">KEY FEATURES</span>
+						<h2 class="font-headline-lg text-[32px] md:text-[40px] text-on-surface font-bold tracking-tight mt-1">
+							Built for <span class="text-primary italic font-semibold">Results</span>
+						</h2>
+						<p class="font-body-md text-body-md text-secondary mt-3 max-w-xl">
+							Every engagement is engineered around your specific goals, budget, and quality expectations.
+						</p>
+					</div>
+					<a href="../contact.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-surface-container-lowest text-on-surface font-semibold text-sm border border-surface-container-high hover:border-primary/40 shadow-sm hover:shadow-[0_8px_20px_rgba(235,87,55,0.12)] hover:-translate-y-0.5 transition-all">
+						<span>See All Features</span>
+						<span class="material-symbols-outlined text-[18px] text-primary">arrow_forward</span>
+					</a>
+				</div>
+
+				<!-- 6 Feature Cards Grid -->
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<!-- Card 1 -->
+					<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.12)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
+						<div>
+							<div class="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+								<span class="material-symbols-outlined text-[26px]">payments</span>
+							</div>
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-3 group-hover:text-primary transition-colors">Cost-Effective Models</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-6">
+								Fixed-price, time &amp; material, or dedicated retainer — pick the model that matches your project stage and budget horizon.
+							</p>
+						</div>
+						<span class="w-fit px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20 font-label-pill">Save 30–60%</span>
+					</div>
+
+					<!-- Card 2 -->
+					<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.12)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
+						<div>
+							<div class="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+								<span class="material-symbols-outlined text-[26px]">bolt</span>
+							</div>
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-3 group-hover:text-primary transition-colors">Agile Execution</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-6">
+								Two-week sprints, daily standups, and continuous delivery pipelines keep momentum high and surprises low across every project.
+							</p>
+						</div>
+						<span class="w-fit px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20 font-label-pill">Sprint-Based</span>
+					</div>
+
+					<!-- Card 3 -->
+					<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.12)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
+						<div>
+							<div class="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+								<span class="material-symbols-outlined text-[26px]">engineering</span>
+							</div>
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-3 group-hover:text-primary transition-colors">Skilled Professionals</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-6">
+								Rigorously vetted developers, designers, QA engineers, and PMs with proven track records across 15+ industries.
+							</p>
+						</div>
+						<span class="w-fit px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20 font-label-pill">Top 5% Talent</span>
+					</div>
+
+					<!-- Card 4 -->
+					<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.12)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
+						<div>
+							<div class="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+								<span class="material-symbols-outlined text-[26px]">verified</span>
+							</div>
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-3 group-hover:text-primary transition-colors">Timely Delivery + QA</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-6">
+								Strict milestone management, automated regression testing, and dedicated QA CLIENTSs ensure production-ready code every release.
+							</p>
+						</div>
+						<span class="w-fit px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20 font-label-pill">98.4% On-Time</span>
+					</div>
+
+					<!-- Card 5 -->
+					<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.12)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
+						<div>
+							<div class="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+								<span class="material-symbols-outlined text-[26px]">query_stats</span>
+							</div>
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-3 group-hover:text-primary transition-colors">Transparent Reporting</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-6">
+								Real-time dashboards, weekly delivery reports, and dedicated Slack channels — you always know exactly where your project stands.
+							</p>
+						</div>
+						<span class="w-fit px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20 font-label-pill">Full Visibility</span>
+					</div>
+
+					<!-- Card 6 -->
+					<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.12)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
+						<div>
+							<div class="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+								<span class="material-symbols-outlined text-[26px]">aspect_ratio</span>
+							</div>
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-3 group-hover:text-primary transition-colors">Flexible Scaling</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-6">
+								Grow from one developer to a full delivery center in weeks. Adjust CLIENTS size, scope, and timelines without penalty or friction.
+							</p>
+						</div>
+						<span class="w-fit px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20 font-label-pill">Elastic CLIENTSs</span>
+					</div>
+				</div>
+			</section>
+
+			<!-- 6. WHY CHOOSE BRIDGE GROUP SECTION -->
+			<section id="why" class="w-full bg-surface-container-low/60 py-20 md:py-24 border-y border-surface-container-high/60 relative overflow-hidden">
+				<div class="max-w-[1320px] mx-auto px-6 md:px-12 relative z-10">
+					<!-- Section Header -->
+					<div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
+						<span class="font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-widest">WHY BRIDGE GROUP</span>
+						<h2 class="font-headline-lg text-[32px] md:text-[40px] text-on-surface font-bold tracking-tight mt-1">
+							The Difference <span class="text-primary italic font-semibold">You'll Feel</span>
+						</h2>
+						<p class="font-body-md text-body-md text-secondary mt-3 max-w-xl mx-auto">
+							We build dedicated, high-performance engineering pods that integrate seamlessly into your company culture.
+						</p>
+					</div>
+
+					<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+						<!-- Left Column: Visual Orbit with BGS Logo -->
+						<div class="lg:col-span-5 relative flex items-center justify-center min-h-[380px]">
+							<div class="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] flex items-center justify-center">
+								<!-- Concentric Circles -->
+								<div class="absolute inset-0 rounded-full border border-surface-container-high animate-pulse"></div>
+								<div class="absolute inset-8 rounded-full border border-surface-container-high/80"></div>
+								<div class="absolute inset-16 rounded-full border border-primary/20"></div>
+								<div class="absolute inset-24 rounded-full border border-primary/30"></div>
+
+								<!-- Center Globe with Logo -->
+								<div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-surface-container-lowest shadow-[0_10px_35px_rgba(235,87,55,0.2)] flex items-center justify-center p-4 relative z-10 border border-primary/20">
+									<img src="../assets/logo.webp" alt="Bridge Group Solutions Logo" class="w-full h-full object-contain" />
+								</div>
+
+								<!-- Orbiting Dots -->
+								<div class="absolute top-4 left-1/2 -translate-x-1/2 w-3.5 h-3.5 rounded-full bg-primary shadow-[0_0_12px_rgba(235,87,55,0.7)]"></div>
+								<div class="absolute bottom-8 right-12 w-3 h-3 rounded-full bg-amber-400 shadow-[0_0_12px_rgba(245,158,11,0.7)]"></div>
+								<div class="absolute top-24 left-8 w-2.5 h-2.5 rounded-full bg-emerald-500 shadow-[0_0_12px_rgba(16,185,129,0.7)]"></div>
+							</div>
+						</div>
+
+						<!-- Right Column: 6 Why Points -->
+						<div class="lg:col-span-7 flex flex-col gap-4">
+							<!-- Point 01 -->
+							<div class="p-6 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(14,165,233,0.18)] hover:border-sky-400 hover:-translate-y-1 transition-all duration-300 flex items-start gap-5 group" data-card-color="sky">
+								<span class="w-12 h-12 rounded-2xl bg-sky-100 border border-sky-200 text-sky-700 font-label-code text-[14px] font-bold flex items-center justify-center shrink-0 group-hover:bg-sky-600 group-hover:text-white transition-colors">01</span>
+								<div class="flex-1">
+									<h3 class="text-on-surface font-headline-sm text-[16px] font-bold mb-1.5 group-hover:text-sky-600 transition-colors">Global Client Experience</h3>
+									<p class="font-body-sm text-[13px] text-secondary leading-relaxed">
+										30+ countries. Startups to Fortune 500. We navigate international business dynamics, time zones, and compliance standards with ease.
+									</p>
+								</div>
+							</div>
+
+							<!-- Point 02 -->
+							<div class="p-6 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(16,185,129,0.18)] hover:border-emerald-400 hover:-translate-y-1 transition-all duration-300 flex items-start gap-5 group" data-card-color="emerald">
+								<span class="w-12 h-12 rounded-2xl bg-emerald-100 border border-emerald-200 text-emerald-700 font-label-code text-[14px] font-bold flex items-center justify-center shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-colors">02</span>
+								<div class="flex-1">
+									<h3 class="text-on-surface font-headline-sm text-[16px] font-bold mb-1.5 group-hover:text-emerald-600 transition-colors">Transparent Communication</h3>
+									<p class="font-body-sm text-[13px] text-secondary leading-relaxed">
+										No black-box updates. Dedicated PMs, real-time project portals, and proactive escalations mean you're never left guessing.
+									</p>
+								</div>
+							</div>
+
+							<!-- Point 03 -->
+							<div class="p-6 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(139,92,246,0.18)] hover:border-violet-400 hover:-translate-y-1 transition-all duration-300 flex items-start gap-5 group" data-card-color="violet">
+								<span class="w-12 h-12 rounded-2xl bg-violet-100 border border-violet-200 text-violet-700 font-label-code text-[14px] font-bold flex items-center justify-center shrink-0 group-hover:bg-violet-600 group-hover:text-white transition-colors">03</span>
+								<div class="flex-1">
+									<h3 class="text-on-surface font-headline-sm text-[16px] font-bold mb-1.5 group-hover:text-violet-600 transition-colors">High-Quality Deliverables</h3>
+									<p class="font-body-sm text-[13px] text-secondary leading-relaxed">
+										Multi-layer code reviews, automated testing suites, and senior architect sign-off on every project ensure production-grade output.
+									</p>
+								</div>
+							</div>
+
+							<!-- Point 04 -->
+							<div class="p-6 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(20,184,166,0.18)] hover:border-teal-400 hover:-translate-y-1 transition-all duration-300 flex items-start gap-5 group" data-card-color="teal">
+								<span class="w-12 h-12 rounded-2xl bg-teal-500/10 border border-teal-500/20 text-teal-700 font-label-code text-[14px] font-bold flex items-center justify-center shrink-0 group-hover:bg-teal-600 group-hover:text-white transition-colors">04</span>
+								<div class="flex-1">
+									<h3 class="text-on-surface font-headline-sm text-[16px] font-bold mb-1.5 group-hover:text-teal-600 transition-colors">IP &amp; Security Protection</h3>
+									<p class="font-body-sm text-[13px] text-secondary leading-relaxed">
+										NDA-first engagements, SOC 2-aligned practices, and isolated development environments protect your codebase and data at every stage.
+									</p>
+								</div>
+							</div>
+
+							<!-- Point 05 -->
+							<div class="p-6 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(245,158,11,0.18)] hover:border-amber-400 hover:-translate-y-1 transition-all duration-300 flex items-start gap-5 group" data-card-color="amber">
+								<span class="w-12 h-12 rounded-2xl bg-amber-100 border border-amber-200 text-amber-700 font-label-code text-[14px] font-bold flex items-center justify-center shrink-0 group-hover:bg-amber-600 group-hover:text-white transition-colors">05</span>
+								<div class="flex-1">
+									<h3 class="text-on-surface font-headline-sm text-[16px] font-bold mb-1.5 group-hover:text-amber-600 transition-colors">Rapid Team Onboarding</h3>
+									<p class="font-body-sm text-[13px] text-secondary leading-relaxed">
+										Your dedicated team is fully integrated into your tools and workflow within 5 business days — not weeks. Momentum never stalls.
+									</p>
+								</div>
+							</div>
+
+							<!-- Point 06 -->
+							<div class="p-6 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(99,102,241,0.18)] hover:border-indigo-400 hover:-translate-y-1 transition-all duration-300 flex items-start gap-5 group" data-card-color="indigo">
+								<span class="w-12 h-12 rounded-2xl bg-indigo-100 border border-indigo-200 text-indigo-700 font-label-code text-[14px] font-bold flex items-center justify-center shrink-0 group-hover:bg-indigo-600 group-hover:text-white transition-colors">06</span>
+								<div class="flex-1">
+									<h3 class="text-on-surface font-headline-sm text-[16px] font-bold mb-1.5 group-hover:text-indigo-600 transition-colors">Predictable SLA &amp; Delivery Velocity</h3>
+									<p class="font-body-sm text-[13px] text-secondary leading-relaxed">
+										Contractual burndown commitments, daily standup summaries, and zero sprint churn ensure your roadmaps ship on time, every time.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 7. STATS SECTION -->
+			<section id="stats" class="w-full max-w-[1320px] mx-auto px-6 md:px-12 py-20 md:py-24">
+				<!-- Section Header -->
+				<div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
+					<span class="font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-widest">BY THE NUMBERS</span>
+					<h2 class="font-headline-lg text-[32px] md:text-[40px] text-on-surface font-bold tracking-tight mt-1">
+						Results That <span class="text-primary italic font-semibold">Speak</span>
+					</h2>
+				</div>
+
+				<!-- 6 Stats Boxes Grid -->
+				<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
+					<div class="p-6 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.12)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center group">
+						<span class="font-display-hero text-[34px] sm:text-[40px] font-bold text-primary tracking-tight leading-none">500+</span>
+						<span class="text-xs sm:text-sm font-bold text-on-surface uppercase tracking-wide mt-2">Projects Delivered</span>
+						<span class="font-body-sm text-[12px] text-secondary mt-1">Across 15+ industries</span>
+					</div>
+
+					<div class="p-6 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.12)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center group">
+						<span class="font-display-hero text-[34px] sm:text-[40px] font-bold text-primary tracking-tight leading-none">98%</span>
+						<span class="text-xs sm:text-sm font-bold text-on-surface uppercase tracking-wide mt-2">On-Time Delivery</span>
+						<span class="font-body-sm text-[12px] text-secondary mt-1">Industry avg: 72%</span>
+					</div>
+
+					<div class="p-6 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.12)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center group">
+						<span class="font-display-hero text-[34px] sm:text-[40px] font-bold text-primary tracking-tight leading-none">40%</span>
+						<span class="text-xs sm:text-sm font-bold text-on-surface uppercase tracking-wide mt-2">Cost Reduction</span>
+						<span class="font-body-sm text-[12px] text-secondary mt-1">vs. in-house hiring</span>
+					</div>
+
+					<div class="p-6 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.12)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center group">
+						<span class="font-display-hero text-[34px] sm:text-[40px] font-bold text-primary tracking-tight leading-none">30+</span>
+						<span class="text-xs sm:text-sm font-bold text-on-surface uppercase tracking-wide mt-2">Countries Served</span>
+						<span class="font-body-sm text-[12px] text-secondary mt-1">Global delivery reach</span>
+					</div>
+
+					<div class="p-6 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.12)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center group">
+						<span class="font-display-hero text-[34px] sm:text-[40px] font-bold text-primary tracking-tight leading-none">4.9</span>
+						<span class="text-xs sm:text-sm font-bold text-on-surface uppercase tracking-wide mt-2">Client Satisfaction</span>
+						<span class="font-body-sm text-[12px] text-secondary mt-1">Average rating / 5.0</span>
+					</div>
+
+					<div class="p-6 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.12)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center group">
+						<span class="font-display-hero text-[34px] sm:text-[40px] font-bold text-primary tracking-tight leading-none">5 days</span>
+						<span class="text-xs sm:text-sm font-bold text-on-surface uppercase tracking-wide mt-2">CLIENTS Onboarding</span>
+						<span class="font-body-sm text-[12px] text-secondary mt-1">From brief to active</span>
+					</div>
+				</div>
+			</section>
+
+			<!-- 8. PROCESS SECTION -->
+			<section id="process" class="bgs-process-wheel" aria-labelledby="wheel-heading">
+<div class="pw-shell">
+<header class="pw-heading"><span class="pw-eyebrow">HOW IT WORKS</span><h2 id="wheel-heading">From Brief to <span class="text-primary italic">Launch</span></h2><p>A lean, proven engagement process that gets things moving fast and keeps delivery on track.</p></header>
+<div class="pw-layout">
+<div class="pw-wheel"><svg class="pw-path" viewBox="0 0 640 640" aria-hidden="true"><defs><linearGradient id="pw-gradient"><stop stop-color="#38ddd8"/><stop offset=".5" stop-color="#9e77ff"/><stop offset="1" stop-color="#ff9675"/></linearGradient></defs><circle class="pw-track" cx="320" cy="320" r="218"/><circle class="pw-progress" cx="320" cy="320" r="218" pathLength="100"/><circle class="pw-spark" r="4" cx="320" cy="102"/></svg>
+<div class="pw-center" aria-hidden="true"><span>BRIEF</span><span class="material-symbols-outlined">arrow_downward</span><span>LAUNCH</span></div>
+<ol class="pw-stages"><li class="pw-stage" style="--i:0;--node-light:#36e4d4;--node-dark:#08989e"><button class="pw-node" type="button" aria-expanded="false" aria-controls="pw-detail-0" aria-label="Stage 01: Discovery Call"><span class="pw-number">01</span><span class="material-symbols-outlined" aria-hidden="true">calendar_month</span></button><span class="pw-stage-title">Discovery Call</span><span class="pw-stage-duration">30 Minutes</span></li><li class="pw-stage" style="--i:1;--node-light:#50b7ff;--node-dark:#3153df"><button class="pw-node" type="button" aria-expanded="false" aria-controls="pw-detail-1" aria-label="Stage 02: Proposal &amp; CLIENTS Match"><span class="pw-number">02</span><span class="material-symbols-outlined" aria-hidden="true">description</span></button><span class="pw-stage-title">Proposal &amp; CLIENTS Match</span><span class="pw-stage-duration">48 Hours</span></li><li class="pw-stage" style="--i:2;--node-light:#bc8aff;--node-dark:#713de5"><button class="pw-node" type="button" aria-expanded="false" aria-controls="pw-detail-2" aria-label="Stage 03: Kickoff &amp; Integration"><span class="pw-number">03</span><span class="material-symbols-outlined" aria-hidden="true">extension</span></button><span class="pw-stage-title">Kickoff &amp; Integration</span><span class="pw-stage-duration">5 Business Days</span></li><li class="pw-stage" style="--i:3;--node-light:#fa8bc9;--node-dark:#c52a9c"><button class="pw-node" type="button" aria-expanded="false" aria-controls="pw-detail-3" aria-label="Stage 04: Agile Delivery"><span class="pw-number">04</span><span class="material-symbols-outlined" aria-hidden="true">rocket_launch</span></button><span class="pw-stage-title">Agile Delivery</span><span class="pw-stage-duration">Ongoing</span></li><li class="pw-stage" style="--i:4;--node-light:#ffba66;--node-dark:#ec593a"><button class="pw-node" type="button" aria-expanded="false" aria-controls="pw-detail-4" aria-label="Stage 05: Scale or Handoff"><span class="pw-number">05</span><span class="material-symbols-outlined" aria-hidden="true">trending_up</span></button><span class="pw-stage-title">Scale or Handoff</span><span class="pw-stage-duration">Flexible</span></li></ol></div><div class="pw-details" aria-label="Process stage details"><article class="pw-detail" id="pw-detail-0" style="--node-light:#36e4d4;--node-dark:#08989e"><div class="pw-detail-top"><span>STAGE 01 / 05</span><span class="material-symbols-outlined" aria-hidden="true">calendar_month</span></div><h3>Discovery Call</h3><p>We learn your goals, technical requirements, budget, and timeline in a focused 30-minute session. No sales fluff — just clarity.</p><span class="pw-duration"><span class="material-symbols-outlined" aria-hidden="true">schedule</span>30 Minutes</span><div class="pw-detail-progress" aria-hidden="true"><span style="width:20%"></span></div></article><article class="pw-detail" id="pw-detail-1" style="--node-light:#50b7ff;--node-dark:#3153df"><div class="pw-detail-top"><span>STAGE 02 / 05</span><span class="material-symbols-outlined" aria-hidden="true">description</span></div><h3>Proposal &amp; CLIENTS Match</h3><p>Within 48 hours, you receive a detailed proposal with tailored engagement models and hand-matched CLIENTS profiles for your review.</p><span class="pw-duration"><span class="material-symbols-outlined" aria-hidden="true">schedule</span>48 Hours</span><div class="pw-detail-progress" aria-hidden="true"><span style="width:40%"></span></div></article><article class="pw-detail" id="pw-detail-2" style="--node-light:#bc8aff;--node-dark:#713de5"><div class="pw-detail-top"><span>STAGE 03 / 05</span><span class="material-symbols-outlined" aria-hidden="true">extension</span></div><h3>Kickoff &amp; Integration</h3><p>Your CLIENTS integrates into your Jira, GitHub, Slack, and communication stack. Architecture review, sprint planning, and Day 1 execution.</p><span class="pw-duration"><span class="material-symbols-outlined" aria-hidden="true">schedule</span>5 Business Days</span><div class="pw-detail-progress" aria-hidden="true"><span style="width:60%"></span></div></article><article class="pw-detail" id="pw-detail-3" style="--node-light:#fa8bc9;--node-dark:#c52a9c"><div class="pw-detail-top"><span>STAGE 04 / 05</span><span class="material-symbols-outlined" aria-hidden="true">rocket_launch</span></div><h3>Agile Delivery</h3><p>Two-week sprints with live demos, stakeholder reviews, and continuous deployment. Full visibility into every milestone and decision.</p><span class="pw-duration"><span class="material-symbols-outlined" aria-hidden="true">schedule</span>Ongoing</span><div class="pw-detail-progress" aria-hidden="true"><span style="width:80%"></span></div></article><article class="pw-detail" id="pw-detail-4" style="--node-light:#ffba66;--node-dark:#ec593a"><div class="pw-detail-top"><span>STAGE 05 / 05</span><span class="material-symbols-outlined" aria-hidden="true">trending_up</span></div><h3>Scale or Handoff</h3><p>Post-launch, scale the CLIENTS up for new features, transition to your in-house CLIENTS with full documentation, or retain us for ongoing support.</p><span class="pw-duration"><span class="material-symbols-outlined" aria-hidden="true">schedule</span>Flexible</span><div class="pw-detail-progress" aria-hidden="true"><span style="width:100%"></span></div></article><div class="pw-controls" hidden><span>SELECT A STAGE TO EXPLORE</span><button type="button" class="pw-motion" aria-pressed="false">Enable gentle orbit</button></div></div></div></div></section>
+
+			<!-- 9. CALL TO ACTION SECTION -->
+			<section id="contact" class="w-full max-w-[1320px] mx-auto px-6 md:px-12 py-20 md:py-24">
+				<div class="p-10 md:p-16 rounded-3xl bg-surface-container-lowest border border-primary/20 shadow-[0_20px_50px_rgba(235,87,55,0.1)] text-center relative overflow-hidden flex flex-col items-center">
+					<!-- Atmospheric Glow -->
+					<div class="absolute -top-24 -right-24 w-80 h-80 rounded-full blur-3xl opacity-40 pointer-events-none" style="background: radial-gradient(circle, rgba(235, 87, 55, 0.3) 0%, transparent 70%);"></div>
+					<div class="absolute -bottom-24 -left-24 w-80 h-80 rounded-full blur-3xl opacity-30 pointer-events-none" style="background: radial-gradient(circle, rgba(92, 147, 159, 0.25) 0%, transparent 70%);"></div>
+
+					<span class="font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-widest relative z-10 mb-3">READY TO BEGIN?</span>
+					<h2 class="font-headline-lg text-[32px] md:text-[48px] lg:text-[54px] text-white font-bold tracking-tight relative z-10 max-w-3xl leading-[1.1] text-center">
+						Outsource Smarter.<br />
+						<span class="text-primary italic font-semibold">Accelerated Growth.</span>
+					</h2>
+					<p class="font-body-lg text-body-lg text-secondary max-w-xl mt-4 mb-8 relative z-10 leading-relaxed">
+						Join 200+ companies that trust Bridge Group Solutions to deliver world-class technology projects — on time, on budget, without compromise.
+					</p>
+					<div class="flex flex-wrap justify-center gap-4 relative z-10">
+						<a class="inline-flex items-center gap-3 px-9 py-4 rounded-full text-white font-label-pill text-label-pill shadow-[0_8px_25px_rgba(235,87,55,0.4)] hover:shadow-[0_14px_35px_rgba(235,87,55,0.55)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 border border-white/25 text-base font-semibold" href="../contact.html" style="background: linear-gradient(135deg, #ad2b0e 0%, #eb5737 60%, #ff7849 100%);">
+							<span>Get a Free Consultation &rarr;</span>
+						</a>
+					</div>
+				</div>
+			</section>
+
+		</div>
+	</main>
+
+	<!-- GLOBAL HIGH-CONTRAST FOOTER -->
+	<!-- Reusable Footer Component -->
+	<div id="footer"></div>
+
+
+
+
+
+	<!-- Interactive Scripts -->
+	<script>
+		function toggleMobileMenu() {
+			var menu = document.getElementById("mobile-nav-menu");
+			var icon = document.getElementById("mobile-menu-icon");
+			if (menu) {
+				var isHidden = menu.classList.toggle("hidden");
+				if (icon) {
+					icon.textContent = isHidden ? "menu" : "close";
+				}
+			}
+		}
+
+		function toggleMobileServices() {
+			var dropdown = document.getElementById("mobile-services-dropdown");
+			var arrow = document.getElementById("mobile-services-arrow");
+			var btn = document.getElementById("mobile-services-btn");
+			if (dropdown) {
+				var isHidden = dropdown.classList.toggle("hidden");
+				if (arrow) {
+					if (isHidden) {
+						arrow.classList.remove("rotate-180");
+					} else {
+						arrow.classList.add("rotate-180");
+					}
+				}
+				if (btn) {
+					btn.setAttribute("aria-expanded", isHidden ? "false" : "true");
+				}
+			}
+		}
+
+		function toggleFaq(el) {
+			var isActive = el.classList.contains('active');
+			var allFaqs = document.querySelectorAll('.faq-item');
+			allFaqs.forEach(function(item) {
+				item.classList.remove('active');
+				var chev = item.querySelector('.faq-chevron');
+				if (chev) {
+					chev.classList.remove('text-primary');
+					chev.classList.add('text-secondary');
+				}
+			});
+			if (!isActive) {
+				el.classList.add('active');
+				var chev = el.querySelector('.faq-chevron');
+				if (chev) {
+					chev.classList.remove('text-secondary');
+					chev.classList.add('text-primary');
+				}
+			}
+		}
+	</script>
+	<!-- Reusable Component Loader (Navbar & Footer) -->
+	<script src="../assets/bgs-components.js"></script>
+</body>
+</html>

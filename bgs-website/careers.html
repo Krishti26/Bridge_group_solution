@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!-- Core typography preload -->
+<link rel="preload" href="assets/amphora-fonts/The%20Future/TheFuture-Regular.subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/amphora-fonts/The%20Future/TheFuture-Medium.subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/amphora-fonts/The%20Future/TheFuture-Bold.subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/amphora-fonts/Tiempos%20Headline/TiemposHeadline-400-Regular-Italic.woff2" as="font" type="font/woff2" crossorigin>
+
+
+<!-- Reveal the finished layout without showing a loading animation. -->
+<style>html.layout-pending body { visibility:hidden !important; }</style>
+<script>
+(() => {
+  const root = document.documentElement;
+  root.classList.add('layout-pending');
+  let observer;
+  const reveal = () => {
+    root.classList.remove('layout-pending');
+    if (observer) observer.disconnect();
+  };
+  const ready = () => {
+    if (root.classList.contains('bgs-layout-ready') && document.querySelector('.bgs-main-navbar')) reveal();
+  };
+  observer = new MutationObserver(ready);
+  observer.observe(root, {childList:true, subtree:true, attributes:true, attributeFilter:['class']});
+  document.addEventListener('DOMContentLoaded', ready, {once:true});
+  setTimeout(reveal, 2500);
+})();
+</script>
+
+
+
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	<meta content="web_standard" name="shell-type">
+	<title>Careers at Bridge Group Solutions | Join Our Engineering Squads</title>
+	<meta name="description" content="Explore career opportunities at Bridge Group Solutions (BGS). We are hiring forward-thinking software engineers, AI architects, cloud specialists, and ERP engineers." />
+	<meta name="keywords" content="BGS careers, software engineering jobs, tech jobs India, Bridge Group Solutions hiring, cloud architects, AI engineers, enterprise software careers, Noida tech jobs" />
+
+	<meta property="og:title" content="Careers at Bridge Group Solutions | Join Our Engineering Squads" />
+	<meta property="og:description" content="Explore career opportunities at Bridge Group Solutions. Build high-availability enterprise systems, AI pipelines, and modern web platforms with world-class engineers." />
+	<meta property="og:url" content="https://www.bridgegroupsolutions.com/careers.html" />
+	<meta property="og:image" content="https://www.bridgegroupsolutions.com/assets/logo.webp" />
+	<meta property="og:type" content="website" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Careers at Bridge Group Solutions | Join Our Engineering Squads" />
+	<meta name="twitter:description" content="Explore career opportunities at Bridge Group Solutions. Build high-availability enterprise systems, AI pipelines, and modern web platforms with world-class engineers." />
+	<meta name="twitter:image" content="https://www.bridgegroupsolutions.com/assets/logo.webp" />
+	<link rel="canonical" href="https://www.bridgegroupsolutions.com/careers.html" />
+	<link rel="icon" type="image/svg+xml" href="assets/logo.webp" />
+
+	<!-- Schema.org Structured Data (JSON-LD) -->
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.bridgegroupsolutions.com/careers.html#webpage",
+      "url": "https://www.bridgegroupsolutions.com/careers.html",
+      "name": "Careers at Bridge Group Solutions | Join Our Engineering Squads",
+      "description": "Explore career opportunities at Bridge Group Solutions. Build high-availability enterprise systems, AI pipelines, and modern web platforms.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.bridgegroupsolutions.com/#website",
+        "url": "https://www.bridgegroupsolutions.com",
+        "name": "Bridge Group Solutions"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.bridgegroupsolutions.com/#organization",
+      "name": "Bridge Group Solutions",
+      "url": "https://www.bridgegroupsolutions.com",
+      "logo": "https://www.bridgegroupsolutions.com/assets/logo.webp",
+      "sameAs": [
+        "https://www.linkedin.com/company/bridge-group-solutions-pvt-ltd/",
+        "https://x.com/Bridgegroupsol"
+      ]
+    }
+  ]
+}
+	</script>
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com" rel="preconnect">
+	<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+	<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+	<!-- Tabler Icons CDN -->
+	<link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" rel="stylesheet"/>
+
+	<style>
+		@layer base {
+			html, body { margin: 0; padding: 0; }
+			body { overscroll-behavior: none; }
+			main > :first-child { margin-top: 0 !important; }
+			main > :last-child { margin-bottom: 0 !important; }
+		}
+		::-webkit-scrollbar { display: none; }
+	</style>
+
+	<!-- Tailwind CSS CDN & Custom Config -->
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script id="tailwind-config">
+		tailwind.config = {
+			darkMode: "class",
+			theme: {
+				extend: {
+					colors: {
+						"surface-container-highest": "#e2e2e4",
+						"on-secondary-container": "#5c647a",
+						"on-surface": "#1a1c1d",
+						"on-error": "#ffffff",
+						"primary-fixed": "#ffdad3",
+						"background": "#f9f9fb",
+						"primary-fixed-dim": "#ffb4a4",
+						"inverse-primary": "#ffb4a4",
+						"surface-bright": "#f9f9fb",
+						"on-tertiary-fixed-variant": "#424656",
+						"tertiary-fixed-dim": "#c3c6d8",
+						"secondary": "#5c647a",
+						"surface": "#ffffff",
+						"surface-container-low": "#f3f3f5",
+						"surface-container-lowest": "#ffffff",
+						"surface-container": "#ededef",
+						"on-primary-fixed-variant": "#872007",
+						"on-primary-fixed": "#3e0800",
+						"primary-container": "#d04426",
+						"surface-container-high": "#e8e8ea",
+						"primary": "#ad2b0e",
+						"surface-variant": "#e2e2e4"
+					},
+					borderRadius: {
+						"DEFAULT": "0.25rem",
+						"lg": "0.5rem",
+						"xl": "0.75rem",
+						"full": "9999px"
+					},
+					spacing: {
+						"space-sm": "0.5rem",
+						"space-md": "1rem",
+						"space-xs": "0.25rem",
+						"gutter": "1.5rem",
+						"space-lg": "1.5rem",
+						"margin-mobile": "1.25rem",
+						"gutter-mobile": "1rem",
+						"space-xl": "2.5rem",
+						"margin": "3rem"
+					},
+					fontFamily: {
+						"body-md": ["Plus Jakarta Sans"],
+						"body-sm": ["Plus Jakarta Sans"],
+						"label-pill": ["Plus Jakarta Sans"],
+						"display-hero": ["Plus Jakarta Sans"],
+						"headline-lg": ["Plus Jakarta Sans"],
+						"headline-md": ["Plus Jakarta Sans"],
+						"label-eyebrow": ["Space Grotesk"],
+						"body-lg": ["Plus Jakarta Sans"],
+						"display-hero-mobile": ["Plus Jakarta Sans"],
+						"headline-sm": ["Plus Jakarta Sans"],
+						"stat-metric": ["Plus Jakarta Sans"],
+						"label-code": ["Space Grotesk"]
+					},
+					fontSize: {
+						"body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+						"body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }],
+						"label-pill": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+						"display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+						"headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+						"headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+						"label-eyebrow": ["11px", { "lineHeight": "14px", "letterSpacing": "0.12em", "fontWeight": "700" }],
+						"body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+						"display-hero-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+						"headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+						"stat-metric": ["40px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+						"label-code": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }]
+					}
+				}
+			}
+		}
+	</script>
+
+	<!-- Design Tokens & Theme -->
+	<link rel="stylesheet" href="assets/bgs-modern-theme.css?v=24" />
+	<link rel="stylesheet" href="assets/amphora-reference.css" />
+	<link rel="stylesheet" href="assets/amphora-bgs.css?v=30" />
+	<script defer src="assets/amphora-bgs.js?v=24"></script>
+<link rel="stylesheet" href="assets/engineering-ethos.css">
+<script defer src="assets/engineering-ethos.js"></script>
+</head>
+
+<body class="amphora-theme bg-surface font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+
+	<a class="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50 px-4 py-2 bg-primary text-white rounded-lg shadow-lg" href="#main">Skip to content</a>
+
+	<!-- Header Navigation -->
+	<!-- Reusable Navbar Component -->
+	<div id="navbar"></div>
+
+	<!-- Main Content Wrapper -->
+	<main id="main" class="pt-32 sm:pt-36 md:pt-40 lg:pt-44 pb-24">
+
+		<!-- 1. HERO SECTION -->
+		<section id="careers-hero" class="relative overflow-hidden pt-2 sm:pt-4 pb-12 md:pb-20">
+			<!-- Ambient Background Glow -->
+			<div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1240px] h-[400px] pointer-events-none opacity-45 blur-3xl -z-10" style="background: radial-gradient(circle at 50% 15%, rgba(235, 87, 55, 0.22) 0%, rgba(139, 92, 246, 0.14) 45%, rgba(59, 130, 246, 0.08) 75%, transparent 100%);"></div>
+
+			<div class="max-w-[1360px] mx-auto px-4 sm:px-6 md:px-12">
+				<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+					<!-- Hero Left Column -->
+					<div class="lg:col-span-7 xl:col-span-6 flex flex-col items-start">
+						<!-- Eyebrow Badge -->
+						<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary font-label-eyebrow text-[11px] font-bold uppercase tracking-wider mb-5">
+							<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+							<span>CAREERS &bull; JOIN OUR ENGINEERING SQUADS</span>
+						</div>
+
+						<!-- Main Headline -->
+						<h1 class="font-display-hero font-extrabold text-on-surface tracking-tight leading-[1.1]">
+							Build Systems That Scale.<br class="hidden sm:inline" />
+							<span class="text-primary italic font-semibold">Join the BGS Squads.</span>
+						</h1>
+
+						<!-- Subtitle -->
+						<p class="mt-5 text-body-lg text-secondary max-w-2xl leading-relaxed">
+							At Bridge Group Solutions, we build high-availability software platforms, modular ERP ecosystems, and autonomous AI pipelines for forward-thinking enterprises worldwide. Work with passionate engineers who value craft, speed, and real architectural impact.
+						</p>
+
+						<!-- Micro-Pills -->
+						<div class="mt-6 flex flex-wrap items-center gap-3">
+							<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-low border border-surface-container-high text-xs font-semibold text-secondary">
+								<span class="material-symbols-outlined text-[16px] text-primary">code</span>
+								<span>Modern Tech Stack</span>
+							</div>
+							<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-low border border-surface-container-high text-xs font-semibold text-secondary">
+								<span class="material-symbols-outlined text-[16px] text-primary">flight_takeoff</span>
+								<span>Autonomous Ownership</span>
+							</div>
+							<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-low border border-surface-container-high text-xs font-semibold text-secondary">
+								<span class="material-symbols-outlined text-[16px] text-primary">diversity_3</span>
+								<span>Hybrid &amp; Remote Models</span>
+							</div>
+						</div>
+
+						<!-- CTA Buttons (Responsive: desktop & mobile-friendly) -->
+						<div class="mt-8 flex items-center gap-4 flex-wrap">
+							<a href="#open-positions" class="ref-button inline-flex items-center justify-between gap-4 px-6 py-3.5 rounded-xl text-white font-medium text-sm transition-all shadow-md hover:-translate-y-0.5" style="background: #17171b;">
+								<span>View Open Positions</span>
+								<span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+							</a>
+							<a href="#culture" class="ref-text-link inline-flex items-center gap-2 text-sm font-semibold text-on-surface hover:text-primary transition-colors">
+								<span>Our Engineering Culture</span>
+								<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+							</a>
+						</div>
+					</div>
+
+					<!-- Hero Right Visual Showcase (Wider Engineering Pods Card) -->
+					<div class="lg:col-span-5 xl:col-span-6 w-full relative">
+						<div class="absolute -inset-2 bg-gradient-to-r from-primary/20 via-purple-500/15 to-blue-500/15 rounded-3xl blur-xl opacity-75"></div>
+						
+						<div id="engineering-pods-card" class="relative w-full rounded-3xl border border-surface-container-high bg-white/95 backdrop-blur-xl p-6 sm:p-8 md:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.08)]">
+							<!-- Top Badge -->
+							<div class="flex items-center justify-between pb-5 border-b border-surface-container-high/70">
+								<div class="flex items-center gap-3">
+									<div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center font-bold shrink-0">
+										<span class="material-symbols-outlined text-[20px]">hub</span>
+									</div>
+									<div>
+										<h4 class="font-headline-sm text-sm font-bold text-on-surface leading-tight">Engineering Pods</h4>
+										<p class="text-[11px] text-secondary">Noida HQ &bull; Distributed Squads</p>
+									</div>
+								</div>
+								<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-700 text-[11px] font-bold">
+									<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span>
+									<span>6 Open Roles</span>
+								</span>
+							</div>
+
+							<!-- Metrics Grid -->
+							<div class="grid grid-cols-2 gap-4 py-5 border-b border-surface-container-high/70">
+								<div class="p-3.5 sm:p-4 rounded-2xl bg-surface-container-low">
+									<span class="text-[11px] font-medium text-secondary uppercase tracking-wider block mb-1">Architecture Velocity</span>
+									<span class="font-headline-lg text-2xl font-bold text-on-surface">100+</span>
+									<span class="text-[11px] text-secondary block mt-0.5">Production Deployments</span>
+								</div>
+								<div class="p-3.5 sm:p-4 rounded-2xl bg-surface-container-low">
+									<span class="text-[11px] font-medium text-secondary uppercase tracking-wider block mb-1">Retention Rate</span>
+									<span class="font-headline-lg text-2xl font-bold text-on-surface">94%</span>
+									<span class="text-[11px] text-secondary block mt-0.5">Squad Stability</span>
+								</div>
+							</div>
+
+							<!-- Tech Stack Badges -->
+							<div class="pt-5">
+								<span class="text-[11px] font-bold uppercase tracking-wider text-secondary block mb-3">Our Core Technologies</span>
+								<div class="flex flex-wrap gap-2">
+									<span class="px-2.5 py-1 rounded-lg bg-surface-container-low text-[11px] font-medium text-on-surface">Node.js</span>
+									<span class="px-2.5 py-1 rounded-lg bg-surface-container-low text-[11px] font-medium text-on-surface">React / Next.js</span>
+									<span class="px-2.5 py-1 rounded-lg bg-surface-container-low text-[11px] font-medium text-on-surface">Python &bull; FastAPI</span>
+									<span class="px-2.5 py-1 rounded-lg bg-surface-container-low text-[11px] font-medium text-on-surface">PyTorch / LLMs</span>
+									<span class="px-2.5 py-1 rounded-lg bg-surface-container-low text-[11px] font-medium text-on-surface">PostgreSQL &bull; Redis</span>
+									<span class="px-2.5 py-1 rounded-lg bg-surface-container-low text-[11px] font-medium text-on-surface">Kubernetes &bull; AWS</span>
+								</div>
+							</div>
+
+							<!-- Bottom Quote -->
+							<div class="mt-5 pt-4 border-t border-surface-container-high/60 flex items-center gap-3">
+								<div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-xs font-bold shrink-0">
+									<span class="material-symbols-outlined text-[16px]">verified</span>
+								</div>
+								<p class="text-xs text-secondary leading-snug italic">
+									"We believe in small, autonomous pods that own their roadmap and take pride in shipping robust code."
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- 2. CULTURE & ENGINEERING PILLARS -->
+		<section id="engineering-ethos" class="engineering-ethos" aria-labelledby="ee-heading"><div class="ee-shell"><header class="ee-heading"><span class="ee-eyebrow">ENGINEERING ETHOS</span><h2 id="ee-heading"><span class="ee-phrase">How We Think,</span> <em>Build &amp; Ship.</em></h2><p>We are not a traditional agency. We operate as high-velocity product engineering pods with deep architectural autonomy and relentless focus on quality.</p></header><div class="ee-network"><svg class="ee-connectors" aria-hidden="true"><g class="ee-routes"></g></svg><div class="ee-grid"><article class="ee-card" id="ee-card-0" style="--ee-accent:#7359e8;--ee-tint:#efe9fc;--card-index:0"><div class="ee-copy"><span class="ee-step">01 / Own</span><h3>Autonomous Ownership &amp; Zero Bureaucracy</h3><p>You own systems end-to-end: from initial RFC architecture documents and database schema design to automated CI/CD deployment and telemetry dashboards. No endless ticket ping-pong.</p><footer>Direct production deployment access</footer></div><div class="ee-art"><svg viewBox="0 0 240 160" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="ee-draw" pathLength="100" d="M40 82Q85 34 120 82T200 82"/><g class="ee-panel" style="--i:0"><rect x="15" y="48" width="52" height="64" rx="9"/><path d="M28 64h26M28 74h26M28 84h16"/></g><g class="ee-panel" style="--i:1"><rect x="94" y="48" width="52" height="64" rx="9"/><path d="m114 65-9 12 9 12m12-24 9 12-9 12"/></g><g class="ee-panel" style="--i:2"><rect x="173" y="48" width="52" height="64" rx="9"/><path class="ee-arrow" d="M199 94V65m-10 10 10-10 10 10"/></g><circle class="ee-own-light" r="3.5" cx="200" cy="82"/></svg></div></article><article class="ee-card" id="ee-card-1" style="--ee-accent:#a16bca;--ee-tint:#fae9ef;--card-index:1"><div class="ee-copy"><span class="ee-step">02 / Build</span><h3>Production-Grade Architecture</h3><p>We design for durability, not quick patches. We practice automated unit and integration testing, code reviews by principal architects, and proactive zero-downtime database migrations.</p><footer>99.98% target system uptime standard</footer></div><div class="ee-art"><svg viewBox="0 0 240 160" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="ee-layer" style="--i:0"><path d="m36 112 84-26 84 26-84 27Z" fill="#eee6fa"/></g><g class="ee-layer" style="--i:1"><path d="m36 94 84-26 84 26-84 27Z" fill="#f8e3ed"/></g><g class="ee-layer" style="--i:2"><path d="m36 76 84-26 84 26-84 27Z" fill="#fcebdc"/></g><path class="ee-shield ee-draw" pathLength="100" d="m120 13 22 7v20c0 16-22 28-22 28s-22-12-22-28V20Z" fill="#ffffff"/><path class="ee-check" pathLength="100" d="m110 37 8 8 14-18"/><ellipse class="ee-ring" cx="120" cy="110" rx="92" ry="32"/></svg></div></article><article class="ee-card" id="ee-card-2" style="--ee-accent:#159fe0;--ee-tint:#e4f5fc;--card-index:2"><div class="ee-copy"><span class="ee-step">03 / Learn</span><h3>Continuous Learning &amp; Mentorship</h3><p>Engineering evolves fast. We allocate annual learning stipends, sponsor cloud certifications (AWS, GCP, CNCF), hold bi-weekly architecture deep dives, and foster open peer reviews.</p><footer>Annual certification &amp; book stipends</footer></div><div class="ee-art"><svg viewBox="0 0 240 160" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="ee-draw" pathLength="100" d="M62 83Q120 35 178 83"/><g class="ee-person" style="--i:0"><circle cx="62" cy="72" r="12"/><path d="M42 108q0-24 40-24v24"/></g><g class="ee-person" style="--i:1"><circle cx="178" cy="72" r="12"/><path d="M158 108q0-24 40-24v24"/></g><path class="ee-branch" pathLength="100" d="M62 60 42 25m30 34 28-34m77 35-32-35m42 35 22-34"/><g class="ee-node" style="--i:0"><rect x="26" y="9" width="28" height="23" rx="5"/><path d="M40 11v18"/></g><g class="ee-node" style="--i:1"><rect x="87" y="8" width="28" height="24" rx="5"/><path d="m98 15-4 5 4 5m6-10 4 5-4 5"/></g><g class="ee-node" style="--i:2"><path d="M133 9h28v22h-17l-9 5v-5h-2Z"/></g><g class="ee-node" style="--i:3"><path d="M202 27q-13-17 0-19 14 0 4 19Zm0 4h6"/></g><circle class="ee-mentor-light" cx="178" cy="83" r="3"/><circle class="ee-ring" cx="178" cy="80" r="28"/></svg></div></article><article class="ee-card" id="ee-card-3" style="--ee-accent:#cf8645;--ee-tint:#fff0df;--card-index:3"><div class="ee-copy"><span class="ee-step">04 / Deliver</span><h3>Mission-Critical Enterprise Impact</h3><p>Our platforms run the heart of global enterprises: real-time CRM engines, automated supply chains, high-throughput financial workflows, and predictive analytics pipelines.</p><footer>Serving 100k+ enterprise users daily</footer></div><div class="ee-art"><svg viewBox="0 0 240 160" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="ee-branch" pathLength="100" d="M120 75 45 35m75 40 75-40m-75 40-75 50m75-50 75 50"/><g class="ee-platform"><rect x="87" y="52" width="66" height="46" rx="10" fill="#eee6fa"/><path d="m105 75 11 10 20-23"/></g><g class="ee-node" style="--i:0"><circle cx="45" cy="25" r="7"/><path d="M31 47q0-17 28-17v17"/></g><g class="ee-node" style="--i:1"><rect x="180" y="18" width="30" height="28" rx="5"/><path d="M180 30h30m-15-12v28"/></g><g class="ee-node" style="--i:2"><circle cx="45" cy="124" r="16"/><path d="M50 116H40v8h10v8H40m5-20v24"/></g><g class="ee-node" style="--i:3"><path d="M182 138v-15h6v15m5 0v-23h6v23m5 0v-32h6v32"/></g><path class="ee-data" pathLength="100" style="--i:0" d="M120 75 45 35"/><path class="ee-data" pathLength="100" style="--i:1" d="M120 75 195 35"/><path class="ee-data" pathLength="100" style="--i:2" d="M120 75 45 125"/><path class="ee-data" pathLength="100" style="--i:3" d="M120 75 195 125"/><circle class="ee-finish" cx="120" cy="75" r="30"/></svg></div></article></div></div><div class="ee-previews" aria-label="Engineering illustration previews"><button type="button" class="ee-preview" data-replay="0" aria-label="Replay Own illustration" style="--ee-accent:#7359e8;--ee-tint:#efe9fc;--card-index:0"><span class="ee-mini"><svg viewBox="0 0 240 160" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="ee-draw" pathLength="100" d="M40 82Q85 34 120 82T200 82"/><g class="ee-panel" style="--i:0"><rect x="15" y="48" width="52" height="64" rx="9"/><path d="M28 64h26M28 74h26M28 84h16"/></g><g class="ee-panel" style="--i:1"><rect x="94" y="48" width="52" height="64" rx="9"/><path d="m114 65-9 12 9 12m12-24 9 12-9 12"/></g><g class="ee-panel" style="--i:2"><rect x="173" y="48" width="52" height="64" rx="9"/><path class="ee-arrow" d="M199 94V65m-10 10 10-10 10 10"/></g><circle class="ee-own-light" r="3.5" cx="200" cy="82"/></svg></span><span>Own</span></button><button type="button" class="ee-preview" data-replay="1" aria-label="Replay Build illustration" style="--ee-accent:#a16bca;--ee-tint:#fae9ef;--card-index:1"><span class="ee-mini"><svg viewBox="0 0 240 160" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="ee-layer" style="--i:0"><path d="m36 112 84-26 84 26-84 27Z" fill="#eee6fa"/></g><g class="ee-layer" style="--i:1"><path d="m36 94 84-26 84 26-84 27Z" fill="#f8e3ed"/></g><g class="ee-layer" style="--i:2"><path d="m36 76 84-26 84 26-84 27Z" fill="#fcebdc"/></g><path class="ee-shield ee-draw" pathLength="100" d="m120 13 22 7v20c0 16-22 28-22 28s-22-12-22-28V20Z" fill="#ffffff"/><path class="ee-check" pathLength="100" d="m110 37 8 8 14-18"/><ellipse class="ee-ring" cx="120" cy="110" rx="92" ry="32"/></svg></span><span>Build</span></button><button type="button" class="ee-preview" data-replay="2" aria-label="Replay Learn illustration" style="--ee-accent:#159fe0;--ee-tint:#e4f5fc;--card-index:2"><span class="ee-mini"><svg viewBox="0 0 240 160" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="ee-draw" pathLength="100" d="M62 83Q120 35 178 83"/><g class="ee-person" style="--i:0"><circle cx="62" cy="72" r="12"/><path d="M42 108q0-24 40-24v24"/></g><g class="ee-person" style="--i:1"><circle cx="178" cy="72" r="12"/><path d="M158 108q0-24 40-24v24"/></g><path class="ee-branch" pathLength="100" d="M62 60 42 25m30 34 28-34m77 35-32-35m42 35 22-34"/><g class="ee-node" style="--i:0"><rect x="26" y="9" width="28" height="23" rx="5"/><path d="M40 11v18"/></g><g class="ee-node" style="--i:1"><rect x="87" y="8" width="28" height="24" rx="5"/><path d="m98 15-4 5 4 5m6-10 4 5-4 5"/></g><g class="ee-node" style="--i:2"><path d="M133 9h28v22h-17l-9 5v-5h-2Z"/></g><g class="ee-node" style="--i:3"><path d="M202 27q-13-17 0-19 14 0 4 19Zm0 4h6"/></g><circle class="ee-mentor-light" cx="178" cy="83" r="3"/><circle class="ee-ring" cx="178" cy="80" r="28"/></svg></span><span>Learn</span></button><button type="button" class="ee-preview" data-replay="3" aria-label="Replay Deliver illustration" style="--ee-accent:#cf8645;--ee-tint:#fff0df;--card-index:3"><span class="ee-mini"><svg viewBox="0 0 240 160" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="ee-branch" pathLength="100" d="M120 75 45 35m75 40 75-40m-75 40-75 50m75-50 75 50"/><g class="ee-platform"><rect x="87" y="52" width="66" height="46" rx="10" fill="#eee6fa"/><path d="m105 75 11 10 20-23"/></g><g class="ee-node" style="--i:0"><circle cx="45" cy="25" r="7"/><path d="M31 47q0-17 28-17v17"/></g><g class="ee-node" style="--i:1"><rect x="180" y="18" width="30" height="28" rx="5"/><path d="M180 30h30m-15-12v28"/></g><g class="ee-node" style="--i:2"><circle cx="45" cy="124" r="16"/><path d="M50 116H40v8h10v8H40m5-20v24"/></g><g class="ee-node" style="--i:3"><path d="M182 138v-15h6v15m5 0v-23h6v23m5 0v-32h6v32"/></g><path class="ee-data" pathLength="100" style="--i:0" d="M120 75 45 35"/><path class="ee-data" pathLength="100" style="--i:1" d="M120 75 195 35"/><path class="ee-data" pathLength="100" style="--i:2" d="M120 75 45 125"/><path class="ee-data" pathLength="100" style="--i:3" d="M120 75 195 125"/><circle class="ee-finish" cx="120" cy="75" r="30"/></svg></span><span>Deliver</span></button></div></div></section>
+
+		<!-- 3. PERKS & BENEFITS -->
+
+
+		<!-- 4. OPEN POSITIONS EXPLORER -->
+		<section id="open-positions" class="py-16 md:py-24 bg-surface-container-low/40 border-t border-surface-container-high/60">
+			<div class="max-w-[1320px] mx-auto px-6 md:px-12">
+				<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+					<div>
+						<span class="font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-widest block mb-2">JOIN THE SQUAD</span>
+						<h2 class="font-headline-lg text-[32px] md:text-[42px] text-on-surface font-bold tracking-tight">
+							Current Open <span class="text-primary italic font-semibold">Positions.</span>
+						</h2>
+						<p class="mt-2 text-body-md text-secondary">
+							Select a practice area to filter positions, or browse all active roles below.
+						</p>
+					</div>
+
+					<!-- Department Filter Tabs -->
+					<div class="flex flex-wrap items-center gap-2" id="dept-filters">
+						<button type="button" data-filter="all" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-primary text-white shadow-sm">
+							All Roles (<span id="role-count">6</span>)
+						</button>
+						<button type="button" data-filter="engineering" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white text-secondary hover:text-on-surface border border-surface-container-high">
+							Engineering
+						</button>
+						<button type="button" data-filter="ai-data" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white text-secondary hover:text-on-surface border border-surface-container-high">
+							AI &amp; Data
+						</button>
+						<button type="button" data-filter="cloud-devops" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white text-secondary hover:text-on-surface border border-surface-container-high">
+							Cloud &amp; DevOps
+						</button>
+						<button type="button" data-filter="erp" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white text-secondary hover:text-on-surface border border-surface-container-high">
+							Enterprise ERP
+						</button>
+						<button type="button" data-filter="product" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white text-secondary hover:text-on-surface border border-surface-container-high">
+							Product &amp; Design
+						</button>
+					</div>
+				</div>
+
+				<!-- Roles List -->
+				<div class="space-y-4" id="roles-container">
+					<!-- Role 1: Full Stack -->
+					<div class="role-card p-6 md:p-8 rounded-2xl bg-white border border-surface-container-high shadow-sm hover:shadow-md hover:border-primary/40 transition-all" data-category="engineering">
+						<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+							<div class="space-y-2.5 max-w-2xl">
+								<div class="flex flex-wrap items-center gap-2">
+									<span class="px-2.5 py-0.5 rounded-full bg-primary/10 text-primary text-[11px] font-bold uppercase tracking-wider">Engineering</span>
+									<span class="text-xs text-secondary flex items-center gap-1">
+										<span class="material-symbols-outlined text-[14px]">location_on</span> Noida / Hybrid
+									</span>
+									<span class="text-xs text-secondary">&bull; Full-Time</span>
+									<span class="text-xs text-secondary">&bull; 4-7 Yrs Exp</span>
+								</div>
+								<h3 class="font-headline-md text-xl font-bold text-on-surface">Staff Full-Stack Architect</h3>
+								<p class="text-xs md:text-sm text-secondary leading-relaxed">
+									Lead the architectural design and implementation of high-throughput web systems, modular micro-frontends, and distributed backend services using Node.js, Next.js, and Redis.
+								</p>
+								<div class="flex flex-wrap gap-2 pt-2">
+									<span class="px-2.5 py-1 rounded-md bg-surface-container-low text-[11px] font-medium text-secondary">TypeScript</span>
+									<span class="px-2.5 py-1 rounded-md bg-surface-container-low text-[11px] font-medium text-secondary">Next.js 15</span>
+									<span class="px-2.5 py-1 rounded-md bg-surface-container-low text-[11px] font-medium text-secondary">Node.js</span>
+									<span class="px-2.5 py-1 rounded-md bg-surface-container-low text-[11px] font-medium text-secondary">Distributed Systems</span>
+									<span class="px-2.5 py-1 rounded-md bg-surface-container-low text-[11px] font-medium text-secondary">Redis</span>
+								</div>
+							</div>
+
+							<div class="shrink-0 flex items-center gap-3">
+								<button type="button" onclick="selectRoleForApplication('Staff Full-Stack Architect')" class="px-5 py-2.5 rounded-xl bg-on-surface text-white hover:bg-primary text-xs font-semibold transition-all inline-flex items-center gap-2">
+									<span>Apply for Role</span>
+									<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<!-- Role 2: AI & ML -->
+					<div class="role-card p-6 md:p-8 rounded-2xl bg-white border border-surface-container-high shadow-sm hover:shadow-md hover:border-purple-500/40 transition-all" data-category="ai-data">
+						<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+							<div class="space-y-2.5 max-w-2xl">
+								<div class="flex flex-wrap items-center gap-2">
+									<span class="px-2.5 py-0.5 rounded-full bg-purple-500/10 text-purple-700 text-[11px] font-bold uppercase tracking-wider">AI &amp; Data</span>
+									<span class="text-xs text-secondary flex items-center gap-1">
+										<span class="material-symbols-outlined text-[14px]">location_on</span> Hybrid / Remote
+									</span>
+									<span class="text-xs text-secondary">&bull; Full-Time</span>
+									<span class="text-xs text-secondary">&bull; 3-6 Yrs Exp</span>
+								</div>
+								<h3 class="font-headline-md text-xl font-bold text-on-surface">Senior AI &amp; Machine Learning Engineer</h3>
+								<p class="text-xs md:text-sm text-secondary leading-relaxed">
+									Build real-time LLM pipelines, autonomous agentic triage workflows, and vector retrieval engines powering our proprietary Pulse AI enterprise customer intelligence platform.
+								</p>
+								<div class="flex flex-wrap gap-2 pt-2">
+									<span class="px-2.5 py-1 rounded-md bg-surface-container-low text-[11px] font-medium text-secondary">Python</span>
+									<span class="px-2.5 py-1 rounded-md bg-surface-container-low text-[11px] font-medium text-secondary">PyTorch</span>
+									<span class="px-2.5 py-1 rounded-md bg-surface-container-low text-[11px] font-medium text-secondary">LLM Agents</span>
+									<span class="px-2.5 py-1 rounded-md bg-surface-container-low text-[11px] font-medium text-secondary">RAG / Qdrant</span>
+									<span class="px-2.5 py-1 rounded-md bg-surface-container-low text-[11px] font-medium text-secondary">FastAPI</span>
+								</div>
+							</div>
+
+							<div class="shrink-0 flex items-center gap-3">
+								<button type="button" onclick="selectRoleForApplication('Senior AI & Machine Learning Engineer')" class="px-5 py-2.5 rounded-xl bg-on-surface text-white hover:bg-primary text-xs font-semibold transition-all inline-flex items-center gap-2">
+									<span>Apply for Role</span>
+									<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<!-- Role 3: Cloud & DevOps -->
+					<div class="role-card p-6 md:p-8 rounded-2xl bg-white border border-surface-container-high shadow-sm hover:shadow-md hover:border-blue-500/40 transition-all" data-category="cloud-devops">
+						<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+							<div class="space-y-2.5 max-w-2xl">
+								<div class="flex flex-wrap items-center gap-2">
+									<span class="px-2.5 py-0.5 rounded-full bg-blue-500/10 text-blue-700 text-[11px] font-bold uppercase tracking-wider">Cloud &amp; DevOps</span>
+									<span class="text-xs text-secondary flex items-center gap-1">
+										<span class="material-symbols-outlined text-[14px]">location_on</span> Noida / Hybrid
+									</span>
+									<span class="text-xs text-secondary">&bull; Full-Time</span>
+									<span class="text-xs text-secondary">&bull; 4-8 Yrs Exp</span>
+								</div>
+								<h3 class="font-headline-md text-xl font-bold text-on-surface">Lead Cloud &amp; DevOps Engineer</h3>
+								<p class="text-xs md:text-sm text-secondary leading-relaxed">
+									Architect resilient multi-tenant Kubernetes infrastructure, Terraform IaC blueprints, and automated canary deployments to support enterprise uptime SLA commitments.
+								</p>
+								<div class="flex flex-wrap gap-2 pt-2">
+									<span class="px-2.5 py-1 rounded-md bg-surface-container-low text-[11px] font-medium text-secondary">Kubernetes</span>
+									<span class="px-2.5 py-1 rounded-md bg-surface-container-low text-[11px] font-medium text-secondary">Terraform</span>
+									<span class="px-2.5 py-1 rounded-md bg-surface-container-low text-[11px] font-medium text-secondary">AWS / GCP</span>
+									<span class="px-2.5 py-1 rounded-md bg-surface-container-low text-[11px] font-medium text-secondary">CI/CD GitOps</span>
+									<span class="px-2.5 py-1 rounded-md bg-surface-container-low text-[11px] font-medium text-secondary">Prometheus / Grafana</span>
+								</div>
+							</div>
+
+							<div class="shrink-0 flex items-center gap-3">
+								<button type="button" onclick="selectRoleForApplication('Lead Cloud & DevOps Engineer')" class="px-5 py-2.5 rounded-xl bg-on-surface text-white hover:bg-primary text-xs font-semibold transition-all inline-flex items-center gap-2">
+									<span>Apply for Role</span>
+									<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<!-- Role 4: Data Engineering -->
+					<div class="role-card p-6 md:p-8 rounded-2xl bg-white border border-surface-container-high shadow-sm hover:shadow-md hover:border-emerald-500/40 transition-all" data-category="ai-data">
+						<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+							<div class="space-y-2.5 max-w-2xl">
+								<div class="flex flex-wrap items-center gap-2">
+									<span class="px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-700 text-[11px] font-bold uppercase tracking-wider">AI &amp; Data</span>
+									<span class="text-xs text-secondary flex items-center gap-1">
+										<span class="material-symbols-outlined text-[14px]">location_on</span> Noida / Hybrid
+									</span>
+									<span class="text-xs text-secondary">&bull; Full-Time</span>
+									<span class="text-xs text-secondary">&bull; 4-7 Yrs Exp</span>
+								</div>
+								<h3 class="font-headline-md text-xl font-bold text-on-surface">Principal Data &amp; Telemetry Engineer</h3>
+								<p class="text-xs md:text-sm text-secondary leading-relaxed">
+									Build petabyte-scale event streaming pipelines, ClickHouse analytical data stores, and real-time observability telemetry across client production platforms.
+								</p>
+								<div class="flex flex-wrap gap-2 pt-2">
+									<span class="px-2.5 py-1 rounded-md bg-surface-container-low text-[11px] font-medium text-secondary">Apache Kafka</span>
+									<span class="px-2.5 py-1 rounded-md bg-surface-container-low text-[11px] font-medium text-secondary">ClickHouse</span>
+									<span class="px-2.5 py-1 rounded-md bg-surface-container-low text-[11px] font-medium text-secondary">PostgreSQL</span>
+									<span class="px-2.5 py-1 rounded-md bg-surface-container-low text-[11px] font-medium text-secondary">Go / Python</span>
+									<span class="px-2.5 py-1 rounded-md bg-surface-container-low text-[11px] font-medium text-secondary">Data Warehousing</span>
+								</div>
+							</div>
+
+							<div class="shrink-0 flex items-center gap-3">
+								<button type="button" onclick="selectRoleForApplication('Principal Data & Telemetry Engineer')" class="px-5 py-2.5 rounded-xl bg-on-surface text-white hover:bg-primary text-xs font-semibold transition-all inline-flex items-center gap-2">
+									<span>Apply for Role</span>
+									<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<!-- Role 5: ERP Architecture -->
+					<div class="role-card p-6 md:p-8 rounded-2xl bg-white border border-surface-container-high shadow-sm hover:shadow-md hover:border-amber-500/40 transition-all" data-category="erp">
+						<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+							<div class="space-y-2.5 max-w-2xl">
+								<div class="flex flex-wrap items-center gap-2">
+									<span class="px-2.5 py-0.5 rounded-full bg-amber-500/10 text-amber-700 text-[11px] font-bold uppercase tracking-wider">Enterprise ERP</span>
+									<span class="text-xs text-secondary flex items-center gap-1">
+										<span class="material-symbols-outlined text-[14px]">location_on</span> Noida HQ
+									</span>
+									<span class="text-xs text-secondary">&bull; Full-Time</span>
+									<span class="text-xs text-secondary">&bull; 5-9 Yrs Exp</span>
+								</div>
+								<h3 class="font-headline-md text-xl font-bold text-on-surface">Senior ERP Solutions Architect</h3>
+								<p class="text-xs md:text-sm text-secondary leading-relaxed">
+									Architect tailored ERP modules, multi-warehouse inventory state machines, and bidirectional ledger synchronization engines for fast-growing manufacturing and commerce enterprises.
+								</p>
+								<div class="flex flex-wrap gap-2 pt-2">
+									<span class="px-2.5 py-1 rounded-md bg-surface-container-low text-[11px] font-medium text-secondary">Custom ERP</span>
+									<span class="px-2.5 py-1 rounded-md bg-surface-container-low text-[11px] font-medium text-secondary">Relational Modeling</span>
+									<span class="px-2.5 py-1 rounded-md bg-surface-container-low text-[11px] font-medium text-secondary">Financial Systems</span>
+									<span class="px-2.5 py-1 rounded-md bg-surface-container-low text-[11px] font-medium text-secondary">Event-Driven Workflows</span>
+								</div>
+							</div>
+
+							<div class="shrink-0 flex items-center gap-3">
+								<button type="button" onclick="selectRoleForApplication('Senior ERP Solutions Architect')" class="px-5 py-2.5 rounded-xl bg-on-surface text-white hover:bg-primary text-xs font-semibold transition-all inline-flex items-center gap-2">
+									<span>Apply for Role</span>
+									<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<!-- Role 6: Product Design -->
+					<div class="role-card p-6 md:p-8 rounded-2xl bg-white border border-surface-container-high shadow-sm hover:shadow-md hover:border-pink-500/40 transition-all" data-category="product">
+						<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+							<div class="space-y-2.5 max-w-2xl">
+								<div class="flex flex-wrap items-center gap-2">
+									<span class="px-2.5 py-0.5 rounded-full bg-pink-500/10 text-pink-700 text-[11px] font-bold uppercase tracking-wider">Product &amp; Design</span>
+									<span class="text-xs text-secondary flex items-center gap-1">
+										<span class="material-symbols-outlined text-[14px]">location_on</span> Noida / Hybrid
+									</span>
+									<span class="text-xs text-secondary">&bull; Full-Time</span>
+									<span class="text-xs text-secondary">&bull; 3-6 Yrs Exp</span>
+								</div>
+								<h3 class="font-headline-md text-xl font-bold text-on-surface">Lead Product Designer (UI/UX)</h3>
+								<p class="text-xs md:text-sm text-secondary leading-relaxed">
+									Translate complex multi-role enterprise workflows into elegant, intuitive dashboards, design tokens, and scalable component systems across responsive web and mobile interfaces.
+								</p>
+								<div class="flex flex-wrap gap-2 pt-2">
+									<span class="px-2.5 py-1 rounded-md bg-surface-container-low text-[11px] font-medium text-secondary">Design Systems</span>
+									<span class="px-2.5 py-1 rounded-md bg-surface-container-low text-[11px] font-medium text-secondary">Figma</span>
+									<span class="px-2.5 py-1 rounded-md bg-surface-container-low text-[11px] font-medium text-secondary">Enterprise UX</span>
+									<span class="px-2.5 py-1 rounded-md bg-surface-container-low text-[11px] font-medium text-secondary">Interactive Prototypes</span>
+								</div>
+							</div>
+
+							<div class="shrink-0 flex items-center gap-3">
+								<button type="button" onclick="selectRoleForApplication('Lead Product Designer (UI/UX)')" class="px-5 py-2.5 rounded-xl bg-on-surface text-white hover:bg-primary text-xs font-semibold transition-all inline-flex items-center gap-2">
+									<span>Apply for Role</span>
+									<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- 5. APPLICATION FORM SECTION -->
+		<section id="apply" class="py-16 md:py-24">
+			<div class="max-w-[1320px] mx-auto px-6 md:px-12">
+				<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+					<!-- Left Context -->
+					<div class="lg:col-span-5 space-y-6">
+						<span class="font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-widest block">DIRECT APPLICATION</span>
+						<h2 class="font-headline-lg text-[32px] md:text-[42px] text-on-surface font-bold tracking-tight">
+							Start Your Next <span class="text-primary italic font-semibold">Engineering Chapter.</span>
+						</h2>
+						<p class="text-body-md text-secondary leading-relaxed">
+							Fill out the brief diagnostic form to connect directly with our engineering leadership squad. We value demonstrated work, GitHub profiles, and architectural curiosity over resume buzzwords.
+						</p>
+					</div>
+
+					<!-- Right Form -->
+					<div class="lg:col-span-7">
+						<div class="p-8 md:p-10 rounded-3xl bg-white border border-surface-container-high shadow-[0_15px_40px_rgba(0,0,0,0.06)]">
+							<div id="application-success" class="hidden mb-6 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm flex items-start gap-3">
+								<span class="material-symbols-outlined text-emerald-600 mt-0.5">check_circle</span>
+								<div>
+									<h5 class="font-bold">Application Received!</h5>
+									<p class="text-xs text-emerald-700 mt-0.5">Thank you for applying. An engineering team lead will review your submission and contact you within 48 hours.</p>
+								</div>
+							</div>
+
+							<form id="careers-form" onsubmit="handleCareerSubmit(event)" class="space-y-5 text-left">
+								<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+									<div>
+										<label class="block text-xs font-bold text-on-surface uppercase tracking-wider mb-2" for="candidate-name">
+											Full Name *
+										</label>
+										<input id="candidate-name" required type="text" placeholder="Alex Rivera" class="w-full px-4 py-3 rounded-xl border border-surface-container-high bg-surface-container-lowest text-sm text-on-surface focus:outline-none focus:border-primary transition-colors" />
+									</div>
+
+									<div>
+										<label class="block text-xs font-bold text-on-surface uppercase tracking-wider mb-2" for="candidate-email">
+											Email Address *
+										</label>
+										<input id="candidate-email" required type="email" placeholder="alex@domain.com" class="w-full px-4 py-3 rounded-xl border border-surface-container-high bg-surface-container-lowest text-sm text-on-surface focus:outline-none focus:border-primary transition-colors" />
+									</div>
+								</div>
+
+								<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+									<div>
+										<label class="block text-xs font-bold text-on-surface uppercase tracking-wider mb-2" for="candidate-phone">
+											Phone Number *
+										</label>
+										<input id="candidate-phone" required type="tel" placeholder="+91 98765 43210" class="w-full px-4 py-3 rounded-xl border border-surface-container-high bg-surface-container-lowest text-sm text-on-surface focus:outline-none focus:border-primary transition-colors" />
+									</div>
+
+									<div>
+										<label class="block text-xs font-bold text-on-surface uppercase tracking-wider mb-2" for="candidate-role">
+											Target Position *
+										</label>
+										<select id="candidate-role" required class="w-full px-4 py-3 rounded-xl border border-surface-container-high bg-surface-container-lowest text-sm text-on-surface focus:outline-none focus:border-primary transition-colors">
+											<option value="">Select a role...</option>
+											<option value="Staff Full-Stack Architect">Staff Full-Stack Architect</option>
+											<option value="Senior AI & Machine Learning Engineer">Senior AI &amp; Machine Learning Engineer</option>
+											<option value="Lead Cloud & DevOps Engineer">Lead Cloud &amp; DevOps Engineer</option>
+											<option value="Principal Data & Telemetry Engineer">Principal Data &amp; Telemetry Engineer</option>
+											<option value="Senior ERP Solutions Architect">Senior ERP Solutions Architect</option>
+											<option value="Lead Product Designer (UI/UX)">Lead Product Designer (UI/UX)</option>
+											<option value="General Open Application">Other / General Engineering Application</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+									<div>
+										<label class="block text-xs font-bold text-on-surface uppercase tracking-wider mb-2" for="candidate-links">
+											GitHub / LinkedIn / Portfolio *
+										</label>
+										<input id="candidate-links" required type="url" placeholder="https://github.com/yourhandle" class="w-full px-4 py-3 rounded-xl border border-surface-container-high bg-surface-container-lowest text-sm text-on-surface focus:outline-none focus:border-primary transition-colors" />
+									</div>
+
+									<div>
+										<label class="block text-xs font-bold text-on-surface uppercase tracking-wider mb-2" for="candidate-exp">
+											Years of Relevant Experience *
+										</label>
+										<select id="candidate-exp" required class="w-full px-4 py-3 rounded-xl border border-surface-container-high bg-surface-container-lowest text-sm text-on-surface focus:outline-none focus:border-primary transition-colors">
+											<option value="">Select experience level...</option>
+											<option value="1-3 Years">1 - 3 Years</option>
+											<option value="3-5 Years">3 - 5 Years</option>
+											<option value="5-8 Years">5 - 8 Years</option>
+											<option value="8+ Years">8+ Years (Staff / Principal)</option>
+										</select>
+									</div>
+								</div>
+
+								<div>
+									<label class="block text-xs font-bold text-on-surface uppercase tracking-wider mb-2" for="candidate-notes">
+										Tell us about a system or problem you recently solved
+									</label>
+									<textarea id="candidate-notes" rows="4" placeholder="Briefly describe an architecture decision, scale hurdle, or open-source project you are proud of..." class="w-full px-4 py-3 rounded-xl border border-surface-container-high bg-surface-container-lowest text-sm text-on-surface focus:outline-none focus:border-primary transition-colors resize-none"></textarea>
+								</div>
+
+								<div class="pt-2">
+									<button type="submit" id="submit-btn" class="w-full py-4 px-6 rounded-xl text-white font-medium text-sm transition-all shadow-[0_6px_20px_rgba(235,87,55,0.35)] hover:shadow-[0_8px_25px_rgba(235,87,55,0.5)] flex items-center justify-center gap-2" style="background: linear-gradient(135deg, rgb(173, 43, 14) 0%, rgb(235, 87, 55) 60%, rgb(255, 120, 73) 100%);">
+										<span>Submit Application to Engineering Team</span>
+										<span class="material-symbols-outlined text-[18px]">send</span>
+									</button>
+									<p class="text-[11px] text-secondary text-center mt-3">
+										By submitting, you agree to our <a href="legal/privacy-policy.html" class="underline hover:text-primary">Privacy Policy</a>. We never share candidate information.
+									</p>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<!-- Footer Component Placeholder -->
+	<div id="footer"></div>
+
+	<!-- Careers Interactive Filter Script -->
+	<script>
+		// Department Filter functionality
+		const filterBtns = document.querySelectorAll('.filter-btn');
+		const roleCards = document.querySelectorAll('.role-card');
+		const roleCounter = document.getElementById('role-count');
+
+		filterBtns.forEach(btn => {
+			btn.addEventListener('click', () => {
+				const filter = btn.getAttribute('data-filter');
+
+				// Update active button styling
+				filterBtns.forEach(b => {
+					b.classList.remove('bg-primary', 'text-white', 'shadow-sm');
+					b.classList.add('bg-white', 'text-secondary', 'border', 'border-surface-container-high');
+				});
+				btn.classList.add('bg-primary', 'text-white', 'shadow-sm');
+				btn.classList.remove('bg-white', 'text-secondary', 'border', 'border-surface-container-high');
+
+				// Filter role cards
+				let visibleCount = 0;
+				roleCards.forEach(card => {
+					const category = card.getAttribute('data-category');
+					if (filter === 'all' || category === filter) {
+						card.style.display = 'block';
+						visibleCount++;
+					} else {
+						card.style.display = 'none';
+					}
+				});
+
+				if (roleCounter && filter === 'all') {
+					roleCounter.textContent = visibleCount;
+				}
+			});
+		});
+
+		// Auto-populate role in form when "Apply for Role" clicked
+		function selectRoleForApplication(roleTitle) {
+			const select = document.getElementById('candidate-role');
+			if (select) {
+				for (let i = 0; i < select.options.length; i++) {
+					if (select.options[i].value === roleTitle) {
+						select.selectedIndex = i;
+						break;
+					}
+				}
+			}
+			const applySection = document.getElementById('apply');
+			if (applySection) {
+				applySection.scrollIntoView({ behavior: 'smooth' });
+			}
+			const nameInput = document.getElementById('candidate-name');
+			if (nameInput) {
+				setTimeout(() => nameInput.focus(), 600);
+			}
+		}
+
+		// Application submission handler
+		function handleCareerSubmit(e) {
+			e.preventDefault();
+			const form = document.getElementById('careers-form');
+			const successBox = document.getElementById('application-success');
+			const submitBtn = document.getElementById('submit-btn');
+
+			if (submitBtn) {
+				submitBtn.disabled = true;
+				submitBtn.innerHTML = '<span>Submitting Application...</span><span class="material-symbols-outlined animate-spin text-[18px]">progress_activity</span>';
+			}
+
+			setTimeout(() => {
+				if (form) {
+					form.reset();
+				}
+				if (successBox) {
+					successBox.classList.remove('hidden');
+					successBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+				}
+				if (submitBtn) {
+					submitBtn.disabled = false;
+					submitBtn.innerHTML = '<span>Application Sent &check;</span><span class="material-symbols-outlined text-[18px]">check</span>';
+					setTimeout(() => {
+						submitBtn.innerHTML = '<span>Submit Application to Engineering Team</span><span class="material-symbols-outlined text-[18px]">send</span>';
+					}, 5000);
+				}
+			}, 900);
+		}
+	</script>
+
+	<!-- Reusable Component Loader (Navbar & Footer) -->
+	<script src="assets/bgs-components.js"></script>
+</body>
+
+</html>

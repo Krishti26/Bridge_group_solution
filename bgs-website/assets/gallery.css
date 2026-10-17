@@ -1,0 +1,136 @@
+/* ===================================================================
+   BRIDGE GROUP SOLUTIONS - GALLERY PAGE STYLESHEET
+   Dedicated CSS for gallery.html
+   Visual Benchmark: https://bgs-alpha.vercel.app/ & index.html
+   =================================================================== */
+
+@import url('bgs-alpha-theme.css');
+
+/* Smooth Scrolling & Typography */
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	background-color: #f9f9fb;
+	color: #1a1c1d;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Atmospheric Radial Lights */
+.radial-glow-coral {
+	background: radial-gradient(circle, rgba(235, 87, 55, 0.22) 0%, rgba(255, 120, 73, 0.12) 40%, rgba(147, 51, 234, 0.05) 75%, transparent 100%);
+}
+.radial-glow-gold {
+	background: radial-gradient(circle, rgba(255, 170, 60, 0.18) 0%, rgba(235, 87, 55, 0.08) 50%, transparent 80%);
+}
+.radial-glow-violet {
+	background: radial-gradient(circle, rgba(124, 58, 237, 0.12) 0%, rgba(235, 87, 55, 0.06) 60%, transparent 100%);
+}
+
+/* Continuous Marquee Animation */
+@keyframes marquee {
+	0% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+.animate-marquee {
+	display: flex;
+	width: max-content;
+	animation: marquee 35s linear infinite;
+}
+
+.animate-marquee:hover {
+	animation-play-state: paused;
+}
+
+/* Bento Card Transitions (Exact Match with portfolio.html) */
+.bento-card, .gallery-bento-card {
+	transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+	            box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+	            border-color 0.3s ease;
+	position: relative;
+	overflow: hidden;
+}
+
+.bento-card:hover, .gallery-bento-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 20px 45px rgba(235, 87, 55, 0.14), 0 10px 30px rgba(0, 0, 0, 0.03);
+	border-color: rgba(235, 87, 55, 0.4);
+}
+
+/* Gallery Card Image (Matching Portfolio's .project-card-img) */
+.gallery-card-img, .project-card-img {
+	width: 100%;
+	height: 240px;
+	object-fit: cover;
+	border-radius: 12px;
+	transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-bento-card:hover .gallery-card-img,
+.bento-card:hover .project-card-img {
+	transform: scale(1.03);
+}
+
+/* Mobile Screen Responsiveness */
+@media (max-width: 768px) {
+	.gallery-card-img, .project-card-img {
+		height: 220px;
+	}
+}
+
+@media (max-width: 640px) {
+	.gallery-bento-card {
+		padding: 1.15rem !important;
+	}
+	.gallery-card-img, .project-card-img {
+		height: 200px;
+		border-radius: 10px;
+	}
+}
+
+@media (max-width: 420px) {
+	.gallery-bento-card {
+		padding: 1rem !important;
+	}
+	.gallery-card-img, .project-card-img {
+		height: 180px;
+	}
+}
+
+/* Filter Buttons Modern Styling */
+.gallery-filter-btn {
+	transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-filter-btn:hover:not(.active-filter) {
+	border-color: rgba(235, 87, 55, 0.35);
+	transform: translateY(-1px);
+}
+
+.gallery-filter-btn.active-filter {
+	background: linear-gradient(135deg, rgb(173, 43, 14) 0%, rgb(235, 87, 55) 60%, rgb(255, 120, 73) 100%) !important;
+	color: #ffffff !important;
+	box-shadow: 0 4px 14px rgba(235, 87, 55, 0.35);
+}
+
+/* Primary Coral Gradient Button */
+.btn-primary-gradient {
+	background: linear-gradient(135deg, rgb(173, 43, 14) 0%, rgb(235, 87, 55) 60%, rgb(255, 120, 73) 100%);
+}
+
+.btn-primary-gradient:hover {
+	box-shadow: 0 12px 30px rgba(235, 87, 55, 0.45);
+	transform: translateY(-2px);
+}
+
+.btn-primary-gradient:active {
+	transform: translateY(0);
+}

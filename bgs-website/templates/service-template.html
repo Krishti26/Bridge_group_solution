@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Core typography preload -->
+<link rel="preload" href="../assets/amphora-fonts/The%20Future/TheFuture-Regular.subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/amphora-fonts/The%20Future/TheFuture-Medium.subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/amphora-fonts/The%20Future/TheFuture-Bold.subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/amphora-fonts/Tiempos%20Headline/TiemposHeadline-400-Regular-Italic.woff2" as="font" type="font/woff2" crossorigin>
+
+
+<!-- Reveal the finished layout without showing a loading animation. -->
+<style>html.layout-pending body { visibility:hidden !important; }</style>
+<script>
+(() => {
+  const root = document.documentElement;
+  root.classList.add('layout-pending');
+  let observer;
+  const reveal = () => {
+    root.classList.remove('layout-pending');
+    if (observer) observer.disconnect();
+  };
+  const ready = () => {
+    if (root.classList.contains('bgs-layout-ready') && document.querySelector('.bgs-main-navbar')) reveal();
+  };
+  observer = new MutationObserver(ready);
+  observer.observe(root, {childList:true, subtree:true, attributes:true, attributeFilter:['class']});
+  document.addEventListener('DOMContentLoaded', ready, {once:true});
+  setTimeout(reveal, 2500);
+})();
+</script>
+
+
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+  <title>{{PAGE_TITLE}} | Bridge Group Solutions</title>
+  <meta name="description" content="{{META_DESCRIPTION}}" />
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="{{PAGE_TITLE}} | Bridge Group Solutions" />
+  <meta property="og:description" content="{{META_DESCRIPTION}}" />
+  <meta property="og:url" content="https://www.bridgegroupsolutions.com/services/{{PAGE_SLUG}}.html" />
+  <meta property="og:image" content="https://www.bridgegroupsolutions.com/assets/logo.webp" />
+  <meta property="og:type" content="website" />
+
+  <!-- X (Twitter) Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{PAGE_TITLE}} | Bridge Group Solutions" />
+  <meta name="twitter:description" content="{{META_DESCRIPTION}}" />
+  <meta name="twitter:image" content="https://www.bridgegroupsolutions.com/assets/logo.webp" />
+
+  <link rel="canonical" href="https://www.bridgegroupsolutions.com/services/{{PAGE_SLUG}}.html" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="../assets/logo.webp" />
+
+  <!-- Tabler Icons CDN (All icons ti ti-*) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+
+  <!-- Fonts matching index.html -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+
+  <!-- Base Layer Styles -->
+  <style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style>
+
+  <!-- Tailwind CSS CDN + Design Tokens -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-highest": "#e2e2e4",
+            "on-secondary-container": "#5c647a",
+            "on-surface": "#1a1c1d",
+            "on-error": "#ffffff",
+            "primary-fixed": "#ffdad3",
+            "background": "#f9f9fb",
+            "primary-fixed-dim": "#ffb4a4",
+            "inverse-primary": "#ffb4a4",
+            "surface-bright": "#f9f9fb",
+            "on-tertiary-fixed-variant": "#424656",
+            "tertiary-fixed-dim": "#c3c6d8",
+            "tertiary-fixed": "#dfe1f5",
+            "outline-variant": "#e2bfb7",
+            "error-container": "#ffdad6",
+            "on-primary-container": "#fffbff",
+            "on-tertiary-container": "#fefcff",
+            "error": "#ba1a1a",
+            "tertiary": "#585b6b",
+            "secondary": "#565e74",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f3f3f5",
+            "secondary-fixed": "#dae2fd",
+            "secondary-fixed-dim": "#bec6e0",
+            "on-background": "#1a1c1d",
+            "on-secondary": "#ffffff",
+            "on-surface-variant": "#5a413b",
+            "outline": "#8e706a",
+            "secondary-container": "#dae2fd",
+            "surface": "#f9f9fb",
+            "surface-container": "#eeeef0",
+            "inverse-surface": "#2f3132",
+            "tertiary-container": "#707485",
+            "on-tertiary": "#ffffff",
+            "surface-tint": "#b12e11",
+            "inverse-on-surface": "#f0f0f2",
+            "on-primary-fixed": "#3d0600",
+            "surface-dim": "#d9dadc",
+            "on-error-container": "#93000a",
+            "on-primary": "#ffffff",
+            "on-primary-fixed-variant": "#8c1800",
+            "on-secondary-fixed": "#131b2e",
+            "primary-container": "#d04426",
+            "surface-container-high": "#e8e8ea",
+            "primary": "#ad2b0e",
+            "on-secondary-fixed-variant": "#3f465c",
+            "on-tertiary-fixed": "#171b29",
+            "surface-variant": "#e2e2e4"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-xs": "0.25rem",
+            "gutter": "1.5rem",
+            "space-lg": "1.5rem",
+            "margin-mobile": "1.25rem",
+            "gutter-mobile": "1rem",
+            "space-xl": "2.5rem",
+            "margin": "3rem"
+          },
+          fontFamily: {
+            "body-md": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "label-pill": ["Plus Jakarta Sans"],
+            "display-hero": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "label-eyebrow": ["Space Grotesk"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "display-hero-mobile": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "stat-metric": ["Plus Jakarta Sans"],
+            "label-code": ["Space Grotesk"]
+          },
+          fontSize: {
+            "body-md": ["15px", {"lineHeight": "24px", "fontWeight": "400"}],
+            "body-sm": ["13px", {"lineHeight": "20px", "fontWeight": "400"}],
+            "label-pill": ["12px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+            "display-hero": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+            "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+            "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+            "label-eyebrow": ["11px", {"lineHeight": "14px", "letterSpacing": "0.12em", "fontWeight": "700"}],
+            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+            "display-hero-mobile": ["36px", {"lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "headline-sm": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+            "stat-metric": ["40px", {"lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+            "label-code": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}]
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- BGS Unified Design System -->
+  <link rel="stylesheet" href="../assets/bgs-design-system.css" />
+	<link rel="stylesheet" href="../assets/bgs-modern-theme.css" />
+	<link rel="stylesheet" href="../assets/bgs-alpha-theme.css" />
+<link rel="stylesheet" href="../assets/amphora-reference.css">
+<link rel="stylesheet" href="../assets/amphora-bgs.css">
+<script defer src="../assets/amphora-bgs.js"></script>
+</head>
+<body class="amphora-theme bg-surface font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+
+  <!-- ═══ HEADER & NAVIGATION ═══ -->
+  <!-- Reusable Navbar Component -->
+	<div id="navbar"></div>
+
+
+
+
+
+  <main class="bgs-container">
+
+    <!-- ═══ 1. HERO SECTION ═══ -->
+    <section class="bgs-hero-section">
+      <div class="bgs-hero-grid">
+        <div class="bgs-hero-content">
+          <div class="bgs-section-label">
+            <i class="ti {{HERO_ICON}}" aria-hidden="true"></i>
+            {{SERVICE_CATEGORY}}
+          </div>
+          <h1 class="bgs-heading-display">{{SERVICE_TITLE}}</h1>
+          <p class="bgs-lead">{{SERVICE_TAGLINE}}</p>
+          <div class="bgs-hero-actions">
+            <a href="../contact.html" class="bgs-btn bgs-btn-primary">
+              <i class="ti ti-calendar-event" aria-hidden="true"></i>
+              {{HERO_PRIMARY_CTA_TEXT}}
+            </a>
+            <a href="#features" class="bgs-btn bgs-btn-outline">
+              <i class="ti ti-list-check" aria-hidden="true"></i>
+              Explore Capabilities
+            </a>
+          </div>
+        </div>
+
+        <div class="bgs-hero-sidecard">
+          <div class="bgs-section-label">
+            <i class="ti ti-sparkles" aria-hidden="true"></i>
+            Core Impact
+          </div>
+          <div class="bgs-heading">{{HERO_SIDE_HEADING}}</div>
+          <p class="bgs-desc">{{HERO_SIDE_DESC}}</p>
+          <div class="bgs-hero-highlights">
+            <div class="bgs-highlight-item">
+              <i class="ti ti-circle-check-filled" aria-hidden="true"></i>
+              <span>{{HIGHLIGHT_1}}</span>
+            </div>
+            <div class="bgs-highlight-item">
+              <i class="ti ti-circle-check-filled" aria-hidden="true"></i>
+              <span>{{HIGHLIGHT_2}}</span>
+            </div>
+            <div class="bgs-highlight-item">
+              <i class="ti ti-circle-check-filled" aria-hidden="true"></i>
+              <span>{{HIGHLIGHT_3}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 2. OVERVIEW SECTION ═══ -->
+    <section class="bgs-overview-section" id="overview">
+      <div class="bgs-overview-grid">
+        <div class="bgs-overview-content">
+          <div class="bgs-section-label">
+            <i class="ti ti-info-circle" aria-hidden="true"></i>
+            Overview & Approach
+          </div>
+          <h2 class="bgs-heading-section">{{OVERVIEW_HEADING}}</h2>
+          <p>{{OVERVIEW_P1}}</p>
+          <p>{{OVERVIEW_P2}}</p>
+          <p>{{OVERVIEW_P3}}</p>
+        </div>
+
+        <div class="bgs-overview-panel">
+          <div class="bgs-metric-card">
+            <div class="bgs-metric-val">{{METRIC_1_VAL}}</div>
+            <div class="bgs-metric-lbl">{{METRIC_1_LBL}}</div>
+          </div>
+          <div class="bgs-metric-card">
+            <div class="bgs-metric-val">{{METRIC_2_VAL}}</div>
+            <div class="bgs-metric-lbl">{{METRIC_2_LBL}}</div>
+          </div>
+          <div class="bgs-metric-card">
+            <div class="bgs-metric-val">{{METRIC_3_VAL}}</div>
+            <div class="bgs-metric-lbl">{{METRIC_3_LBL}}</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 3. KEY FEATURES / BENEFITS GRID ═══ -->
+    <section class="bgs-features-section" id="features">
+      <div class="bgs-section-label">
+        <i class="ti ti-apps" aria-hidden="true"></i>
+        Key Features & Capabilities
+      </div>
+      <h2 class="bgs-heading-section">{{FEATURES_HEADING}}</h2>
+      <p class="bgs-desc">{{FEATURES_SUBHEADING}}</p>
+
+      <div class="bgs-features-grid-4">
+        <!-- Feature Col 1 -->
+        <div class="bgs-col-item">
+          <div class="bgs-feature-icon">
+            <i class="ti {{FEAT_1_ICON}}" aria-hidden="true"></i>
+          </div>
+          <div class="bgs-section-label">{{FEAT_1_LABEL}}</div>
+          <div class="bgs-heading">{{FEAT_1_TITLE}}</div>
+          <p class="bgs-desc">{{FEAT_1_DESC}}</p>
+          <ul class="bgs-feature-list">
+            <li><i class="ti ti-check" aria-hidden="true"></i><span>{{FEAT_1_BULLET_1}}</span></li>
+            <li><i class="ti ti-check" aria-hidden="true"></i><span>{{FEAT_1_BULLET_2}}</span></li>
+            <li><i class="ti ti-check" aria-hidden="true"></i><span>{{FEAT_1_BULLET_3}}</span></li>
+          </ul>
+        </div>
+
+        <!-- Feature Col 2 -->
+        <div class="bgs-col-item">
+          <div class="bgs-feature-icon">
+            <i class="ti {{FEAT_2_ICON}}" aria-hidden="true"></i>
+          </div>
+          <div class="bgs-section-label">{{FEAT_2_LABEL}}</div>
+          <div class="bgs-heading">{{FEAT_2_TITLE}}</div>
+          <p class="bgs-desc">{{FEAT_2_DESC}}</p>
+          <ul class="bgs-feature-list">
+            <li><i class="ti ti-check" aria-hidden="true"></i><span>{{FEAT_2_BULLET_1}}</span></li>
+            <li><i class="ti ti-check" aria-hidden="true"></i><span>{{FEAT_2_BULLET_2}}</span></li>
+            <li><i class="ti ti-check" aria-hidden="true"></i><span>{{FEAT_2_BULLET_3}}</span></li>
+          </ul>
+        </div>
+
+        <!-- Feature Col 3 -->
+        <div class="bgs-col-item">
+          <div class="bgs-feature-icon">
+            <i class="ti {{FEAT_3_ICON}}" aria-hidden="true"></i>
+          </div>
+          <div class="bgs-section-label">{{FEAT_3_LABEL}}</div>
+          <div class="bgs-heading">{{FEAT_3_TITLE}}</div>
+          <p class="bgs-desc">{{FEAT_3_DESC}}</p>
+          <ul class="bgs-feature-list">
+            <li><i class="ti ti-check" aria-hidden="true"></i><span>{{FEAT_3_BULLET_1}}</span></li>
+            <li><i class="ti ti-check" aria-hidden="true"></i><span>{{FEAT_3_BULLET_2}}</span></li>
+            <li><i class="ti ti-check" aria-hidden="true"></i><span>{{FEAT_3_BULLET_3}}</span></li>
+          </ul>
+        </div>
+
+        <!-- Feature Col 4 -->
+        <div class="bgs-col-item">
+          <div class="bgs-feature-icon">
+            <i class="ti {{FEAT_4_ICON}}" aria-hidden="true"></i>
+          </div>
+          <div class="bgs-section-label">{{FEAT_4_LABEL}}</div>
+          <div class="bgs-heading">{{FEAT_4_TITLE}}</div>
+          <p class="bgs-desc">{{FEAT_4_DESC}}</p>
+          <ul class="bgs-feature-list">
+            <li><i class="ti ti-check" aria-hidden="true"></i><span>{{FEAT_4_BULLET_1}}</span></li>
+            <li><i class="ti ti-check" aria-hidden="true"></i><span>{{FEAT_4_BULLET_2}}</span></li>
+            <li><i class="ti ti-check" aria-hidden="true"></i><span>{{FEAT_4_BULLET_3}}</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 4. PROCESS / HOW WE WORK SECTION ═══ -->
+    <section class="bgs-process-section" id="process">
+      <div class="bgs-section-label">
+        <i class="ti ti-git-branch" aria-hidden="true"></i>
+        Delivery Methodology
+      </div>
+      <h2 class="bgs-heading-section">How We Engineer Excellence</h2>
+      <p class="bgs-desc">A deterministic, milestone-driven execution framework ensuring zero-friction delivery from concept to production.</p>
+
+      <div class="bgs-process-grid">
+        <div class="bgs-col-item">
+          <div class="bgs-step-num">Step 01</div>
+          <div class="bgs-section-label">{{STEP_1_LABEL}}</div>
+          <div class="bgs-heading">{{STEP_1_TITLE}}</div>
+          <p class="bgs-desc">{{STEP_1_DESC}}</p>
+        </div>
+
+        <div class="bgs-col-item">
+          <div class="bgs-step-num">Step 02</div>
+          <div class="bgs-section-label">{{STEP_2_LABEL}}</div>
+          <div class="bgs-heading">{{STEP_2_TITLE}}</div>
+          <p class="bgs-desc">{{STEP_2_DESC}}</p>
+        </div>
+
+        <div class="bgs-col-item">
+          <div class="bgs-step-num">Step 03</div>
+          <div class="bgs-section-label">{{STEP_3_LABEL}}</div>
+          <div class="bgs-heading">{{STEP_3_TITLE}}</div>
+          <p class="bgs-desc">{{STEP_3_DESC}}</p>
+        </div>
+
+        <div class="bgs-col-item">
+          <div class="bgs-step-num">Step 04</div>
+          <div class="bgs-section-label">{{STEP_4_LABEL}}</div>
+          <div class="bgs-heading">{{STEP_4_TITLE}}</div>
+          <p class="bgs-desc">{{STEP_4_DESC}}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 5. CTA BANNER (MATCHES FOOTER BOTTOM BAR STYLE) ═══ -->
+    <section class="bgs-cta-banner">
+      <div class="bgs-cta-content">
+        <div class="bgs-section-label">
+          <i class="ti ti-rocket" aria-hidden="true"></i>
+          Next Steps
+        </div>
+        <div class="bgs-heading">{{CTA_BANNER_TITLE}}</div>
+        <p class="bgs-desc">{{CTA_BANNER_DESC}}</p>
+      </div>
+      <div class="bgs-cta-actions">
+        <a href="../contact.html" class="bgs-btn bgs-btn-primary">
+          <i class="ti ti-send" aria-hidden="true"></i>
+          Schedule a Technical Discovery
+        </a>
+        <a href="../portfolio.html" class="bgs-btn bgs-btn-subtle">
+          <i class="ti ti-briefcase" aria-hidden="true"></i>
+          View Portfolio
+        </a>
+      </div>
+    </section>
+
+    <!-- Reusable Footer Component -->
+	<div id="footer"></div>
+
+
+
+
+
+  </main>
+
+  <script>
+    // Responsive Mobile Menu Toggle
+    const navToggle = document.getElementById('bgsNavToggle');
+    const navLinks = document.getElementById('bgsNavLinks');
+    if (navToggle && navLinks) {
+      navToggle.addEventListener('click', () => {
+        const isOpen = navLinks.classList.toggle('is-open');
+        navToggle.setAttribute('aria-expanded', isOpen);
+      });
+    }
+  </script>
+	<!-- Reusable Component Loader (Navbar & Footer) -->
+	<script src="../assets/bgs-components.js"></script>
+</body>
+</html>

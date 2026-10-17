@@ -1,0 +1,83 @@
+/* ===================================================================
+   BRIDGE GROUP SOLUTIONS - BLOGS & INSIGHTS STYLESHEET
+   Clean Light Enterprise Stylesheet for blogs.html
+   =================================================================== */
+
+@import url('bgs-modern-theme.css');
+
+/* Smooth card transitions and elevation */
+.blog-card {
+	transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
+	            box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
+	            border-color 0.25s ease;
+}
+
+.blog-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 20px 45px rgba(235, 87, 55, 0.14), 0 4px 12px rgba(0, 0, 0, 0.04);
+	border-color: rgba(235, 87, 55, 0.4);
+}
+
+/* Card Lift Physics matching web.html */
+.hover-lift {
+	transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+}
+
+.hover-lift:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 20px 45px rgba(235, 87, 55, 0.14);
+}
+
+/* Category Filter Active and Hover States */
+.category-filter-btn {
+	transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.category-filter-btn.active {
+	background: linear-gradient(135deg, rgb(173, 43, 14) 0%, rgb(235, 87, 55) 60%, rgb(255, 120, 73) 100%) !important;
+	color: #ffffff !important;
+	border-color: transparent !important;
+	box-shadow: 0 4px 14px rgba(235, 87, 55, 0.3) !important;
+}
+
+/* Blueprint Architecture Visual in Featured Card */
+.blueprint-pattern {
+	background-size: 24px 24px;
+	background-image: 
+		linear-gradient(to right, rgba(86, 94, 116, 0.07) 1px, transparent 1px),
+		linear-gradient(to bottom, rgba(86, 94, 116, 0.07) 1px, transparent 1px);
+}
+
+/* Micro tag typography */
+.tag-badge {
+	display: inline-flex;
+	align-items: center;
+	padding: 4px 10px;
+	border-radius: 9999px;
+	font-family: 'Space Grotesk', monospace;
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+/* Blog Card Image Styles & Hover Zoom */
+.blog-card-img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	object-position: center;
+	border-radius: 0.75rem;
+	transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.blog-card:hover .blog-card-img {
+	transform: scale(1.04);
+}
+
+@media (max-width: 640px) {
+	.blog-card-img {
+		height: 180px;
+	}
+}
+

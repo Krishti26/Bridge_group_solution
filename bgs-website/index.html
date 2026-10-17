@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Core typography preload -->
+<link rel="preload" href="assets/amphora-fonts/The%20Future/TheFuture-Regular.subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/amphora-fonts/The%20Future/TheFuture-Medium.subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/amphora-fonts/The%20Future/TheFuture-Bold.subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/amphora-fonts/Tiempos%20Headline/TiemposHeadline-400-Regular-Italic.woff2" as="font" type="font/woff2" crossorigin>
+
+<!-- Prevent the pre-enhancement page from flashing on refresh. -->
+<style>
+html.page-booting { background:#fff; }
+html.page-booting body { visibility:hidden !important; }
+html.page-booting::before { content:"Bridge Group Solutions"; display:flex; align-items:center; justify-content:center; box-sizing:border-box; padding:150px 20px 0; font:600 clamp(18px,4.5vw,26px)/1.4 "The Future",Arial,sans-serif; color:#17171b; text-align:center; letter-spacing:.01em; position:fixed; inset:0; z-index:2147483647; background:radial-gradient(ellipse at center,#f4f0ff,#fff 58%); }
+html.page-booting::after { content:""; position:fixed; top:50%; left:50%; width:84px; height:84px; transform:translate(-50%,-50%); z-index:2147483647; background:url("assets/logo.webp") center/contain no-repeat; }
+</style>
+<script>
+(() => {
+  const root = document.documentElement;
+  root.classList.add('page-booting');
+  let observer;
+  const reveal = () => {
+    root.classList.remove('page-booting');
+    if (observer) observer.disconnect();
+  };
+  const ready = () => {
+    if (root.classList.contains('bgs-layout-ready') &&
+        document.querySelector('.bgs-main-navbar') &&
+        !document.body.classList.contains('home-loading')) reveal();
+  };
+  observer = new MutationObserver(ready);
+  observer.observe(root, {childList:true, subtree:true, attributes:true, attributeFilter:['class']});
+  document.addEventListener('DOMContentLoaded', ready, {once:true});
+  // Keep the page usable if a dependency fails to load.
+  setTimeout(reveal, 2500);
+})();
+</script>
+
+
+
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	<meta content="web_standard" name="shell-type">
+	<title>Enterprise Software & AI Solutions | Bridge Group Solutions</title>
+	<meta name="description" content="Established in 2014, Bridge Group Solutions delivers enterprise digital transformation, custom software, ERP systems, and cloud engineering." />
+	<meta name="keywords" content="Bridge Group Solutions, enterprise software, digital transformation, custom software development, ERP systems, cloud engineering, AI solutions" />
+	
+		<meta property="og:title" content="Enterprise Software & AI Solutions | Bridge Group Solutions" />
+	<meta property="og:description" content="Established in 2014, Bridge Group Solutions delivers enterprise digital transformation, custom software, ERP systems, and cloud engineering." />
+	<meta property="og:url" content="https://www.bridgegroupsolutions.com/index.html" />
+	<meta property="og:image" content="https://www.bridgegroupsolutions.com/assets/logo.webp" />
+	<meta property="og:type" content="website" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Enterprise Software & AI Solutions | Bridge Group Solutions" />
+	<meta name="twitter:description" content="Established in 2014, Bridge Group Solutions delivers enterprise digital transformation, custom software, ERP systems, and cloud engineering." />
+	<meta name="twitter:image" content="https://www.bridgegroupsolutions.com/assets/logo.webp" />
+	<link rel="canonical" href="https://www.bridgegroupsolutions.com/index.html" />
+	<link rel="icon" type="image/svg+xml" href="assets/logo.webp" />
+
+	<!-- Schema.org Structured Data (JSON-LD) -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@graph": [
+			{
+				"@type": "Organization",
+				"@id": "https://www.bridgegroupsolutions.com/#organization",
+				"name": "Bridge Group Solutions",
+				"legalName": "Bridge Group Solutions",
+				"url": "https://www.bridgegroupsolutions.com",
+				"logo": "https://www.bridgegroupsolutions.com/assets/logo.webp",
+				"foundingDate": "2014",
+				"description": "Established in 2014, Bridge Group Solutions delivers enterprise digital transformation, custom software, ERP systems, and cloud engineering.",
+				"address": {
+					"@type": "PostalAddress",
+					"streetAddress": "F356+4MJ, Ashok Marg, Moti Vihar, South City I, Sector 41",
+					"addressLocality": "Gurugram",
+					"postalCode": "122003",
+					"addressRegion": "Haryana",
+					"addressCountry": "IN"
+				},
+				"contactPoint": {
+					"@type": "ContactPoint",
+					"contactType": "customer support",
+					"email": "contactus@bridgegroupsolutions.com",
+					"availableLanguage": ["English", "Hindi"]
+				},
+				"sameAs": [
+					"https://medium.com/@blogs_90244"
+				]
+			},
+			{
+				"@type": "WebSite",
+				"@id": "https://www.bridgegroupsolutions.com/#website",
+				"url": "https://www.bridgegroupsolutions.com",
+				"name": "Bridge Group Solutions",
+				"description": "Enterprise Software & AI Solutions",
+				"publisher": {
+					"@id": "https://www.bridgegroupsolutions.com/#organization"
+				}
+			},
+			{
+				"@type": "WebPage",
+				"@id": "https://www.bridgegroupsolutions.com/index.html#webpage",
+				"url": "https://www.bridgegroupsolutions.com/index.html",
+				"name": "Enterprise Software & AI Solutions | Bridge Group Solutions",
+				"description": "Established in 2014, Bridge Group Solutions delivers enterprise digital transformation, custom software, ERP systems, and cloud engineering.",
+				"isPartOf": {
+					"@id": "https://www.bridgegroupsolutions.com/#website"
+				},
+				"about": {
+					"@id": "https://www.bridgegroupsolutions.com/#organization"
+				}
+			}
+		]
+	}
+	</script>
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com" rel="preconnect">
+	<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+	<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+	<!-- Tabler Icons CDN -->
+	<link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" rel="stylesheet"/>
+
+	<style>
+		@layer base {
+			html, body { margin: 0; padding: 0; }
+			body { overscroll-behavior: none; }
+			main > :first-child { margin-top: 0 !important; }
+			main > :last-child { margin-bottom: 0 !important; }
+		}
+		::-webkit-scrollbar { display: none; }
+	</style>
+
+	<!-- Tailwind CSS CDN & Custom Config -->
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script id="tailwind-config">
+		tailwind.config = {
+			darkMode: "class",
+			theme: {
+				extend: {
+					colors: {
+						"surface-container-highest": "#e2e2e4",
+						"on-secondary-container": "#5c647a",
+						"on-surface": "#1a1c1d",
+						"on-error": "#ffffff",
+						"primary-fixed": "#ffdad3",
+						"background": "#f9f9fb",
+						"primary-fixed-dim": "#ffb4a4",
+						"inverse-primary": "#ffb4a4",
+						"surface-bright": "#f9f9fb",
+						"on-tertiary-fixed-variant": "#424656",
+						"tertiary-fixed-dim": "#c3c6d8",
+						"tertiary-fixed": "#dfe1f5",
+						"outline-variant": "#e2bfb7",
+						"error-container": "#ffdad6",
+						"on-primary-container": "#fffbff",
+						"on-tertiary-container": "#fefcff",
+						"error": "#ba1a1a",
+						"tertiary": "#585b6b",
+						"secondary": "#565e74",
+						"surface-container-lowest": "#ffffff",
+						"surface-container-low": "#f3f3f5",
+						"secondary-fixed": "#dae2fd",
+						"secondary-fixed-dim": "#bec6e0",
+						"on-background": "#1a1c1d",
+						"on-secondary": "#ffffff",
+						"on-surface-variant": "#5a413b",
+						"outline": "#8e706a",
+						"secondary-container": "#dae2fd",
+						"surface": "#f9f9fb",
+						"surface-container": "#eeeef0",
+						"inverse-surface": "#2f3132",
+						"tertiary-container": "#707485",
+						"on-tertiary": "#ffffff",
+						"surface-tint": "#b12e11",
+						"inverse-on-surface": "#f0f0f2",
+						"on-primary-fixed": "#3d0600",
+						"surface-dim": "#d9dadc",
+						"on-error-container": "#93000a",
+						"on-primary": "#ffffff",
+						"on-primary-fixed-variant": "#8c1800",
+						"on-secondary-fixed": "#131b2e",
+						"primary-container": "#d04426",
+						"surface-container-high": "#e8e8ea",
+						"primary": "#ad2b0e",
+						"on-secondary-fixed-variant": "#3f465c",
+						"on-tertiary-fixed": "#171b29",
+						"surface-variant": "#e2e2e4"
+					},
+					borderRadius: {
+						"DEFAULT": "0.25rem",
+						"lg": "0.5rem",
+						"xl": "0.75rem",
+						"full": "9999px"
+					},
+					spacing: {
+						"space-sm": "0.5rem",
+						"space-md": "1rem",
+						"space-xs": "0.25rem",
+						"gutter": "1.5rem",
+						"space-lg": "1.5rem",
+						"margin-mobile": "1.25rem",
+						"gutter-mobile": "1rem",
+						"space-xl": "2.5rem",
+						"margin": "3rem"
+					},
+					fontFamily: {
+						"body-md": ["Plus Jakarta Sans"],
+						"body-sm": ["Plus Jakarta Sans"],
+						"label-pill": ["Plus Jakarta Sans"],
+						"display-hero": ["Plus Jakarta Sans"],
+						"headline-lg": ["Plus Jakarta Sans"],
+						"headline-md": ["Plus Jakarta Sans"],
+						"label-eyebrow": ["Space Grotesk"],
+						"body-lg": ["Plus Jakarta Sans"],
+						"display-hero-mobile": ["Plus Jakarta Sans"],
+						"headline-sm": ["Plus Jakarta Sans"],
+						"stat-metric": ["Plus Jakarta Sans"],
+						"label-code": ["Space Grotesk"]
+					},
+					fontSize: {
+						"body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+						"body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }],
+						"label-pill": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+						"display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+						"headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+						"headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+						"label-eyebrow": ["11px", { "lineHeight": "14px", "letterSpacing": "0.12em", "fontWeight": "700" }],
+						"body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+						"display-hero-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+						"headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+						"stat-metric": ["40px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+						"label-code": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }]
+					}
+				}
+			}
+		}
+	</script>
+
+	<!-- Design Tokens & Theme -->
+	<link rel="stylesheet" href="assets/bgs-modern-theme.css?v=26" />
+	<!-- Dedicated CSS file for index.html -->
+	<link rel="stylesheet" href="assets/index.css" />
+<link rel="stylesheet" href="assets/amphora-reference.css">
+<link rel="stylesheet" href="assets/amphora-bgs.css?v=41">
+<script defer src="assets/amphora-bgs.js?v=41"></script>
+<link rel="stylesheet" href="assets/services-showcase.css">
+<script defer src="assets/services-showcase.js"></script>
+</head>
+<body class="amphora-theme bg-surface font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+
+<!-- Reusable Navbar Component -->
+	<div id="navbar"></div>
+
+
+	<main class="w-full pt-20 bg-surface">
+		<div class="flex flex-col w-full overflow-hidden">
+
+			<!-- 1. HERO SECTION WITH BALANCED HIGH-IMPACT CANVAS -->
+			<section class="relative w-full max-w-[1320px] mx-auto px-6 md:px-12 pt-10 pb-16 md:pb-24">
+				<!-- Atmospheric Glow Backgrounds -->
+				<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[650px] pointer-events-none -z-10 overflow-hidden">
+					<div class="absolute top-0 right-10 w-[550px] h-[550px] rounded-full blur-3xl opacity-60" style="background: radial-gradient(circle, rgba(235, 87, 55, 0.22) 0%, rgba(255, 120, 73, 0.12) 40%, rgba(147, 51, 234, 0.05) 75%, transparent 100%);"></div>
+					<div class="absolute top-20 -left-20 w-[500px] h-[500px] rounded-full blur-3xl opacity-50" style="background: radial-gradient(circle, rgba(255, 170, 60, 0.18) 0%, rgba(235, 87, 55, 0.08) 50%, transparent 80%);"></div>
+					<div class="absolute top-44 left-1/3 w-[400px] h-[400px] rounded-full blur-2xl opacity-40" style="background: radial-gradient(circle, rgba(124, 58, 237, 0.12) 0%, rgba(235, 87, 55, 0.06) 60%, transparent 100%);"></div>
+				</div>
+
+				<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+					<!-- Left Column: Primary Value Proposition -->
+					<div class="lg:col-span-7 flex flex-col gap-6">
+						<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary font-label-eyebrow text-label-eyebrow tracking-widest uppercase w-fit">
+							<span class="h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+							<span>BGS ENTERPRISE PLATFORM &bull; EST. 2014</span>
+						</div>
+
+						<h1 class="font-display-hero text-display-hero-mobile md:text-display-hero text-on-surface tracking-tight leading-[1.08] font-bold">
+							Building Technology That Drives The <span class="text-primary italic font-semibold">Future Forward.</span>
+						</h1>
+
+						<p class="font-body-lg text-body-lg text-secondary max-w-xl leading-relaxed">
+							Established in 2014, Bridge Group Solutions (BGS) has grown from a niche project outsourcing company into a trusted name in digital transformation, enterprise solutions, and strategic consulting across India. Headquartered in Delhi NCR with a presence in Mumbai, Uttar Pradesh, and Tier-2 cities, BGS serves as a reliable growth partner for startups, SMEs, and large enterprises.
+						</p>
+
+						<div class="flex flex-wrap items-center gap-4 pt-2">
+							<a href="contact.html" class="px-7 py-3.5 rounded-full text-white font-label-pill text-label-pill shadow-[0_10px_28px_rgba(235,87,55,0.38)] hover:shadow-[0_16px_36px_rgba(235,87,55,0.5)] hover:-translate-y-0.5 active:translate-y-0 transition-all flex items-center gap-2 border border-white/20" style="background: linear-gradient(135deg, rgb(173, 43, 14) 0%, rgb(235, 87, 55) 60%, rgb(255, 120, 73) 100%);">
+								<span>Contact Us</span>
+								<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+							</a>
+
+							<a href="services/web.html" class="px-7 py-3.5 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface font-label-pill text-label-pill border border-surface-container-high hover:border-outline-variant transition-all flex items-center gap-2">
+								<span>Explore Solutions</span>
+								<span class="material-symbols-outlined text-[16px]">north_east</span>
+							</a>
+						</div>
+
+						<!-- Trust & Scale Telemetry Strip -->
+						<div class="grid grid-cols-3 gap-4 pt-4 border-t border-surface-container-high/80 max-w-lg">
+							<div class="flex flex-col">
+								<span class="font-headline-sm text-headline-sm font-bold text-on-surface">10+</span>
+								<span class="font-label-code text-[11px] text-secondary uppercase">Years Proven Growth</span>
+							</div>
+							<div class="flex flex-col">
+								<span class="font-headline-sm text-headline-sm font-bold text-on-surface">250+</span>
+								<span class="font-label-code text-[11px] text-secondary uppercase">Enterprise Deployments</span>
+							</div>
+							<div class="flex flex-col">
+								<span class="font-headline-sm text-headline-sm font-bold text-on-surface">99.9%</span>
+								<span class="font-label-code text-[11px] text-secondary uppercase">Uptime Architecture</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- Right Column: Featured Insights & Publications Bento -->
+					<div class="lg:col-span-5 relative w-full flex items-center justify-center">
+						<div class="w-full max-w-[540px] flex flex-col gap-4">
+							<!-- Primary Image Card (Pure Image, No Text) -->
+							<div class="overflow-hidden rounded-3xl border border-surface-container-high bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.12)] hover:border-primary/40 transition-all duration-500 group">
+								<div class="w-full h-64 sm:h-72 overflow-hidden relative">
+									<img src="assets/hero-enterprise-crm.jpg" alt="Enterprise Solutions" loading="eager" class="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105" />
+								</div>
+							</div>
+
+							<!-- Secondary Dual Images Grid (Pure Images, No Text) -->
+							<div class="grid grid-cols-2 gap-4">
+								<!-- Image 2: IT Outsourcing -->
+								<div class="overflow-hidden rounded-2xl border border-surface-container-high bg-surface-container-lowest shadow-sm hover:shadow-[0_14px_32px_rgba(235,87,55,0.12)] hover:border-primary/40 transition-all duration-500 group">
+									<div class="w-full h-44 sm:h-48 overflow-hidden relative">
+										<img src="assets/hero-it-outsourcing.jpg" alt="Engineering Squad" loading="lazy" class="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105" />
+									</div>
+								</div>
+
+								<!-- Image 3: Data Analytics -->
+								<div class="overflow-hidden rounded-2xl border border-surface-container-high bg-surface-container-lowest shadow-sm hover:shadow-[0_14px_32px_rgba(235,87,55,0.12)] hover:border-primary/40 transition-all duration-500 group">
+									<div class="w-full h-44 sm:h-48 overflow-hidden relative">
+										<img src="assets/hero-data-analytics.jpg" alt="Data Intelligence" loading="lazy" class="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 2. LOGO MARQUEE & METRICS BAR -->
+			<section class="w-full bg-surface-container-low/70 py-6 border-y border-surface-container-high/60 overflow-hidden">
+				<div class="max-w-[1320px] mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
+					<div class="flex items-center gap-3 shrink-0">
+						<span class="h-2 w-2 rounded-full bg-primary"></span>
+						<span class="font-label-eyebrow text-[11px] font-bold uppercase tracking-widest text-secondary">TRUSTED ENTERPRISE METRICS:</span>
+					</div>
+					<div class="flex flex-wrap items-center justify-center md:justify-end gap-6 sm:gap-10 font-label-code text-[12px] font-semibold text-secondary">
+						<div class="flex items-center gap-2">
+							<span class="text-primary font-bold">40%</span>
+							<span>Efficiency Boost</span>
+						</div>
+						<div class="flex items-center gap-2">
+							<span class="text-primary font-bold">55%</span>
+							<span>Faster Time-To-Market</span>
+						</div>
+						<div class="flex items-center gap-2">
+							<span class="text-primary font-bold">ISO 27001</span>
+							<span>&amp; SOC 2 Type II Certified</span>
+						</div>
+						<div class="flex items-center gap-2">
+							<span class="text-primary font-bold">250+</span>
+							<span>Live Implementations</span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 3. ETHOS / PHILOSOPHY ASYMMETRICAL EDITORIAL BENTO -->
+			<section id="ethos" class="relative w-full max-w-[1320px] mx-auto px-4 sm:px-6 md:px-12 py-10 sm:py-12 md:py-16 overflow-hidden">
+				<!-- Atmospheric Glows -->
+				<div class="absolute -top-24 right-0 w-96 h-96 rounded-full blur-3xl opacity-25 pointer-events-none -z-10" style="background: radial-gradient(circle, rgba(235, 87, 55, 0.25) 0%, transparent 70%);"></div>
+				<div class="absolute -bottom-24 left-0 w-96 h-96 rounded-full blur-3xl opacity-20 pointer-events-none -z-10" style="background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, transparent 70%);"></div>
+
+				<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+					<!-- Left Anchored Headline Column -->
+					<div class="lg:col-span-5 flex flex-col justify-start gap-5">
+						<div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-surface-container-low shadow-[0_2px_8px_rgba(0,0,0,0.04)] w-fit">
+							<span class="relative flex h-2 w-2">
+								<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+								<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+							</span>
+							<span class="font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-widest">OUR ETHOS</span>
+						</div>
+
+						<h2 class="font-headline-lg text-[32px] md:text-[40px] font-bold text-on-surface tracking-tight mt-2 leading-[1.12]">
+							Driven to Deliver. <span class="text-primary italic font-semibold">Built to Scale.</span>
+						</h2>
+
+						<p class="font-body-md text-body-md text-secondary leading-relaxed">
+							Our comprehensive solutions platform powers your business forward with confidence. With reliable infrastructure, skilled experts, and tailored strategies, we deliver results that matter. From web and app development to data analytics, CRM, ERP, and customized software, we provide end-to-end services designed to scale with you. This isn’t just service delivery—it’s complete digital growth, built for today’s fast-moving world.
+						</p>
+
+						<div class="pt-2">
+							<a href="contact.html" class="px-7 py-3 rounded-full text-white font-label-pill text-label-pill shadow-[0_10px_25px_rgba(235,87,55,0.35)] hover:shadow-[0_14px_30px_rgba(235,87,55,0.5)] hover:-translate-y-0.5 transition-all inline-flex items-center gap-2 border border-white/20" style="background: linear-gradient(135deg, rgb(173, 43, 14) 0%, rgb(235, 87, 55) 100%);">
+								<span>Join Us</span>
+								<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+							</a>
+						</div>
+					</div>
+
+					<!-- Right Column: 4 Principle Bento Cards -->
+					<div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5">
+						<!-- Principle 01 -->
+						<div class="p-5 sm:p-6 rounded-2xl bg-surface-container-lowest shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_30px_rgba(235,87,55,0.14)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group border border-primary/30 hover:border-primary relative overflow-hidden">
+							<div class="flex flex-col">
+								<div class="flex items-center justify-between mb-3.5">
+									<div class="flex items-center gap-2">
+										<span class="font-label-code text-[16px] sm:text-[18px] font-extrabold text-primary">01</span>
+										<span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-primary/10 text-primary border border-primary/20">Principle</span>
+									</div>
+									<div class="w-10 h-10 rounded-xl flex items-center justify-center text-white shadow-sm" style="background: linear-gradient(135deg, #ad2b0e 0%, #eb5737 100%);">
+										<span class="material-symbols-outlined text-[20px]">explore</span>
+									</div>
+								</div>
+								<h3 class="font-headline-sm text-[18px] font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">Driven by Purpose</h3>
+								<p class="font-body-sm text-[13px] text-secondary leading-relaxed">At BGS, everything we do is guided by a clear purpose—to create meaningful impact through technology. We focus on delivering solutions that not only solve problems but also add lasting value. Our purpose-driven approach ensures every project aligns with our clients’ goals and vision.</p>
+							</div>
+							<div class="mt-4 pt-3 border-t border-primary/15 flex items-center justify-between font-label-code text-[11px] text-primary font-bold">
+								<span>PURPOSE-DRIVEN IMPACT</span>
+								<span class="material-symbols-outlined text-[15px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+							</div>
+						</div>
+
+						<!-- Principle 02 -->
+						<div class="p-5 sm:p-6 rounded-2xl bg-surface-container-lowest shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_30px_rgba(139,92,246,0.18)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group border border-violet-200/70 hover:border-violet-400 relative overflow-hidden" data-card-color="violet">
+							<div class="flex flex-col">
+								<div class="flex items-center justify-between mb-3.5">
+									<div class="flex items-center gap-2">
+										<span class="font-label-code text-[16px] sm:text-[18px] font-extrabold text-violet-600">02</span>
+										<span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-violet-50 text-violet-800 border border-violet-200/60">Principle</span>
+									</div>
+									<div class="w-10 h-10 rounded-xl flex items-center justify-center text-white shadow-sm" style="background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);">
+										<span class="material-symbols-outlined text-[20px]">rocket_launch</span>
+									</div>
+								</div>
+								<h3 class="font-headline-sm text-[18px] font-bold text-on-surface mb-2 group-hover:text-violet-600 transition-colors">Future Ready Support</h3>
+								<p class="font-body-sm text-[13px] text-secondary leading-relaxed">At Bridge Group Solutions, we design and develop systems that are scalable, adaptable, and built to evolve with changing business needs. By combining modern development practices with forward-thinking architecture, we ensure our solutions remain reliable, efficient, and relevant — not just for today, but for the future.</p>
+							</div>
+							<div class="mt-4 pt-3 border-t border-violet-100 flex items-center justify-between font-label-code text-[11px] text-violet-700 font-bold group-hover:text-violet-600 transition-colors">
+								<span>ADAPTIVE SCALING</span>
+								<span class="material-symbols-outlined text-[15px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+							</div>
+						</div>
+
+						<!-- Principle 03 -->
+						<div class="p-5 sm:p-6 rounded-2xl bg-surface-container-lowest shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_30px_rgba(16,185,129,0.18)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group border border-emerald-200/70 hover:border-emerald-400 relative overflow-hidden" data-card-color="emerald">
+							<div class="flex flex-col">
+								<div class="flex items-center justify-between mb-3.5">
+									<div class="flex items-center gap-2">
+										<span class="font-label-code text-[16px] sm:text-[18px] font-extrabold text-emerald-600">03</span>
+										<span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-800 border border-emerald-200/60">Principle</span>
+									</div>
+									<div class="w-10 h-10 rounded-xl flex items-center justify-center text-white shadow-sm" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+										<span class="material-symbols-outlined text-[20px]">lock</span>
+									</div>
+								</div>
+								<h3 class="font-headline-sm text-[18px] font-bold text-on-surface mb-2 group-hover:text-emerald-600 transition-colors">Reliable Systems</h3>
+								<p class="font-body-sm text-[13px] text-secondary leading-relaxed">We deliver reliable systems built on trust and consistency. Our focus on quality, testing, and secure design ensures smooth performance and minimal downtime. Clients rely on our proven expertise to provide dependable solutions that support their business needs.</p>
+							</div>
+							<div class="mt-4 pt-3 border-t border-emerald-100 flex items-center justify-between font-label-code text-[11px] text-emerald-700 font-bold group-hover:text-emerald-600 transition-colors">
+								<span>ZERO DOWNTIME PROMISE</span>
+								<span class="material-symbols-outlined text-[15px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+							</div>
+						</div>
+
+						<!-- Principle 04 -->
+						<div class="p-5 sm:p-6 rounded-2xl bg-surface-container-lowest shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_30px_rgba(235,87,55,0.16)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group border border-primary/30 hover:border-primary relative overflow-hidden">
+							<div class="flex flex-col">
+								<div class="flex items-center justify-between mb-3.5">
+									<div class="flex items-center gap-2">
+										<span class="font-label-code text-[16px] sm:text-[18px] font-extrabold text-primary">04</span>
+										<span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-primary/10 text-primary border border-primary/20">Principle</span>
+									</div>
+									<div class="w-10 h-10 rounded-xl flex items-center justify-center text-white shadow-sm" style="background: linear-gradient(135deg, #ad2b0e 0%, #eb5737 100%);">
+										<span class="material-symbols-outlined text-[20px]">sync</span>
+									</div>
+								</div>
+								<h3 class="font-headline-sm text-[18px] font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">Agile at the Core</h3>
+								<p class="font-body-sm text-[13px] text-secondary leading-relaxed">We stay agile by quickly adapting to changing needs and technologies. Our flexible approach allows us to deliver efficient, reliable solutions while continuously improving to meet client expectations.</p>
+							</div>
+							<div class="mt-4 pt-3 border-t border-red-100 flex items-center justify-between font-label-code text-[11px] text-primary font-bold">
+								<span>CONTINUOUS CI/CD DELIVERY</span>
+								<span class="material-symbols-outlined text-[15px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 4. OUR SERVICES SECTION -->
+			<section id="core-services" class="services-showcase" aria-labelledby="sc-heading"><div class="sc-shell"><header class="sc-heading items-center text-center"><span class="sc-eyebrow">OUR SERVICES</span><h2 id="sc-heading">We Don’t Just Build Systems. We Build Your <span class="text-primary italic sc-gradient">Competitive Edge.</span></h2></header><div class="sc-grid"><article class="sc-card" tabindex="0" aria-labelledby="sc-title-0" style="--sc-index:0"><div class="sc-copy"><div class="sc-icon"><span class="material-symbols-outlined" aria-hidden="true">language</span></div><h3 id="sc-title-0">Web Development</h3><p>Crafting modern, high-performing websites that deliver seamless user experiences and drive results.</p><div class="sc-footer"><a href="services/web.html" aria-label="Explore Web Development">Explore <span aria-hidden="true">→</span></a><span>SLA 99.99%</span></div></div><div class="sc-art sc-art-0" aria-hidden="true"><svg viewBox="0 0 300 225" fill="none"><defs><linearGradient id="sc-grad-0" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c8b4f0"/><stop offset=".55" stop-color="#a38ade"/><stop offset="1" stop-color="#efb9a4"/></linearGradient></defs><ellipse cx="145" cy="194" rx="110" ry="13" fill="#d9d0f1" opacity=".35"/>
+<g class="sc-piece" style="--dx:0px;--dy:16px;--d:0s"><rect x="30" y="37" width="228" height="150" rx="14" fill="white" stroke="#cec2ef"/><path d="M30 65H258" stroke="#e5dff1"/><circle cx="45" cy="51" r="3" fill="#f3bcae"/><circle cx="57" cy="51" r="3" fill="#d5c4f5"/><circle cx="69" cy="51" r="3" fill="#c4dbec"/><rect x="101" y="46" width="111" height="10" rx="5" fill="#f3f0f8"/></g>
+<g class="sc-piece" style="--dx:-30px;--dy:-22px;--d:.2s"><rect x="46" y="79" width="92" height="88" rx="8" fill="url(#sc-grad-0)"/><circle cx="112" cy="98" r="10" fill="white" opacity=".65"/><path d="m46 150 25-32 22 18 16-13 29 34v10H46" fill="white" opacity=".6"/></g>
+<g class="sc-piece" style="--dx:25px;--dy:-10px;--d:.4s"><rect x="151" y="83" width="83" height="8" rx="4" fill="#7e64c5"/><rect x="151" y="101" width="72" height="5" rx="2.5" fill="#ddd5ee"/><rect x="151" y="113" width="81" height="5" rx="2.5" fill="#ddd5ee"/><rect x="151" y="125" width="54" height="5" rx="2.5" fill="#ddd5ee"/></g>
+<rect class="sc-piece" style="--dx:12px;--dy:22px;--d:.65s" x="151" y="146" width="62" height="23" rx="7" fill="#7359e8"/></svg></div></article><article class="sc-card" tabindex="0" aria-labelledby="sc-title-1" style="--sc-index:1"><div class="sc-copy"><div class="sc-icon"><span class="material-symbols-outlined" aria-hidden="true">devices</span></div><h3 id="sc-title-1">Application Development</h3><p>Building robust, scalable applications designed for performance, usability, and business growth.</p><div class="sc-footer"><a href="services/app.html" aria-label="Explore Application Development">Explore <span aria-hidden="true">→</span></a><span>iOS &amp; Android</span></div></div><div class="sc-art sc-art-1" aria-hidden="true"><svg viewBox="0 0 300 225" fill="none"><defs><linearGradient id="sc-grad-1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c8b4f0"/><stop offset=".55" stop-color="#a38ade"/><stop offset="1" stop-color="#efb9a4"/></linearGradient></defs><ellipse cx="145" cy="197" rx="100" ry="10" fill="#ded4f4" opacity=".4"/>
+<g class="sc-piece" style="--dx:-18px;--dy:10px;--d:0s"><rect x="47" y="20" width="88" height="173" rx="19" fill="#fff" stroke="#cfc2ed"/><rect x="55" y="42" width="72" height="134" rx="9" fill="#f2edfc"/><rect x="76" y="28" width="30" height="5" rx="2.5" fill="#d6cbed"/><g class="sc-screen"><rect x="63" y="52" width="56" height="47" rx="7" fill="url(#sc-grad-1)"/><rect x="63" y="112" width="50" height="6" rx="3" fill="#cbb8ed"/><rect x="63" y="125" width="38" height="5" rx="2.5" fill="#ded3ef"/><rect x="63" y="145" width="56" height="19" rx="6" fill="#8d69dd"/></g></g>
+<g class="sc-piece" style="--dx:18px;--dy:-10px;--d:.2s"><rect x="158" y="31" width="88" height="173" rx="19" fill="#fff" stroke="#cfc2ed"/><rect x="166" y="53" width="72" height="134" rx="9" fill="#f8f1f8"/><rect x="187" y="39" width="30" height="5" rx="2.5" fill="#d6cbed"/><g class="sc-screen" style="--d:.3s"><circle cx="202" cy="83" r="16" fill="#e5d5f7"/><path d="m195 83 5 5 9-11" stroke="#9871d9" stroke-width="3" fill="none"/><rect x="174" y="111" width="56" height="23" rx="6" fill="#e9ddf6"/><rect x="174" y="145" width="56" height="29" rx="6" fill="url(#sc-grad-1)"/></g></g>
+<g class="sc-transfer"><rect x="110" y="97" width="52" height="38" rx="10" fill="#7359e8" stroke="white" stroke-width="3"/><path d="M123 116h25m-7-6 7 6-7 6" stroke="white" stroke-width="2" fill="none"/></g></svg></div></article><article class="sc-card" tabindex="0" aria-labelledby="sc-title-2" style="--sc-index:2"><div class="sc-copy"><div class="sc-icon"><span class="material-symbols-outlined" aria-hidden="true">analytics</span></div><h3 id="sc-title-2">Data Analytics</h3><p>Unlocking the power of your data to reveal insights, drive smarter decisions, and accelerate business growth.</p><div class="sc-footer"><a href="services/data.html" aria-label="Explore Data Analytics">Explore <span aria-hidden="true">→</span></a><span>Data Intelligence</span></div></div><div class="sc-art sc-art-2" aria-hidden="true"><svg viewBox="0 0 300 225" fill="none"><defs><linearGradient id="sc-grad-2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c8b4f0"/><stop offset=".55" stop-color="#a38ade"/><stop offset="1" stop-color="#efb9a4"/></linearGradient></defs><rect x="30" y="32" width="235" height="163" rx="15" fill="white" stroke="#d5caed"/><path d="M48 169H247M48 58V169" stroke="#e2dcef"/><path d="M48 132H247M48 95H247" stroke="#f2eef8"/>
+<rect class="sc-bar" style="--d:.1s" x="65" y="128" width="25" height="41" rx="5" fill="#d7c3f0"/><rect class="sc-bar" style="--d:.25s" x="108" y="104" width="25" height="65" rx="5" fill="#b5a0e7"/><rect class="sc-bar" style="--d:.4s" x="151" y="85" width="25" height="84" rx="5" fill="#9579dc"/><rect class="sc-bar" style="--d:.55s" x="194" y="60" width="25" height="109" rx="5" fill="#7359e8"/>
+<path class="sc-line" pathLength="100" d="M58 139 112 119 161 85 222 51" stroke="#f1b18b" stroke-width="3" stroke-linecap="round" fill="none"/><circle class="sc-data-dot" cx="0" cy="0" r="5" fill="#f1b18b"/>
+<g class="sc-insight"><rect x="165" y="20" width="98" height="32" rx="10" fill="#faf6ff" stroke="#d3c5f1"/><path d="m178 38 5-6 5 3 8-7m-4 0h4v4" stroke="#9576d9" stroke-width="2" fill="none"/><rect x="206" y="30" width="41" height="4" rx="2" fill="#aa91da"/><rect x="206" y="38" width="28" height="3" rx="1.5" fill="#d8c9ed"/></g></svg></div></article><article class="sc-card" tabindex="0" aria-labelledby="sc-title-3" style="--sc-index:3"><div class="sc-copy"><div class="sc-icon"><span class="material-symbols-outlined" aria-hidden="true">group_work</span></div><h3 id="sc-title-3">Project Outsourcing</h3><p>Seamlessly extend your capabilities with expert talent—delivering high-quality projects faster, smarter, and more efficiently.</p><div class="sc-footer"><a href="services/project.html" aria-label="Explore Project Outsourcing">Explore <span aria-hidden="true">→</span></a><span>Expert Talent</span></div></div><div class="sc-art sc-art-3" aria-hidden="true"><svg viewBox="0 0 300 225" fill="none"><defs><linearGradient id="sc-grad-3" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c8b4f0"/><stop offset=".55" stop-color="#a38ade"/><stop offset="1" stop-color="#efb9a4"/></linearGradient></defs><path d="M64 43Q139 35 168 95M55 114Q110 100 168 108M64 185Q130 175 168 124" stroke="#d0c4ec" stroke-width="1.5" fill="none"/>
+<path class="sc-task" style="--d:.2s" pathLength="100" d="M64 43Q139 35 168 95"/><path class="sc-task" style="--d:.5s" pathLength="100" d="M55 114Q110 100 168 108"/><path class="sc-task" style="--d:.8s" pathLength="100" d="M64 185Q130 175 168 124"/>
+<g class="sc-piece" style="--d:0s;--dx:-12px;--dy:0px"><circle cx="57" cy="43" r="22" fill="#e8ddf7"/><circle cx="57" cy="37" r="6" fill="#aa8ad6"/><path d="M45 56q0-15 12-15t12 15" fill="#aa8ad6"/><circle cx="47" cy="114" r="22" fill="#f8e3d8"/><circle cx="47" cy="108" r="6" fill="#d7a58a"/><path d="M35 127q0-15 12-15t12 15" fill="#d7a58a"/><circle cx="57" cy="185" r="22" fill="#dae5fa"/><circle cx="57" cy="179" r="6" fill="#8fa4d3"/><path d="M45 198q0-15 12-15t12 15" fill="#8fa4d3"/></g>
+<g class="sc-piece" style="--d:.2s;--dx:12px;--dy:0px"><rect x="162" y="57" width="105" height="124" rx="14" fill="white" stroke="#cec1eb"/><rect x="179" y="76" width="64" height="7" rx="3" fill="#b59bdc"/><path d="M184 103h57m-57 22h57m-57 22h40" stroke="#e1d7ef" stroke-width="5" stroke-linecap="round"/></g>
+<g class="sc-complete"><circle cx="251" cy="174" r="21" fill="#7359e8" stroke="white" stroke-width="4"/><path d="m241 174 7 7 13-15" stroke="white" stroke-width="3" fill="none" stroke-linecap="round"/></g></svg></div></article><article class="sc-card" tabindex="0" aria-labelledby="sc-title-4" style="--sc-index:4"><div class="sc-copy"><div class="sc-icon"><span class="material-symbols-outlined" aria-hidden="true">dns</span></div><h3 id="sc-title-4">ERP &amp; Customize Software</h3><p>Tailored solutions that streamline operations, improve efficiency, and support scalable business growth.</p><div class="sc-footer"><a href="services/erp.html" aria-label="Explore ERP &amp; Customize Software">Explore <span aria-hidden="true">→</span></a><span>Modular Systems</span></div></div><div class="sc-art sc-art-4" aria-hidden="true"><svg viewBox="0 0 300 225" fill="none"><defs><linearGradient id="sc-grad-4" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c8b4f0"/><stop offset=".55" stop-color="#a38ade"/><stop offset="1" stop-color="#efb9a4"/></linearGradient></defs><path d="M77 58H133V111M77 174H133V111M222 111H163" fill="none" stroke="#d2c6ea" stroke-width="2"/>
+<path class="sc-task" pathLength="100" style="--d:.2s" d="M77 58H133V111"/><path class="sc-task" pathLength="100" style="--d:.6s" d="M77 174H133V111"/><path class="sc-task" pathLength="100" style="--d:.9s" d="M222 111H163"/>
+<rect class="sc-piece" style="--dx:-14px;--dy:-8px;--d:0s" x="17" y="29" width="78" height="58" rx="12" fill="#f3eafd" stroke="#d8c8ee"/><rect class="sc-piece" style="--dx:-14px;--dy:8px;--d:.15s" x="17" y="145" width="78" height="58" rx="12" fill="#fff1e7" stroke="#eed5c3"/><rect class="sc-piece" style="--dx:14px;--dy:0px;--d:.3s" x="207" y="82" width="78" height="58" rx="12" fill="#eaf0fd" stroke="#cdd9f3"/>
+<g class="sc-core"><rect x="116" y="83" width="64" height="64" rx="18" fill="url(#sc-grad-4)" stroke="white" stroke-width="3"/><path d="m133 105 15-8 15 8v18l-15 9-15-9zm0 0 15 9 15-9m-15 9v18" stroke="white" stroke-width="2" fill="none"/></g></svg><div class="sc-erp-label sc-sales">Sales</div><div class="sc-erp-label sc-stock">Stock</div><div class="sc-erp-label sc-finance">Finance</div></div></article><article class="sc-card" tabindex="0" aria-labelledby="sc-title-5" style="--sc-index:5"><div class="sc-copy"><div class="sc-icon"><span class="material-symbols-outlined" aria-hidden="true">hub</span></div><h3 id="sc-title-5">CRM</h3><p>Smart solutions to manage customer relationships, enhance engagement, and drive business growth.</p><div class="sc-footer"><a href="services/crm.html" aria-label="Explore CRM">Explore <span aria-hidden="true">→</span></a><span>&lt;4 Min SLA</span></div></div><div class="sc-art sc-art-5" aria-hidden="true"><svg viewBox="0 0 300 225" fill="none"><defs><linearGradient id="sc-grad-5" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c8b4f0"/><stop offset=".55" stop-color="#a38ade"/><stop offset="1" stop-color="#efb9a4"/></linearGradient></defs><circle class="sc-ripple" cx="150" cy="115" r="50" fill="none" stroke="#c9b6ef"/><circle class="sc-ripple" style="--d:.3s" cx="150" cy="115" r="73" fill="none" stroke="#e4d7f6"/>
+<g class="sc-crm-lines" fill="none" stroke="#c5b1e7" stroke-width="1.5"><path class="sc-line" pathLength="100" d="M150 115 66 53M150 115 244 62M150 115 59 171M150 115 237 177"/></g>
+<g class="sc-piece" style="--d:.3s;--dx:-8px;--dy:-8px" fill="#e6d9f7" stroke="white" stroke-width="3"><circle cx="66" cy="53" r="19"/><circle cx="244" cy="62" r="19"/><circle cx="59" cy="171" r="19"/><circle cx="237" cy="177" r="19"/></g>
+<g fill="#ac8cd8"><circle cx="66" cy="49" r="5"/><path d="M57 63q0-12 9-12t9 12"/><circle cx="244" cy="58" r="5"/><path d="M235 72q0-12 9-12t9 12"/><circle cx="59" cy="167" r="5"/><path d="M50 181q0-12 9-12t9 12"/><circle cx="237" cy="173" r="5"/><path d="M228 187q0-12 9-12t9 12"/></g>
+<g class="sc-core"><circle cx="150" cy="115" r="35" fill="url(#sc-grad-5)" stroke="white" stroke-width="4"/><circle cx="150" cy="107" r="10" fill="white"/><path d="M131 136q0-24 19-24t19 24" fill="white"/></g>
+<g class="sc-notification"><rect x="191" y="27" width="69" height="25" rx="9" fill="white" stroke="#d1c1e9"/><circle cx="204" cy="40" r="4" fill="#c49be6"/><path d="M215 36h29m-29 7h18" stroke="#c9b4e3" stroke-width="3" stroke-linecap="round"/></g></svg></div></article></div></div></section>
+
+			<!-- 5. OUR MAIN FEATURE: ENGINEERED SYSTEMS & ACCELERATED GROWTH -->
+			<section id="focus-industries" class="w-full max-w-[1320px] mx-auto px-6 md:px-12 py-16 md:py-24">
+				<div class="flex flex-col items-start text-left max-w-3xl mb-14">
+					<span class="font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-widest text-left">OUR MAIN FEATURE</span>
+					<h2 class="font-headline-lg text-[32px] md:text-[40px] font-bold text-white tracking-tight mt-2 text-left">
+						Engineered Systems. <span class="text-primary italic font-semibold">Accelerated Growth.</span>
+					</h2>
+					<p class="font-body-md text-body-md text-[#9ca3af] mt-2 text-left">Modern technology is changing the game, not just improving it. It drives new possibilities and faster growth. We build at that pace—delivering solutions that move you forward.</p>
+				</div>
+
+				<!-- 9 Pillars Horizontal Rows (Matching Reference Image) -->
+				<div class="engineered-systems-list w-full mt-10">
+					<!-- Item 1: tune - Personalized Solutions -->
+					<div class="engineered-system-row w-full py-7 px-2 sm:px-4 grid grid-cols-1 md:grid-cols-[46%_54%] items-center border-b border-white/[0.08] hover:bg-white/[0.025] transition-colors duration-200">
+						<div class="engineered-system-left flex items-center gap-4 sm:gap-5 min-w-0">
+							<div class="engineered-system-icon-box w-10 h-10 rounded-xl bg-[#e0f2fe] text-[#0284c7] flex items-center justify-center shrink-0 shadow-sm">
+								<span class="material-symbols-outlined text-[22px]">tune</span>
+							</div>
+							<h3 class="engineered-system-title font-headline-sm text-[22px] md:text-[24px] font-bold text-white tracking-tight leading-snug max-w-[340px]">Personalized Solutions</h3>
+						</div>
+						<div class="engineered-system-desc font-body-md text-[15px] sm:text-[15.5px] text-[#9ca3af] leading-relaxed">
+							Tailored to your needs. Aligned with your goals. Built to deliver efficient, scalable, and impactful results.
+						</div>
+					</div>
+
+					<!-- Item 2: support_agent - Premium Customer Support -->
+					<div class="engineered-system-row w-full py-7 px-2 sm:px-4 grid grid-cols-1 md:grid-cols-[46%_54%] items-center border-b border-white/[0.08] hover:bg-white/[0.025] transition-colors duration-200">
+						<div class="engineered-system-left flex items-center gap-4 sm:gap-5 min-w-0">
+							<div class="engineered-system-icon-box w-10 h-10 rounded-xl bg-[#f3e8ff] text-[#9333ea] flex items-center justify-center shrink-0 shadow-sm">
+								<span class="material-symbols-outlined text-[22px]">support_agent</span>
+							</div>
+							<h3 class="engineered-system-title font-headline-sm text-[22px] md:text-[24px] font-bold text-white tracking-tight leading-snug max-w-[340px]">Premium Customer Support</h3>
+						</div>
+						<div class="engineered-system-desc font-body-md text-[15px] sm:text-[15.5px] text-[#9ca3af] leading-relaxed">
+							Responsive, reliable, and always available. Dedicated support to ensure smooth operations and quick resolution at every step.
+						</div>
+					</div>
+
+					<!-- Item 3: lightbulb - Innovation with Real Implementations (Exact match to Row 1 in reference) -->
+					<div class="engineered-system-row w-full py-7 px-2 sm:px-4 grid grid-cols-1 md:grid-cols-[46%_54%] items-center border-b border-white/[0.08] hover:bg-white/[0.025] transition-colors duration-200">
+						<div class="engineered-system-left flex items-center gap-4 sm:gap-5 min-w-0">
+							<div class="engineered-system-icon-box w-10 h-10 rounded-xl bg-[#d1fae5] text-[#059669] flex items-center justify-center shrink-0 shadow-sm">
+								<span class="material-symbols-outlined text-[22px]">lightbulb</span>
+							</div>
+							<h3 class="engineered-system-title font-headline-sm text-[22px] md:text-[24px] font-bold text-white tracking-tight leading-snug max-w-[340px]">Innovation with Real Implementations</h3>
+						</div>
+						<div class="engineered-system-desc font-body-md text-[15px] sm:text-[15.5px] text-[#9ca3af] leading-relaxed">
+							Practical innovation that delivers real results. We turn ideas into scalable, working solutions that drive measurable impact.
+						</div>
+					</div>
+
+					<!-- Item 4: payments - Quality That Fits Your Budget (Exact match to Row 2 in reference) -->
+					<div class="engineered-system-row w-full py-7 px-2 sm:px-4 grid grid-cols-1 md:grid-cols-[46%_54%] items-center border-b border-white/[0.08] hover:bg-white/[0.025] transition-colors duration-200">
+						<div class="engineered-system-left flex items-center gap-4 sm:gap-5 min-w-0">
+							<div class="engineered-system-icon-box w-10 h-10 rounded-xl bg-[#fef3c7] text-[#7c3aed] flex items-center justify-center shrink-0 shadow-sm">
+								<span class="material-symbols-outlined text-[22px]">payments</span>
+							</div>
+							<h3 class="engineered-system-title font-headline-sm text-[22px] md:text-[24px] font-bold text-white tracking-tight leading-snug max-w-[340px]">Quality That Fits Your Budget</h3>
+						</div>
+						<div class="engineered-system-desc font-body-md text-[15px] sm:text-[15.5px] text-[#9ca3af] leading-relaxed">
+							High-quality solutions delivered with efficiency and value. Premium service standards without compromising on cost-effectiveness.
+						</div>
+					</div>
+
+					<!-- Item 5: speed - Reliable Performance (Exact match to Row 3 in reference) -->
+					<div class="engineered-system-row w-full py-7 px-2 sm:px-4 grid grid-cols-1 md:grid-cols-[46%_54%] items-center border-b border-white/[0.08] hover:bg-white/[0.025] transition-colors duration-200">
+						<div class="engineered-system-left flex items-center gap-4 sm:gap-5 min-w-0">
+							<div class="engineered-system-icon-box w-10 h-10 rounded-xl bg-[#1f152d] text-[#c084fc] flex items-center justify-center shrink-0 shadow-sm">
+								<span class="material-symbols-outlined text-[22px]">speed</span>
+							</div>
+							<h3 class="engineered-system-title font-headline-sm text-[22px] md:text-[24px] font-bold text-white tracking-tight leading-snug max-w-[340px]">Reliable Performance</h3>
+						</div>
+						<div class="engineered-system-desc font-body-md text-[15px] sm:text-[15.5px] text-[#9ca3af] leading-relaxed">
+							Consistent, high-performing systems you can depend on.
+						</div>
+					</div>
+
+					<!-- Item 6: published_with_changes - Continuous Support -->
+					<div class="engineered-system-row w-full py-7 px-2 sm:px-4 grid grid-cols-1 md:grid-cols-[46%_54%] items-center border-b border-white/[0.08] hover:bg-white/[0.025] transition-colors duration-200">
+						<div class="engineered-system-left flex items-center gap-4 sm:gap-5 min-w-0">
+							<div class="engineered-system-icon-box w-10 h-10 rounded-xl bg-[#dbeafe] text-[#2563eb] flex items-center justify-center shrink-0 shadow-sm">
+								<span class="material-symbols-outlined text-[22px]">published_with_changes</span>
+							</div>
+							<h3 class="engineered-system-title font-headline-sm text-[22px] md:text-[24px] font-bold text-white tracking-tight leading-snug max-w-[340px]">Continuous Support</h3>
+						</div>
+						<div class="engineered-system-desc font-body-md text-[15px] sm:text-[15.5px] text-[#9ca3af] leading-relaxed">
+							Ongoing assistance to ensure long-term success, stability, smooth operations, and consistent performance.
+						</div>
+					</div>
+
+					<!-- Item 7: query_stats - Data-Driven Approach -->
+					<div class="engineered-system-row w-full py-7 px-2 sm:px-4 grid grid-cols-1 md:grid-cols-[46%_54%] items-center border-b border-white/[0.08] hover:bg-white/[0.025] transition-colors duration-200">
+						<div class="engineered-system-left flex items-center gap-4 sm:gap-5 min-w-0">
+							<div class="engineered-system-icon-box w-10 h-10 rounded-xl bg-[#ccfbf1] text-[#0d9488] flex items-center justify-center shrink-0 shadow-sm">
+								<span class="material-symbols-outlined text-[22px]">query_stats</span>
+							</div>
+							<h3 class="engineered-system-title font-headline-sm text-[22px] md:text-[24px] font-bold text-white tracking-tight leading-snug max-w-[340px]">Data-Driven Approach</h3>
+						</div>
+						<div class="engineered-system-desc font-body-md text-[15px] sm:text-[15.5px] text-[#9ca3af] leading-relaxed">
+							Leveraging data insights to guide decisions, optimize performance, improve efficiency, and drive smarter business outcomes.
+						</div>
+					</div>
+
+					<!-- Item 8: person_check - User-Centric Design -->
+					<div class="engineered-system-row w-full py-7 px-2 sm:px-4 grid grid-cols-1 md:grid-cols-[46%_54%] items-center border-b border-white/[0.08] hover:bg-white/[0.025] transition-colors duration-200">
+						<div class="engineered-system-left flex items-center gap-4 sm:gap-5 min-w-0">
+							<div class="engineered-system-icon-box w-10 h-10 rounded-xl bg-[#ffe4e6] text-[#e11d48] flex items-center justify-center shrink-0 shadow-sm">
+								<span class="material-symbols-outlined text-[22px]">person_check</span>
+							</div>
+							<h3 class="engineered-system-title font-headline-sm text-[22px] md:text-[24px] font-bold text-white tracking-tight leading-snug max-w-[340px]">User-Centric Design</h3>
+						</div>
+						<div class="engineered-system-desc font-body-md text-[15px] sm:text-[15.5px] text-[#9ca3af] leading-relaxed">
+							Designed with users in mind to ensure intuitive, seamless, and engaging experiences across every interaction.
+						</div>
+					</div>
+
+					<!-- Item 9: security - Secure Systems -->
+					<div class="engineered-system-row w-full py-7 px-2 sm:px-4 grid grid-cols-1 md:grid-cols-[46%_54%] items-center last:border-b-0 hover:bg-white/[0.025] transition-colors duration-200">
+						<div class="engineered-system-left flex items-center gap-4 sm:gap-5 min-w-0">
+							<div class="engineered-system-icon-box w-10 h-10 rounded-xl bg-[#ffedd5] text-[#ea580c] flex items-center justify-center shrink-0 shadow-sm">
+								<span class="material-symbols-outlined text-[22px]">security</span>
+							</div>
+							<h3 class="engineered-system-title font-headline-sm text-[22px] md:text-[24px] font-bold text-white tracking-tight leading-snug max-w-[340px]">Secure Systems</h3>
+						</div>
+						<div class="engineered-system-desc font-body-md text-[15px] sm:text-[15.5px] text-[#9ca3af] leading-relaxed">
+							Built with robust security measures to protect data, ensure privacy, and maintain reliable, safe operations.
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 6. STRATEGIC SALES & PARTNERSHIPS -->
+			<section id="sales" class="w-full max-w-[1320px] mx-auto px-6 md:px-12 py-16 md:py-24 border-t border-surface-container-high/60">
+				<div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-14">
+					<span class="font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-widest">STRATEGIC SALES</span>
+					<h2 class="font-headline-lg text-[32px] md:text-[40px] font-bold text-on-surface tracking-tight mt-2 leading-tight">
+						We identify opportunities early. Transform into <span class="text-primary italic font-semibold">companies that matter.</span>
+					</h2>
+					<p class="font-body-md text-body-md text-secondary mt-4 leading-relaxed">
+						At Bridge Group Solutions, we believe that meaningful change happens when expertise is shared. That’s why we’ve joined forces with industry leaders who share our passion for excellence and innovation. These partnerships don’t just enhance our services — they amplify the outcomes we deliver.
+					</p>
+					<div class="pt-5">
+						<a href="about.html" class="px-7 py-3 rounded-full text-white font-label-pill text-label-pill shadow-[0_10px_25px_rgba(235,87,55,0.35)] hover:shadow-[0_14px_30px_rgba(235,87,55,0.5)] hover:-translate-y-0.5 transition-all inline-flex items-center gap-2 border border-white/20" style="background: linear-gradient(135deg, rgb(173, 43, 14) 0%, rgb(235, 87, 55) 100%);">
+							<span>Meet the Clients</span>
+							<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+						</a>
+					</div>
+				</div>
+
+				<!-- B2B SALES ENTERPRISE MODULE -->
+				<div class="sales-section-box p-8 md:p-12 mb-12">
+					<!-- B2B Sales Highlights Card -->
+					<div class="relative overflow-hidden rounded-3xl bg-surface-container-lowest/90 border border-surface-container-high p-6 sm:p-8 lg:p-10 shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.12)] hover:border-primary/40 transition-all duration-300 group">
+						<!-- Ambient Atmospheric Glow -->
+						<div class="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-primary/5 blur-3xl pointer-events-none group-hover:bg-primary/10 transition-colors duration-500"></div>
+
+						<div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-surface-container-high/80">
+							<div class="max-w-2xl flex flex-col gap-2.5">
+								<div>
+									<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary font-label-code text-[11px] font-bold border border-primary/20 tracking-wider uppercase">
+										<span class="material-symbols-outlined text-[14px]">handshake</span>
+										<span>B2B SALES</span>
+									</span>
+								</div>
+								<h3 class="font-headline-lg text-[26px] sm:text-[34px] font-bold text-on-surface tracking-tight leading-tight">
+									Drive Growth with Our <span class="text-primary italic font-semibold">B2B Sales Expertise</span>
+								</h3>
+								<p class="font-body-md text-body-md text-secondary leading-relaxed">
+									Unlock new opportunities and scale your business with our tailored B2B sales strategies. Our expert team supports your expansion into new markets and enhances your sales performance.
+								</p>
+							</div>
+						</div>
+
+						<!-- 3 Feature Pillar Cards -->
+						<div class="relative z-10 grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6">
+							<div class="flex items-center gap-3.5 p-4 rounded-2xl bg-white border border-surface-container-high shadow-2xs hover:border-primary/40 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group/pill">
+								<div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0 group-hover/pill:bg-primary group-hover/pill:text-white transition-colors">
+									<span class="material-symbols-outlined text-[20px]">person_search</span>
+								</div>
+								<span class="font-headline-sm text-[13.5px] sm:text-[14px] font-bold text-on-surface leading-snug">Lead Generation &amp; Qualification</span>
+							</div>
+
+							<div class="flex items-center gap-3.5 p-4 rounded-2xl bg-white border border-surface-container-high shadow-2xs hover:border-primary/40 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group/pill">
+								<div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0 group-hover/pill:bg-primary group-hover/pill:text-white transition-colors">
+									<span class="material-symbols-outlined text-[20px]">trending_up</span>
+								</div>
+								<span class="font-headline-sm text-[13.5px] sm:text-[14px] font-bold text-on-surface leading-snug">Sales Pipeline Optimization</span>
+							</div>
+
+							<div class="flex items-center gap-3.5 p-4 rounded-2xl bg-white border border-surface-container-high shadow-2xs hover:border-primary/40 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group/pill">
+								<div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0 group-hover/pill:bg-primary group-hover/pill:text-white transition-colors">
+									<span class="material-symbols-outlined text-[20px]">manage_accounts</span>
+								</div>
+								<span class="font-headline-sm text-[13.5px] sm:text-[14px] font-bold text-on-surface leading-snug">Dedicated Account Managers</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- 2-Column Split: Why Choose BGS & What Sets BGS Apart -->
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+						<!-- Why Choose BGS for Your Business? -->
+						<div class="sales-bento-hero p-6 sm:p-8 flex flex-col justify-between">
+							<div class="flex flex-col">
+								<div class="flex items-center gap-3.5 mb-6">
+									<div class="sales-icon-box">
+										<span class="material-symbols-outlined text-[24px]">verified</span>
+									</div>
+									<div>
+										<h4 class="font-headline-sm text-[19px] font-bold text-on-surface leading-snug">Why Choose BGS for Your Business?</h4>
+										<span class="font-label-code text-[11px] text-secondary">Tailored Enterprise Advantage</span>
+									</div>
+								</div>
+								<ul class="flex flex-col gap-3 font-body-sm text-[13px] text-secondary leading-relaxed">
+									<li class="sales-feature-row">
+										<span class="sales-bullet-dot"></span>
+										<div><strong class="text-on-surface font-semibold">Industry-Tailored Solutions:</strong> From logistics to finance, our services are customized to address your sector’s challenges.</div>
+									</li>
+									<li class="sales-feature-row">
+										<span class="sales-bullet-dot"></span>
+										<div><strong class="text-on-surface font-semibold">Human-First Approach:</strong> We listen to your needs and deliver solutions that feel intuitive and personalized.</div>
+									</li>
+									<li class="sales-feature-row">
+										<span class="sales-bullet-dot"></span>
+										<div><strong class="text-on-surface font-semibold">Proven Impact:</strong> Our clients report 40% improved operational efficiency and 55% faster project delivery.</div>
+									</li>
+									<li class="sales-feature-row">
+										<span class="sales-bullet-dot"></span>
+										<div><strong class="text-on-surface font-semibold">Unwavering Support:</strong> From onboarding to ongoing management, our team is your partner every step of the way.</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- What Sets BGS Apart -->
+						<div class="sales-bento-hero p-6 sm:p-8 flex flex-col justify-between">
+							<div class="flex flex-col">
+								<div class="flex items-center gap-3.5 mb-6">
+									<div class="sales-icon-box">
+										<span class="material-symbols-outlined text-[24px]">stars</span>
+									</div>
+									<div>
+										<h4 class="font-headline-sm text-[19px] font-bold text-on-surface leading-snug">What Sets BGS Apart</h4>
+										<span class="font-label-code text-[11px] text-secondary">Next-Gen Delivery Framework</span>
+									</div>
+								</div>
+								<ul class="flex flex-col gap-3 font-body-sm text-[13px] text-secondary leading-relaxed">
+									<li class="sales-feature-row">
+										<span class="sales-bullet-dot"></span>
+										<div><strong class="text-on-surface font-semibold">Holistic Tech Ecosystem:</strong> Combine CRM, software, cloud, and security for a unified strategy.</div>
+									</li>
+									<li class="sales-feature-row">
+										<span class="sales-bullet-dot"></span>
+										<div><strong class="text-on-surface font-semibold">Future-Ready Innovation:</strong> Stay ahead with AI-driven tools and cutting-edge technologies.</div>
+									</li>
+									<li class="sales-feature-row">
+										<span class="sales-bullet-dot"></span>
+										<div><strong class="text-on-surface font-semibold">Flexible Contracts:</strong> Pay-as-you-go plans let you scale up or down without long-term commitments.</div>
+									</li>
+									<li class="sales-feature-row">
+										<span class="sales-bullet-dot"></span>
+										<div><strong class="text-on-surface font-semibold">Local Expertise, Global Standards:</strong> Deep understanding of the Indian market paired with world-class solutions.</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<!-- 5 B2B Tech Modules Interactive Accordion (Matching Reference) -->
+					<div id="b2b-tech-modules" class="mt-8 rounded-3xl bg-white border border-surface-container-high/80 shadow-[0_10px_35px_rgba(0,0,0,0.03)] p-6 sm:p-10 divide-y divide-surface-container-high/70 w-full block">
+						<!-- 01 BGS CRM: Your Growth Engine -->
+						<div class="bgs-module-item py-6 transition-all" data-module="01" tabindex="0" role="button" aria-expanded="false" onclick="toggleTechModule(this)" onmouseenter="openTechModule(this)" onkeydown="if(event.key==='Enter'||event.key===' ')toggleTechModule(this)">
+							<div class="bgs-module-header w-full flex items-start justify-between gap-4">
+								<div class="bgs-module-header-left flex flex-col items-start gap-2 flex-1 min-w-0 pr-4">
+									<span class="bgs-num-badge inline-flex items-center justify-center px-2.5 py-1 rounded-md text-[11px] font-bold bg-[#eb5737]/10 text-[#eb5737] border border-[#eb5737]/20">01</span>
+									<h4 class="font-headline-sm text-[20px] sm:text-[23px] font-bold text-on-surface tracking-tight group-hover:text-primary transition-colors">BGS CRM: Your Growth Engine</h4>
+								</div>
+								<div class="bgs-module-header-right flex flex-col items-end justify-between shrink-0 ml-auto self-stretch min-h-[58px]">
+									<span class="bgs-category-tag font-label-code text-[11px] text-secondary font-bold uppercase tracking-wider text-right self-end ml-auto mr-0">GROWTH CRM</span>
+									<div class="bgs-chevron-circle w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#f3edf9] text-[#7359e8] flex items-center justify-center shrink-0 mt-auto ml-auto mr-0 self-end">
+										<span class="material-symbols-outlined text-[20px] transition-transform duration-300">keyboard_arrow_down</span>
+									</div>
+								</div>
+							</div>
+							<div class="bgs-module-body max-h-0 opacity-0 overflow-hidden w-full">
+								<ul class="pt-4 pb-2 space-y-2.5 font-body-sm text-[13.5px] sm:text-[14px] text-secondary leading-relaxed pl-1">
+									<li class="flex items-start gap-2.5">
+										<span class="text-[#eb5737] font-bold text-base leading-none select-none shrink-0 mt-0.5">*</span>
+										<div><strong class="text-on-surface font-semibold">Pulse AI Intelligence:</strong> AI engine analyses client behaviour, predicts opportunities, and automates routine tasks.</div>
+									</li>
+									<li class="flex items-start gap-2.5">
+										<span class="text-[#eb5737] font-bold text-base leading-none select-none shrink-0 mt-0.5">*</span>
+										<div><strong class="text-on-surface font-semibold">Collab Hub Workspaces:</strong> Secure, role-specific workspaces for seamless team collaboration.</div>
+									</li>
+									<li class="flex items-start gap-2.5">
+										<span class="text-[#eb5737] font-bold text-base leading-none select-none shrink-0 mt-0.5">*</span>
+										<div><strong class="text-on-surface font-semibold">900+ Integrations:</strong> Connect with SAP, HubSpot, Microsoft Dynamics, and more.</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- 02 Custom Software Development (Active by default matching reference) -->
+						<div class="bgs-module-item is-active py-6 transition-all" data-module="02" tabindex="0" role="button" aria-expanded="true" onclick="toggleTechModule(this)" onmouseenter="openTechModule(this)" onkeydown="if(event.key==='Enter'||event.key===' ')toggleTechModule(this)">
+							<div class="bgs-module-header w-full flex items-start justify-between gap-4">
+								<div class="bgs-module-header-left flex flex-col items-start gap-2 flex-1 min-w-0 pr-4">
+									<span class="bgs-num-badge inline-flex items-center justify-center px-2.5 py-1 rounded-md text-[11px] font-bold bg-[#eb5737] text-white border-transparent shadow-xs">02</span>
+									<h4 class="font-headline-sm text-[20px] sm:text-[23px] font-bold text-on-surface tracking-tight group-hover:text-primary transition-colors">Custom Software Development</h4>
+								</div>
+								<div class="bgs-module-header-right flex flex-col items-end justify-between shrink-0 ml-auto self-stretch min-h-[58px]">
+									<span class="bgs-category-tag font-label-code text-[11px] text-secondary font-bold uppercase tracking-wider text-right self-end ml-auto mr-0">DEVELOPMENT</span>
+									<div class="bgs-chevron-circle w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#ede5f8] text-[#7359e8] flex items-center justify-center shrink-0 mt-auto ml-auto mr-0 self-end">
+										<span class="material-symbols-outlined text-[20px] rotate-180 transition-transform duration-300">keyboard_arrow_down</span>
+									</div>
+								</div>
+							</div>
+							<div class="bgs-module-body max-h-96 opacity-100 overflow-hidden w-full">
+								<ul class="pt-4 pb-2 space-y-2.5 font-body-sm text-[13.5px] sm:text-[14px] text-secondary leading-relaxed pl-1">
+									<li class="flex items-start gap-2.5">
+										<span class="text-[#eb5737] font-bold text-base leading-none select-none shrink-0 mt-0.5">*</span>
+										<div><strong class="text-on-surface font-semibold">Tailored Solutions:</strong> Bespoke applications for your unique business needs.</div>
+									</li>
+									<li class="flex items-start gap-2.5">
+										<span class="text-[#eb5737] font-bold text-base leading-none select-none shrink-0 mt-0.5">*</span>
+										<div><strong class="text-on-surface font-semibold">Agile Development:</strong> Fast delivery and flexibility to adapt to your goals.</div>
+									</li>
+									<li class="flex items-start gap-2.5">
+										<span class="text-[#eb5737] font-bold text-base leading-none select-none shrink-0 mt-0.5">*</span>
+										<div><strong class="text-on-surface font-semibold">Cross-Platform Apps:</strong> Web, mobile, and desktop apps (React Native, Node.js).</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- 03 Cloud Solutions -->
+						<div class="bgs-module-item py-6 transition-all" data-module="03" tabindex="0" role="button" aria-expanded="false" onclick="toggleTechModule(this)" onmouseenter="openTechModule(this)" onkeydown="if(event.key==='Enter'||event.key===' ')toggleTechModule(this)">
+							<div class="bgs-module-header w-full flex items-start justify-between gap-4">
+								<div class="bgs-module-header-left flex flex-col items-start gap-2 flex-1 min-w-0 pr-4">
+									<span class="bgs-num-badge inline-flex items-center justify-center px-2.5 py-1 rounded-md text-[11px] font-bold bg-[#eb5737]/10 text-[#eb5737] border border-[#eb5737]/20">03</span>
+									<h4 class="font-headline-sm text-[20px] sm:text-[23px] font-bold text-on-surface tracking-tight group-hover:text-primary transition-colors">Cloud Solutions</h4>
+								</div>
+								<div class="bgs-module-header-right flex flex-col items-end justify-between shrink-0 ml-auto self-stretch min-h-[58px]">
+									<span class="bgs-category-tag font-label-code text-[11px] text-secondary font-bold uppercase tracking-wider text-right self-end ml-auto mr-0">CLOUD SYSTEMS</span>
+									<div class="bgs-chevron-circle w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#f3edf9] text-[#7359e8] flex items-center justify-center shrink-0 mt-auto ml-auto mr-0 self-end">
+										<span class="material-symbols-outlined text-[20px] transition-transform duration-300">keyboard_arrow_down</span>
+									</div>
+								</div>
+							</div>
+							<div class="bgs-module-body max-h-0 opacity-0 overflow-hidden w-full">
+								<ul class="pt-4 pb-2 space-y-2.5 font-body-sm text-[13.5px] sm:text-[14px] text-secondary leading-relaxed pl-1">
+									<li class="flex items-start gap-2.5">
+										<span class="text-[#eb5737] font-bold text-base leading-none select-none shrink-0 mt-0.5">*</span>
+										<div><strong class="text-on-surface font-semibold">Effortless Cloud Migration:</strong> Transition to AWS, Azure, or Google Cloud with zero disruption.</div>
+									</li>
+									<li class="flex items-start gap-2.5">
+										<span class="text-[#eb5737] font-bold text-base leading-none select-none shrink-0 mt-0.5">*</span>
+										<div><strong class="text-on-surface font-semibold">Optimized Infrastructure:</strong> Cost-effective, scalable cloud setups.</div>
+									</li>
+									<li class="flex items-start gap-2.5">
+										<span class="text-[#eb5737] font-bold text-base leading-none select-none shrink-0 mt-0.5">*</span>
+										<div><strong class="text-on-surface font-semibold">Managed Cloud Services:</strong> Updates, backups, and monitoring handled for you.</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- 04 IT Consulting -->
+						<div class="bgs-module-item py-6 transition-all" data-module="04" tabindex="0" role="button" aria-expanded="false" onclick="toggleTechModule(this)" onmouseenter="openTechModule(this)" onkeydown="if(event.key==='Enter'||event.key===' ')toggleTechModule(this)">
+							<div class="bgs-module-header w-full flex items-start justify-between gap-4">
+								<div class="bgs-module-header-left flex flex-col items-start gap-2 flex-1 min-w-0 pr-4">
+									<span class="bgs-num-badge inline-flex items-center justify-center px-2.5 py-1 rounded-md text-[11px] font-bold bg-[#eb5737]/10 text-[#eb5737] border border-[#eb5737]/20">04</span>
+									<h4 class="font-headline-sm text-[20px] sm:text-[23px] font-bold text-on-surface tracking-tight group-hover:text-primary transition-colors">IT Consulting</h4>
+								</div>
+								<div class="bgs-module-header-right flex flex-col items-end justify-between shrink-0 ml-auto self-stretch min-h-[58px]">
+									<span class="bgs-category-tag font-label-code text-[11px] text-secondary font-bold uppercase tracking-wider text-right self-end ml-auto mr-0">STRATEGY</span>
+									<div class="bgs-chevron-circle w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#f3edf9] text-[#7359e8] flex items-center justify-center shrink-0 mt-auto ml-auto mr-0 self-end">
+										<span class="material-symbols-outlined text-[20px] transition-transform duration-300">keyboard_arrow_down</span>
+									</div>
+								</div>
+							</div>
+							<div class="bgs-module-body max-h-0 opacity-0 overflow-hidden w-full">
+								<ul class="pt-4 pb-2 space-y-2.5 font-body-sm text-[13.5px] sm:text-[14px] text-secondary leading-relaxed pl-1">
+									<li class="flex items-start gap-2.5">
+										<span class="text-[#eb5737] font-bold text-base leading-none select-none shrink-0 mt-0.5">*</span>
+										<div><strong class="text-on-surface font-semibold">Strategic Tech Planning:</strong> Align technology with business goals via custom IT roadmaps.</div>
+									</li>
+									<li class="flex items-start gap-2.5">
+										<span class="text-[#eb5737] font-bold text-base leading-none select-none shrink-0 mt-0.5">*</span>
+										<div><strong class="text-on-surface font-semibold">Digital Transformation:</strong> Modernize legacy systems for efficiency and competitiveness.</div>
+									</li>
+									<li class="flex items-start gap-2.5">
+										<span class="text-[#eb5737] font-bold text-base leading-none select-none shrink-0 mt-0.5">*</span>
+										<div><strong class="text-on-surface font-semibold">Operational Excellence:</strong> Data-driven insights to optimize processes and reduce costs.</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- 05 Cybersecurity -->
+						<div class="bgs-module-item py-6 transition-all" data-module="05" tabindex="0" role="button" aria-expanded="false" onclick="toggleTechModule(this)" onmouseenter="openTechModule(this)" onkeydown="if(event.key==='Enter'||event.key===' ')toggleTechModule(this)">
+							<div class="bgs-module-header w-full flex items-start justify-between gap-4">
+								<div class="bgs-module-header-left flex flex-col items-start gap-2 flex-1 min-w-0 pr-4">
+									<span class="bgs-num-badge inline-flex items-center justify-center px-2.5 py-1 rounded-md text-[11px] font-bold bg-[#eb5737]/10 text-[#eb5737] border border-[#eb5737]/20">05</span>
+									<h4 class="font-headline-sm text-[20px] sm:text-[23px] font-bold text-on-surface tracking-tight group-hover:text-primary transition-colors">Cybersecurity</h4>
+								</div>
+								<div class="bgs-module-header-right flex flex-col items-end justify-between shrink-0 ml-auto self-stretch min-h-[58px]">
+									<span class="bgs-category-tag font-label-code text-[11px] text-secondary font-bold uppercase tracking-wider text-right self-end ml-auto mr-0">SECURITY</span>
+									<div class="bgs-chevron-circle w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#f3edf9] text-[#7359e8] flex items-center justify-center shrink-0 mt-auto ml-auto mr-0 self-end">
+										<span class="material-symbols-outlined text-[20px] transition-transform duration-300">keyboard_arrow_down</span>
+									</div>
+								</div>
+							</div>
+							<div class="bgs-module-body max-h-0 opacity-0 overflow-hidden w-full">
+								<ul class="pt-4 pb-2 space-y-2.5 font-body-sm text-[13.5px] sm:text-[14px] text-secondary leading-relaxed pl-1">
+									<li class="flex items-start gap-2.5">
+										<span class="text-[#eb5737] font-bold text-base leading-none select-none shrink-0 mt-0.5">*</span>
+										<div><strong class="text-on-surface font-semibold">Ironclad Protection:</strong> Advanced encryption, firewalls, and threat detection.</div>
+									</li>
+									<li class="flex items-start gap-2.5">
+										<span class="text-[#eb5737] font-bold text-base leading-none select-none shrink-0 mt-0.5">*</span>
+										<div><strong class="text-on-surface font-semibold">Regulatory Compliance:</strong> Adherence to GDPR, ISO 27001, and more.</div>
+									</li>
+									<li class="flex items-start gap-2.5">
+										<span class="text-[#eb5737] font-bold text-base leading-none select-none shrink-0 mt-0.5">*</span>
+										<div><strong class="text-on-surface font-semibold">24/7 Threat Monitoring:</strong> Proactive security operations center keeps threats at bay.</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- B2C SALES CONSUMER PLATFORM -->
+				<div class="sales-section-box p-8 md:p-12">
+					<!-- B2C Sales Highlights Card -->
+					<div class="relative overflow-hidden rounded-3xl bg-surface-container-lowest/90 border border-surface-container-high p-6 sm:p-8 lg:p-10 shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.12)] hover:border-primary/40 transition-all duration-300 group">
+						<!-- Ambient Atmospheric Glow -->
+						<div class="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-primary/5 blur-3xl pointer-events-none group-hover:bg-primary/10 transition-colors duration-500"></div>
+
+						<div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+							<div class="max-w-2xl flex flex-col gap-2.5">
+								<div>
+									<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary font-label-code text-[11px] font-bold border border-primary/20 tracking-wider uppercase">
+										<span class="material-symbols-outlined text-[14px]">storefront</span>
+										<span>B2C SALES</span>
+									</span>
+								</div>
+								<h3 class="font-headline-lg text-[26px] sm:text-[34px] font-bold text-on-surface tracking-tight leading-tight">
+									Why Partner with <span class="text-primary italic font-semibold">BGS?</span>
+								</h3>
+								<p class="font-body-md text-body-md text-secondary leading-relaxed">
+									Consumer-facing digital execution built for massive scale, human-centered journeys, and high-velocity transactional reliability.
+								</p>
+							</div>
+							<a href="contact.html" class="group/btn px-7 py-3 rounded-full text-white font-label-pill text-label-pill shadow-[0_10px_25px_rgba(235,87,55,0.35)] hover:shadow-[0_16px_35px_rgba(235,87,55,0.5)] hover:-translate-y-0.5 transition-all inline-flex items-center gap-2 border border-white/20 shrink-0" style="background: linear-gradient(135deg, rgb(173, 43, 14) 0%, rgb(235, 87, 55) 100%);">
+								<span>Build with us</span>
+								<span class="material-symbols-outlined text-[16px] group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+							</a>
+						</div>
+					</div>
+
+					<!-- 4 Partner Pillars Grid -->
+					<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+						<div class="sales-pillar-box flex flex-col gap-3">
+							<div class="sales-icon-box">
+								<span class="material-symbols-outlined text-[24px]">domain</span>
+							</div>
+							<div>
+								<h4 class="font-headline-sm text-[17px] font-bold text-on-surface mb-1">Industry Expertise</h4>
+								<p class="font-body-sm text-[13px] text-secondary leading-relaxed">From manufacturing to IT, we tailor solutions to your sector’s unique challenges.</p>
+							</div>
+						</div>
+						<div class="sales-pillar-box flex flex-col gap-3">
+							<div class="sales-icon-box">
+								<span class="material-symbols-outlined text-[24px]">favorite</span>
+							</div>
+							<div>
+								<h4 class="font-headline-sm text-[17px] font-bold text-on-surface mb-1">Human-Centered Approach</h4>
+								<p class="font-body-sm text-[13px] text-secondary leading-relaxed">We listen, understand, and deliver solutions that feel like they were made just for you.</p>
+							</div>
+						</div>
+						<div class="sales-pillar-box flex flex-col gap-3">
+							<div class="sales-icon-box">
+								<span class="material-symbols-outlined text-[24px]">trending_up</span>
+							</div>
+							<div>
+								<h4 class="font-headline-sm text-[17px] font-bold text-on-surface mb-1">Proven Results</h4>
+								<p class="font-body-sm text-[13px] text-secondary leading-relaxed">Our clients see 40% improved operational efficiency and 55% faster project delivery.</p>
+							</div>
+						</div>
+						<div class="sales-pillar-box flex flex-col gap-3">
+							<div class="sales-icon-box">
+								<span class="material-symbols-outlined text-[24px]">handshake</span>
+							</div>
+							<div>
+								<h4 class="font-headline-sm text-[17px] font-bold text-on-surface mb-1">Dedicated Support</h4>
+								<p class="font-body-sm text-[13px] text-secondary leading-relaxed">Our team is with you from strategy to execution, ensuring your success every step of the way.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 7. CLIENT TESTIMONIALS & PROVEN RESULTS -->
+			<section id="impact" class="w-full bg-surface-container-low/70 py-16 md:py-24 border-t border-surface-container-high/60">
+				<div class="max-w-[1320px] mx-auto px-6 md:px-12">
+					<div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-14">
+						<span class="font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-widest">CLIENT TESTIMONIALS</span>
+						<h2 class="font-headline-lg text-[32px] md:text-[40px] font-bold text-on-surface tracking-tight mt-2">
+							What Our Clients <span class="text-primary italic font-semibold">Say About Us</span>
+						</h2>
+						<p class="font-body-md text-body-md text-secondary mt-2">
+							Build smarter. Grow faster. Stay ahead. We create solutions that give your business a real competitive edge.
+						</p>
+						<div class="pt-4">
+							<a href="contact.html" class="px-6 py-2.5 rounded-full bg-surface-container-lowest text-primary border border-surface-container-high font-label-pill text-label-pill hover:bg-primary hover:text-white transition-all inline-flex items-center gap-2">
+								<span>Connect with us</span>
+								<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+							</a>
+						</div>
+					</div>
+
+					<!-- 3 Impact Metric Cards -->
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-4">
+						<div class="p-8 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col items-center text-center">
+							<span class="font-stat-metric text-[52px] leading-tight font-extrabold text-primary">35%</span>
+							<span class="font-headline-sm text-headline-sm font-semibold text-on-surface mt-2">Efficiency Boost</span>
+							<p class="font-body-sm text-body-sm text-secondary mt-1">Streamline processes to get more done with less effort.</p>
+						</div>
+						<div class="p-8 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col items-center text-center">
+							<span class="font-stat-metric text-[52px] leading-tight font-extrabold text-on-surface">50%</span>
+							<span class="font-headline-sm text-headline-sm font-semibold text-on-surface mt-2">Faster Implementation</span>
+							<p class="font-body-sm text-body-sm text-secondary mt-1">Launch your tech solutions quickly with our expert support.</p>
+						</div>
+						<div class="p-8 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col items-center text-center">
+							<span class="font-stat-metric text-[52px] leading-tight font-extrabold text-primary">60%</span>
+							<span class="font-headline-sm text-headline-sm font-semibold text-on-surface mt-2">Cost Savings</span>
+							<p class="font-body-sm text-body-sm text-secondary mt-1">Affordable, high-value services that maximize your ROI.</p>
+						</div>
+					</div>
+					<div class="text-center font-label-code text-[11px] text-secondary mb-12">
+						*Based on feedback from our B2B clients.
+					</div>
+
+					<!-- 2 Testimonial Cards: Anil Gupta & Meera Patel -->
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+						<div class="p-8 rounded-2xl bg-surface-container-lowest border border-surface-container-high/80 shadow-sm flex flex-col justify-between">
+							<p class="font-body-md text-on-surface italic leading-relaxed">
+								&ldquo;BGS’s CRM and custom software transformed our operations. We’ve reduced client response times by 60% and doubled our project capacity.&rdquo;
+							</p>
+							<div class="mt-6 pt-4 border-t border-surface-container-high/60 flex items-center justify-between">
+								<div class="flex flex-col">
+									<span class="font-headline-sm text-[15px] font-bold text-on-surface">Anil Gupta</span>
+									<span class="font-label-code text-[11px] text-secondary">COO &bull; Apex Innovations</span>
+								</div>
+								<span class="text-amber-500 font-bold text-[14px]">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+							</div>
+						</div>
+
+						<div class="p-8 rounded-2xl bg-surface-container-lowest border border-surface-container-high/80 shadow-sm flex flex-col justify-between">
+							<p class="font-body-md text-on-surface italic leading-relaxed">
+								&ldquo;Their cloud solutions and cybersecurity services gave us peace of mind and let us focus on scaling our business.&rdquo;
+							</p>
+							<div class="mt-6 pt-4 border-t border-surface-container-high/60 flex items-center justify-between">
+								<div class="flex flex-col">
+									<span class="font-headline-sm text-[15px] font-bold text-on-surface">Meera Patel</span>
+									<span class="font-label-code text-[11px] text-secondary">Director &bull; Core Tech Solutions</span>
+								</div>
+								<span class="text-amber-500 font-bold text-[14px]">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 8. FREQUENTLY ASKED QUESTIONS (FAQ) -->
+			<section class="w-full py-16 md:py-24 faq-section" id="faq">
+				<div class="max-w-[1320px] mx-auto px-6 md:px-12">
+					<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+						<!-- Left Sticky Narrative Column -->
+						<div class="lg:col-span-4 lg:sticky lg:top-28">
+							<div class="flex flex-col gap-4">
+								<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 border border-red-100 text-primary w-fit shadow-xs">
+									<span class="h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+									<span class="font-label-code text-[11px] text-primary font-bold tracking-wider uppercase">FAQ &amp; KNOWLEDGE BASE</span>
+								</div>
+
+								<h2 class="font-display-hero text-[30px] sm:text-[36px] md:text-[42px] leading-[1.18] font-bold text-on-surface tracking-tight">
+									Got Questions? <span class="text-primary italic font-semibold">We’ve Got Answers.</span>
+								</h2>
+
+								<p class="font-body-md text-sm sm:text-base text-secondary leading-relaxed font-normal">
+									Everything you need to know about partnering with Bridge Group Solutions, our engineering delivery standards, security protocols, and rapid deployment velocity.
+								</p>
+
+								<!-- Quick Contact Card -->
+								<div class="mt-4 p-6 rounded-2xl bg-white border border-slate-200/90 shadow-sm flex flex-col gap-4">
+									<div class="flex items-center gap-3">
+										<div class="w-10 h-10 rounded-xl bg-orange-50 text-primary flex items-center justify-center shrink-0 border border-orange-100">
+											<span class="material-symbols-outlined text-[20px]">contact_support</span>
+										</div>
+										<div class="flex flex-col">
+											<span class="font-headline-sm text-[15px] font-bold text-on-surface">Need immediate guidance?</span>
+											<span class="font-body-sm text-[12px] text-secondary">Verified response in &lt; 4 hours</span>
+										</div>
+									</div>
+
+									<p class="font-body-sm text-[13px] text-secondary leading-relaxed">
+										Speak directly with an enterprise solutions architect about your specific tech stack and delivery roadmap.
+									</p>
+
+									<a href="contact.html" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full text-white font-label-pill text-xs font-semibold shadow-[0_6px_20px_rgba(235,87,55,0.35)] hover:shadow-[0_10px_28px_rgba(235,87,55,0.5)] hover:-translate-y-0.5 active:translate-y-0 transition-all" style="background: linear-gradient(135deg, rgb(173, 43, 14) 0%, rgb(235, 87, 55) 60%, rgb(255, 120, 73) 100%);">
+										<span>Initiate Consultation</span>
+										<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<!-- Right Accordion Column (7 Items) -->
+						<div class="lg:col-span-8 flex flex-col gap-3.5">
+							<!-- FAQ 1 -->
+							<div class="faq-item active">
+								<button type="button" class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="true" aria-controls="faq-ans-1">
+									<div class="flex items-center gap-3.5">
+										<span class="faq-number-badge">01</span>
+										<span class="faq-question-text">What digital transformation and software engineering services does BGS provide?</span>
+									</div>
+									<div class="faq-icon-wrapper">
+										<span class="material-symbols-outlined text-[18px]">expand_more</span>
+									</div>
+								</button>
+								<div class="faq-collapse" id="faq-ans-1">
+									<div class="faq-collapse-inner">
+										<div class="faq-answer-content">
+											Bridge Group Solutions delivers end-to-end digital engineering across six core domains: custom web applications, scalable mobile apps (iOS &amp; Android), enterprise ERP systems, custom CRM platforms with AI automation, advanced data analytics and business intelligence pipelines, and dedicated project outsourcing pods. Every system is bespoke, modular, and engineered for high availability.
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- FAQ 2 -->
+							<div class="faq-item">
+								<button type="button" class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-ans-2">
+									<div class="flex items-center gap-3.5">
+										<span class="faq-number-badge">02</span>
+										<span class="faq-question-text">How quickly can BGS assemble and deploy a dedicated engineering pod?</span>
+									</div>
+									<div class="faq-icon-wrapper">
+										<span class="material-symbols-outlined text-[18px]">expand_more</span>
+									</div>
+								</button>
+								<div class="faq-collapse" id="faq-ans-2">
+									<div class="faq-collapse-inner">
+										<div class="faq-answer-content">
+											Our rapid deployment protocol provisions dedicated, cross-functional sprint pods—comprising senior architects, full-stack engineers, UI/UX designers, and QA automation specialists—integrated into your Git repositories and Slack/Jira workflows within 5 to 7 business days, bypassing conventional hiring delays.
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- FAQ 3 -->
+							<div class="faq-item">
+								<button type="button" class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-ans-3">
+									<div class="flex items-center gap-3.5">
+										<span class="faq-number-badge">03</span>
+										<span class="faq-question-text">What engagement and commercial pricing models do you support?</span>
+									</div>
+									<div class="faq-icon-wrapper">
+										<span class="material-symbols-outlined text-[18px]">expand_more</span>
+									</div>
+								</button>
+								<div class="faq-collapse" id="faq-ans-3">
+									<div class="faq-collapse-inner">
+										<div class="faq-answer-content">
+											We offer three transparent engagement models tailored to your operational velocity:
+											<ul class="list-disc list-inside mt-2 space-y-1.5 text-secondary">
+												<li><strong class="text-on-surface">Dedicated Engineering Pods:</strong> Predictable monthly retainers for dedicated sprint capacity integrated into your product team.</li>
+												<li><strong class="text-on-surface">Milestone-Based Fixed Scope:</strong> Clearly defined scope, budget, and delivery milestones for structured deliverables.</li>
+												<li><strong class="text-on-surface">Time &amp; Materials (Agile Sprints):</strong> Flexible sprint contracts ideal for evolving roadmaps, MVP iteration, and rapid feature pivots.</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- FAQ 4 -->
+							<div class="faq-item">
+								<button type="button" class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-ans-4">
+									<div class="flex items-center gap-3.5">
+										<span class="faq-number-badge">04</span>
+										<span class="faq-question-text">How does Bridge Group Solutions guarantee data security and IP protection?</span>
+									</div>
+									<div class="faq-icon-wrapper">
+										<span class="material-symbols-outlined text-[18px]">expand_more</span>
+									</div>
+								</button>
+								<div class="faq-collapse" id="faq-ans-4">
+									<div class="faq-collapse-inner">
+										<div class="faq-answer-content">
+											We enforce a mutual NDA-first protocol before reviewing any project architecture. All development operates under ISO 27001 and SOC 2 Type II aligned controls, role-based access management, AES-256 encryption at rest and in transit, and isolated development VPCs. Upon deliverable sign-off, all custom code, schemas, and proprietary IP transfer 100% to the client.
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- FAQ 5 -->
+							<div class="faq-item">
+								<button type="button" class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-ans-5">
+									<div class="flex items-center gap-3.5">
+										<span class="faq-number-badge">05</span>
+										<span class="faq-question-text">Can you integrate custom solutions with our existing legacy systems and software stack?</span>
+									</div>
+									<div class="faq-icon-wrapper">
+										<span class="material-symbols-outlined text-[18px]">expand_more</span>
+									</div>
+								</button>
+								<div class="faq-collapse" id="faq-ans-5">
+									<div class="faq-collapse-inner">
+										<div class="faq-answer-content">
+											Yes. Our architects specialize in non-invasive legacy modernization. We engineer robust RESTful, GraphQL, and event-driven webhook integration layers that seamlessly interface with legacy on-premises databases, enterprise ERPs (SAP, Oracle, Tally), payment processors (Stripe, Razorpay), CRMs (Salesforce, HubSpot), and custom third-party APIs.
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- FAQ 6 -->
+							<div class="faq-item">
+								<button type="button" class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-ans-6">
+									<div class="flex items-center gap-3.5">
+										<span class="faq-number-badge">06</span>
+										<span class="faq-question-text">What is the typical project delivery lifecycle and communication cadence?</span>
+									</div>
+									<div class="faq-icon-wrapper">
+										<span class="material-symbols-outlined text-[18px]">expand_more</span>
+									</div>
+								</button>
+								<div class="faq-collapse" id="faq-ans-6">
+									<div class="faq-collapse-inner">
+										<div class="faq-answer-content">
+											We run disciplined two-week Agile sprints with complete stakeholder visibility. You receive daily asynchronous standup summaries, bi-weekly live sprint demos, burndown tracking via a real-time PM dashboard, and direct Slack/Teams access to your dedicated Project Manager and Lead Architect.
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- FAQ 7 -->
+							<div class="faq-item">
+								<button type="button" class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-ans-7">
+									<div class="flex items-center gap-3.5">
+										<span class="faq-number-badge">07</span>
+										<span class="faq-question-text">How do we get started and what does the initial technical diagnostic involve?</span>
+									</div>
+									<div class="faq-icon-wrapper">
+										<span class="material-symbols-outlined text-[18px]">expand_more</span>
+									</div>
+								</button>
+								<div class="faq-collapse" id="faq-ans-7">
+									<div class="faq-collapse-inner">
+										<div class="faq-answer-content">
+											Getting started takes just a few clicks via our <a href="contact.html" class="text-primary font-semibold underline underline-offset-2 hover:text-[#ad2b0e]">Contact page</a>. Our engineering desk reviews your inquiry within 4 hours to arrange an architectural diagnostic session, evaluate requirements under mutual NDA, and present a structured scope, tech stack recommendation, and timeline estimate.
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</div>
+	</main>
+
+<!-- Reusable Footer Component -->
+	<div id="footer"></div>
+
+
+	<script>
+		function toggleFaq(button) {
+			var item = button.closest('.faq-item');
+			if (!item) return;
+			var isActive = item.classList.contains('active');
+			var allFaqs = document.querySelectorAll('.faq-item');
+			allFaqs.forEach(function(el) {
+				el.classList.remove('active');
+				var btn = el.querySelector('.faq-trigger');
+				if (btn) btn.setAttribute('aria-expanded', 'false');
+			});
+			if (!isActive) {
+				item.classList.add('active');
+				button.setAttribute('aria-expanded', 'true');
+			}
+		}
+
+		function submitLead() {
+			var feedback = document.getElementById("form-feedback");
+			if (feedback) {
+				feedback.classList.remove("hidden");
+				feedback.scrollIntoView({ behavior: "smooth", block: "nearest" });
+			}
+			var form = document.getElementById("lead-form");
+			if (form) {
+				form.reset();
+			}
+		}
+
+		function toggleMobileMenu() {
+			var menu = document.getElementById("mobile-nav-menu");
+			var icon = document.getElementById("mobile-menu-icon");
+			if (menu) {
+				var isHidden = menu.classList.toggle("hidden");
+				if (icon) {
+					icon.textContent = isHidden ? "menu" : "close";
+				}
+			}
+		}
+
+		function toggleMobileServices() {
+			var dropdown = document.getElementById("mobile-services-dropdown");
+			var arrow = document.getElementById("mobile-services-arrow");
+			var btn = document.getElementById("mobile-services-btn");
+			if (dropdown) {
+				var isHidden = dropdown.classList.toggle("hidden");
+				if (arrow) {
+					if (isHidden) {
+						arrow.classList.remove("rotate-180");
+					} else {
+						arrow.classList.add("rotate-180");
+					}
+				}
+				if (btn) {
+					btn.setAttribute("aria-expanded", isHidden ? "false" : "true");
+				}
+			}
+		}
+
+		window.addEventListener("resize", function() {
+			if (window.innerWidth >= 768) {
+				var menu = document.getElementById("mobile-nav-menu");
+				var icon = document.getElementById("mobile-menu-icon");
+				if (menu && !menu.classList.contains("hidden")) {
+					menu.classList.add("hidden");
+				}
+				if (icon) {
+					icon.textContent = "menu";
+				}
+			}
+		});
+		function openTechModule(trigger) {
+			var item = trigger.classList.contains('bgs-module-item') ? trigger : trigger.closest('.bgs-module-item');
+			if (!item || item.classList.contains('is-active')) return;
+			var container = document.getElementById('b2b-tech-modules');
+			if (container) {
+				container.querySelectorAll('.bgs-module-item').forEach(function(el) {
+					if (el === item) return;
+					el.classList.remove('is-active');
+					el.setAttribute('aria-expanded', 'false');
+					var badge = el.querySelector('.bgs-num-badge');
+					if (badge) {
+						badge.classList.remove('bg-[#eb5737]', 'text-white', 'border-transparent', 'shadow-xs');
+						badge.classList.add('bg-[#eb5737]/10', 'text-[#eb5737]', 'border-[#eb5737]/20');
+					}
+					var chevron = el.querySelector('.bgs-chevron-circle span');
+					if (chevron) {
+						chevron.classList.remove('rotate-180');
+					}
+					var circle = el.querySelector('.bgs-chevron-circle');
+					if (circle) {
+						circle.classList.remove('bg-[#ede5f8]');
+						circle.classList.add('bg-[#f3edf9]');
+					}
+					var body = el.querySelector('.bgs-module-body');
+					if (body) {
+						body.style.maxHeight = '0px';
+						body.style.opacity = '0';
+					}
+				});
+			}
+			item.classList.add('is-active');
+			item.setAttribute('aria-expanded', 'true');
+			var badge = item.querySelector('.bgs-num-badge');
+			if (badge) {
+				badge.classList.remove('bg-[#eb5737]/10', 'text-[#eb5737]', 'border-[#eb5737]/20');
+				badge.classList.add('bg-[#eb5737]', 'text-white', 'border-transparent', 'shadow-xs');
+			}
+			var chevron = item.querySelector('.bgs-chevron-circle span');
+			if (chevron) {
+				chevron.classList.add('rotate-180');
+			}
+			var circle = item.querySelector('.bgs-chevron-circle');
+			if (circle) {
+				circle.classList.remove('bg-[#f3edf9]');
+				circle.classList.add('bg-[#ede5f8]');
+			}
+			var body = item.querySelector('.bgs-module-body');
+			if (body) {
+				body.style.maxHeight = (body.scrollHeight + 32) + 'px';
+				body.style.opacity = '1';
+			}
+		}
+
+		function toggleTechModule(trigger) {
+			openTechModule(trigger);
+		}
+
+		function initTechModules() {
+			var container = document.getElementById('b2b-tech-modules');
+			if (container) {
+				container.querySelectorAll('.bgs-module-item').forEach(function(item) {
+					item.addEventListener('mouseenter', function() {
+						openTechModule(item);
+					});
+					item.addEventListener('focusin', function() {
+						openTechModule(item);
+					});
+				});
+			}
+			var activeItem = document.querySelector('.bgs-module-item.is-active');
+			if (activeItem) {
+				var body = activeItem.querySelector('.bgs-module-body');
+				if (body) {
+					body.style.maxHeight = (body.scrollHeight + 32) + 'px';
+					body.style.opacity = '1';
+				}
+			}
+		}
+		window.addEventListener('load', initTechModules);
+		document.addEventListener('DOMContentLoaded', initTechModules);
+		setTimeout(initTechModules, 100);
+		setTimeout(initTechModules, 500);
+	</script>
+	<!-- Reusable Component Loader (Navbar & Footer) -->
+	<script src="assets/bgs-components.js?v=5"></script>
+</body>
+</html>

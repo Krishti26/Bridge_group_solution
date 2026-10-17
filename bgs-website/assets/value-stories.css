@@ -1,0 +1,77 @@
+@layer bgs-mobile {
+body.amphora-theme #our-work.value-stories{margin:0!important;width:100%!important;max-width:none!important;padding:80px 40px!important;background:#faf9fd!important;overflow:hidden!important;scroll-margin-top:110px}
+#our-work .vs-shell{max-width:1400px;margin:auto;display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.35fr);gap:64px;align-items:start}
+#our-work .vs-heading{padding-top:36px;min-width:0}
+#our-work .vs-eyebrow{font:600 11px 'The Future Mono',monospace;color:#7359e8;letter-spacing:.15em}
+body.amphora-theme #our-work h2{font-size:clamp(36px,4.2vw,60px)!important;line-height:1.1!important;letter-spacing:-.05em!important;font-weight:700!important;text-align:left!important;margin:20px 0!important;color:#17171b!important}
+#our-work h2 em{font-family:'Tiempos Headline',serif!important;font-weight:400!important;background:linear-gradient(110deg,#5270e8,#a36dcb,#cb78b0,#d99967,#eee5f8,#966bd0);background-size:220% 100%;background-clip:text;-webkit-background-clip:text;color:transparent!important;-webkit-text-fill-color:transparent!important}
+body.amphora-theme #our-work .vs-heading>p{font:400 20px/1.65 var(--font-primary,'The Future',sans-serif)!important;letter-spacing:-.025em!important;color:#65616f!important;margin:0 0 24px!important;text-align:left!important}
+#our-work .vs-button a{display:inline-flex!important;align-items:center!important;gap:12px!important}
+#our-work .vs-button a>span:last-child{transition:transform .25s}#our-work .vs-button a:hover>span:last-child{transform:translateX(3px)}
+#our-work .vs-stories{min-width:0;position:relative;padding-right:46px}
+#our-work .vs-stage{display:grid;gap:22px;position:relative;isolation:isolate}
+#our-work .vs-card{position:relative;background:radial-gradient(ellipse at 100% 0,var(--vs-tint),transparent 55%),white!important;border:1px solid #e3daef!important;border-radius:24px!important;padding:30px!important;box-shadow:0 12px 30px -23px #5c427b4d!important;outline-offset:4px;transition:opacity .35s,transform .35s,box-shadow .3s,border-color .3s;min-width:0}
+#our-work .vs-card-top{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:18px}
+#our-work .vs-number{font:600 22px 'The Future Mono',monospace;color:var(--vs-accent)}
+#our-work .vs-illustration{width:140px;height:90px;color:var(--vs-accent);background:var(--vs-tint);border-radius:18px;flex-shrink:0}
+#our-work .vs-illustration svg{width:100%;height:100%}
+body.amphora-theme #our-work .vs-card h3{font-size:28px!important;line-height:1.15!important;letter-spacing:-.035em!important;font-weight:700!important;color:#17171b!important;margin:0 0 18px!important;text-align:left!important}
+body.amphora-theme #our-work .vs-card>p{font:400 20px/1.65 var(--font-primary,'The Future',sans-serif)!important;letter-spacing:-.025em!important;color:#65616f!important;text-align:left!important;margin:0!important}
+#our-work .vs-card footer{margin-top:24px;padding-top:16px;border-top:1px solid #eae3f1;font:600 10px 'The Future Mono',monospace;color:var(--vs-accent);letter-spacing:.04em}
+#our-work .vs-progress,#our-work .vs-title-tabs{display:none}
+#our-work.vs-interactive .vs-stage{gap:0}
+#our-work.vs-interactive .vs-stage::before,#our-work.vs-interactive .vs-stage::after{content:'';position:absolute;inset:12px 10px -12px;background:#f5effb;border:1px solid #e4dbef;border-radius:24px;z-index:-1;pointer-events:none}
+#our-work.vs-interactive .vs-stage::after{inset:22px 20px -22px;z-index:-2;background:#f8f4fc}
+#our-work.vs-interactive .vs-card{grid-area:1/1;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(10px) scale(.98)}
+#our-work.vs-interactive .vs-card.vs-active{opacity:1;visibility:visible;pointer-events:auto;transform:none;z-index:1}
+#our-work.vs-interactive .vs-progress{position:absolute;right:0;top:35px;display:flex;flex-direction:column;gap:12px}
+#our-work .vs-progress button{width:34px!important;height:36px!important;border:1px solid #e3daef!important;border-radius:10px!important;background:#fff!important;color:#918399!important;font:500 11px 'The Future Mono',monospace!important;cursor:pointer}
+#our-work .vs-progress button[aria-pressed=true]{background:#eee6fa!important;color:#7359e8!important;border-color:#ac90de!important}
+#our-work.vs-interactive .vs-title-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:42px}
+#our-work .vs-title-tabs button{display:flex!important;align-items:center;gap:10px;padding:12px!important;min-height:56px;background:#fff!important;border:1px solid #e6dfee!important;border-radius:12px!important;color:#6b6274!important;font:500 10px/1.4 'The Future',sans-serif!important;text-align:left!important;cursor:pointer}
+#our-work .vs-title-tabs button>span{color:#9676c8;font-family:'The Future Mono',monospace}
+#our-work .vs-title-tabs button[aria-pressed=true]{border-color:#b298dd!important;background:#f4effb!important}
+#our-work :focus-visible{outline:2px solid #9571cb!important;outline-offset:4px}
+@media(hover:hover) and (pointer:fine){#our-work .vs-card.vs-active:hover,#our-work .vs-card.vs-active:focus-visible{transform:translateY(-3px);border-color:var(--vs-accent)!important;box-shadow:0 15px 30px -20px color-mix(in srgb,var(--vs-accent) 35%,transparent)!important}}
+.vs-animating .vs-person{animation:vs-gather .8s ease both;transform-box:fill-box;transform-origin:center}.vs-animating .vs-connect{animation:vs-connect .9s ease both;transform-box:fill-box;transform-origin:center}.vs-animating .vs-draw{animation:vs-draw .8s ease both}.vs-animating .vs-check{animation:vs-draw .5s .65s ease both}.vs-animating .vs-converge{animation:vs-converge 1s var(--delay,0s) ease both;transform-box:fill-box;transform-origin:center}.vs-animating .vs-delivered{animation:vs-delivered .5s .7s ease both;transform-box:fill-box;transform-origin:center}
+.vs-enhanced .vs-heading{opacity:0;translate:0 12px;transition:opacity .6s,translate .6s}.vs-revealed .vs-heading{opacity:1;translate:none}.vs-revealed h2 em{animation:vs-sweep 1.8s .3s ease both}
+#our-work:not(.vs-inview) svg *{animation-play-state:paused!important}
+@keyframes vs-gather{from{opacity:0;transform:translate(var(--dx,0px),8px)}to{opacity:1;transform:none}}
+@keyframes vs-connect{from{opacity:0;transform:scale(.7)}to{opacity:1;transform:scale(1)}}
+@keyframes vs-draw{from{stroke-dasharray:100;stroke-dashoffset:100}to{stroke-dasharray:100;stroke-dashoffset:0}}
+@keyframes vs-converge{from{opacity:0;transform:scale(1.35)}to{opacity:.65;transform:scale(1)}}
+@keyframes vs-delivered{from{opacity:0;transform:scale(.7)}to{opacity:1;transform:none}}
+@keyframes vs-sweep{from{background-position:100% 50%}to{background-position:0% 50%}}
+@media(max-width:950px){#our-work .vs-shell{grid-template-columns:minmax(0,1fr);gap:32px}#our-work .vs-heading{padding-top:0;max-width:700px}#our-work .vs-stories{padding-right:0}body.amphora-theme #our-work.value-stories{padding:48px 20px!important}body.amphora-theme #our-work h2{font-size:36px!important}body.amphora-theme #our-work .vs-heading>p,body.amphora-theme #our-work .vs-card>p{font-size:16px!important}#our-work .vs-card{padding:24px!important}body.amphora-theme #our-work .vs-card h3{font-size:26px!important}}
+@media(prefers-reduced-motion:reduce){#our-work *,#our-work *::before,#our-work *::after{animation:none!important;transition:none!important;transform:none!important}.vs-enhanced .vs-heading{opacity:1;translate:none}}
+}
+/* Compact value stories without truncating their content. */
+@layer bgs-mobile {
+ body.amphora-theme #our-work.value-stories{padding:56px 32px!important}
+ #our-work .vs-shell{max-width:1240px!important;gap:40px!important}
+ #our-work .vs-heading{padding-top:20px!important}
+ body.amphora-theme #our-work h2{font-size:clamp(34px,3.5vw,48px)!important;margin:16px 0!important}
+ body.amphora-theme #our-work .vs-heading>p{font-size:17px!important;line-height:1.6!important}
+ #our-work .vs-card{padding:24px!important;border-radius:20px!important}
+ #our-work .vs-card-top{margin-bottom:12px!important}
+ #our-work .vs-illustration{width:104px!important;height:67px!important;border-radius:14px!important}
+ #our-work .vs-number{font-size:18px!important}
+ body.amphora-theme #our-work .vs-card h3{font-size:24px!important;margin-bottom:14px!important}
+ body.amphora-theme #our-work .vs-card>p{font-size:17px!important;line-height:1.6!important}
+ #our-work .vs-card footer{margin-top:18px!important;padding-top:12px!important;font-size:9px!important}
+ #our-work.vs-interactive .vs-title-tabs{margin-top:34px!important;gap:8px!important}
+ #our-work .vs-title-tabs button{min-height:48px!important;padding:10px!important}
+ @media(max-width:950px){
+  body.amphora-theme #our-work.value-stories{padding:40px 20px!important}
+  #our-work .vs-shell{gap:24px!important}
+  #our-work .vs-heading{padding-top:0!important}
+  body.amphora-theme #our-work h2{font-size:34px!important}
+  body.amphora-theme #our-work .vs-heading>p,body.amphora-theme #our-work .vs-card>p{font-size:16px!important}
+  #our-work .vs-card{padding:20px!important}
+ }
+}
+@layer bgs-mobile {
+ body.amphora-theme :is(.bgs-values-partners-divider, .bgs-awards-values-divider, .bgs-section-divider){display:block!important;padding:8px 32px!important;margin:0!important;background:#faf9fd!important;width:100%!important}
+ body.amphora-theme :is(.bgs-values-partners-divider, .bgs-awards-values-divider, .bgs-section-divider) hr{display:block!important;height:1px!important;max-width:1180px!important;width:100%!important;margin:0 auto!important;border:0!important;background:linear-gradient(90deg,transparent,#cbb9e6 25%,#e4c1d6 60%,#ebd4bf 80%,transparent)!important}
+ @media(max-width:767px){body.amphora-theme :is(.bgs-values-partners-divider, .bgs-awards-values-divider, .bgs-section-divider){padding-inline:20px!important}}
+}

@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Core typography preload -->
+<link rel="preload" href="../assets/amphora-fonts/The%20Future/TheFuture-Regular.subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/amphora-fonts/The%20Future/TheFuture-Medium.subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/amphora-fonts/The%20Future/TheFuture-Bold.subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/amphora-fonts/Tiempos%20Headline/TiemposHeadline-400-Regular-Italic.woff2" as="font" type="font/woff2" crossorigin>
+
+
+<!-- Reveal the finished layout without showing a loading animation. -->
+<style>html.layout-pending body { visibility:hidden !important; }</style>
+<script>
+(() => {
+  const root = document.documentElement;
+  root.classList.add('layout-pending');
+  let observer;
+  const reveal = () => {
+    root.classList.remove('layout-pending');
+    if (observer) observer.disconnect();
+  };
+  const ready = () => {
+    if (root.classList.contains('bgs-layout-ready') && document.querySelector('.bgs-main-navbar')) reveal();
+  };
+  observer = new MutationObserver(ready);
+  observer.observe(root, {childList:true, subtree:true, attributes:true, attributeFilter:['class']});
+  document.addEventListener('DOMContentLoaded', ready, {once:true});
+  setTimeout(reveal, 2500);
+})();
+</script>
+
+
+
+	<meta charset="utf-8"/>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
+	<title>Data Intelligence & AI Solutions | Bridge Group Solutions</title>
+	<meta name="description" content="Transform enterprise data into predictive value with scalable ETL pipelines, real-time analytics dashboards, and custom machine learning models." />
+	<meta name="keywords" content="Data intelligence, enterprise AI solutions, ETL data pipelines, predictive analytics, machine learning engineering, Bridge Group Solutions" />
+	
+			<!-- Open Graph Meta Tags -->
+	<meta property="og:title" content="Data Intelligence & AI Solutions | Bridge Group Solutions" />
+	<meta property="og:description" content="Transform enterprise data into predictive value with scalable ETL pipelines, real-time analytics dashboards, and custom machine learning models." />
+	<meta property="og:url" content="https://www.bridgegroupsolutions.com/services/data.html" />
+	<meta property="og:image" content="https://www.bridgegroupsolutions.com/assets/logo.webp" />
+	<meta property="og:type" content="website" />
+
+	<!-- X (Twitter) Meta Tags -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Data Intelligence & AI Solutions | Bridge Group Solutions" />
+	<meta name="twitter:description" content="Transform enterprise data into predictive value with scalable ETL pipelines, real-time analytics dashboards, and custom machine learning models." />
+	<meta name="twitter:image" content="https://www.bridgegroupsolutions.com/assets/logo.webp" />
+	<link rel="canonical" href="https://www.bridgegroupsolutions.com/services/data.html"/>
+	<link rel="icon" type="image/webp" href="../assets/logo.webp"/>
+
+	<!-- Schema.org Structured Data (JSON-LD) -->
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://www.bridgegroupsolutions.com/services/data.html#service",
+      "serviceType": "Data Analytics & Business Intelligence",
+      "name": "Data Analytics & Business Insights | Bridge Group Solutions",
+      "description": "Transform unstructured enterprise data into predictive business intelligence with real-time analytics pipelines and executive dashboards.",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://www.bridgegroupsolutions.com/#organization",
+        "name": "Bridge Group Solutions",
+        "url": "https://www.bridgegroupsolutions.com",
+        "logo": "https://www.bridgegroupsolutions.com/assets/logo.webp"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.bridgegroupsolutions.com/services/data.html#webpage",
+      "url": "https://www.bridgegroupsolutions.com/services/data.html",
+      "name": "Data Analytics & Business Insights | Bridge Group Solutions",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.bridgegroupsolutions.com/#website",
+        "url": "https://www.bridgegroupsolutions.com",
+        "name": "Bridge Group Solutions"
+      }
+    }
+  ]
+}
+	</script>
+
+
+	<!-- Fonts matching index.html -->
+	<link rel="preconnect" href="https://fonts.googleapis.com"/>
+	<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+	<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+	<!-- Tabler Icons CDN -->
+	<link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" rel="stylesheet"/>
+
+	<!-- Base Layer Styles -->
+	<style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style>
+
+	<!-- Tailwind CSS CDN + Design Tokens -->
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script id="tailwind-config">
+		tailwind.config = {
+			darkMode: "class",
+			theme: {
+				extend: {
+					colors: {
+						"surface-container-highest": "#e2e2e4",
+						"on-secondary-container": "#5c647a",
+						"on-surface": "#1a1c1d",
+						"on-error": "#ffffff",
+						"primary-fixed": "#ffdad3",
+						"background": "#f9f9fb",
+						"primary-fixed-dim": "#ffb4a4",
+						"inverse-primary": "#ffb4a4",
+						"surface-bright": "#f9f9fb",
+						"on-tertiary-fixed-variant": "#424656",
+						"tertiary-fixed-dim": "#c3c6d8",
+						"tertiary-fixed": "#dfe1f5",
+						"outline-variant": "#e2bfb7",
+						"error-container": "#ffdad6",
+						"on-primary-container": "#fffbff",
+						"on-tertiary-container": "#fefcff",
+						"error": "#ba1a1a",
+						"tertiary": "#585b6b",
+						"secondary": "#565e74",
+						"surface-container-lowest": "#ffffff",
+						"surface-container-low": "#f3f3f5",
+						"secondary-fixed": "#dae2fd",
+						"secondary-fixed-dim": "#bec6e0",
+						"on-background": "#1a1c1d",
+						"on-secondary": "#ffffff",
+						"on-surface-variant": "#5a413b",
+						"outline": "#8e706a",
+						"secondary-container": "#dae2fd",
+						"surface": "#f9f9fb",
+						"surface-container": "#eeeef0",
+						"inverse-surface": "#2f3132",
+						"tertiary-container": "#707485",
+						"on-tertiary": "#ffffff",
+						"surface-tint": "#b12e11",
+						"inverse-on-surface": "#f0f0f2",
+						"on-primary-fixed": "#3d0600",
+						"surface-dim": "#d9dadc",
+						"on-error-container": "#93000a",
+						"on-primary": "#ffffff",
+						"on-primary-fixed-variant": "#8c1800",
+						"on-secondary-fixed": "#131b2e",
+						"primary-container": "#d04426",
+						"surface-container-high": "#e8e8ea",
+						"primary": "#ad2b0e",
+						"on-secondary-fixed-variant": "#3f465c",
+						"on-tertiary-fixed": "#171b29",
+						"surface-variant": "#e2e2e4"
+					},
+					borderRadius: {
+						"DEFAULT": "0.25rem",
+						"lg": "0.5rem",
+						"xl": "0.75rem",
+						"full": "9999px"
+					},
+					spacing: {
+						"space-sm": "0.5rem",
+						"space-md": "1rem",
+						"space-xs": "0.25rem",
+						"gutter": "1.5rem",
+						"space-lg": "1.5rem",
+						"margin-mobile": "1.25rem",
+						"gutter-mobile": "1rem",
+						"space-xl": "2.5rem",
+						"margin": "3rem"
+					},
+					fontFamily: {
+						"body-md": ["Plus Jakarta Sans"],
+						"body-sm": ["Plus Jakarta Sans"],
+						"label-pill": ["Plus Jakarta Sans"],
+						"display-hero": ["Plus Jakarta Sans"],
+						"headline-lg": ["Plus Jakarta Sans"],
+						"headline-md": ["Plus Jakarta Sans"],
+						"label-eyebrow": ["Space Grotesk"],
+						"body-lg": ["Plus Jakarta Sans"],
+						"display-hero-mobile": ["Plus Jakarta Sans"],
+						"headline-sm": ["Plus Jakarta Sans"],
+						"stat-metric": ["Plus Jakarta Sans"],
+						"label-code": ["Space Grotesk"]
+					},
+					fontSize: {
+						"body-md": ["15px", {"lineHeight": "24px", "fontWeight": "400"}],
+						"body-sm": ["13px", {"lineHeight": "20px", "fontWeight": "400"}],
+						"label-pill": ["12px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+						"display-hero": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+						"headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+						"headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+						"label-eyebrow": ["11px", {"lineHeight": "14px", "letterSpacing": "0.12em", "fontWeight": "700"}],
+						"body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+						"display-hero-mobile": ["36px", {"lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+						"headline-sm": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+						"stat-metric": ["40px", {"lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+						"label-code": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}]
+					}
+				}
+			}
+		}
+	</script>
+
+	<!-- Design Tokens & Theme -->
+	<link rel="stylesheet" href="../assets/bgs-modern-theme.css"/>
+	<!-- Dedicated Stylesheet -->
+	<link rel="stylesheet" href="../assets/services-data.css"/>
+<link rel="stylesheet" href="../assets/amphora-reference.css">
+<link rel="stylesheet" href="../assets/amphora-bgs.css">
+<script defer src="../assets/amphora-bgs.js"></script>
+</head>
+
+<body class="amphora-theme bg-surface font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+
+	<!-- GLOBAL STICKY HEADER -->
+	<!-- Reusable Navbar Component -->
+	<div id="navbar"></div>
+
+
+
+
+
+		<main class="w-full pt-20 bg-surface min-h-screen">
+		<div class="flex flex-col w-full overflow-hidden">
+
+			<!-- 1. HERO SECTION WITH LIVE TELEMETRY DECK -->
+			<section class="relative w-full max-w-[1320px] mx-auto px-6 md:px-12 pt-12 pb-16 md:pb-24">
+				<!-- Atmospheric Glows -->
+				<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[650px] pointer-events-none -z-10 overflow-hidden">
+					<div class="absolute top-0 right-10 w-[550px] h-[550px] rounded-full blur-3xl opacity-60" style="background: radial-gradient(circle, rgba(16, 185, 129, 0.22) 0%, rgba(235, 87, 55, 0.12) 40%, rgba(59, 130, 246, 0.05) 75%, transparent 100%);"></div>
+					<div class="absolute top-20 -left-20 w-[500px] h-[500px] rounded-full blur-3xl opacity-50" style="background: radial-gradient(circle, rgba(235, 87, 55, 0.15) 0%, rgba(16, 185, 129, 0.08) 50%, transparent 80%);"></div>
+				</div>
+
+				<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+					<!-- Hero Left Column -->
+					<div class="lg:col-span-6 flex flex-col items-start space-y-6">
+						<div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-surface-container-low shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
+							<span class="relative flex h-2 w-2">
+								<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
+								<span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+							</span>
+							<span class="font-label-eyebrow text-label-eyebrow text-emerald-700 uppercase tracking-widest">Advanced Analytics &amp; BI Platform</span>
+						</div>
+
+						<h1 class="font-display-hero text-display-hero text-on-surface tracking-tight leading-[1.08]">
+							Transform Raw Data<br class="hidden sm:inline">
+							Into <span class="text-secondary">Actionable</span><br class="hidden sm:inline">
+							<span class="text-primary italic font-semibold">Intelligence</span>
+						</h1>
+
+						<p class="font-body-lg text-body-lg text-secondary max-w-xl leading-relaxed">
+							Bridge Group Solutions empowers businesses with data-driven decision-making through advanced analytics and reporting solutions that improve performance and efficiency.
+						</p>
+
+						<!-- Dual CTAs -->
+						<div class="flex flex-wrap items-center gap-4 pt-2">
+							<a class="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full text-white font-label-pill text-label-pill shadow-[0_8px_25px_rgba(235,87,55,0.4)] hover:shadow-[0_14px_35px_rgba(235,87,55,0.55)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 border border-white/25 font-semibold" href="#cta" style="background: linear-gradient(135deg, #ad2b0e 0%, #eb5737 60%, #ff7849 100%);">
+								<span>Start Your Journey &rarr;</span>
+							</a>
+							<a class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-surface-container-lowest text-on-surface font-label-pill text-label-pill shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_24px_rgba(16,185,129,0.15)] hover:border-emerald-400 hover:-translate-y-0.5 transition-all duration-200 border border-surface-container-high" href="#services">
+								<span class="font-semibold">Explore Solutions</span>
+								<span class="material-symbols-outlined text-[18px] text-emerald-700">arrow_downward</span>
+							</a>
+						</div>
+					</div>
+
+					<!-- Hero Right Column: Telemetry Deck -->
+					<div class="lg:col-span-6 relative w-full flex items-center justify-center">
+						<div class="w-full max-w-[560px] p-6 sm:p-8 rounded-3xl bg-surface-container-lowest shadow-[0_25px_60px_rgba(16,185,129,0.12),0_10px_30px_rgba(15,23,42,0.06)] relative overflow-hidden flex flex-col gap-6 border border-emerald-200">
+							<!-- Header -->
+							<div class="flex items-center justify-between border-b border-surface-container-high pb-4">
+								<div class="flex items-center gap-2.5">
+									<div class="flex gap-1.5">
+										<span class="w-3 h-3 rounded-full bg-red-400 inline-block"></span>
+										<span class="w-3 h-3 rounded-full bg-amber-400 inline-block"></span>
+										<span class="w-3 h-3 rounded-full bg-emerald-400 inline-block"></span>
+									</div>
+									<span class="font-headline-sm text-[15px] font-bold text-on-surface ml-2">Analytics Dashboard — Live</span>
+								</div>
+								<div class="flex items-center gap-2 px-3 py-1 rounded-full shadow-sm border border-emerald-200 bg-emerald-50">
+									<span class="h-2 w-2 rounded-full bg-emerald-500 animate-ping"></span>
+									<span class="font-label-code text-[11px] font-bold text-emerald-800">STREAMING ACTIVE</span>
+								</div>
+							</div>
+
+							<!-- 3 Metrics -->
+							<div class="grid grid-cols-3 gap-3">
+								<div class="p-3.5 rounded-2xl bg-surface-container-low border border-surface-container-high/60 flex flex-col">
+									<span class="font-label-eyebrow text-[10px] text-secondary uppercase font-bold">Revenue</span>
+									<span class="font-stat-metric text-[22px] sm:text-[24px] font-extrabold text-primary mt-1">.4M</span>
+									<span class="font-label-code text-[11px] font-semibold text-emerald-700 mt-0.5">&uarr; 18.2%</span>
+								</div>
+								<div class="p-3.5 rounded-2xl bg-surface-container-low border border-surface-container-high/60 flex flex-col">
+									<span class="font-label-eyebrow text-[10px] text-secondary uppercase font-bold">Efficiency</span>
+									<span class="font-stat-metric text-[22px] sm:text-[24px] font-extrabold text-emerald-600 mt-1">94.7%</span>
+									<span class="font-label-code text-[11px] font-semibold text-emerald-700 mt-0.5">&uarr; 6.1%</span>
+								</div>
+								<div class="p-3.5 rounded-2xl bg-surface-container-low border border-surface-container-high/60 flex flex-col">
+									<span class="font-label-eyebrow text-[10px] text-secondary uppercase font-bold">Insights</span>
+									<span class="font-stat-metric text-[22px] sm:text-[24px] font-extrabold text-on-surface mt-1">1,284</span>
+									<span class="font-label-code text-[11px] font-semibold text-primary mt-0.5">&uarr; 32.4%</span>
+								</div>
+							</div>
+
+							<!-- Monthly Performance Index Chart -->
+							<div class="p-4 rounded-2xl bg-surface-container-low border border-surface-container-high/60 flex flex-col gap-3">
+								<div class="flex items-center justify-between text-[11px] font-label-code text-secondary font-bold uppercase tracking-wider">
+									<span>Monthly Performance Index</span>
+									<span class="text-emerald-700 font-bold">&uarr; OPTIMAL</span>
+								</div>
+								<div class="h-20 flex items-end justify-between gap-1.5 pt-2">
+									<div class="w-full bg-primary/20 hover:bg-primary rounded-t transition-all" style="height: 38%;"></div>
+									<div class="w-full bg-primary/30 hover:bg-primary rounded-t transition-all" style="height: 52%;"></div>
+									<div class="w-full bg-primary/40 hover:bg-primary rounded-t transition-all" style="height: 48%;"></div>
+									<div class="w-full bg-primary/50 hover:bg-primary rounded-t transition-all" style="height: 65%;"></div>
+									<div class="w-full bg-primary/60 hover:bg-primary rounded-t transition-all" style="height: 58%;"></div>
+									<div class="w-full bg-emerald-500/50 hover:bg-emerald-600 rounded-t transition-all" style="height: 78%;"></div>
+									<div class="w-full bg-emerald-500/60 hover:bg-emerald-600 rounded-t transition-all" style="height: 70%;"></div>
+									<div class="w-full bg-emerald-500/70 hover:bg-emerald-600 rounded-t transition-all" style="height: 86%;"></div>
+									<div class="w-full bg-emerald-500/80 hover:bg-emerald-600 rounded-t transition-all" style="height: 82%;"></div>
+									<div class="w-full bg-emerald-500 rounded-t transition-all" style="height: 100%;"></div>
+								</div>
+							</div>
+
+							<!-- Hero Tags -->
+							<div class="flex flex-wrap items-center gap-2 pt-1 font-label-code text-[11px]">
+								<span class="px-3 py-1 rounded-full bg-red-50 text-red-700 border border-red-200 font-semibold">🔴 Real-time</span>
+								<span class="px-3 py-1 rounded-full bg-violet-50 text-violet-700 border border-violet-200 font-semibold">🤖 AI-Powered</span>
+								<span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 font-semibold">📊 Predictive</span>
+								<span class="px-3 py-1 rounded-full bg-primary-fixed/40 text-primary border border-primary/20 font-semibold">🔗 Multi-source</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 2. STATS STRIP -->
+			<section class="w-full bg-surface-container-low py-8 md:py-10 border-y border-surface-container-high/60">
+				<div class="max-w-[1100px] mx-auto px-6 md:px-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+					<div class="flex flex-col items-center">
+						<span class="font-display-hero text-[34px] sm:text-[40px] md:text-[44px] font-bold text-primary tracking-tight leading-none">500+</span>
+						<span class="font-body-sm text-secondary font-medium mt-2">Clients Served</span>
+					</div>
+					<div class="flex flex-col items-center">
+						<span class="font-display-hero text-[34px] sm:text-[40px] md:text-[44px] font-bold text-primary tracking-tight leading-none">98%</span>
+						<span class="font-body-sm text-secondary font-medium mt-2">Client Satisfaction</span>
+					</div>
+					<div class="flex flex-col items-center">
+						<span class="font-display-hero text-[34px] sm:text-[40px] md:text-[44px] font-bold text-primary tracking-tight leading-none">10B+</span>
+						<span class="font-body-sm text-secondary font-medium mt-2">Data Points Processed</span>
+					</div>
+					<div class="flex flex-col items-center">
+						<span class="font-display-hero text-[34px] sm:text-[40px] md:text-[44px] font-bold text-primary tracking-tight leading-none">3.2&times;</span>
+						<span class="font-body-sm text-secondary font-medium mt-2">Avg. Decision Speed</span>
+					</div>
+				</div>
+			</section>
+
+			<!-- 3. WHAT WE OFFER / END-TO-END ANALYTICS SOLUTIONS -->
+			<section id="services" class="w-full max-w-[1320px] mx-auto px-6 md:px-12 py-20 md:py-24">
+				<div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
+					<span class="font-label-eyebrow text-label-eyebrow text-emerald-700 uppercase tracking-widest">WHAT WE OFFER</span>
+					<h2 class="font-headline-lg text-[32px] md:text-[40px] text-on-surface font-bold tracking-tight mt-1">
+						End-to-End <span class="text-primary italic font-semibold">Analytics</span> Solutions
+					</h2>
+					<p class="font-body-md text-body-md text-secondary mt-3">
+						From raw data to real insights — we handle the full spectrum of your business intelligence needs with precision and expertise.
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+					<!-- Service 1 -->
+					<div class="p-8 rounded-3xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(139,92,246,0.18)] hover:border-violet-400 hover:-translate-y-1.5 transition-all duration-300 border border-surface-container-high flex gap-6 items-start group" data-card-color="violet">
+						<div class="w-14 h-14 rounded-2xl bg-violet-100 text-violet-700 flex items-center justify-center text-2xl shrink-0 group-hover:bg-violet-600 group-hover:text-white transition-colors">🧹</div>
+						<div class="flex flex-col">
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-2 group-hover:text-violet-600 transition-colors">Data Cleaning &amp; Transformation</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">We normalize, cleanse, and structure your messy data pipelines into reliable, analysis-ready datasets — eliminating errors and inconsistencies at scale.</p>
+						</div>
+					</div>
+
+					<!-- Service 2 -->
+					<div class="p-8 rounded-3xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(16,185,129,0.18)] hover:border-emerald-400 hover:-translate-y-1.5 transition-all duration-300 border border-surface-container-high flex gap-6 items-start group" data-card-color="emerald">
+						<div class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-2xl shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-colors">📊</div>
+						<div class="flex flex-col">
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-2 group-hover:text-emerald-600 transition-colors">Dashboard &amp; Report Development</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">Custom-built interactive dashboards tailored to your KPIs. Visualize trends, track performance, and surface critical metrics at a glance — anytime, anywhere.</p>
+						</div>
+					</div>
+
+					<!-- Service 3 -->
+					<div class="p-8 rounded-3xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(14,165,233,0.18)] hover:border-sky-400 hover:-translate-y-1.5 transition-all duration-300 border border-surface-container-high flex gap-6 items-start group" data-card-color="sky">
+						<div class="w-14 h-14 rounded-2xl bg-sky-100 text-sky-700 flex items-center justify-center text-2xl shrink-0 group-hover:bg-sky-600 group-hover:text-white transition-colors">🔮</div>
+						<div class="flex flex-col">
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-2 group-hover:text-sky-600 transition-colors">Predictive Analytics</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">Leverage machine learning models to forecast demand, detect anomalies, and anticipate business outcomes — turning historical data into strategic foresight.</p>
+						</div>
+					</div>
+
+					<!-- Service 4 -->
+					<div class="p-8 rounded-3xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(20,184,166,0.18)] hover:border-teal-400 hover:-translate-y-1.5 transition-all duration-300 border border-surface-container-high flex gap-6 items-start group" data-card-color="teal">
+						<div class="w-14 h-14 rounded-2xl bg-teal-500/10 text-teal-700 flex items-center justify-center text-2xl shrink-0 group-hover:bg-teal-600 group-hover:text-white transition-colors">🧠</div>
+						<div class="flex flex-col">
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-2 group-hover:text-teal-600 transition-colors">Business Intelligence Solutions</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">Comprehensive BI implementations that integrate across your tech stack — from data warehousing to advanced OLAP analysis and executive reporting.</p>
+						</div>
+					</div>
+
+					<!-- Service 5 -->
+					<div class="p-8 rounded-3xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(99,102,241,0.18)] hover:border-indigo-400 hover:-translate-y-1.5 transition-all duration-300 border border-surface-container-high flex gap-6 items-start group" data-card-color="indigo">
+						<div class="w-14 h-14 rounded-2xl bg-indigo-100 text-indigo-700 flex items-center justify-center text-2xl shrink-0 group-hover:bg-indigo-600 group-hover:text-white transition-colors">☁️</div>
+						<div class="flex flex-col">
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-2 group-hover:text-indigo-600 transition-colors">Cloud Data Warehousing</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">Architecting resilient data lakes and warehouses on Snowflake, BigQuery, and Redshift to centralize multi-source telemetry with zero degradation.</p>
+						</div>
+					</div>
+
+					<!-- Service 6 -->
+					<div class="p-8 rounded-3xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(245,158,11,0.18)] hover:border-amber-400 hover:-translate-y-1.5 transition-all duration-300 border border-surface-container-high flex gap-6 items-start group" data-card-color="amber">
+						<div class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center text-2xl shrink-0 group-hover:bg-amber-600 group-hover:text-white transition-colors">⚡</div>
+						<div class="flex flex-col">
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-2 group-hover:text-amber-600 transition-colors">Real-Time Streaming &amp; Alerting</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">Event-driven pipelines using Kafka and automated webhook triggers, pushing anomaly notifications and live operational updates to key stakeholders instantly.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 4. KEY FEATURES / BUILT FOR SPEED & SCALE -->
+			<section id="features" class="w-full bg-surface-container-low/60 py-20 md:py-24 border-y border-surface-container-high/60">
+				<div class="max-w-[1320px] mx-auto px-6 md:px-12">
+					<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+						<!-- Features List Left -->
+						<div class="lg:col-span-7 flex flex-col">
+							<span class="font-label-eyebrow text-label-eyebrow text-emerald-700 uppercase tracking-widest">KEY FEATURES</span>
+							<h2 class="font-headline-lg text-[32px] md:text-[40px] text-on-surface font-bold tracking-tight mt-1">
+								Built for <span class="text-primary italic font-semibold">Speed</span> &amp; Scale
+							</h2>
+							<p class="font-body-md text-body-md text-secondary mt-3 max-w-xl">
+								Everything you need to turn raw data into a strategic business asset — engineered for enterprise performance.
+							</p>
+
+							<div class="flex flex-col gap-4 mt-8">
+								<!-- Item 1 -->
+								<div class="flex gap-4 items-start p-4 rounded-2xl bg-surface-container-lowest border border-surface-container-high/60 hover:border-emerald-300 transition-colors shadow-sm">
+									<div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-lg shrink-0 mt-0.5">⚡</div>
+									<div>
+										<h4 class="font-headline-sm text-[16px] font-bold text-on-surface mb-1">Real-Time Data Pipelines</h4>
+										<p class="font-body-sm text-[13px] text-secondary leading-relaxed">Process and stream large volumes of transactional data in milliseconds with sub-second latency across all nodes.</p>
+									</div>
+								</div>
+
+								<!-- Item 2 -->
+								<div class="flex gap-4 items-start p-4 rounded-2xl bg-surface-container-lowest border border-surface-container-high/60 hover:border-emerald-300 transition-colors shadow-sm">
+									<div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-lg shrink-0 mt-0.5">🛡️</div>
+									<div>
+										<h4 class="font-headline-sm text-[16px] font-bold text-on-surface mb-1">Enterprise-Grade Security</h4>
+										<p class="font-body-sm text-[13px] text-secondary leading-relaxed">Bank-level encryption (AES-256), SOC 2 compliance, and role-based access controls to keep your data safe.</p>
+									</div>
+								</div>
+
+								<!-- Item 3 -->
+								<div class="flex gap-4 items-start p-4 rounded-2xl bg-surface-container-lowest border border-surface-container-high/60 hover:border-emerald-300 transition-colors shadow-sm">
+									<div class="w-10 h-10 rounded-xl bg-violet-100 text-violet-700 flex items-center justify-center text-lg shrink-0 mt-0.5">🤖</div>
+									<div>
+										<h4 class="font-headline-sm text-[16px] font-bold text-on-surface mb-1">AI-Driven Analytics Models</h4>
+										<p class="font-body-sm text-[13px] text-secondary leading-relaxed">Our ML models adapt to your business patterns, continuously improving prediction accuracy over time.</p>
+									</div>
+								</div>
+
+								<!-- Item 4 -->
+								<div class="flex gap-4 items-start p-4 rounded-2xl bg-surface-container-lowest border border-surface-container-high/60 hover:border-emerald-300 transition-colors shadow-sm">
+									<div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center text-lg shrink-0 mt-0.5">🔗</div>
+									<div>
+										<h4 class="font-headline-sm text-[16px] font-bold text-on-surface mb-1">Multi-Source Integration</h4>
+										<p class="font-body-sm text-[13px] text-secondary leading-relaxed">Connect CRMs, ERPs, cloud databases, APIs, and spreadsheets into one unified data layer.</p>
+									</div>
+								</div>
+
+								<!-- Item 5 -->
+								<div class="flex gap-4 items-start p-4 rounded-2xl bg-surface-container-lowest border border-surface-container-high/60 hover:border-emerald-300 transition-colors shadow-sm">
+									<div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center text-lg shrink-0 mt-0.5">📬</div>
+									<div>
+										<h4 class="font-headline-sm text-[16px] font-bold text-on-surface mb-1">Automated Reporting</h4>
+										<p class="font-body-sm text-[13px] text-secondary leading-relaxed">Scheduled reports delivered automatically to stakeholders — no manual exports, no delays.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Data Visual Right -->
+						<div class="lg:col-span-5 flex flex-col gap-6">
+							<!-- Viz Card 1: Donut -->
+							<div class="p-6 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-sm hover:shadow-md transition-all">
+								<div class="font-label-code text-[12px] font-bold text-secondary uppercase tracking-wider mb-4">Data Distribution — Q4 2024</div>
+								<div class="flex flex-col sm:flex-row items-center gap-6">
+									<svg class="shrink-0" width="100" height="100" viewBox="0 0 90 90">
+										<circle cx="45" cy="45" r="35" fill="none" stroke="#eeeef0" stroke-width="12"/>
+										<circle cx="45" cy="45" r="35" fill="none" stroke="#ad2b0e" stroke-width="12" stroke-dasharray="88 132" stroke-dashoffset="-16" stroke-linecap="round"/>
+										<circle cx="45" cy="45" r="35" fill="none" stroke="#059669" stroke-width="12" stroke-dasharray="55 165" stroke-dashoffset="-104" stroke-linecap="round"/>
+										<circle cx="45" cy="45" r="35" fill="none" stroke="#565e74" stroke-width="12" stroke-dasharray="77 143" stroke-dashoffset="-159" stroke-linecap="round"/>
+									</svg>
+									<div class="flex flex-col gap-2.5 font-body-sm text-[13px] text-on-surface">
+										<div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-primary inline-block"></span><span>Sales Analytics &mdash; <strong>40%</strong></span></div>
+										<div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-emerald-600 inline-block"></span><span>Ops Intelligence &mdash; <strong>25%</strong></span></div>
+										<div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-secondary inline-block"></span><span>Predictive Models &mdash; <strong>35%</strong></span></div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Viz Card 2: Real-time Line -->
+							<div class="p-6 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-sm hover:shadow-md transition-all">
+								<div class="font-label-code text-[12px] font-bold text-secondary uppercase tracking-wider mb-3">Performance Trend — Real-time</div>
+								<div class="w-full">
+									<svg viewBox="0 0 320 50" preserveAspectRatio="none" class="w-full h-14 overflow-visible">
+										<defs>
+											<linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+												<stop offset="0%" stop-color="#ad2b0e"/>
+												<stop offset="100%" stop-color="#059669"/>
+											</linearGradient>
+										</defs>
+										<path d="M0,40 C20,38 40,30 60,28 C80,26 100,32 120,20 C140,8 160,15 180,10 C200,5 220,18 240,12 C260,6 280,8 320,4"
+											fill="none" stroke="url(#lineGrad)" stroke-width="2.5" stroke-linecap="round"/>
+										<path d="M0,40 C20,38 40,30 60,28 C80,26 100,32 120,20 C140,8 160,15 180,10 C200,5 220,18 240,12 C260,6 280,8 320,4 L320,50 L0,50 Z"
+											fill="url(#lineGrad)" opacity="0.1"/>
+									</svg>
+								</div>
+							</div>
+
+							<!-- Viz Card 3: Active Integrations -->
+							<div class="p-6 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-sm hover:shadow-md transition-all">
+								<div class="font-label-code text-[12px] font-bold text-secondary uppercase tracking-wider mb-3">Active Integrations</div>
+								<div class="flex flex-wrap gap-2">
+									<span class="px-3 py-1.5 rounded-xl font-label-code text-[12px] font-semibold bg-primary-fixed/40 text-primary border border-primary/20">Salesforce</span>
+									<span class="px-3 py-1.5 rounded-xl font-label-code text-[12px] font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200">SAP</span>
+									<span class="px-3 py-1.5 rounded-xl font-label-code text-[12px] font-semibold bg-primary-fixed/40 text-primary border border-primary/20">AWS</span>
+									<span class="px-3 py-1.5 rounded-xl font-label-code text-[12px] font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200">Google BigQuery</span>
+									<span class="px-3 py-1.5 rounded-xl font-label-code text-[12px] font-semibold bg-surface-container-high text-secondary border border-surface-container-high/80">Snowflake</span>
+									<span class="px-3 py-1.5 rounded-xl font-label-code text-[12px] font-semibold bg-surface-container-high text-secondary border border-surface-container-high/80">Power BI</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 5. WHY CHOOSE US / THE BRIDGE ADVANTAGE -->
+			<section id="why" class="w-full max-w-[1320px] mx-auto px-6 md:px-12 py-20 md:py-24">
+				<div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
+					<span class="font-label-eyebrow text-label-eyebrow text-emerald-700 uppercase tracking-widest">WHY CHOOSE US</span>
+					<h2 class="font-headline-lg text-[32px] md:text-[40px] text-on-surface font-bold tracking-tight mt-1">
+						The <span class="text-primary italic font-semibold">Bridge</span> Advantage
+					</h2>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+					<!-- Card 1 -->
+					<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-sm hover:shadow-[0_20px_45px_rgba(16,185,129,0.18)] hover:border-emerald-400 hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden group" data-card-color="emerald">
+						<span class="absolute top-6 right-6 font-display-hero text-[48px] font-bold text-emerald-600/15 group-hover:text-emerald-600/30 transition-colors leading-none">01</span>
+						<div class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-emerald-600 group-hover:text-white transition-all">👥</div>
+						<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-3 group-hover:text-emerald-600 transition-colors">Expert Team of Analysts &amp; Scientists</h3>
+						<p class="font-body-sm text-body-sm text-secondary leading-relaxed">Our certified data analysts, scientists, and BI engineers bring deep domain expertise across finance, retail, healthcare, and logistics.</p>
+					</div>
+
+					<!-- Card 2 -->
+					<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-sm hover:shadow-[0_20px_45px_rgba(235,87,55,0.18)] hover:border-primary/40 hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden group" data-card-color="primary">
+						<span class="absolute top-6 right-6 font-display-hero text-[48px] font-bold text-primary/15 group-hover:text-primary/30 transition-colors leading-none">02</span>
+						<div class="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all">🏭</div>
+						<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-3 group-hover:text-primary transition-colors">Industry-Specific Solutions</h3>
+						<p class="font-body-sm text-body-sm text-secondary leading-relaxed">We don't offer generic templates. Every engagement starts with understanding your industry KPIs and designing solutions that fit your business model precisely.</p>
+					</div>
+
+					<!-- Card 3 -->
+					<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-sm hover:shadow-[0_20px_45px_rgba(14,165,233,0.18)] hover:border-sky-400 hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden group" data-card-color="sky">
+						<span class="absolute top-6 right-6 font-display-hero text-[48px] font-bold text-sky-600/15 group-hover:text-sky-600/30 transition-colors leading-none">03</span>
+						<div class="w-14 h-14 rounded-2xl bg-sky-100 text-sky-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-sky-600 group-hover:text-white transition-all">🎯</div>
+						<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-3 group-hover:text-sky-600 transition-colors">Improved Decision Accuracy</h3>
+						<p class="font-body-sm text-body-sm text-secondary leading-relaxed">Clients using our analytics solutions report up to 3&times; faster decision cycles and a measurable reduction in forecasting errors within the first 90 days.</p>
+					</div>
+
+					<!-- Card 4 -->
+					<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-sm hover:shadow-[0_20px_45px_rgba(139,92,246,0.18)] hover:border-violet-400 hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden group" data-card-color="violet">
+						<span class="absolute top-6 right-6 font-display-hero text-[48px] font-bold text-violet-600/15 group-hover:text-violet-600/30 transition-colors leading-none">04</span>
+						<div class="w-14 h-14 rounded-2xl bg-violet-100 text-violet-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-violet-600 group-hover:text-white transition-all">🔒</div>
+						<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-3 group-hover:text-violet-600 transition-colors">Bank-Grade Data Governance</h3>
+						<p class="font-body-sm text-body-sm text-secondary leading-relaxed">Strict role-based access control (RBAC), end-to-end data lineage tracking, and GDPR/HIPAA compliance guarantees built into every pipeline.</p>
+					</div>
+
+					<!-- Card 5 -->
+					<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-sm hover:shadow-[0_20px_45px_rgba(245,158,11,0.18)] hover:border-amber-400 hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden group" data-card-color="amber">
+						<span class="absolute top-6 right-6 font-display-hero text-[48px] font-bold text-amber-600/15 group-hover:text-amber-600/30 transition-colors leading-none">05</span>
+						<div class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-amber-600 group-hover:text-white transition-all">🚀</div>
+						<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-3 group-hover:text-amber-600 transition-colors">Sub-Second Query Performance</h3>
+						<p class="font-body-sm text-body-sm text-secondary leading-relaxed">Optimized indexing, columnar caching, and automated materialized views that return complex executive aggregations in under a second.</p>
+					</div>
+
+					<!-- Card 6 -->
+					<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-sm hover:shadow-[0_20px_45px_rgba(20,184,166,0.18)] hover:border-teal-400 hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden group" data-card-color="teal">
+						<span class="absolute top-6 right-6 font-display-hero text-[48px] font-bold text-teal-600/15 group-hover:text-teal-600/30 transition-colors leading-none">06</span>
+						<div class="w-14 h-14 rounded-2xl bg-teal-500/10 text-teal-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-teal-600 group-hover:text-white transition-all">🎓</div>
+						<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-3 group-hover:text-teal-600 transition-colors">Self-Service Enablement &amp; Training</h3>
+						<p class="font-body-sm text-body-sm text-secondary leading-relaxed">We empower your internal analysts with hands-on documentation, semantic modeling standards, and workshop training to drive continuous data adoption.</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- 6. PROCESS / HOW WE WORK -->
+			<section id="process" class="w-full bg-surface-container-low/60 py-20 md:py-24 border-y border-surface-container-high/60">
+				<div class="max-w-[1320px] mx-auto px-6 md:px-12">
+					<div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
+						<span class="font-label-eyebrow text-label-eyebrow text-emerald-700 uppercase tracking-widest">OUR PROCESS</span>
+						<h2 class="font-headline-lg text-[32px] md:text-[40px] text-on-surface font-bold tracking-tight mt-1">
+							How We <span class="text-primary italic font-semibold">Work</span>
+						</h2>
+					</div>
+
+					<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+						<!-- Step 01 -->
+						<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-sm hover:border-emerald-400 hover:shadow-[0_20px_45px_rgba(16,185,129,0.18)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-card-color="emerald">
+							<div>
+								<span class="font-label-code text-[28px] font-bold text-emerald-600/40 group-hover:text-emerald-600 transition-colors">01</span>
+								<h4 class="font-headline-sm text-[18px] font-bold text-on-surface mt-4 mb-2 group-hover:text-emerald-600 transition-colors">Discover &amp; Audit</h4>
+								<p class="font-body-sm text-body-sm text-secondary leading-relaxed">We assess your data infrastructure, sources, and business goals to define a clear analytics roadmap.</p>
+							</div>
+						</div>
+
+						<!-- Step 02 -->
+						<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-sm hover:border-sky-400 hover:shadow-[0_20px_45px_rgba(14,165,233,0.18)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-card-color="sky">
+							<div>
+								<span class="font-label-code text-[28px] font-bold text-sky-600/40 group-hover:text-sky-600 transition-colors">02</span>
+								<h4 class="font-headline-sm text-[18px] font-bold text-on-surface mt-4 mb-2 group-hover:text-sky-600 transition-colors">Design &amp; Build</h4>
+								<p class="font-body-sm text-body-sm text-secondary leading-relaxed">Our engineers architect data pipelines, models, and dashboards tailored to your workflows.</p>
+							</div>
+						</div>
+
+						<!-- Step 03 -->
+						<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-sm hover:border-violet-400 hover:shadow-[0_20px_45px_rgba(139,92,246,0.18)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-card-color="violet">
+							<div>
+								<span class="font-label-code text-[28px] font-bold text-violet-600/40 group-hover:text-violet-600 transition-colors">03</span>
+								<h4 class="font-headline-sm text-[18px] font-bold text-on-surface mt-4 mb-2 group-hover:text-violet-600 transition-colors">Deploy &amp; Integrate</h4>
+								<p class="font-body-sm text-body-sm text-secondary leading-relaxed">Seamless deployment into your existing stack with full integration testing and QA validation.</p>
+							</div>
+						</div>
+
+						<!-- Step 04 -->
+						<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-sm hover:border-amber-400 hover:shadow-[0_20px_45px_rgba(245,158,11,0.18)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-card-color="amber">
+							<div>
+								<span class="font-label-code text-[28px] font-bold text-amber-600/40 group-hover:text-amber-600 transition-colors">04</span>
+								<h4 class="font-headline-sm text-[18px] font-bold text-on-surface mt-4 mb-2 group-hover:text-amber-600 transition-colors">Optimize &amp; Scale</h4>
+								<p class="font-body-sm text-body-sm text-secondary leading-relaxed">Continuous monitoring, model refinement, and performance tuning as your data grows.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 7. CTA SECTION -->
+			<section id="cta" class="w-full max-w-[1320px] mx-auto px-6 md:px-12 py-20 md:py-24">
+				<div class="p-10 md:p-16 rounded-3xl bg-surface-container-lowest border border-primary/20 shadow-[0_20px_50px_rgba(235,87,55,0.1)] text-center relative overflow-hidden flex flex-col items-center">
+					<!-- Atmospheric Glow -->
+					<div class="absolute -top-24 -right-24 w-80 h-80 rounded-full blur-3xl opacity-40 pointer-events-none" style="background: radial-gradient(circle, rgba(235, 87, 55, 0.3) 0%, transparent 70%);"></div>
+					<div class="absolute -bottom-24 -left-24 w-80 h-80 rounded-full blur-3xl opacity-30 pointer-events-none" style="background: radial-gradient(circle, rgba(16, 185, 129, 0.25) 0%, transparent 70%);"></div>
+
+					<h2 class="font-headline-lg text-[32px] md:text-[48px] lg:text-[54px] text-white font-bold tracking-tight relative z-10 max-w-3xl leading-[1.1] text-center">
+						Turn Data Into Intelligence.<br />
+						<span class="text-primary italic font-semibold">Accelerated Growth.</span>
+					</h2>
+					<p class="font-body-lg text-body-lg text-secondary max-w-xl mt-4 mb-8 relative z-10 leading-relaxed">
+						Join hundreds of businesses already making smarter, faster, and more accurate decisions with Bridge Group Solutions.
+					</p>
+					<div class="flex flex-wrap justify-center gap-4 relative z-10">
+						<a class="inline-flex items-center gap-3 px-9 py-4 rounded-full text-white font-label-pill text-label-pill shadow-[0_8px_25px_rgba(235,87,55,0.4)] hover:shadow-[0_14px_35px_rgba(235,87,55,0.55)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 border border-white/25 text-base font-semibold" href="../contact.html" style="background: linear-gradient(135deg, #ad2b0e 0%, #eb5737 60%, #ff7849 100%);">
+							<span>Talk to an Expert &rarr;</span>
+						</a>
+					</div>
+				</div>
+			</section>
+
+		</div>
+	</main>
+
+	<!-- GLOBAL HIGH-CONTRAST FOOTER -->
+	<!-- Reusable Footer Component -->
+	<div id="footer"></div>
+
+
+
+
+
+	<!-- Interactive Scripts -->
+	<script>
+		function toggleMobileMenu() {
+			var menu = document.getElementById("mobile-nav-menu");
+			var icon = document.getElementById("mobile-menu-icon");
+			if (menu) {
+				var isHidden = menu.classList.toggle("hidden");
+				if (icon) {
+					icon.textContent = isHidden ? "menu" : "close";
+				}
+			}
+		}
+
+		function toggleMobileServices() {
+			var dropdown = document.getElementById("mobile-services-dropdown");
+			var arrow = document.getElementById("mobile-services-arrow");
+			var btn = document.getElementById("mobile-services-btn");
+			if (dropdown) {
+				var isHidden = dropdown.classList.toggle("hidden");
+				if (arrow) {
+					if (isHidden) {
+						arrow.classList.remove("rotate-180");
+					} else {
+						arrow.classList.add("rotate-180");
+					}
+				}
+				if (btn) {
+					btn.setAttribute("aria-expanded", isHidden ? "false" : "true");
+				}
+			}
+		}
+
+		function toggleFaq(el) {
+			var isActive = el.classList.contains('active');
+			var allFaqs = document.querySelectorAll('.faq-item');
+			allFaqs.forEach(function(item) {
+				item.classList.remove('active');
+				var chev = item.querySelector('.faq-chevron');
+				if (chev) {
+					chev.classList.remove('text-emerald-700');
+					chev.classList.add('text-secondary');
+				}
+			});
+			if (!isActive) {
+				el.classList.add('active');
+				var chev = el.querySelector('.faq-chevron');
+				if (chev) {
+					chev.classList.remove('text-secondary');
+					chev.classList.add('text-emerald-700');
+				}
+			}
+		}
+
+	</script>
+	<!-- Reusable Component Loader (Navbar & Footer) -->
+	<script src="../assets/bgs-components.js"></script>
+</body>
+</html>

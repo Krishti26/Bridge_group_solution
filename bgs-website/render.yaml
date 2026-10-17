@@ -1,0 +1,27 @@
+# Render.com Pure Static Site Configuration
+# Project: Bridge Group Solutions (100% Pure Frontend)
+
+services:
+  - type: web
+    name: internboot-bgs-final
+    env: static
+    staticPublishPath: .
+    routes:
+      - type: rewrite
+        source: /about
+        destination: /about.html
+      - type: rewrite
+        source: /contact
+        destination: /contact.html
+      - type: rewrite
+        source: /gallery
+        destination: /gallery.html
+      - type: rewrite
+        source: /portfolio
+        destination: /portfolio.html
+      - type: rewrite
+        source: /why-bgs
+        destination: /why-bgs.html
+      - type: rewrite
+        source: /blogs
+        destination: /blogs.html

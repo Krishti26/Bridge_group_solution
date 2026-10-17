@@ -1,0 +1,34 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/gallery", "destination": "/gallery.html" },
+    { "source": "/portfolio", "destination": "/portfolio.html" },
+    { "source": "/why-bgs", "destination": "/why-bgs.html" },
+    { "source": "/blogs", "destination": "/blogs.html" },
+    { "source": "/services/crm", "destination": "/services/crm.html" },
+    { "source": "/services/web", "destination": "/services/web.html" },
+    { "source": "/services/data", "destination": "/services/data.html" },
+    { "source": "/services/erp", "destination": "/services/erp.html" },
+    { "source": "/services/project", "destination": "/services/project.html" },
+    { "source": "/services/app", "destination": "/services/app.html" },
+    { "source": "/legal/privacy-policy", "destination": "/legal/privacy-policy.html" },
+    { "source": "/legal/terms-and-conditions", "destination": "/legal/terms-and-conditions.html" },
+    { "source": "/legal/cookie-policy", "destination": "/legal/cookie-policy.html" },
+    { "source": "/legal/disclaimer", "destination": "/legal/disclaimer.html" }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "bgs-website",
+  "version": "1.0.0",
+  "description": "BGS Website",
+  "scripts": {
+    "start": "node bgs-website/serve-local.js",
+    "build": "echo 'Static build ready'"
+  }
+}

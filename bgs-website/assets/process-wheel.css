@@ -1,0 +1,126 @@
+@layer bgs-mobile {
+html:has(link[href$="/services/project.html"]) body.amphora-theme #process.bgs-process-wheel {
+ --pw-accent:#36e4d4; --mx:50%; --my:40%; position:relative!important; isolation:isolate; overflow:hidden!important;
+ background:radial-gradient(ellipse at var(--mx) var(--my),#44338c55,transparent 48%),linear-gradient(145deg,#111027,#211449 55%,#11162e)!important;
+ padding:88px 40px!important; color:#fff!important; border:1px solid #ffffff14!important; border-radius:32px!important;
+}
+body.amphora-theme #process.bgs-process-wheel::before,body.amphora-theme #process.bgs-process-wheel::after{display:none!important}
+html body.amphora-theme #process.bgs-process-wheel > .pw-shell{width:100%!important;max-width:1400px!important;padding:0!important;margin:auto!important}
+body.amphora-theme #process.bgs-process-wheel .pw-heading{text-align:center!important;max-width:920px;margin:0 auto 48px!important}
+body.amphora-theme #process.bgs-process-wheel .pw-eyebrow{font:600 11px/1.5 'The Future Mono',monospace;letter-spacing:.18em;color:#b7a7f5}
+body.amphora-theme #process.bgs-process-wheel h2{font-size:clamp(38px,5.4vw,72px)!important;line-height:1.12!important;color:#fff!important;margin:16px 0 20px!important}
+body.amphora-theme #process.bgs-process-wheel .pw-heading p{font-size:18px!important;color:#bcb8d1!important;line-height:1.7!important;max-width:700px;margin:auto!important}
+.pw-layout{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:32px;align-items:center}
+.pw-wheel{position:relative;width:100%;aspect-ratio:1;max-width:720px;margin:auto;perspective:1000px}
+.pw-path{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+.pw-track{stroke:#c6b5ff25;stroke-width:1;fill:none;stroke-dasharray:3 7}
+.pw-progress{stroke:url(#pw-gradient);stroke-width:2;fill:none;stroke-dasharray:100;stroke-dashoffset:100;transform:rotate(-90deg);transform-origin:320px 320px;filter:drop-shadow(0 0 5px #9c76ff);transition:stroke-dashoffset .7s ease}
+.pw-spark{fill:#c5b0ff;filter:drop-shadow(0 0 7px #fff);transform-origin:320px 320px;animation:pw-spark 18s linear infinite}
+.pw-center{position:absolute;inset:42% 36%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;font:500 11px 'The Future Mono',monospace;letter-spacing:.26em;color:#bcb2df}
+.pw-center .material-symbols-outlined{font-size:20px;color:#9b80e5}
+.pw-stages{list-style:none!important;margin:0!important;padding:0!important;position:absolute;inset:0}
+.pw-stage{position:absolute;left:var(--x);top:var(--y);width:180px;transform:translate(-50%,-50%);text-align:center;display:flex;align-items:center;flex-direction:column;gap:10px;z-index:2}
+.pw-stage:nth-child(1){--x:50%;--y:13%}.pw-stage:nth-child(2){--x:85%;--y:39%}.pw-stage:nth-child(3){--x:72%;--y:80%}.pw-stage:nth-child(4){--x:28%;--y:80%}.pw-stage:nth-child(5){--x:15%;--y:39%}
+body.amphora-theme #process.bgs-process-wheel .pw-node{width:112px!important;height:112px!important;min-height:0!important;padding:16px!important;border-radius:50%!important;border:1px solid #ffffff55!important;display:flex!important;flex-direction:column!important;gap:8px!important;align-items:center!important;justify-content:center!important;background:conic-gradient(from 155deg,var(--node-dark) 0 31%,var(--node-light) 31% 75%,var(--node-dark) 100%)!important;color:#fff!important;box-shadow:inset 0 2px 2px #ffffff50,0 14px 26px #0006!important;cursor:pointer;position:relative;transition:transform .35s cubic-bezier(.2,.9,.3,1.3),filter .3s,box-shadow .3s!important}
+.pw-node::before{content:'';position:absolute;inset:-6px;border:1px solid var(--node-light);border-radius:50%;opacity:0;transition:opacity .3s}
+.pw-node::after{content:'';position:absolute;inset:-8px;border:1px solid var(--node-light);border-radius:50%;opacity:0;pointer-events:none}
+body.amphora-theme #process.bgs-process-wheel .pw-node .material-symbols-outlined{color:#fff!important;-webkit-text-fill-color:#fff!important;font-size:30px!important;line-height:1!important;align-self:center!important;transition:transform .3s!important}
+.pw-number{font-size:23px;font-weight:700;line-height:1;transition:transform .3s}
+.pw-stage-title{max-width:165px;font-size:14px;font-weight:600;line-height:1.3;color:#edeaf8}
+.pw-stage-duration{font-size:10px;color:#b0a8cc;letter-spacing:.04em}
+.pw-stage.active .pw-node::before{opacity:1}.pw-stage.active .pw-node{box-shadow:0 0 28px color-mix(in srgb,var(--node-light) 35%,transparent),0 16px 30px #0007!important}
+.pw-stage.active .pw-stage-title{color:var(--node-light)}
+.pw-node:focus-visible{outline:3px solid #fff!important;outline-offset:10px!important}
+body.amphora-theme #process.bgs-process-wheel .pw-details{min-width:0}
+body.amphora-theme #process.bgs-process-wheel .pw-detail{background:linear-gradient(135deg,#ffffff10,#ffffff04)!important;border:1px solid #ffffff22!important;border-radius:24px!important;padding:32px!important;box-shadow:0 24px 60px #07051955!important;backdrop-filter:blur(12px);margin-bottom:16px}
+.pw-detail[hidden]{display:none!important}
+.pw-detail-top{display:flex;justify-content:space-between;align-items:center;color:var(--node-light);font:500 11px 'The Future Mono',monospace;letter-spacing:.12em}
+.pw-detail-top .material-symbols-outlined{font-size:26px}
+body.amphora-theme #process.bgs-process-wheel .pw-detail h3{color:#fff!important;-webkit-text-fill-color:#fff!important;font-size:32px!important;line-height:1.18!important;margin:28px 0 18px!important;letter-spacing:-.04em!important}
+body.amphora-theme #process.bgs-process-wheel .pw-detail p{color:#c2bdd4!important;font-size:16px!important;line-height:1.75!important;margin:0 0 28px!important}
+.pw-duration{display:inline-flex;align-items:center;gap:8px;padding:9px 13px;border:1px solid color-mix(in srgb,var(--node-light) 35%,transparent);border-radius:999px;font-size:12px;color:var(--node-light);background:#ffffff06}
+.pw-duration .material-symbols-outlined{font-size:16px}
+.pw-detail-progress{height:3px;background:#ffffff14;border-radius:5px;margin-top:30px;overflow:hidden}.pw-detail-progress span{display:block;height:100%;background:var(--node-light);border-radius:5px;transition:width .5s}
+.pw-controls{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:20px}.pw-controls[hidden]{display:none}
+.pw-controls>span{font:500 9px 'The Future Mono',monospace;letter-spacing:.12em;color:#a99cc7}
+body.amphora-theme #process.bgs-process-wheel .pw-motion{background:transparent!important;border:1px solid #ffffff25!important;border-radius:999px!important;padding:9px 12px!important;color:#d2c7ef!important;font-size:11px!important;cursor:pointer;min-height:36px!important}
+.pw-enhanced:not(.pw-entered) .pw-stage{opacity:0}
+.pw-entered .pw-stage{animation:pw-enter .75s cubic-bezier(.2,1.4,.4,1) both;animation-delay:calc(var(--i)*.12s)}
+.pw-entered .pw-heading h2{animation:pw-mask .8s both}.pw-entered .pw-heading p{animation:pw-copy .7s .15s both}
+.pw-detail.pw-selected{animation:pw-panel .4s ease-out}
+@media(hover:hover) and (pointer:fine){
+.pw-wheel:has(.pw-node:hover) .pw-stage:not(:hover){opacity:.55;transition:opacity .3s}
+body.amphora-theme #process.bgs-process-wheel .pw-node:hover{transform:translateZ(22px) scale(1.12)!important;filter:brightness(1.12)}
+.pw-node:hover::before{opacity:1}.pw-node:hover::after{animation:pw-ripple 1.6s infinite}.pw-node:hover .material-symbols-outlined{transform:rotate(12deg)}.pw-node:hover .pw-number{transform:translateY(-3px)}
+.pw-wheel:hover .pw-spark,.pw-wheel:focus-within .pw-spark{animation-play-state:paused}
+.pw-orbit .pw-stages{animation:pw-orbit 30s ease-in-out infinite}.pw-orbit .pw-stage{animation:pw-counter 30s ease-in-out infinite}.pw-orbit:hover .pw-stages,.pw-orbit:hover .pw-stage,.pw-orbit:focus-within .pw-stages,.pw-orbit:focus-within .pw-stage{animation-play-state:paused}
+}
+@keyframes pw-enter{from{opacity:0;transform:translate(-50%,-50%) scale(.65) rotate(-12deg)}to{opacity:1;transform:translate(-50%,-50%) scale(1) rotate(0)}}
+@keyframes pw-mask{from{clip-path:inset(100% 0 0);transform:translateY(24px)}to{clip-path:inset(0);transform:none}}
+@keyframes pw-copy{from{opacity:0;transform:translateY(12px);filter:blur(3px)}to{opacity:1;transform:none;filter:none}}
+@keyframes pw-panel{from{opacity:.3;transform:translateY(8px) scale(.98)}to{opacity:1;transform:none}}
+@keyframes pw-spark{to{transform:rotate(360deg)}}
+@keyframes pw-ripple{from{opacity:.55;transform:scale(1)}to{opacity:0;transform:scale(1.35)}}
+@keyframes pw-orbit{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+@keyframes pw-counter{0%,100%{transform:translate(-50%,-50%) rotate(3deg)}50%{transform:translate(-50%,-50%) rotate(-3deg)}}
+@media(min-width:768px) and (max-width:1100px){.pw-layout{grid-template-columns:1fr}.pw-wheel{max-width:650px}.pw-details{max-width:650px;width:100%;margin:auto}}
+@media(max-width:767px){
+html:has(link[href$="/services/project.html"]) body.amphora-theme #process.bgs-process-wheel{padding:48px 20px!important;border-radius:24px!important}
+.pw-layout{display:block}.pw-wheel{aspect-ratio:auto;max-width:none}.pw-path,.pw-center{display:none}
+.pw-stages{position:relative;display:flex;flex-direction:column;gap:20px;margin-bottom:28px!important}
+.pw-stages::before{content:'';position:absolute;left:36px;top:24px;bottom:24px;width:1px;background:linear-gradient(#36e4d4,#7659f2,#ef727d)}
+.pw-stage{position:relative;left:auto;top:auto;transform:none;width:100%;display:grid;grid-template-columns:74px minmax(0,1fr);grid-template-rows:auto auto;column-gap:18px;row-gap:4px;text-align:left}
+body.amphora-theme #process.bgs-process-wheel .pw-node{width:74px!important;height:74px!important;grid-row:1 / span 2;padding:10px!important;gap:4px!important}
+.pw-number{font-size:17px}body.amphora-theme #process.bgs-process-wheel .pw-node .material-symbols-outlined{font-size:23px!important}
+.pw-stage-title{max-width:none;font-size:15px;align-self:end}.pw-stage-duration{align-self:start;font-size:11px}
+body.amphora-theme #process.bgs-process-wheel h2{font-size:38px!important}.pw-heading{margin-bottom:32px!important}
+body.amphora-theme #process.bgs-process-wheel .pw-heading p{font-size:16px!important}
+body.amphora-theme #process.bgs-process-wheel .pw-detail{padding:24px!important}
+body.amphora-theme #process.bgs-process-wheel .pw-detail h3{font-size:27px!important}
+.pw-entered .pw-stage{animation:pw-copy .5s both;animation-delay:calc(var(--i)*.08s)}
+.pw-motion{display:none!important}
+}
+@media(prefers-reduced-motion:reduce){#process.bgs-process-wheel *,#process.bgs-process-wheel *::before,#process.bgs-process-wheel *::after{animation:none!important;transition:none!important}.pw-enhanced:not(.pw-entered) .pw-stage{opacity:1}}
+}
+@layer bgs-mobile {
+ body.amphora-theme #process.bgs-process-wheel .pw-heading p { text-align:center!important; }
+ @media(max-width:767px){body.amphora-theme #process.bgs-process-wheel :is(.pw-path,.pw-center){display:none!important}}
+}
+/* Compact process wheel and detail card. */
+@layer bgs-mobile {
+html:has(link[href$="/services/project.html"]) body.amphora-theme #process.bgs-process-wheel{padding:56px 32px!important}
+body.amphora-theme #process.bgs-process-wheel .pw-heading{margin-bottom:28px!important}
+body.amphora-theme #process.bgs-process-wheel h2{font-size:clamp(34px,4vw,56px)!important;margin:12px 0 14px!important}
+body.amphora-theme #process.bgs-process-wheel .pw-heading p{font-size:16px!important}
+.pw-layout{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);max-width:1100px;margin:auto;gap:28px}
+.pw-wheel{max-width:560px}
+.pw-stage{width:150px;gap:7px}
+body.amphora-theme #process.bgs-process-wheel .pw-node{width:88px!important;height:88px!important;padding:12px!important;gap:5px!important}
+.pw-number{font-size:20px}
+body.amphora-theme #process.bgs-process-wheel .pw-node .material-symbols-outlined{font-size:25px!important}
+.pw-stage-title{font-size:12px;max-width:145px}
+body.amphora-theme #process.bgs-process-wheel .pw-detail{padding:24px!important;border-radius:20px!important}
+body.amphora-theme #process.bgs-process-wheel .pw-detail h3{font-size:27px!important;margin:20px 0 14px!important}
+body.amphora-theme #process.bgs-process-wheel .pw-detail p{font-size:14px!important;line-height:1.65!important;margin-bottom:20px!important}
+.pw-detail-progress{margin-top:22px}.pw-controls{margin-top:14px}
+@media(min-width:768px) and (max-width:1100px){.pw-layout{grid-template-columns:1fr}.pw-details{max-width:560px}}
+@media(max-width:767px){
+html:has(link[href$="/services/project.html"]) body.amphora-theme #process.bgs-process-wheel{padding:36px 18px!important}
+.pw-layout{display:block}.pw-stage{width:100%;grid-template-columns:60px minmax(0,1fr)}
+.pw-stages{gap:14px;margin-bottom:22px!important}.pw-stages::before{left:29px}
+body.amphora-theme #process.bgs-process-wheel .pw-node{width:60px!important;height:60px!important;padding:8px!important;gap:3px!important}
+.pw-number{font-size:15px}body.amphora-theme #process.bgs-process-wheel .pw-node .material-symbols-outlined{font-size:20px!important}
+.pw-stage-title{max-width:none;font-size:13px}
+body.amphora-theme #process.bgs-process-wheel .pw-detail{padding:20px!important}
+body.amphora-theme #process.bgs-process-wheel .pw-detail h3{font-size:24px!important}
+}
+}
+@layer bgs-mobile {
+ html:has(link[href$="/services/project.html"]) body.amphora-theme #process.bgs-process-wheel {border-radius:0!important}
+}
+@layer bgs-mobile {
+ html:has(link[href$="/services/project.html"]) body.amphora-theme #process.bgs-process-wheel {margin-bottom:48px!important}
+ @media(max-width:767px){
+  html:has(link[href$="/services/project.html"]) body.amphora-theme #process.bgs-process-wheel {margin-bottom:32px!important}
+ }
+}

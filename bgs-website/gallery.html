@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Core typography preload -->
+<link rel="preload" href="assets/amphora-fonts/The%20Future/TheFuture-Regular.subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/amphora-fonts/The%20Future/TheFuture-Medium.subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/amphora-fonts/The%20Future/TheFuture-Bold.subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/amphora-fonts/Tiempos%20Headline/TiemposHeadline-400-Regular-Italic.woff2" as="font" type="font/woff2" crossorigin>
+
+
+<!-- Reveal the finished layout without showing a loading animation. -->
+<style>html.layout-pending body { visibility:hidden !important; }</style>
+<script>
+(() => {
+  const root = document.documentElement;
+  root.classList.add('layout-pending');
+  let observer;
+  const reveal = () => {
+    root.classList.remove('layout-pending');
+    if (observer) observer.disconnect();
+  };
+  const ready = () => {
+    if (root.classList.contains('bgs-layout-ready') && document.querySelector('.bgs-main-navbar')) reveal();
+  };
+  observer = new MutationObserver(ready);
+  observer.observe(root, {childList:true, subtree:true, attributes:true, attributeFilter:['class']});
+  document.addEventListener('DOMContentLoaded', ready, {once:true});
+  setTimeout(reveal, 2500);
+})();
+</script>
+
+
+
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	<meta content="web_standard" name="shell-type">
+	<title>Our Workplace Culture & Team Gallery | Bridge Group Solutions</title>
+	<meta name="description" content="Explore our official gallery capturing the spirit of our team, workplace culture, innovation sprints, and milestones at Bridge Group Solutions." />
+	<meta name="keywords" content="Bridge Group Solutions gallery, BGS workplace culture, life at BGS, software development team, corporate events, tech innovation milestones" />
+	
+		<meta property="og:title" content="Our Workplace Culture & Team Gallery | Bridge Group Solutions" />
+	<meta property="og:description" content="Explore our official gallery capturing the spirit of our team, workplace culture, innovation sprints, and milestones at Bridge Group Solutions." />
+	<meta property="og:url" content="https://www.bridgegroupsolutions.com/gallery.html" />
+	<meta property="og:image" content="https://www.bridgegroupsolutions.com/assets/logo.webp" />
+	<meta property="og:type" content="website" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Our Workplace Culture & Team Gallery | Bridge Group Solutions" />
+	<meta name="twitter:description" content="Explore our official gallery capturing the spirit of our team, workplace culture, innovation sprints, and milestones at Bridge Group Solutions." />
+	<meta name="twitter:image" content="https://www.bridgegroupsolutions.com/assets/logo.webp" />
+	<link rel="canonical" href="https://www.bridgegroupsolutions.com/gallery.html" />
+	<link rel="icon" type="image/svg+xml" href="assets/logo.webp" />
+
+	<!-- Schema.org Structured Data (JSON-LD) -->
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ImageGallery",
+      "@id": "https://www.bridgegroupsolutions.com/gallery.html#gallery",
+      "url": "https://www.bridgegroupsolutions.com/gallery.html",
+      "name": "Life at BGS & Company Culture Gallery | Bridge Group Solutions",
+      "description": "Explore photos of team culture, tech hackathons, delivery milestones, client summits, and engineering team life at Bridge Group Solutions.",
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.bridgegroupsolutions.com/#organization",
+        "name": "Bridge Group Solutions",
+        "url": "https://www.bridgegroupsolutions.com",
+        "logo": "https://www.bridgegroupsolutions.com/assets/logo.webp"
+      }
+    }
+  ]
+}
+	</script>
+
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com" rel="preconnect">
+	<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+	<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+
+	<style>
+		@layer base {
+			html, body { margin: 0; padding: 0; }
+			body { overscroll-behavior: none; }
+			main > :first-child { margin-top: 0 !important; }
+			main > :last-child { margin-bottom: 0 !important; }
+		}
+		::-webkit-scrollbar { display: none; }
+	</style>
+
+	<link rel="stylesheet" href="assets/bgs-modern-theme.css" />
+
+	<!-- Tailwind CSS CDN & Custom Config matching Index -->
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script id="tailwind-config">
+		tailwind.config = {
+			darkMode: "class",
+			theme: {
+				extend: {
+					colors: {
+						"surface-container-highest": "#e2e2e4",
+						"on-secondary-container": "#5c647a",
+						"on-surface": "#1a1c1d",
+						"on-error": "#ffffff",
+						"primary-fixed": "#ffdad3",
+						"background": "#f9f9fb",
+						"primary-fixed-dim": "#ffb4a4",
+						"inverse-primary": "#ffb4a4",
+						"surface-bright": "#f9f9fb",
+						"on-tertiary-fixed-variant": "#424656",
+						"tertiary-fixed-dim": "#c3c6d8",
+						"tertiary-fixed": "#dfe1f5",
+						"outline-variant": "#e2bfb7",
+						"error-container": "#ffdad6",
+						"on-primary-container": "#fffbff",
+						"on-tertiary-container": "#fefcff",
+						"error": "#ba1a1a",
+						"tertiary": "#585b6b",
+						"secondary": "#565e74",
+						"surface-container-lowest": "#ffffff",
+						"surface-container-low": "#f3f3f5",
+						"secondary-fixed": "#dae2fd",
+						"secondary-fixed-dim": "#bec6e0",
+						"on-background": "#1a1c1d",
+						"on-secondary": "#ffffff",
+						"on-surface-variant": "#5a413b",
+						"outline": "#8e706a",
+						"secondary-container": "#dae2fd",
+						"surface": "#f9f9fb",
+						"surface-container": "#eeeef0",
+						"inverse-surface": "#2f3132",
+						"tertiary-container": "#707485",
+						"on-tertiary": "#ffffff",
+						"surface-tint": "#b12e11",
+						"inverse-on-surface": "#f0f0f2",
+						"on-primary-fixed": "#3d0600",
+						"surface-dim": "#d9dadc",
+						"on-error-container": "#93000a",
+						"on-primary": "#ffffff",
+						"on-primary-fixed-variant": "#8c1800",
+						"on-secondary-fixed": "#131b2e",
+						"primary-container": "#d04426",
+						"surface-container-high": "#e8e8ea",
+						"primary": "#ad2b0e",
+						"on-secondary-fixed-variant": "#3f465c",
+						"on-tertiary-fixed": "#171b29",
+						"surface-variant": "#e2e2e4"
+					},
+					borderRadius: {
+						"DEFAULT": "0.25rem",
+						"lg": "0.5rem",
+						"xl": "0.75rem",
+						"full": "9999px"
+					},
+					spacing: {
+						"space-sm": "0.5rem",
+						"space-md": "1rem",
+						"space-lg": "1.5rem",
+						"space-xl": "2rem",
+						"space-2xl": "3rem",
+						"gutter": "1.5rem"
+					},
+					fontFamily: {
+						"headline-sm": ["Plus Jakarta Sans", "sans-serif"],
+						"label-code": ["Space Grotesk", "monospace"],
+						"label-eyebrow": ["Space Grotesk", "sans-serif"],
+						"body-sm": ["Plus Jakarta Sans", "sans-serif"],
+						"label-pill": ["Plus Jakarta Sans", "sans-serif"],
+						"display-hero": ["Plus Jakarta Sans", "sans-serif"],
+						"body-lg": ["Plus Jakarta Sans", "sans-serif"],
+						"headline-lg": ["Plus Jakarta Sans", "sans-serif"],
+						"headline-card": ["Plus Jakarta Sans", "sans-serif"],
+						"headline-stat": ["Plus Jakarta Sans", "sans-serif"],
+						"label-stat": ["Plus Jakarta Sans", "sans-serif"],
+						"label-metric": ["Space Grotesk", "monospace"]
+					},
+					fontSize: {
+						"headline-sm": ["1.25rem", { lineHeight: "1.2", letterSpacing: "-0.01em" }],
+						"label-code": ["0.6875rem", { lineHeight: "1.3", letterSpacing: "0.08em" }],
+						"label-eyebrow": ["0.6875rem", { lineHeight: "1.3", letterSpacing: "0.12em" }],
+						"body-sm": ["0.875rem", { lineHeight: "1.5", letterSpacing: "-0.005em" }],
+						"label-pill": ["0.8125rem", { lineHeight: "1.3", letterSpacing: "0.02em" }],
+						"display-hero": ["clamp(2.5rem, 5vw, 4rem)", { lineHeight: "1.08", letterSpacing: "-0.035em" }],
+						"body-lg": ["1.125rem", { lineHeight: "1.6", letterSpacing: "-0.01em" }],
+						"headline-lg": ["clamp(1.75rem, 3.5vw, 2.5rem)", { lineHeight: "1.15", letterSpacing: "-0.025em" }],
+						"headline-card": ["1.375rem", { lineHeight: "1.25", letterSpacing: "-0.02em" }],
+						"headline-stat": ["clamp(2rem, 3vw, 2.75rem)", { lineHeight: "1.1", letterSpacing: "-0.03em" }],
+						"label-stat": ["0.8125rem", { lineHeight: "1.3", letterSpacing: "-0.005em" }],
+						"label-metric": ["0.75rem", { lineHeight: "1.4", letterSpacing: "0.04em" }]
+					}
+				}
+			}
+		};
+	</script>
+
+	<!-- Dedicated Gallery Page Stylesheet -->
+	<link rel="stylesheet" href="assets/gallery.css" />
+<link rel="stylesheet" href="assets/amphora-reference.css">
+<link rel="stylesheet" href="assets/amphora-bgs.css">
+<script defer src="assets/amphora-bgs.js"></script>
+</head>
+
+<body class="amphora-theme bg-surface text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+
+	<!-- FIXED GLASSMORPHIC HEADER MATCHING INDEX & SUB-PAGES -->
+	<!-- Reusable Navbar Component -->
+	<div id="navbar"></div>
+
+
+
+
+
+	<main class="w-full pt-20 bg-surface">
+		<div class="flex flex-col w-full overflow-hidden">
+
+			<!-- 1. HERO SECTION WITH ATMOSPHERIC RADIAL LIGHTING -->
+			<section class="relative w-full max-w-[1320px] mx-auto px-6 md:px-12 pt-6 sm:pt-8 pb-12 md:pb-16">
+				<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[650px] pointer-events-none -z-10 overflow-hidden">
+					<div class="absolute top-0 right-10 w-[550px] h-[550px] rounded-full blur-3xl opacity-60 radial-glow-coral"></div>
+					<div class="absolute top-20 -left-20 w-[500px] h-[500px] rounded-full blur-3xl opacity-50 radial-glow-gold"></div>
+					<div class="absolute top-44 left-1/3 w-[400px] h-[400px] rounded-full blur-2xl opacity-40 radial-glow-violet"></div>
+				</div>
+
+				<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+					<!-- Hero Left Column -->
+					<div class="lg:col-span-7 flex flex-col items-start space-y-6">
+						<div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-surface-container-low shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
+							<span class="relative flex h-2 w-2">
+								<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+								<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+							</span>
+							<span class="font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-widest">GALLERY • TEAM &amp; WORKPLACE</span>
+							<span class="font-label-code text-label-code text-secondary pl-1">EST. 2014</span>
+						</div>
+
+						<h1 class="font-display-hero text-display-hero text-on-surface tracking-tight leading-[1.08]">
+							Capturing the Spirit of Our Team and <span class="text-primary italic font-semibold">Workplace.</span>
+						</h1>
+
+						<p class="font-body-lg text-body-lg text-secondary max-w-2xl leading-relaxed">
+							Explore our gallery capturing the spirit of our team, workplace culture, and milestones at Bridge Group Solutions. From innovation sprints to collaborative breakthroughs, see how we build together.
+						</p>
+
+						<!-- Filter / Quick Action Pills -->
+						<div class="flex flex-wrap items-center gap-3 pt-2">
+							<a class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-white font-label-pill text-label-pill shadow-[0_8px_25px_rgba(235,87,55,0.4)] hover:shadow-[0_14px_35px_rgba(235,87,55,0.55)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 border border-white/25 btn-primary-gradient" href="#gallery-showcase">
+								<span>View Gallery Moments</span>
+								<span class="material-symbols-outlined text-[16px]">photo_library</span>
+							</a>
+							<a class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-surface-container-lowest text-on-surface font-label-pill text-label-pill shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_24px_rgba(235,87,55,0.15)] hover:border-primary/40 hover:-translate-y-0.5 transition-all duration-200 border border-surface-container-high" href="contact.html">
+								<span>Schedule Briefing</span>
+								<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+							</a>
+						</div>
+					</div>
+
+					<!-- Hero Right Showcase Image -->
+					<div class="lg:col-span-5 w-full relative">
+						<!-- Ambient Glow Behind Image -->
+						<div class="absolute -inset-2 bg-gradient-to-r from-primary/20 via-amber-500/15 to-purple-500/10 rounded-3xl blur-xl opacity-75"></div>
+						
+						<!-- Showcase Image Container Frame -->
+						<div class="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-surface-container-high/90 bg-surface-container-lowest shadow-[0_20px_50px_rgba(235,87,55,0.12),0_10px_25px_rgba(0,0,0,0.06)] group">
+							<img 
+								src="assets/pic4.webp" 
+								alt="Bridge Group Solutions Team &amp; Workplace Culture" 
+								class="w-full h-[360px] sm:h-[420px] object-cover object-center transform transition-transform duration-700 ease-out group-hover:scale-105"
+								loading="eager"
+							/>
+							<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent pointer-events-none"></div>
+
+							<!-- Floating Status Badge -->
+							<div class="absolute top-4 right-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md border border-white/40 shadow-sm">
+								<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+								<span class="font-label-code text-[11px] font-bold text-on-surface">Active Culture</span>
+							</div>
+
+							<!-- Bottom Overlay Caption -->
+							<div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-white/90 backdrop-blur-md border border-white/60 shadow-md">
+								<div class="flex items-center justify-between">
+									<div class="flex flex-col">
+										<span class="font-headline-sm text-[15px] font-bold text-on-surface">Team Synergy &amp; Workplace Culture</span>
+										<span class="font-label-code text-[11px] text-secondary">Bridge Group Solutions &bull; Delhi NCR &amp; Mumbai</span>
+									</div>
+									<div class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
+										<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 2. CONTINUOUS MARQUEE TICKER -->
+			<div class="w-full bg-surface-container-low border-y border-surface-container-high py-3.5 overflow-hidden">
+				<div class="animate-marquee flex items-center gap-12 font-label-code text-label-code uppercase tracking-wider text-secondary">
+					<div class="flex items-center gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>Engineering Culture</span></div>
+					<div class="flex items-center gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span>Workplace Excellence</span></div>
+					<div class="flex items-center gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>Collaborative Innovation</span></div>
+					<div class="flex items-center gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span>Delhi NCR &bull; Mumbai &bull; Global Ecosystem</span></div>
+					<div class="flex items-center gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>High-Impact Engineering Teams</span></div>
+					<div class="flex items-center gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span>Shared Vision &bull; Rapid Execution</span></div>
+					<div class="flex items-center gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>Engineering Culture</span></div>
+					<div class="flex items-center gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span>Workplace Excellence</span></div>
+					<div class="flex items-center gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>Collaborative Innovation</span></div>
+					<div class="flex items-center gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span>Delhi NCR &bull; Mumbai &bull; Global Ecosystem</span></div>
+					<div class="flex items-center gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>High-Impact Engineering Teams</span></div>
+					<div class="flex items-center gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span>Shared Vision &bull; Rapid Execution</span></div>
+				</div>
+			</div>
+
+			<!-- 3. MAIN GALLERY BENTO GRID -->
+			<section id="gallery-showcase" class="relative w-full max-w-[1320px] mx-auto px-6 md:px-12 py-14 md:py-20">
+				
+				<!-- Section Eyebrow & Title -->
+				<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-10">
+					<div class="max-w-2xl">
+						<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low text-primary text-xs font-semibold uppercase tracking-wider mb-2.5">
+							<span class="material-symbols-outlined text-[14px]">photo_camera</span>
+							<span>VISUAL CHRONICLES</span>
+						</div>
+						<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">
+							Moments That Define Our <span class="text-primary italic font-semibold">Journey.</span>
+						</h2>
+						<p class="font-body-lg text-body-lg text-secondary mt-2.5">
+							From vision to reality—every moment we capture and every milestone we achieve reflects our commitment to excellence.
+						</p>
+					</div>
+
+					<!-- Interactive Category Filter Pills -->
+					<div class="flex flex-wrap items-center gap-2" id="gallery-filters">
+						<button type="button" onclick="filterGallery('all', this)" class="gallery-filter-btn px-4 py-2 rounded-full text-xs font-semibold transition-all duration-200 bg-primary text-white shadow-sm active-filter">
+							All Moments (6)
+						</button>
+						<button type="button" onclick="filterGallery('culture', this)" class="gallery-filter-btn px-4 py-2 rounded-full text-xs font-semibold transition-all duration-200 bg-surface-container-lowest text-secondary hover:text-primary hover:bg-surface-container-low border border-surface-container-high">
+							Culture &amp; Energy
+						</button>
+						<button type="button" onclick="filterGallery('innovation', this)" class="gallery-filter-btn px-4 py-2 rounded-full text-xs font-semibold transition-all duration-200 bg-surface-container-lowest text-secondary hover:text-primary hover:bg-surface-container-low border border-surface-container-high">
+							Innovation &amp; Tech
+						</button>
+						<button type="button" onclick="filterGallery('execution', this)" class="gallery-filter-btn px-4 py-2 rounded-full text-xs font-semibold transition-all duration-200 bg-surface-container-lowest text-secondary hover:text-primary hover:bg-surface-container-low border border-surface-container-high">
+							Execution
+						</button>
+					</div>
+				</div>
+
+				<!-- 6 Moments 3x2 Bento Grid (Matching portfolio.html Architecture) -->
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" id="gallery-grid">
+					
+					<!-- Moment 1: Culture & Energy -->
+					<div class="bento-card gallery-bento-card p-5 sm:p-6 md:p-8 rounded-2xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.14)] border border-surface-container-high hover:border-primary/40 flex flex-col justify-between cursor-pointer" data-category="culture" onclick="openLightbox('assets/pic4.webp', 'Team Joy &amp; Spirit', 'A glimpse of the joy, energy, and togetherness that define our culture.', '01 / 06')">
+						<div class="flex flex-col">
+							<div class="w-full overflow-hidden rounded-xl bg-surface-container-low mb-4 sm:mb-5 flex items-center justify-center relative group/img">
+								<img src="assets/pic4.webp" alt="Bridge Group Solutions Team Culture" loading="lazy" decoding="async" class="gallery-card-img project-card-img">
+								<div class="absolute inset-0 bg-black/20 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+									<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 text-on-surface text-xs font-semibold shadow-md">
+										<span class="material-symbols-outlined text-[16px] text-primary">zoom_in</span>
+										<span>View Photo</span>
+									</span>
+								</div>
+							</div>
+							<div class="flex items-center justify-between mb-3">
+								<span class="px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-code text-[11px] font-bold">Culture &amp; Energy</span>
+								<span class="font-label-code text-[12px] text-secondary font-bold">01 / 06</span>
+							</div>
+							<h3 class="font-headline-md text-headline-md font-bold text-on-surface mb-3 uppercase">
+								Team Joy &amp; Spirit
+							</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-4">
+								A glimpse of the joy, energy, and togetherness that define our culture.
+							</p>
+						</div>
+						<div class="pt-4 border-t border-surface-container-high flex flex-wrap gap-2 items-center justify-between">
+							<div class="flex flex-wrap gap-2">
+								<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">TEAM SYNERGY</span>
+								<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">CULTURE</span>
+							</div>
+							<span class="inline-flex items-center gap-1 text-primary text-xs font-semibold hover:underline">
+								<span>Expand</span>
+								<span class="material-symbols-outlined text-[14px]">open_in_full</span>
+							</span>
+						</div>
+					</div>
+
+					<!-- Moment 2: Vision & Reality -->
+					<div class="bento-card gallery-bento-card p-5 sm:p-6 md:p-8 rounded-2xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.14)] border border-surface-container-high hover:border-primary/40 flex flex-col justify-between cursor-pointer" data-category="execution" onclick="openLightbox('assets/pic2.webp', 'Architectural Vision', 'From vision to reality—every moment we capture and every milestone we achieve reflects our commitment to excellence.', '02 / 06')">
+						<div class="flex flex-col">
+							<div class="w-full overflow-hidden rounded-xl bg-surface-container-low mb-4 sm:mb-5 flex items-center justify-center relative group/img">
+								<img src="assets/pic2.webp" alt="Bridge Group Solutions Vision to Reality" loading="lazy" decoding="async" class="gallery-card-img project-card-img">
+								<div class="absolute inset-0 bg-black/20 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+									<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 text-on-surface text-xs font-semibold shadow-md">
+										<span class="material-symbols-outlined text-[16px] text-primary">zoom_in</span>
+										<span>View Photo</span>
+									</span>
+								</div>
+							</div>
+							<div class="flex items-center justify-between mb-3">
+								<span class="px-2.5 py-1 rounded-full bg-blue-100 text-blue-700 font-label-code text-[11px] font-bold">Vision &amp; Reality</span>
+								<span class="font-label-code text-[12px] text-secondary font-bold">02 / 06</span>
+							</div>
+							<h3 class="font-headline-md text-headline-md font-bold text-on-surface mb-3 uppercase">
+								Architectural Vision
+							</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-4">
+								From vision to reality—every moment we capture and every milestone we achieve reflects our commitment to excellence.
+							</p>
+						</div>
+						<div class="pt-4 border-t border-surface-container-high flex flex-wrap gap-2 items-center justify-between">
+							<div class="flex flex-wrap gap-2">
+								<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">ENTERPRISE</span>
+								<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">PRECISION</span>
+							</div>
+							<span class="inline-flex items-center gap-1 text-primary text-xs font-semibold hover:underline">
+								<span>Expand</span>
+								<span class="material-symbols-outlined text-[14px]">open_in_full</span>
+							</span>
+						</div>
+					</div>
+
+					<!-- Moment 3: Innovation & Tech -->
+					<div class="bento-card gallery-bento-card p-5 sm:p-6 md:p-8 rounded-2xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.14)] border border-surface-container-high hover:border-primary/40 flex flex-col justify-between cursor-pointer" data-category="innovation" onclick="openLightbox('assets/pic3.webp', 'Innovation Sprints', 'Step into our world through moments that reflect innovation, collaboration, and the passion that drives Bridge Group Solutions forward.', '03 / 06')">
+						<div class="flex flex-col">
+							<div class="w-full overflow-hidden rounded-xl bg-surface-container-low mb-4 sm:mb-5 flex items-center justify-center relative group/img">
+								<img src="assets/pic3.webp" alt="Bridge Group Solutions Innovation and Collaboration" loading="lazy" decoding="async" class="gallery-card-img project-card-img">
+								<div class="absolute inset-0 bg-black/20 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+									<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 text-on-surface text-xs font-semibold shadow-md">
+										<span class="material-symbols-outlined text-[16px] text-primary">zoom_in</span>
+										<span>View Photo</span>
+									</span>
+								</div>
+							</div>
+							<div class="flex items-center justify-between mb-3">
+								<span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-700 font-label-code text-[11px] font-bold">Innovation &amp; Tech</span>
+								<span class="font-label-code text-[12px] text-secondary font-bold">03 / 06</span>
+							</div>
+							<h3 class="font-headline-md text-headline-md font-bold text-on-surface mb-3 uppercase">
+								Innovation Sprints
+							</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-4">
+								Step into our world through moments that reflect innovation, collaboration, and the passion that drives Bridge Group Solutions forward.
+							</p>
+						</div>
+						<div class="pt-4 border-t border-surface-container-high flex flex-wrap gap-2 items-center justify-between">
+							<div class="flex flex-wrap gap-2">
+								<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">INNOVATION</span>
+								<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">AGILE PODS</span>
+							</div>
+							<span class="inline-flex items-center gap-1 text-primary text-xs font-semibold hover:underline">
+								<span>Expand</span>
+								<span class="material-symbols-outlined text-[14px]">open_in_full</span>
+							</span>
+						</div>
+					</div>
+
+					<!-- Moment 4: Execution & Results -->
+					<div class="bento-card gallery-bento-card p-5 sm:p-6 md:p-8 rounded-2xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.14)] border border-surface-container-high hover:border-primary/40 flex flex-col justify-between cursor-pointer" data-category="execution" onclick="openLightbox('assets/pic5.webp', 'Execution &amp; Delivery', 'Our work speaks through results, precision, and successful execution.', '04 / 06')">
+						<div class="flex flex-col">
+							<div class="w-full overflow-hidden rounded-xl bg-surface-container-low mb-4 sm:mb-5 flex items-center justify-center relative group/img">
+								<img src="assets/pic5.webp" alt="Bridge Group Solutions Execution Results" loading="lazy" decoding="async" class="gallery-card-img project-card-img">
+								<div class="absolute inset-0 bg-black/20 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+									<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 text-on-surface text-xs font-semibold shadow-md">
+										<span class="material-symbols-outlined text-[16px] text-primary">zoom_in</span>
+										<span>View Photo</span>
+									</span>
+								</div>
+							</div>
+							<div class="flex items-center justify-between mb-3">
+								<span class="px-2.5 py-1 rounded-full bg-violet-100 text-violet-700 font-label-code text-[11px] font-bold">Execution &amp; Delivery</span>
+								<span class="font-label-code text-[12px] text-secondary font-bold">04 / 06</span>
+							</div>
+							<h3 class="font-headline-md text-headline-md font-bold text-on-surface mb-3 uppercase">
+								Execution &amp; Delivery
+							</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-4">
+								Our work speaks through results, precision, and successful execution.
+							</p>
+						</div>
+						<div class="pt-4 border-t border-surface-container-high flex flex-wrap gap-2 items-center justify-between">
+							<div class="flex flex-wrap gap-2">
+								<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">DELIVERY</span>
+								<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">CLIENT SLA</span>
+							</div>
+							<span class="inline-flex items-center gap-1 text-primary text-xs font-semibold hover:underline">
+								<span>Expand</span>
+								<span class="material-symbols-outlined text-[14px]">open_in_full</span>
+							</span>
+						</div>
+					</div>
+
+					<!-- Moment 5: Team Synergy & Growth -->
+					<div class="bento-card gallery-bento-card p-5 sm:p-6 md:p-8 rounded-2xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.14)] border border-surface-container-high hover:border-primary/40 flex flex-col justify-between cursor-pointer" data-category="culture" onclick="openLightbox('assets/pic6.webp', 'Team Synergy &amp; Collective Growth', 'Together, we achieve more through strong collaboration, shared vision, and a commitment to excellence. Our team’s dedication and synergy drive every step of our journey, turning challenges into opportunities. Each milestone we accomplish reflects our collective effort, growth, and passion for delivering impactful results.', '05 / 06')">
+						<div class="flex flex-col">
+							<div class="w-full overflow-hidden rounded-xl bg-surface-container-low mb-4 sm:mb-5 flex items-center justify-center relative group/img">
+								<img src="assets/pic6.webp" alt="Bridge Group Solutions Team Synergy" loading="lazy" decoding="async" class="gallery-card-img project-card-img">
+								<div class="absolute inset-0 bg-black/20 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+									<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 text-on-surface text-xs font-semibold shadow-md">
+										<span class="material-symbols-outlined text-[16px] text-primary">zoom_in</span>
+										<span>View Photo</span>
+									</span>
+								</div>
+							</div>
+							<div class="flex items-center justify-between mb-3">
+								<span class="px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-label-code text-[11px] font-bold">Team Synergy</span>
+								<span class="font-label-code text-[12px] text-secondary font-bold">05 / 06</span>
+							</div>
+							<h3 class="font-headline-md text-headline-md font-bold text-on-surface mb-3 uppercase">
+								Synergy &amp; Growth
+							</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-4">
+								Together, we achieve more through strong collaboration, shared vision, and a commitment to excellence. Our team’s dedication and synergy drive every step of our journey, turning challenges into opportunities. Each milestone we accomplish reflects our collective effort, growth, and passion for delivering impactful results.
+							</p>
+						</div>
+						<div class="pt-4 border-t border-surface-container-high flex flex-wrap gap-2 items-center justify-between">
+							<div class="flex flex-wrap gap-2">
+								<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">COLLABORATION</span>
+								<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">SHARED VISION</span>
+							</div>
+							<span class="inline-flex items-center gap-1 text-primary text-xs font-semibold hover:underline">
+								<span>Expand</span>
+								<span class="material-symbols-outlined text-[14px]">open_in_full</span>
+							</span>
+						</div>
+					</div>
+
+					<!-- Moment 6: Technical Mastery & Passion -->
+					<div class="bento-card gallery-bento-card p-5 sm:p-6 md:p-8 rounded-2xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.14)] border border-surface-container-high hover:border-primary/40 flex flex-col justify-between cursor-pointer" data-category="innovation" onclick="openLightbox('assets/pic7.webp', 'Technical Mastery &amp; Passion', 'Where expertise meets passion—our team turning challenges into successful outcomes.', '06 / 06')">
+						<div class="flex flex-col">
+							<div class="w-full overflow-hidden rounded-xl bg-surface-container-low mb-4 sm:mb-5 flex items-center justify-center relative group/img">
+								<img src="assets/pic7.webp" alt="Bridge Group Solutions Expertise and Passion" loading="lazy" decoding="async" class="gallery-card-img project-card-img">
+								<div class="absolute inset-0 bg-black/20 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+									<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 text-on-surface text-xs font-semibold shadow-md">
+										<span class="material-symbols-outlined text-[16px] text-primary">zoom_in</span>
+										<span>View Photo</span>
+									</span>
+								</div>
+							</div>
+							<div class="flex items-center justify-between mb-3">
+								<span class="px-2.5 py-1 rounded-full bg-orange-100 text-orange-700 font-label-code text-[11px] font-bold">Engineering Core</span>
+								<span class="font-label-code text-[12px] text-secondary font-bold">06 / 06</span>
+							</div>
+							<h3 class="font-headline-md text-headline-md font-bold text-on-surface mb-3 uppercase">
+								Technical Mastery
+							</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-4">
+								Where expertise meets passion—our team turning challenges into successful outcomes.
+							</p>
+						</div>
+						<div class="pt-4 border-t border-surface-container-high flex flex-wrap gap-2 items-center justify-between">
+							<div class="flex flex-wrap gap-2">
+								<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">ARCHITECTURE</span>
+								<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code text-[10px] font-bold">MASTERY</span>
+							</div>
+							<span class="inline-flex items-center gap-1 text-primary text-xs font-semibold hover:underline">
+								<span>Expand</span>
+								<span class="material-symbols-outlined text-[14px]">open_in_full</span>
+							</span>
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+
+		</div>
+	</main>
+
+	<!-- ENTERPRISE HIGH-CONTRAST FOOTER (EXACT MATCH WITH INDEX, WHY-BGS, ABOUT & PORTFOLIO) -->
+	<!-- Reusable Footer Component -->
+	<div id="footer"></div>
+
+
+
+
+
+	<!-- Lightbox Modal -->
+	<div id="gallery-lightbox" class="fixed inset-0 z-100 hidden bg-black/85 backdrop-blur-md flex items-center justify-center p-4 md:p-8" onclick="handleLightboxBackdrop(event)">
+		<div class="relative max-w-4xl w-full bg-surface-container-lowest rounded-3xl overflow-hidden shadow-2xl border border-white/20 flex flex-col max-h-[90vh]">
+			<!-- Modal Header Bar -->
+			<div class="flex items-center justify-between px-6 py-4 border-b border-surface-container-high bg-surface-container-low">
+				<div class="flex items-center gap-3">
+					<span id="lightbox-counter" class="font-label-code text-xs font-bold px-2.5 py-1 rounded-full bg-primary/10 text-primary uppercase">01 / 06</span>
+					<h3 id="lightbox-title" class="font-headline-sm text-base font-bold text-on-surface">Moment Title</h3>
+				</div>
+				<button type="button" onclick="closeLightbox()" class="w-9 h-9 rounded-full bg-surface-container-highest hover:bg-primary hover:text-white flex items-center justify-center transition-colors text-secondary" aria-label="Close Lightbox">
+					<span class="material-symbols-outlined text-[20px]">close</span>
+				</button>
+			</div>
+
+			<!-- Modal Image Area -->
+			<div class="relative flex-1 min-h-[300px] max-h-[60vh] bg-black/5 flex items-center justify-center p-2 overflow-hidden">
+				<img id="lightbox-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" alt="Gallery Preview" class="max-h-[58vh] max-w-full object-contain rounded-xl shadow-md">
+			</div>
+
+			<!-- Modal Caption Footer -->
+			<div class="p-6 border-t border-surface-container-high bg-white">
+				<p id="lightbox-desc" class="font-body-sm text-sm text-secondary leading-relaxed">
+					Moment description goes here.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Interactive Scripts -->
+	<script>
+		function openLightbox(src, title, desc, counter) {
+			var modal = document.getElementById('gallery-lightbox');
+			var img = document.getElementById('lightbox-img');
+			var titleEl = document.getElementById('lightbox-title');
+			var descEl = document.getElementById('lightbox-desc');
+			var counterEl = document.getElementById('lightbox-counter');
+
+			if (modal && img) {
+				img.src = src;
+				if (titleEl) titleEl.textContent = title;
+				if (descEl) descEl.textContent = desc;
+				if (counterEl) counterEl.textContent = counter;
+				modal.classList.remove('hidden');
+				document.body.style.overflow = 'hidden';
+			}
+		}
+
+		function closeLightbox() {
+			var modal = document.getElementById('gallery-lightbox');
+			if (modal) {
+				modal.classList.add('hidden');
+				document.body.style.overflow = '';
+			}
+		}
+
+		function handleLightboxBackdrop(e) {
+			if (e.target.id === 'gallery-lightbox') {
+				closeLightbox();
+			}
+		}
+
+		document.addEventListener('keydown', function(e) {
+			if (e.key === 'Escape') {
+				closeLightbox();
+			}
+		});
+
+		function filterGallery(category, btn) {
+			// Update filter buttons
+			var buttons = document.querySelectorAll('.gallery-filter-btn');
+			buttons.forEach(function(b) {
+				b.classList.remove('bg-primary', 'text-white', 'shadow-sm', 'active-filter');
+				b.classList.add('bg-surface-container-lowest', 'text-secondary', 'border', 'border-surface-container-high');
+			});
+			if (btn) {
+				btn.classList.add('bg-primary', 'text-white', 'shadow-sm', 'active-filter');
+				btn.classList.remove('bg-surface-container-lowest', 'text-secondary', 'border', 'border-surface-container-high');
+			}
+
+			// Filter cards
+			var cards = document.querySelectorAll('#gallery-grid .gallery-bento-card');
+			cards.forEach(function(card) {
+				var cardCat = card.getAttribute('data-category');
+				if (category === 'all' || cardCat === category) {
+					card.style.display = '';
+					card.classList.remove('hidden');
+				} else {
+					card.style.display = 'none';
+					card.classList.add('hidden');
+				}
+			});
+		}
+
+		function submitLead() {
+			var feedback = document.getElementById('form-feedback');
+			if (feedback) {
+				feedback.classList.remove('hidden');
+				feedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+			}
+			var form = document.getElementById('lead-form');
+			if (form) {
+				form.reset();
+			}
+		}
+
+		function toggleMobileMenu() {
+			var menu = document.getElementById("mobile-nav-menu");
+			var icon = document.getElementById("mobile-menu-icon");
+			if (menu) {
+				var isHidden = menu.classList.toggle("hidden");
+				if (icon) {
+					icon.textContent = isHidden ? "menu" : "close";
+				}
+			}
+		}
+
+		function toggleMobileServices() {
+			var dropdown = document.getElementById("mobile-services-dropdown");
+			var arrow = document.getElementById("mobile-services-arrow");
+			var btn = document.getElementById("mobile-services-btn");
+			if (dropdown) {
+				var isHidden = dropdown.classList.toggle("hidden");
+				if (arrow) {
+					if (isHidden) {
+						arrow.classList.remove("rotate-180");
+					} else {
+						arrow.classList.add("rotate-180");
+					}
+				}
+				if (btn) {
+					btn.setAttribute("aria-expanded", isHidden ? "false" : "true");
+				}
+			}
+		}
+	</script>
+	<!-- Reusable Component Loader (Navbar & Footer) -->
+	<script src="assets/bgs-components.js"></script>
+</body>
+</html>

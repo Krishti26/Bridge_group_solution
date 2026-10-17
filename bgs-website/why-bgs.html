@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Core typography preload -->
+<link rel="preload" href="assets/amphora-fonts/The%20Future/TheFuture-Regular.subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/amphora-fonts/The%20Future/TheFuture-Medium.subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/amphora-fonts/The%20Future/TheFuture-Bold.subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/amphora-fonts/Tiempos%20Headline/TiemposHeadline-400-Regular-Italic.woff2" as="font" type="font/woff2" crossorigin>
+
+
+<!-- Reveal the finished layout without showing a loading animation. -->
+<style>html.layout-pending body { visibility:hidden !important; }</style>
+<script>
+(() => {
+  const root = document.documentElement;
+  root.classList.add('layout-pending');
+  let observer;
+  const reveal = () => {
+    root.classList.remove('layout-pending');
+    if (observer) observer.disconnect();
+  };
+  const ready = () => {
+    if (root.classList.contains('bgs-layout-ready') && document.querySelector('.bgs-main-navbar')) reveal();
+  };
+  observer = new MutationObserver(ready);
+  observer.observe(root, {childList:true, subtree:true, attributes:true, attributeFilter:['class']});
+  document.addEventListener('DOMContentLoaded', ready, {once:true});
+  setTimeout(reveal, 2500);
+})();
+</script>
+
+
+
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	<meta content="web_standard" name="shell-type">
+	<title>Why Choose BGS — Enterprise Engineering & Trusted Advisory</title>
+	<meta name="description" content="Discover why leading enterprises choose Bridge Group Solutions for digital transformation, resilient cloud architecture, and mission-critical tech." />
+	<meta name="keywords" content="Why choose Bridge Group Solutions, BGS advantages, enterprise engineering, tech excellence, software delivery SLA, digital transformation partner" />
+	
+		<meta property="og:title" content="Why Choose BGS — Enterprise Engineering & Trusted Advisory" />
+	<meta property="og:description" content="Discover why leading enterprises choose Bridge Group Solutions for digital transformation, resilient cloud architecture, and mission-critical tech." />
+	<meta property="og:url" content="https://www.bridgegroupsolutions.com/why-bgs.html" />
+	<meta property="og:image" content="https://www.bridgegroupsolutions.com/assets/logo.webp" />
+	<meta property="og:type" content="website" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Why Choose BGS — Enterprise Engineering & Trusted Advisory" />
+	<meta name="twitter:description" content="Discover why leading enterprises choose Bridge Group Solutions for digital transformation, resilient cloud architecture, and mission-critical tech." />
+	<meta name="twitter:image" content="https://www.bridgegroupsolutions.com/assets/logo.webp" />
+	<link rel="canonical" href="https://www.bridgegroupsolutions.com/why-bgs.html" />
+	<link rel="icon" type="image/svg+xml" href="assets/logo.webp" />
+
+	<!-- Schema.org Structured Data (JSON-LD) -->
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.bridgegroupsolutions.com/why-bgs.html#webpage",
+      "url": "https://www.bridgegroupsolutions.com/why-bgs.html",
+      "name": "Why Choose Bridge Group Solutions | The BGS Advantage",
+      "description": "Explore the BGS enterprise advantage: senior engineering pods, bespoke system architecture, contractual SLA guarantees, and multi-country delivery.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.bridgegroupsolutions.com/#website",
+        "url": "https://www.bridgegroupsolutions.com",
+        "name": "Bridge Group Solutions"
+      }
+    }
+  ]
+}
+	</script>
+
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com" rel="preconnect">
+	<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+	<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+	<!-- Tabler Icons CDN -->
+	<link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" rel="stylesheet"/>
+
+	<style>
+		@layer base {
+			html, body { margin: 0; padding: 0; }
+			body { overscroll-behavior: none; }
+			main > :first-child { margin-top: 0 !important; }
+			main > :last-child { margin-bottom: 0 !important; }
+		}
+		::-webkit-scrollbar { display: none; }
+	</style>
+
+	<!-- Tailwind CSS CDN & Custom Config -->
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script id="tailwind-config">
+		tailwind.config = {
+			darkMode: "class",
+			theme: {
+				extend: {
+					colors: {
+						"surface-container-highest": "#e2e2e4",
+						"on-secondary-container": "#5c647a",
+						"on-surface": "#1a1c1d",
+						"on-error": "#ffffff",
+						"primary-fixed": "#ffdad3",
+						"background": "#f9f9fb",
+						"primary-fixed-dim": "#ffb4a4",
+						"inverse-primary": "#ffb4a4",
+						"surface-bright": "#f9f9fb",
+						"on-tertiary-fixed-variant": "#424656",
+						"tertiary-fixed-dim": "#c3c6d8",
+						"tertiary-fixed": "#dfe1f5",
+						"outline-variant": "#e2bfb7",
+						"error-container": "#ffdad6",
+						"on-primary-container": "#fffbff",
+						"on-tertiary-container": "#fefcff",
+						"error": "#ba1a1a",
+						"tertiary": "#585b6b",
+						"secondary": "#565e74",
+						"surface-container-lowest": "#ffffff",
+						"surface-container-low": "#f3f3f5",
+						"secondary-fixed": "#dae2fd",
+						"secondary-fixed-dim": "#bec6e0",
+						"on-background": "#1a1c1d",
+						"on-secondary": "#ffffff",
+						"on-surface-variant": "#5a413b",
+						"outline": "#8e706a",
+						"secondary-container": "#dae2fd",
+						"surface": "#f9f9fb",
+						"surface-container": "#eeeef0",
+						"inverse-surface": "#2f3132",
+						"tertiary-container": "#707485",
+						"on-tertiary": "#ffffff",
+						"surface-tint": "#b12e11",
+						"inverse-on-surface": "#f0f0f2",
+						"on-primary-fixed": "#3d0600",
+						"surface-dim": "#d9dadc",
+						"on-error-container": "#93000a",
+						"on-primary": "#ffffff",
+						"on-primary-fixed-variant": "#8c1800",
+						"on-secondary-fixed": "#131b2e",
+						"primary-container": "#d04426",
+						"surface-container-high": "#e8e8ea",
+						"primary": "#ad2b0e",
+						"on-secondary-fixed-variant": "#3f465c",
+						"on-tertiary-fixed": "#171b29",
+						"surface-variant": "#e2e2e4"
+					},
+					borderRadius: {
+						"DEFAULT": "0.25rem",
+						"lg": "0.5rem",
+						"xl": "0.75rem",
+						"full": "9999px"
+					},
+					spacing: {
+						"space-sm": "0.5rem",
+						"space-md": "1rem",
+						"space-xs": "0.25rem",
+						"gutter": "1.5rem",
+						"space-lg": "1.5rem",
+						"margin-mobile": "1.25rem",
+						"gutter-mobile": "1rem",
+						"space-xl": "2.5rem",
+						"margin": "3rem"
+					},
+					fontFamily: {
+						"body-md": ["Plus Jakarta Sans"],
+						"body-sm": ["Plus Jakarta Sans"],
+						"label-pill": ["Plus Jakarta Sans"],
+						"display-hero": ["Plus Jakarta Sans"],
+						"headline-lg": ["Plus Jakarta Sans"],
+						"headline-md": ["Plus Jakarta Sans"],
+						"label-eyebrow": ["Space Grotesk"],
+						"body-lg": ["Plus Jakarta Sans"],
+						"display-hero-mobile": ["Plus Jakarta Sans"],
+						"headline-sm": ["Plus Jakarta Sans"],
+						"stat-metric": ["Plus Jakarta Sans"],
+						"label-code": ["Space Grotesk"]
+					},
+					fontSize: {
+						"body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+						"body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }],
+						"label-pill": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+						"display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+						"headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+						"headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+						"label-eyebrow": ["11px", { "lineHeight": "14px", "letterSpacing": "0.12em", "fontWeight": "700" }],
+						"body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+						"display-hero-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+						"headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+						"stat-metric": ["40px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+						"label-code": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }]
+					}
+				}
+			}
+		}
+	</script>
+
+	<!-- Design Tokens & Theme -->
+	<link rel="stylesheet" href="assets/bgs-modern-theme.css" />
+	<!-- Dedicated CSS file for why-bgs.html -->
+	<link rel="stylesheet" href="assets/why-bgs.css" />
+<link rel="stylesheet" href="assets/amphora-reference.css">
+<link rel="stylesheet" href="assets/amphora-bgs.css?v=17">
+<script defer src="assets/amphora-bgs.js?v=17"></script>
+<link rel="stylesheet" href="assets/partner-directory.css">
+<script defer src="assets/partner-directory.js"></script>
+<link rel="stylesheet" href="assets/value-stories.css">
+<script defer src="assets/value-stories.js"></script>
+</head>
+
+<body class="amphora-theme bg-surface font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+
+	<!-- NAVIGATION HEADER MATCHING INDEX (WHY US MARKED ACTIVE) -->
+	<!-- Reusable Navbar Component -->
+	<div id="navbar"></div>
+
+
+
+
+
+	<main class="w-full pt-20 bg-surface">
+		<div class="flex flex-col w-full overflow-hidden">
+
+			<!-- 1. HERO SECTION WITH ATMOSPHERIC RADIAL LIGHTING & HIGH-IMPACT CANVAS -->
+			<section class="relative w-full max-w-[1320px] mx-auto px-6 md:px-12 pt-6 sm:pt-8 pb-12 md:pb-16">
+				<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[650px] pointer-events-none -z-10 overflow-hidden">
+					<div class="absolute top-0 right-10 w-[550px] h-[550px] rounded-full blur-3xl opacity-60" style="background: radial-gradient(circle, rgba(235, 87, 55, 0.22) 0%, rgba(255, 120, 73, 0.12) 40%, rgba(147, 51, 234, 0.05) 75%, transparent 100%);"></div>
+					<div class="absolute top-20 -left-20 w-[500px] h-[500px] rounded-full blur-3xl opacity-50" style="background: radial-gradient(circle, rgba(255, 170, 60, 0.18) 0%, rgba(235, 87, 55, 0.08) 50%, transparent 80%);"></div>
+					<div class="absolute top-44 left-1/3 w-[400px] h-[400px] rounded-full blur-2xl opacity-40" style="background: radial-gradient(circle, rgba(124, 58, 237, 0.12) 0%, rgba(235, 87, 55, 0.06) 60%, transparent 100%);"></div>
+				</div>
+
+				<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+					<!-- Hero Left Column -->
+					<div class="lg:col-span-6 flex flex-col items-start space-y-6">
+						<div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-surface-container-low shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
+							<span class="relative flex h-2 w-2">
+								<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+								<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+							</span>
+							<span class="font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-widest">BGS PLATFORM • WHY BGS</span>
+							<span class="font-label-code text-label-code text-secondary pl-1">EST. 2014</span>
+						</div>
+
+						<h1 class="font-display-hero text-display-hero text-on-surface tracking-tight leading-[1.08]">
+							Turning Visions into Victories with <span class="text-primary italic font-semibold">Purpose.</span>
+						</h1>
+
+						<p class="font-body-lg text-body-lg text-secondary max-w-xl leading-relaxed">
+							Our strength lies in building expert-driven teams, implementing scalable technologies, and maintaining standardized yet flexible delivery models. Every solution is designed to solve real business challenges, streamline operations, and unlock long-term growth.
+						</p>
+
+						<!-- Section Nav Jump Links & CTAs -->
+						<div class="flex flex-wrap items-center gap-3 pt-2">
+							<a class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-white font-label-pill text-label-pill shadow-[0_8px_25px_rgba(235,87,55,0.4)] hover:shadow-[0_14px_35px_rgba(235,87,55,0.55)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 border border-white/25" href="#founders" style="background: linear-gradient(135deg, #ad2b0e 0%, #eb5737 60%, #ff7849 100%);">
+								<span>About Us</span>
+								<span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+							</a>
+							<a class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-surface-container-lowest text-on-surface font-label-pill text-label-pill shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_24px_rgba(235,87,55,0.15)] hover:border-primary/40 hover:-translate-y-0.5 transition-all duration-200 border border-surface-container-high" href="#our-work">
+								<span>Core Values</span>
+								<span class="material-symbols-outlined text-[16px] text-primary">psychology</span>
+							</a>
+							<a class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-surface-container-lowest text-on-surface font-label-pill text-label-pill shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_24px_rgba(235,87,55,0.15)] hover:border-primary/40 hover:-translate-y-0.5 transition-all duration-200 border border-surface-container-high" href="#partners">
+								<span>Partners</span>
+								<span class="material-symbols-outlined text-[16px] text-primary">handshake</span>
+							</a>
+						</div>
+
+						<!-- Social Proof Micro Badge -->
+						<div class="pt-4 flex items-center gap-5">
+							<div class="flex -space-x-2 overflow-hidden">
+								<div class="inline-block h-9 w-9 rounded-full bg-surface-container-high ring-2 ring-surface flex items-center justify-center font-label-code text-[11px] text-secondary font-bold">10Y+</div>
+								<div class="inline-block h-9 w-9 rounded-full bg-primary-fixed ring-2 ring-surface flex items-center justify-center font-label-code text-[11px] text-on-primary-fixed font-bold">500+</div>
+								<div class="inline-block h-9 w-9 rounded-full bg-secondary-fixed ring-2 ring-surface flex items-center justify-center font-label-code text-[11px] text-on-secondary-fixed font-bold">SLA</div>
+							</div>
+							<div class="flex flex-col">
+								<div class="flex items-center gap-2">
+									<span class="font-label-pill text-label-pill font-bold text-on-surface">10+ Years of Excellence</span>
+									<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-code text-[10px] font-bold">OUTSOURCING &amp; INNOVATION</span>
+								</div>
+								<span class="font-body-sm text-body-sm text-secondary">Expert-Driven Teams &amp; Scalable Enterprise Delivery Models</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- Hero Right Column: Architecture & Excellence Telemetry Card -->
+					<div class="lg:col-span-6 relative w-full flex items-center justify-center">
+						<div class="w-full max-w-[560px] p-6 sm:p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high hover:border-primary/40 shadow-[0_20px_50px_rgba(0,0,0,0.06)] hover:shadow-[0_25px_60px_rgba(235,87,55,0.14)] transition-all duration-300 relative overflow-hidden flex flex-col gap-6 group">
+							<!-- Atmospheric Subtle Coral Glow -->
+							<div class="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-primary/5 blur-3xl pointer-events-none group-hover:bg-primary/10 transition-colors duration-500"></div>
+
+							<!-- Card Header -->
+							<div class="flex items-center justify-between border-b border-surface-container-high/80 pb-4 relative z-10">
+								<div class="flex items-center gap-3">
+									<div class="w-9 h-9 rounded-xl bg-primary/10 text-primary border border-primary/20 flex items-center justify-center shadow-2xs">
+										<span class="material-symbols-outlined text-[20px]">verified</span>
+									</div>
+									<span class="font-headline-sm text-[16px] font-bold text-on-surface">BGS Strategic Delivery Fabric</span>
+								</div>
+								<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20 shadow-2xs">
+									<span class="h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+									<span class="font-label-code text-[11px] font-bold tracking-wider uppercase">VERIFIED EXCELLENCE</span>
+								</div>
+							</div>
+
+							<!-- 3 Capabilities Highlights Grid -->
+							<div class="grid grid-cols-3 gap-3 relative z-10">
+								<!-- Card 1: Custom ERP -->
+								<div class="p-3.5 sm:p-4 rounded-2xl bg-surface-container-low/70 border border-surface-container-high flex flex-col justify-between hover:bg-white hover:border-primary/40 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group/item">
+									<div class="flex items-center justify-between">
+										<span class="font-label-eyebrow text-[9.5px] sm:text-[10px] text-secondary group-hover/item:text-primary font-bold uppercase tracking-wider transition-colors">CUSTOM ERP</span>
+										<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-[0_0_6px_#10b981]"></span>
+									</div>
+									<div class="my-3 flex items-center justify-center">
+										<div class="w-10 h-10 rounded-xl bg-white border border-surface-container-high/80 text-secondary group-hover/item:text-primary group-hover/item:border-primary/30 flex items-center justify-center shadow-xs transition-all">
+											<span class="material-symbols-outlined text-[22px]">terminal</span>
+										</div>
+									</div>
+									<span class="font-label-code text-[12px] text-on-surface group-hover/item:text-primary font-bold text-center leading-tight transition-colors">Seamless Flow</span>
+								</div>
+
+								<!-- Card 2: Wealth & Risk (Featured Center Card) -->
+								<div class="p-3.5 sm:p-4 rounded-2xl bg-primary/[0.04] border border-primary/30 shadow-[0_8px_24px_rgba(235,87,55,0.12)] flex flex-col justify-between hover:bg-white hover:border-primary/50 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group/item relative overflow-hidden">
+									<div class="flex items-center justify-between">
+										<span class="font-label-eyebrow text-[9.5px] sm:text-[10px] text-primary font-bold uppercase tracking-wider">WEALTH &amp; RISK</span>
+										<span class="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_6px_#eb5737] animate-pulse"></span>
+									</div>
+									<div class="my-3 flex items-center justify-center">
+										<div class="w-10 h-10 rounded-xl bg-primary text-white flex items-center justify-center shadow-sm group-hover/item:scale-105 transition-transform">
+											<span class="material-symbols-outlined text-[22px]">shield_with_heart</span>
+										</div>
+									</div>
+									<span class="font-label-code text-[12px] text-primary font-bold text-center leading-tight">Proactive Defense</span>
+								</div>
+
+								<!-- Card 3: Strategic Pods -->
+								<div class="p-3.5 sm:p-4 rounded-2xl bg-surface-container-low/70 border border-surface-container-high flex flex-col justify-between hover:bg-white hover:border-primary/40 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group/item">
+									<div class="flex items-center justify-between">
+										<span class="font-label-eyebrow text-[9.5px] sm:text-[10px] text-secondary group-hover/item:text-primary font-bold uppercase tracking-wider transition-colors">STRATEGIC PODS</span>
+										<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-[0_0_6px_#10b981]"></span>
+									</div>
+									<div class="my-3 flex items-center justify-center">
+										<div class="w-10 h-10 rounded-xl bg-white border border-surface-container-high/80 text-secondary group-hover/item:text-primary group-hover/item:border-primary/30 flex items-center justify-center shadow-xs transition-all">
+											<span class="material-symbols-outlined text-[22px]">groups</span>
+										</div>
+									</div>
+									<span class="font-label-code text-[12px] text-on-surface group-hover/item:text-primary font-bold text-center leading-tight transition-colors">Elite Talent</span>
+								</div>
+							</div>
+
+							<!-- 3 Stat Metrics Bar -->
+							<div class="grid grid-cols-3 gap-3 pt-4 border-t border-surface-container-high/80 relative z-10">
+								<div class="flex flex-col p-3 rounded-2xl bg-surface-container-low/50 border border-surface-container-high/60 hover:border-primary/30 transition-colors">
+									<span class="font-stat-metric text-[24px] sm:text-[26px] leading-tight font-extrabold text-on-surface">10+</span>
+									<span class="font-label-code text-[11px] text-secondary font-medium mt-0.5">Years Active</span>
+								</div>
+								<div class="flex flex-col p-3 rounded-2xl bg-primary/[0.04] border border-primary/30 shadow-2xs hover:border-primary/50 transition-colors">
+									<span class="font-stat-metric text-[24px] sm:text-[26px] leading-tight font-extrabold text-primary">100%</span>
+									<span class="font-label-code text-[11px] text-primary font-semibold mt-0.5">On-Time Sprint</span>
+								</div>
+								<div class="flex flex-col p-3 rounded-2xl bg-surface-container-low/50 border border-surface-container-high/60 hover:border-primary/30 transition-colors">
+									<span class="font-stat-metric text-[24px] sm:text-[26px] leading-tight font-extrabold text-on-surface">4</span>
+									<span class="font-label-code text-[11px] text-secondary font-medium mt-0.5">Core Pillars</span>
+								</div>
+							</div>
+
+							<!-- Verification Bottom Banner -->
+							<div class="p-3.5 rounded-2xl flex items-center justify-between text-secondary font-label-code text-[11px] border border-surface-container-high bg-surface-container-low/50 relative z-10">
+								<div class="flex items-center gap-2 text-on-surface font-medium text-[11px] sm:text-[11.5px]">
+									<span class="material-symbols-outlined text-[17px] text-primary">task_alt</span>
+									<span>Standardized Yet Flexible Delivery Models &bull; Pan-India Execution</span>
+								</div>
+								<span class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-200 font-bold text-[10px] uppercase tracking-wider shrink-0 shadow-2xs">
+									VERIFIED
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 2. TICKER MARQUEE -->
+			<section class="w-full bg-surface-container-low py-8 overflow-hidden shadow-inner">
+				<div class="max-w-[1320px] mx-auto px-6 md:px-12 flex flex-col gap-6">
+					<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+						<div class="flex items-center gap-3">
+							<span class="h-2 w-2 rounded-full bg-primary"></span>
+							<span class="font-label-eyebrow text-label-eyebrow text-secondary uppercase tracking-widest">WHY LEADING ENTERPRISES PARTNER WITH BRIDGE GROUP SOLUTIONS</span>
+						</div>
+						<div class="flex items-center gap-6 font-label-code text-label-code text-on-surface-variant">
+							<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">verified</span>10+ YEARS EXCELLENCE</span>
+							<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">shield</span>ENTERPRISE INTEGRITY</span>
+						</div>
+					</div>
+
+					<div class="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+						<div class="animate-marquee gap-12 whitespace-nowrap">
+							<div class="flex items-center gap-3 px-5 py-2.5 rounded-full bg-surface-container-lowest shadow-sm">
+								<span class="font-label-pill text-label-pill text-primary font-bold">10+</span>
+								<span class="font-body-sm text-body-sm text-on-surface">Years of Excellence in Outsourcing &amp; Innovation</span>
+							</div>
+							<div class="flex items-center gap-3 px-5 py-2.5 rounded-full bg-surface-container-lowest shadow-sm">
+								<span class="material-symbols-outlined text-[18px] text-primary">handshake</span>
+								<span class="font-headline-sm text-[14px] text-on-surface font-semibold">ADITYA BIRLA CAPITAL</span>
+							</div>
+							<div class="flex items-center gap-3 px-5 py-2.5 rounded-full bg-surface-container-lowest shadow-sm">
+								<span class="material-symbols-outlined text-[18px] text-secondary">storefront</span>
+								<span class="font-headline-sm text-[14px] text-on-surface font-semibold">BIG BAZAAR</span>
+							</div>
+							<div class="flex items-center gap-3 px-5 py-2.5 rounded-full bg-surface-container-lowest shadow-sm">
+								<span class="material-symbols-outlined text-[18px] text-primary">health_and_safety</span>
+								<span class="font-headline-sm text-[14px] text-on-surface font-semibold">INDIA FIRST LIFE INSURANCE</span>
+							</div>
+							<div class="flex items-center gap-3 px-5 py-2.5 rounded-full bg-surface-container-lowest shadow-sm">
+								<span class="material-symbols-outlined text-[18px] text-secondary">security</span>
+								<span class="font-headline-sm text-[14px] text-on-surface font-semibold">MAX LIFE INSURANCE</span>
+							</div>
+							<div class="flex items-center gap-3 px-5 py-2.5 rounded-full bg-surface-container-lowest shadow-sm">
+								<span class="material-symbols-outlined text-[18px] text-primary">visibility</span>
+								<span class="font-headline-sm text-[14px] text-on-surface font-semibold">DRISHTI</span>
+							</div>
+
+							<!-- Repeat for Infinite Seamless Loop -->
+							<div class="flex items-center gap-3 px-5 py-2.5 rounded-full bg-surface-container-lowest shadow-sm">
+								<span class="font-label-pill text-label-pill text-primary font-bold">10+</span>
+								<span class="font-body-sm text-body-sm text-on-surface">Years of Excellence in Outsourcing &amp; Innovation</span>
+							</div>
+							<div class="flex items-center gap-3 px-5 py-2.5 rounded-full bg-surface-container-lowest shadow-sm">
+								<span class="material-symbols-outlined text-[18px] text-primary">handshake</span>
+								<span class="font-headline-sm text-[14px] text-on-surface font-semibold">ADITYA BIRLA CAPITAL</span>
+							</div>
+							<div class="flex items-center gap-3 px-5 py-2.5 rounded-full bg-surface-container-lowest shadow-sm">
+								<span class="material-symbols-outlined text-[18px] text-secondary">storefront</span>
+								<span class="font-headline-sm text-[14px] text-on-surface font-semibold">BIG BAZAAR</span>
+							</div>
+							<div class="flex items-center gap-3 px-5 py-2.5 rounded-full bg-surface-container-lowest shadow-sm">
+								<span class="material-symbols-outlined text-[18px] text-primary">health_and_safety</span>
+								<span class="font-headline-sm text-[14px] text-on-surface font-semibold">INDIA FIRST LIFE INSURANCE</span>
+							</div>
+							<div class="flex items-center gap-3 px-5 py-2.5 rounded-full bg-surface-container-lowest shadow-sm">
+								<span class="material-symbols-outlined text-[18px] text-secondary">security</span>
+								<span class="font-headline-sm text-[14px] text-on-surface font-semibold">MAX LIFE INSURANCE</span>
+							</div>
+							<div class="flex items-center gap-3 px-5 py-2.5 rounded-full bg-surface-container-lowest shadow-sm">
+								<span class="material-symbols-outlined text-[18px] text-primary">visibility</span>
+								<span class="font-headline-sm text-[14px] text-on-surface font-semibold">DRISHTI</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 3. ABOUT US & 4 PILLARS BENTO SECTION -->
+			<section id="founders" class="w-full bg-[#0b0c10] text-white py-16 md:py-24 relative overflow-hidden border-y border-white/5">
+				<!-- Ambient Background Radial Accents -->
+				<div class="absolute -top-32 -left-20 w-[500px] h-[500px] rounded-full blur-3xl pointer-events-none opacity-20" style="background: radial-gradient(circle, rgba(129, 140, 248, 0.25) 0%, transparent 70%);"></div>
+				<div class="absolute top-1/2 -right-20 w-[500px] h-[500px] rounded-full blur-3xl pointer-events-none opacity-15" style="background: radial-gradient(circle, rgba(234, 88, 12, 0.2) 0%, transparent 70%);"></div>
+
+				<div class="max-w-[1320px] mx-auto px-6 md:px-12 relative z-10">
+					<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+						<!-- Left Anchored Headline Column -->
+						<div class="lg:col-span-5 founders-left-col flex flex-col justify-start gap-5 lg:sticky lg:top-28 overflow-visible max-w-full">
+							<div class="flex flex-col gap-4 max-w-full overflow-visible">
+								<!-- Eyebrow Pill -->
+								<div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#161724]/90 border border-white/10 w-fit">
+									<svg class="w-3 h-3 text-[#a5b4fc] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+										<rect x="3" y="3" width="18" height="18" rx="4"/>
+									</svg>
+									<span class="text-[11px] font-bold uppercase tracking-wider text-[#a5b4fc]">ABOUT US &bull; 10+ YEARS OF EXCELLENCE</span>
+								</div>
+
+								<!-- Headline -->
+								<h2 class="founders-headline text-[34px] sm:text-[42px] lg:text-[46px] text-white font-extrabold tracking-tight leading-[1.12] max-w-full overflow-visible">
+									10+ Years of<br class="hidden sm:inline">
+									Excellence in<br class="hidden sm:inline">
+									<span class="italic font-normal bg-gradient-to-r from-[#818cf8] via-[#c084fc] to-[#f472b6] bg-clip-text text-transparent">Outsourcing &amp; Innovation</span>
+								</h2>
+
+								<!-- Subtitle -->
+								<p class="text-[14px] sm:text-[15px] text-[#94a3b8] leading-relaxed font-normal">
+									At B.G.S, ambition meets action, and integrity shapes every success.
+								</p>
+
+								<!-- Key Metrics Row -->
+								<div class="grid grid-cols-3 gap-3 pt-1 founders-metrics-grid">
+									<div class="flex flex-col p-3.5 sm:p-4 rounded-2xl bg-[#13141f] border border-white/[0.08]">
+										<span class="text-[20px] sm:text-[22px] font-extrabold text-white tracking-tight leading-tight">10+ Yrs</span>
+										<span class="text-[10px] text-[#94a3b8] uppercase font-bold tracking-wider mt-1.5">LEADERSHIP</span>
+									</div>
+									<div class="flex flex-col p-3.5 sm:p-4 rounded-2xl bg-[#13141f] border border-white/[0.08]">
+										<span class="text-[20px] sm:text-[22px] font-extrabold text-white tracking-tight leading-tight">500+</span>
+										<span class="text-[10px] text-[#94a3b8] uppercase font-bold tracking-wider mt-1.5">DEPLOYMENTS</span>
+									</div>
+									<div class="flex flex-col p-3.5 sm:p-4 rounded-2xl bg-[#13141f] border border-white/[0.08]">
+										<span class="text-[20px] sm:text-[22px] font-extrabold text-white tracking-tight leading-tight">99.9%</span>
+										<span class="text-[10px] text-[#94a3b8] uppercase font-bold tracking-wider mt-1.5">CLIENT SLA</span>
+									</div>
+								</div>
+							</div>
+
+							<!-- Executive Methodology Bento Card -->
+							<div class="founders-methodology-card p-6 sm:p-7 rounded-3xl bg-[#13141f] border border-white/[0.08] shadow-[0_12px_36px_rgba(0,0,0,0.35)] flex flex-col gap-3.5 relative overflow-hidden">
+								<div class="flex items-center gap-3.5 relative z-10">
+									<div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#6366f1] shadow-sm shrink-0">
+										<svg class="w-5 h-5 text-[#6366f1]" viewBox="0 0 24 24" fill="currentColor">
+											<path d="M12 2l2.4 2.1 3.1-.7 1.3 2.9 3 .9-.4 3.2 2 2.5-1.5 2.8.7 3.1-3 1.2-1 3-3.1-.4L12 24l-2.5-1.5-3.1.4-1-3-3-1.2.7-3.1-1.5-2.8 2-2.5-.4-3.2 3-.9 1.3-2.9 3.1.7L12 2zm-1.2 13.6l6.6-6.6-1.4-1.4-5.2 5.2-2.4-2.4-1.4 1.4 3.8 3.8z"/>
+										</svg>
+									</div>
+									<h3 class="text-[16px] sm:text-[17px] font-bold text-white tracking-tight leading-snug">
+										Delivering Results Through Smart Approach
+									</h3>
+								</div>
+
+								<p class="text-[12.5px] sm:text-[13px] text-[#94a3b8] leading-relaxed relative z-10">
+									We engineer modern, standardized, and adaptable delivery ecosystems tailored to accelerate your strategic outcomes.
+								</p>
+
+								<div class="pt-2 relative z-10 flex flex-wrap items-center gap-3">
+									<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#1e202e] hover:bg-[#282a3d] border border-white/10 text-xs font-semibold text-slate-200 transition-all duration-200" href="contact.html">
+										<span>Build with us</span>
+										<span class="text-slate-400 font-bold">&rarr;</span>
+									</a>
+									<span class="px-3 py-1.5 rounded-full bg-[#12131d] border border-white/5 text-[10px] font-bold tracking-wider text-slate-300 uppercase flex items-center gap-2 font-mono">
+										<span class="h-1.5 w-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.9)]"></span>
+										<span>ENTERPRISE SLA</span>
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Right 4 Pillars Stacking Matrix -->
+						<div id="founders-pillars" class="lg:col-span-7 flex flex-col gap-6 sm:gap-7 ref-stack-group">
+							<!-- Pillar 01 -->
+							<div class="pillar-card ref-card ref-stack-card group p-7 sm:p-9 rounded-[28px] bg-[#141522] border border-white/[0.08] border-t-[3px] border-t-[#ea580c] flex flex-col justify-start relative overflow-hidden transition-all duration-300">
+								<div class="mb-4">
+									<span class="text-[24px] sm:text-[26px] font-extrabold text-[#818cf8] tracking-tight font-mono">01</span>
+								</div>
+								
+								<h3 class="text-[20px] sm:text-[22px] font-bold text-white mb-3 tracking-tight leading-snug">
+									Custom ERP &amp; Software Development
+								</h3>
+								
+								<p class="text-[14px] sm:text-[14.5px] text-[#94a3b8] leading-relaxed">
+									Architecting robust, purpose-built enterprise software and integrated ERP ecosystems that streamline mission-critical workflows, eliminate operational bottlenecks, and scale seamlessly with organizational growth.
+								</p>
+							</div>
+
+							<!-- Pillar 02 -->
+							<div class="pillar-card ref-card ref-stack-card group p-7 sm:p-9 rounded-[28px] bg-[#141522] border border-white/[0.08] border-t-[3px] border-t-[#ea580c] flex flex-col justify-start relative overflow-hidden transition-all duration-300">
+								<div class="mb-4">
+									<span class="text-[24px] sm:text-[26px] font-extrabold text-[#818cf8] tracking-tight font-mono">02</span>
+								</div>
+								
+								<h3 class="text-[20px] sm:text-[22px] font-bold text-white mb-3 tracking-tight leading-snug">
+									Wealth &amp; Portfolio Management
+								</h3>
+								
+								<p class="text-[14px] sm:text-[14.5px] text-[#94a3b8] leading-relaxed">
+									Delivering disciplined wealth advisory and asset management solutions. We leverage quantitative data insights to optimize asset allocation, manage market exposure, and protect long-term capital yields.
+								</p>
+							</div>
+
+							<!-- Pillar 03 -->
+							<div class="pillar-card ref-card ref-stack-card group p-7 sm:p-9 rounded-[28px] bg-[#141522] border border-white/[0.08] border-t-[3px] border-t-[#ea580c] flex flex-col justify-start relative overflow-hidden transition-all duration-300">
+								<div class="mb-4">
+									<span class="text-[24px] sm:text-[26px] font-extrabold text-[#818cf8] tracking-tight font-mono">03</span>
+								</div>
+								
+								<h3 class="text-[20px] sm:text-[22px] font-bold text-white mb-3 tracking-tight leading-snug">
+									Risk Advisory Solutions
+								</h3>
+								
+								<p class="text-[14px] sm:text-[14.5px] text-[#94a3b8] leading-relaxed">
+									Proactively identifying vulnerabilities, regulatory requirements, and threat landscapes. Our structured mitigation frameworks and compliance audits ensure operational resilience and continuous enterprise protection.
+								</p>
+							</div>
+
+							<!-- Pillar 04 -->
+							<div class="pillar-card ref-card ref-stack-card group p-7 sm:p-9 rounded-[28px] bg-[#141522] border border-white/[0.08] border-t-[3px] border-t-[#ea580c] flex flex-col justify-start relative overflow-hidden transition-all duration-300">
+								<div class="mb-4">
+									<span class="text-[24px] sm:text-[26px] font-extrabold text-[#818cf8] tracking-tight font-mono">04</span>
+								</div>
+								
+								<h3 class="text-[20px] sm:text-[22px] font-bold text-white mb-3 tracking-tight leading-snug">
+									Strategic Talent Outsourcing &amp; Project Execution
+								</h3>
+								
+								<p class="text-[14px] sm:text-[14.5px] text-[#94a3b8] leading-relaxed">
+									Mobilizing high-caliber specialized engineering teams and project managers aligned with your roadmap. We deliver transparent execution, strict SLA adherence, and predictable time-to-market performance.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 4. AWARDS & CERTIFICATIONS SECTION -->
+			<section class="w-full bg-surface-container-low/60 pt-14 pb-12 md:pt-20 md:pb-16">
+				<div class="max-w-[1320px] mx-auto px-6 md:px-12 flex flex-col gap-8 sm:gap-10">
+					<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+						<div class="flex flex-col max-w-2xl">
+							<span class="font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-widest">ACCREDITATIONS &amp; RECOGNITION</span>
+							<h2 class="font-headline-lg text-[32px] md:text-[40px] text-on-surface font-bold tracking-tight mt-2">
+								Our Awards &amp; <span class="text-primary italic font-semibold">Certifications</span>
+							</h2>
+							<p class="font-body-md text-body-md text-secondary mt-2 leading-relaxed">
+								We take pride in our collective achievements in the tech domain and leadership initiatives. These accomplishments reflect our commitment to innovation, collaboration, and continuous learning.
+							</p>
+						</div>
+						<div class="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-lowest shadow-sm border border-surface-container-high shrink-0">
+							<span class="material-symbols-outlined text-primary text-[18px]">workspace_premium</span>
+							<span class="font-label-code text-label-code text-on-surface font-bold">INDUSTRY CERTIFIED</span>
+						</div>
+					</div>
+
+					<!-- 3 Certificate Bento Cards -->
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
+						<!-- Certificate 1 -->
+						<div class="bento-card p-4 sm:p-5 rounded-2xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.14)] border border-surface-container-high hover:border-primary/40 flex flex-col justify-between">
+							<div class="w-full overflow-hidden rounded-xl bg-surface-container-low p-2 mb-3.5 flex items-center justify-center">
+								<img src="assets/C1.jpeg" class="cert-card-img" alt="BGS Award Certification 1" loading="lazy" />
+							</div>
+							<div class="flex items-center justify-between pt-2.5 border-t border-surface-container-high">
+								<span class="font-label-code text-[11px] text-primary font-bold">TECH EXCELLENCE</span>
+								<span class="font-label-code text-[11px] text-secondary">Accredited Recognition</span>
+							</div>
+						</div>
+
+						<!-- Certificate 2 -->
+						<div class="bento-card p-4 sm:p-5 rounded-2xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.14)] border border-surface-container-high hover:border-primary/40 flex flex-col justify-between">
+							<div class="w-full overflow-hidden rounded-xl bg-surface-container-low p-2 mb-3.5 flex items-center justify-center">
+								<img src="assets/C2.jpeg" class="cert-card-img" alt="BGS Award Certification 2" loading="lazy" />
+							</div>
+							<div class="flex items-center justify-between pt-2.5 border-t border-surface-container-high">
+								<span class="font-label-code text-[11px] text-primary font-bold">LEADERSHIP &amp; DELIVERY</span>
+								<span class="font-label-code text-[11px] text-secondary">Verified Honor</span>
+							</div>
+						</div>
+
+						<!-- Certificate 3 -->
+						<div class="bento-card p-4 sm:p-5 rounded-2xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.14)] border border-surface-container-high hover:border-primary/40 flex flex-col justify-between">
+							<div class="w-full overflow-hidden rounded-xl bg-surface-container-low p-2 mb-3.5 flex items-center justify-center">
+								<img src="assets/C3.jpeg" class="cert-card-img" alt="BGS Award Certification 3" loading="lazy" />
+							</div>
+							<div class="flex items-center justify-between pt-2.5 border-t border-surface-container-high">
+								<span class="font-label-code text-[11px] text-primary font-bold">OPERATIONAL GOVERNANCE</span>
+								<span class="font-label-code text-[11px] text-secondary">Quality Certified</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Section Divider between Awards & Core Values -->
+			<div class="bgs-values-partners-divider bgs-awards-values-divider"><hr aria-label="Our Core Values section divider"></div>
+
+			<!-- 5. OUR CORE VALUES SECTION -->
+			<section id="our-work" class="value-stories" aria-labelledby="vs-heading"><div class="vs-shell"><header class="vs-heading"><span class="vs-eyebrow">OUR CORE VALUES</span><h2 id="vs-heading">Built to Plan, Execute &amp; <em>Scale Faster</em></h2><p>At Bridge Group Solutions, our core values are the foundation of everything we do. They guide our culture, decisions, and client relationships.</p><div class="vs-button"><a class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-white font-label-pill text-label-pill shadow-[0_8px_25px_rgba(235,87,55,0.35)] hover:shadow-[0_12px_30px_rgba(235,87,55,0.5)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200" href="contact.html" style="background: linear-gradient(135deg, rgb(173, 43, 14) 0%, rgb(235, 87, 55) 60%, rgb(255, 120, 73) 100%);">
+							<span>Connect with us</span>
+							<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+						</a></div></header><div class="vs-stories"><div class="vs-stage"><article class="vs-card" id="vs-card-0" tabindex="0" aria-labelledby="vs-title-0" style="--vs-accent:#8d70cf;--vs-tint:#f0eafa"><div class="vs-card-top"><span class="vs-number">01</span><div class="vs-illustration" aria-hidden="true"><svg viewBox="0 0 140 90" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle class="vs-connect" cx="70" cy="45" r="28"/><g class="vs-person" style="--dx:-16px"><circle cx="42" cy="35" r="5"/><path d="M32 54q0-15 20-15v15"/></g><g class="vs-person" style="--dx:16px"><circle cx="98" cy="35" r="5"/><path d="M88 54V39q20 0 20 15"/></g><g class="vs-person"><circle cx="70" cy="58" r="5"/><path d="M58 79q0-17 24-17v17"/></g></svg></div></div><h3 id="vs-title-0">PEOPLE FIRST</h3><p>People First is at the heart of our culture, where we prioritize the growth and well-being of our clients and teams alike. We foster an inclusive environment that celebrates diversity, encourages fresh perspectives, and values every voice. By promoting collaboration and mutual respect, we create a workplace where innovation thrives. We invest in continuous learning and development to empower individuals to reach their full potential. Our people-driven approach strengthens relationships and drives collective success. This commitment enables us to build a positive, high-performing ecosystem.</p><footer>PEOPLE-DRIVEN CULTURE</footer></article><article class="vs-card" id="vs-card-1" tabindex="0" aria-labelledby="vs-title-1" style="--vs-accent:#c18c65;--vs-tint:#fcf0e6"><div class="vs-card-top"><span class="vs-number">02</span><div class="vs-illustration" aria-hidden="true"><svg viewBox="0 0 140 90" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="vs-draw" pathLength="100" d="m70 10 27 10v23c0 22-27 37-27 37S43 65 43 43V20Z"/><path class="vs-check" pathLength="100" d="m57 43 10 10 18-22"/></svg></div></div><h3 id="vs-title-1">INTEGRITY ALWAYS</h3><p>Integrity Always defines the way we conduct our business and build relationships. We uphold the highest standards of honesty and ethics in every decision and action. Transparency is at the core of our processes, ensuring trust and accountability at all levels. We honor our commitments and take responsibility for delivering on our promises. By maintaining a principled approach, we create a foundation of credibility and long-term trust. This unwavering commitment to integrity strengthens our reputation and partnerships.</p><footer>TRANSPARENCY &amp; ETHICS</footer></article><article class="vs-card" id="vs-card-2" tabindex="0" aria-labelledby="vs-title-2" style="--vs-accent:#419a85;--vs-tint:#e9f7f1"><div class="vs-card-top"><span class="vs-number">03</span><div class="vs-illustration" aria-hidden="true"><svg viewBox="0 0 140 90" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle class="vs-converge" cx="70" cy="45" r="36"/><circle class="vs-converge" cx="70" cy="45" r="25" style="--delay:.15s"/><circle cx="70" cy="35" r="8"/><path d="M53 66q0-20 34-20v20"/></svg></div></div><h3 id="vs-title-2">CUSTOMER OBSESSION</h3><p>Customer Obsession is at the core of everything we do. We actively listen to our clients, understand their unique needs, and tailor our solutions to deliver meaningful value. Our approach focuses on adaptability and continuous improvement, ensuring we stay aligned with evolving business requirements. By maintaining transparent communication and strong relationships, we build lasting trust with our clients. We consistently strive to exceed expectations by delivering high-quality, reliable outcomes. This commitment enables us to create impactful solutions that drive long-term success.</p><footer>CLIENT CENTRICITY</footer></article><article class="vs-card" id="vs-card-3" tabindex="0" aria-labelledby="vs-title-3" style="--vs-accent:#c783a8;--vs-tint:#faedf4"><div class="vs-card-top"><span class="vs-number">04</span><div class="vs-illustration" aria-hidden="true"><svg viewBox="0 0 140 90" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="vs-draw" pathLength="100" d="M24 45h92"/><g class="vs-person"><circle cx="24" cy="45" r="7"/><circle cx="60" cy="45" r="7"/></g><g class="vs-delivered"><rect x="91" y="29" width="30" height="30" rx="6"/><path d="m98 43 6 6 11-13"/></g></svg></div></div><h3 id="vs-title-3">EXCELLENCE AND TRUST IN EVERY DELIVERY</h3><p>Excellence and Trust in Every Delivery define our commitment to consistently delivering high-quality solutions. We focus on precision, attention to detail, and maintaining the highest standards in every project. Our approach is driven by accountability and a strong sense of ownership, ensuring reliable and timely outcomes. By consistently meeting and exceeding expectations, we build long-term trust with our clients. We believe that performance and reliability are key to strong partnerships. This dedication enables us to deliver impactful results that drive sustained success.</p><footer>PERFORMANCE &amp; RELIABILITY</footer></article></div><nav class="vs-progress" aria-label="Select a core value"><button type="button" data-value="0" aria-label="Show value 1: PEOPLE FIRST" aria-controls="vs-card-0" aria-pressed="true">01</button><button type="button" data-value="1" aria-label="Show value 2: INTEGRITY ALWAYS" aria-controls="vs-card-1" aria-pressed="false">02</button><button type="button" data-value="2" aria-label="Show value 3: CUSTOMER OBSESSION" aria-controls="vs-card-2" aria-pressed="false">03</button><button type="button" data-value="3" aria-label="Show value 4: EXCELLENCE AND TRUST IN EVERY DELIVERY" aria-controls="vs-card-3" aria-pressed="false">04</button></nav><nav class="vs-title-tabs" aria-label="Value stories"><button type="button" data-value="0" aria-controls="vs-card-0" aria-pressed="true"><span>01</span>PEOPLE FIRST</button><button type="button" data-value="1" aria-controls="vs-card-1" aria-pressed="false"><span>02</span>INTEGRITY ALWAYS</button><button type="button" data-value="2" aria-controls="vs-card-2" aria-pressed="false"><span>03</span>CUSTOMER OBSESSION</button><button type="button" data-value="3" aria-controls="vs-card-3" aria-pressed="false"><span>04</span>EXCELLENCE AND TRUST IN EVERY DELIVERY</button></nav></div></div></section>
+
+			<!-- 6. STRATEGIC PARTNERS SECTION -->
+			<div class="bgs-values-partners-divider"><hr aria-label="Strategic Partners section"></div>
+<section id="partners" class="partner-directory" aria-labelledby="pd-heading"><div class="pd-shell"><header class="pd-heading"><span class="pd-eyebrow">STRATEGIC PARTNERS</span><h2 id="pd-heading">Stronger Together: Building the Future with <em>Our Partners</em></h2><p>At Bridge Group Solutions, collaboration plays a key role in driving innovation and delivering better solutions. We work closely with trusted organizations and industry leaders who share our commitment to quality and progress. Through these strategic partnerships, we combine expertise, technology, and experience to create greater value for our clients. Our partners help us strengthen our capabilities and deliver impactful results across every project.</p></header><div class="pd-directory"><div class="pd-tabs" role="tablist" aria-label="Strategic partners" aria-orientation="vertical"><button type="button" role="tab" id="pd-tab-0" aria-controls="pd-panel-0" aria-selected="true" tabindex="0" style="--pd-accent:#e85d82;--pd-tint:#fff0f4"><span class="pd-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8 9-5 9 5ZM5 10v8m5-8v8m4-8v8m5-8v8M3 21h18"/></svg></span><span>ADITYA BIRLA CAPITAL</span></button><button type="button" role="tab" id="pd-tab-1" aria-controls="pd-panel-1" aria-selected="false" tabindex="-1" style="--pd-accent:#d78643;--pd-tint:#fff3e9"><span class="pd-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h3l3 12h11l3-9H6M9 20h.01M18 20h.01"/></svg></span><span>BIG BAZAAR</span></button><button type="button" role="tab" id="pd-tab-2" aria-controls="pd-panel-2" aria-selected="false" tabindex="-1" style="--pd-accent:#259c83;--pd-tint:#eaf9f3"><span class="pd-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8 3v6c0 6-8 9-8 9s-8-3-8-9V6Zm-4 9 3 3 5-6"/></svg></span><span>INDIA FIRST LIFE INSURANCE</span></button><button type="button" role="tab" id="pd-tab-3" aria-controls="pd-panel-3" aria-selected="false" tabindex="-1" style="--pd-accent:#8a61cf;--pd-tint:#f2edfb"><span class="pd-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8 3v6c0 6-8 9-8 9s-8-3-8-9V6Z"/><path d="M8 12h8m-4-4v8"/></svg></span><span>MAX LIFE INSURANCE</span></button><button type="button" role="tab" id="pd-tab-4" aria-controls="pd-panel-4" aria-selected="false" tabindex="-1" style="--pd-accent:#508ccc;--pd-tint:#edf5fc"><span class="pd-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 16c0-3-3-4-3-7a7 7 0 0 1 14 0c0 3-3 4-3 7Zm1 3h6m-5 3h4"/></svg></span><span>DRISHTI</span></button></div><div class="pd-panels"><article class="pd-panel" id="pd-panel-0" role="tabpanel" aria-labelledby="pd-tab-0" tabindex="0" style="--pd-accent:#e85d82;--pd-tint:#fff0f4"><div class="pd-category"><span class="pd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8 9-5 9 5ZM5 10v8m5-8v8m4-8v8m5-8v8M3 21h18"/></svg></span><span>FINANCIAL SERVICES</span></div><h3>ADITYA BIRLA CAPITAL</h3><p class="pd-description">Aditya Birla Capital Limited is known for its strong legacy, robust governance, and customer-centric approach, delivering reliable financial solutions tailored to evolving business needs.</p><ul class="pd-points"><li style="--row:0"><span class="pd-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8 9-5 9 5ZM5 10v8m5-8v8m4-8v8m5-8v8M3 21h18"/></svg></span><p>With a wide portfolio spanning asset management, life and health insurance, and structured finance, the company ensures comprehensive support across every stage of financial growth.</p></li><li style="--row:1"><span class="pd-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8 9-5 9 5ZM5 10v8m5-8v8m4-8v8m5-8v8M3 21h18"/></svg></span><p>Its focus on innovation, digital transformation, and risk-managed strategies enables businesses like Bridge Group Solutions to operate with greater financial confidence and stability.</p></li><li style="--row:2"><span class="pd-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8 9-5 9 5ZM5 10v8m5-8v8m4-8v8m5-8v8M3 21h18"/></svg></span><p>Backed by the globally respected Aditya Birla Group, it brings credibility, scale, and deep industry expertise to every partnership.</p></li></ul><footer class="pd-footer"><span>ENTERPRISE SCALE</span><span>VERIFIED ALLIANCE</span></footer></article><article class="pd-panel" id="pd-panel-1" role="tabpanel" aria-labelledby="pd-tab-1" tabindex="0" hidden style="--pd-accent:#d78643;--pd-tint:#fff3e9"><div class="pd-category"><span class="pd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h3l3 12h11l3-9H6M9 20h.01M18 20h.01"/></svg></span><span>NATIONWIDE RETAIL</span></div><h3>BIG BAZAAR</h3><p class="pd-description">Big Bazaar is recognized for its extensive product portfolio, offering everything from daily essentials to lifestyle goods under one roof.</p><ul class="pd-points"><li style="--row:0"><span class="pd-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h3l3 12h11l3-9H6M9 20h.01M18 20h.01"/></svg></span><p>Its customer-centric approach and competitive pricing strategy make it a preferred destination for value-conscious shoppers across India.</p></li><li style="--row:1"><span class="pd-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h3l3 12h11l3-9H6M9 20h.01M18 20h.01"/></svg></span><p>With a strong retail network and focus on convenience, it continues to enhance accessibility and deliver a seamless shopping experience.</p></li><li style="--row:2"><span class="pd-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h3l3 12h11l3-9H6M9 20h.01M18 20h.01"/></svg></span><p>Strategic retail ecosystem integration enabling scalable vendor operations, workforce distribution, and sustained commercial engagement.</p></li></ul><footer class="pd-footer"><span>HIGH ACCESSIBILITY</span><span>VERIFIED ALLIANCE</span></footer></article><article class="pd-panel" id="pd-panel-2" role="tabpanel" aria-labelledby="pd-tab-2" tabindex="0" hidden style="--pd-accent:#259c83;--pd-tint:#eaf9f3"><div class="pd-category"><span class="pd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8 3v6c0 6-8 9-8 9s-8-3-8-9V6Zm-4 9 3 3 5-6"/></svg></span><span>INSURANCE &amp; SAVINGS</span></div><h3>INDIA FIRST LIFE INSURANCE</h3><p class="pd-description">IndiaFirst Life Insurance Company Limited offers a comprehensive range of protection and savings plans tailored to meet diverse customer needs.</p><ul class="pd-points"><li style="--row:0"><span class="pd-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8 3v6c0 6-8 9-8 9s-8-3-8-9V6Zm-4 9 3 3 5-6"/></svg></span><p>With a strong focus on transparency and customer trust, the company ensures reliable financial planning solutions for individuals and businesses alike.</p></li><li style="--row:1"><span class="pd-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8 3v6c0 6-8 9-8 9s-8-3-8-9V6Zm-4 9 3 3 5-6"/></svg></span><p>Its innovative products and digital-first approach enable seamless policy management and enhanced customer experience.</p></li><li style="--row:2"><span class="pd-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8 3v6c0 6-8 9-8 9s-8-3-8-9V6Zm-4 9 3 3 5-6"/></svg></span><p>Backed by strategic partnerships and industry expertise, it supports long-term financial stability and sustainable growth for its partners.</p></li></ul><footer class="pd-footer"><span>DIGITAL-FIRST ASSURANCE</span><span>VERIFIED ALLIANCE</span></footer></article><article class="pd-panel" id="pd-panel-3" role="tabpanel" aria-labelledby="pd-tab-3" tabindex="0" hidden style="--pd-accent:#8a61cf;--pd-tint:#f2edfb"><div class="pd-category"><span class="pd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8 3v6c0 6-8 9-8 9s-8-3-8-9V6Z"/><path d="M8 12h8m-4-4v8"/></svg></span><span>FINANCIAL PROTECTION</span></div><h3>MAX LIFE INSURANCE</h3><p class="pd-description">Max Life Insurance Company Limited is known for its strong focus on long-term financial protection, offering a wide range of life insurance and savings plans.</p><ul class="pd-points"><li style="--row:0"><span class="pd-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8 3v6c0 6-8 9-8 9s-8-3-8-9V6Z"/><path d="M8 12h8m-4-4v8"/></svg></span><p>The company emphasizes customer-centric services, ensuring transparent policies and dependable support throughout the policy lifecycle.</p></li><li style="--row:1"><span class="pd-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8 3v6c0 6-8 9-8 9s-8-3-8-9V6Z"/><path d="M8 12h8m-4-4v8"/></svg></span><p>With a commitment to innovation and digital excellence, it provides seamless and efficient insurance solutions.</p></li><li style="--row:2"><span class="pd-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8 3v6c0 6-8 9-8 9s-8-3-8-9V6Z"/><path d="M8 12h8m-4-4v8"/></svg></span><p>Its strong financial stability and trusted market reputation make it a reliable partner in delivering secure and sustainable growth.</p></li></ul><footer class="pd-footer"><span>SUSTAINED GROWTH</span><span>VERIFIED ALLIANCE</span></footer></article><article class="pd-panel" id="pd-panel-4" role="tabpanel" aria-labelledby="pd-tab-4" tabindex="0" hidden style="--pd-accent:#508ccc;--pd-tint:#edf5fc"><div class="pd-category"><span class="pd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 16c0-3-3-4-3-7a7 7 0 0 1 14 0c0 3-3 4-3 7Zm1 3h6m-5 3h4"/></svg></span><span>STRATEGIC INNOVATION</span></div><h3>DRISHTI</h3><p class="pd-description">Drishti brings a forward-looking approach, combining innovation with practical strategies to drive impactful results.</p><ul class="pd-points"><li style="--row:0"><span class="pd-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 16c0-3-3-4-3-7a7 7 0 0 1 14 0c0 3-3 4-3 7Zm1 3h6m-5 3h4"/></svg></span><p>Its collaborative mindset and adaptability enable seamless alignment with evolving business needs and market trends.</p></li><li style="--row:1"><span class="pd-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 16c0-3-3-4-3-7a7 7 0 0 1 14 0c0 3-3 4-3 7Zm1 3h6m-5 3h4"/></svg></span><p>The organization focuses on delivering efficient, scalable solutions that support long-term growth and operational excellence.</p></li><li style="--row:2"><span class="pd-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 16c0-3-3-4-3-7a7 7 0 0 1 14 0c0 3-3 4-3 7Zm1 3h6m-5 3h4"/></svg></span><p>With a commitment to continuous improvement, it contributes valuable insights and expertise to strengthen strategic initiatives.</p></li></ul><footer class="pd-footer"><span>OPERATIONAL EXCELLENCE</span><span>VERIFIED ALLIANCE</span></footer></article></div></div><aside class="pd-invitation" style="--pd-accent:#7359e8;--pd-tint:#f3effb"><div class="pd-category"><span class="pd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v4m0 12v4M2 12h4m12 0h4M5 5l3 3m8 8 3 3M5 19l3-3m8-8 3-3"/></svg></span><span>ALLIANCE</span></div><h3>Partner with BGS</h3><p class="pd-description">Join our strategic network of enterprise partners. We combine engineering excellence, rapid talent deployment, and mission-critical systems to create compound market value.</p><ul class="pd-points"><li style="--row:0"><span class="pd-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v4m0 12v4M2 12h4m12 0h4M5 5l3 3m8 8 3 3M5 19l3-3m8-8 3-3"/></svg></span><p>Pan-India Strategic Delivery Network with multi-city presence and rapid ramp-up capability.</p></li><li style="--row:1"><span class="pd-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v4m0 12v4M2 12h4m12 0h4M5 5l3 3m8 8 3 3M5 19l3-3m8-8 3-3"/></svg></span><p>Mutual Confidentiality &amp; NDA Assured under ISO 27001 data governance standards.</p></li><li style="--row:2"><span class="pd-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v4m0 12v4M2 12h4m12 0h4M5 5l3 3m8 8 3 3M5 19l3-3m8-8 3-3"/></svg></span><p>Dedicated Executive Sponsor &amp; Solutions Architect assigned for enterprise-grade deployments.</p></li></ul><footer class="pd-footer"><span>OPEN ADVISORY</span></footer><a class="pd-cta" href="contact.html">Initiate Discussion <span aria-hidden="true">→</span></a></aside></div></section>
+
+		</div>
+	</main>
+
+	<!-- Reusable Footer Component -->
+	<div id="footer"></div>
+
+
+
+
+
+	<!-- Interactive Scripts -->
+	<script>
+		function submitLead() {
+			var feedback = document.getElementById('form-feedback');
+			if (feedback) {
+				feedback.classList.remove('hidden');
+				feedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+			}
+			var form = document.getElementById('lead-form');
+			if (form) {
+				form.reset();
+			}
+		}
+
+		function toggleMobileMenu() {
+			var menu = document.getElementById("mobile-nav-menu");
+			var icon = document.getElementById("mobile-menu-icon");
+			if (menu) {
+				var isHidden = menu.classList.toggle("hidden");
+				if (icon) {
+					icon.textContent = isHidden ? "menu" : "close";
+				}
+			}
+		}
+
+		function toggleMobileServices() {
+			var dropdown = document.getElementById("mobile-services-dropdown");
+			var arrow = document.getElementById("mobile-services-arrow");
+			var btn = document.getElementById("mobile-services-btn");
+			if (dropdown) {
+				var isHidden = dropdown.classList.toggle("hidden");
+				if (arrow) {
+					if (isHidden) {
+						arrow.classList.remove("rotate-180");
+					} else {
+						arrow.classList.add("rotate-180");
+					}
+				}
+				if (btn) {
+					btn.setAttribute("aria-expanded", isHidden ? "false" : "true");
+				}
+			}
+		}
+	</script>
+	<!-- Reusable Component Loader (Navbar & Footer) -->
+	<script src="assets/bgs-components.js"></script>
+</body>
+</html>

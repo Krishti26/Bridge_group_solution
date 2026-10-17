@@ -1,0 +1,3 @@
+Adapted from the user-supplied advantage-solutions and advantage-cloud Lottie JSON files. Paths and illustrations are preserved; SVG stroke reveals and screen fades recreate the motion without loading the reference site scripts. Source JSON is retained beside each SVG. No copy or branding imported. Reduced motion displays a static illustration.
+
+Additional original SVG animations in the same outline style: mobile (apps and cloud APIs), analytics (data to dashboards), crm (customer records and relationships), erp (integrated business modules), project (expert teams and delivery boards), workflow (planning through completion). Applied only to corresponding service and process sections. No new visible text.

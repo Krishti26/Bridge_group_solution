@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Core typography preload -->
+<link rel="preload" href="../assets/amphora-fonts/The%20Future/TheFuture-Regular.subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/amphora-fonts/The%20Future/TheFuture-Medium.subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/amphora-fonts/The%20Future/TheFuture-Bold.subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/amphora-fonts/Tiempos%20Headline/TiemposHeadline-400-Regular-Italic.woff2" as="font" type="font/woff2" crossorigin>
+
+
+<!-- Reveal the finished layout without showing a loading animation. -->
+<style>html.layout-pending body { visibility:hidden !important; }</style>
+<script>
+(() => {
+  const root = document.documentElement;
+  root.classList.add('layout-pending');
+  let observer;
+  const reveal = () => {
+    root.classList.remove('layout-pending');
+    if (observer) observer.disconnect();
+  };
+  const ready = () => {
+    if (root.classList.contains('bgs-layout-ready') && document.querySelector('.bgs-main-navbar')) reveal();
+  };
+  observer = new MutationObserver(ready);
+  observer.observe(root, {childList:true, subtree:true, attributes:true, attributeFilter:['class']});
+  document.addEventListener('DOMContentLoaded', ready, {once:true});
+  setTimeout(reveal, 2500);
+})();
+</script>
+
+
+
+	<meta charset="utf-8"/>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
+	<title>Mobile App Development Services | Bridge Group Solutions</title>
+	<meta name="description" content="End-to-end iOS, Android, and cross-platform app engineering. Scalable cloud architectures, offline-first reliability, and fluid enterprise UX." />
+	<meta name="keywords" content="Mobile app development, iOS app engineering, Android development, Flutter cross-platform apps, enterprise mobile apps, Bridge Group Solutions" />
+	
+			<!-- Open Graph Meta Tags -->
+	<meta property="og:title" content="Mobile App Development Services | Bridge Group Solutions" />
+	<meta property="og:description" content="End-to-end iOS, Android, and cross-platform app engineering. Scalable cloud architectures, offline-first reliability, and fluid enterprise UX." />
+	<meta property="og:url" content="https://www.bridgegroupsolutions.com/services/app.html" />
+	<meta property="og:image" content="https://www.bridgegroupsolutions.com/assets/logo.webp" />
+	<meta property="og:type" content="website" />
+
+	<!-- X (Twitter) Meta Tags -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Mobile App Development Services | Bridge Group Solutions" />
+	<meta name="twitter:description" content="End-to-end iOS, Android, and cross-platform app engineering. Scalable cloud architectures, offline-first reliability, and fluid enterprise UX." />
+	<meta name="twitter:image" content="https://www.bridgegroupsolutions.com/assets/logo.webp" />
+	<link rel="canonical" href="https://www.bridgegroupsolutions.com/services/app.html"/>
+	<link rel="icon" type="image/webp" href="../assets/logo.webp"/>
+
+	<!-- Schema.org Structured Data (JSON-LD) -->
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://www.bridgegroupsolutions.com/services/app.html#service",
+      "serviceType": "Mobile & Web Application Development",
+      "name": "Enterprise Mobile App Development | Bridge Group Solutions",
+      "description": "High-performance iOS, Android, and cross-platform mobile apps engineered for speed, enterprise security, and seamless consumer UX.",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://www.bridgegroupsolutions.com/#organization",
+        "name": "Bridge Group Solutions",
+        "url": "https://www.bridgegroupsolutions.com",
+        "logo": "https://www.bridgegroupsolutions.com/assets/logo.webp"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.bridgegroupsolutions.com/services/app.html#webpage",
+      "url": "https://www.bridgegroupsolutions.com/services/app.html",
+      "name": "Enterprise Mobile App Development | Bridge Group Solutions",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.bridgegroupsolutions.com/#website",
+        "url": "https://www.bridgegroupsolutions.com",
+        "name": "Bridge Group Solutions"
+      }
+    }
+  ]
+}
+	</script>
+
+
+	<!-- Fonts matching index.html -->
+	<link rel="preconnect" href="https://fonts.googleapis.com"/>
+	<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+	<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+	<!-- Tabler Icons CDN -->
+	<link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" rel="stylesheet"/>
+
+	<!-- Base Layer Styles -->
+	<style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style>
+
+	<!-- Tailwind CSS CDN + Design Tokens -->
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script id="tailwind-config">
+		tailwind.config = {
+			darkMode: "class",
+			theme: {
+				extend: {
+					colors: {
+						"surface-container-highest": "#e2e2e4",
+						"on-secondary-container": "#5c647a",
+						"on-surface": "#1a1c1d",
+						"on-error": "#ffffff",
+						"primary-fixed": "#ffdad3",
+						"background": "#f9f9fb",
+						"primary-fixed-dim": "#ffb4a4",
+						"inverse-primary": "#ffb4a4",
+						"surface-bright": "#f9f9fb",
+						"on-tertiary-fixed-variant": "#424656",
+						"tertiary-fixed-dim": "#c3c6d8",
+						"tertiary-fixed": "#dfe1f5",
+						"outline-variant": "#e2bfb7",
+						"error-container": "#ffdad6",
+						"on-primary-container": "#fffbff",
+						"on-tertiary-container": "#fefcff",
+						"error": "#ba1a1a",
+						"tertiary": "#585b6b",
+						"secondary": "#565e74",
+						"surface-container-lowest": "#ffffff",
+						"surface-container-low": "#f3f3f5",
+						"secondary-fixed": "#dae2fd",
+						"secondary-fixed-dim": "#bec6e0",
+						"on-background": "#1a1c1d",
+						"on-secondary": "#ffffff",
+						"on-surface-variant": "#5a413b",
+						"outline": "#8e706a",
+						"secondary-container": "#dae2fd",
+						"surface": "#f9f9fb",
+						"surface-container": "#eeeef0",
+						"inverse-surface": "#2f3132",
+						"tertiary-container": "#707485",
+						"on-tertiary": "#ffffff",
+						"surface-tint": "#b12e11",
+						"inverse-on-surface": "#f0f0f2",
+						"on-primary-fixed": "#3d0600",
+						"surface-dim": "#d9dadc",
+						"on-error-container": "#93000a",
+						"on-primary": "#ffffff",
+						"on-primary-fixed-variant": "#8c1800",
+						"on-secondary-fixed": "#131b2e",
+						"primary-container": "#d04426",
+						"surface-container-high": "#e8e8ea",
+						"primary": "#ad2b0e",
+						"on-secondary-fixed-variant": "#3f465c",
+						"on-tertiary-fixed": "#171b29",
+						"surface-variant": "#e2e2e4"
+					},
+					borderRadius: {
+						"DEFAULT": "0.25rem",
+						"lg": "0.5rem",
+						"xl": "0.75rem",
+						"full": "9999px"
+					},
+					spacing: {
+						"space-sm": "0.5rem",
+						"space-md": "1rem",
+						"space-xs": "0.25rem",
+						"gutter": "1.5rem",
+						"space-lg": "1.5rem",
+						"margin-mobile": "1.25rem",
+						"gutter-mobile": "1rem",
+						"space-xl": "2.5rem",
+						"margin": "3rem"
+					},
+					fontFamily: {
+						"body-md": ["Plus Jakarta Sans"],
+						"body-sm": ["Plus Jakarta Sans"],
+						"label-pill": ["Plus Jakarta Sans"],
+						"display-hero": ["Plus Jakarta Sans"],
+						"headline-lg": ["Plus Jakarta Sans"],
+						"headline-md": ["Plus Jakarta Sans"],
+						"label-eyebrow": ["Space Grotesk"],
+						"body-lg": ["Plus Jakarta Sans"],
+						"display-hero-mobile": ["Plus Jakarta Sans"],
+						"headline-sm": ["Plus Jakarta Sans"],
+						"stat-metric": ["Plus Jakarta Sans"],
+						"label-code": ["Space Grotesk"]
+					},
+					fontSize: {
+						"body-md": ["15px", {"lineHeight": "24px", "fontWeight": "400"}],
+						"body-sm": ["13px", {"lineHeight": "20px", "fontWeight": "400"}],
+						"label-pill": ["12px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+						"display-hero": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+						"headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+						"headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+						"label-eyebrow": ["11px", {"lineHeight": "14px", "letterSpacing": "0.12em", "fontWeight": "700"}],
+						"body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+						"display-hero-mobile": ["36px", {"lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+						"headline-sm": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+						"stat-metric": ["40px", {"lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+						"label-code": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}]
+					}
+				}
+			}
+		}
+	</script>
+
+	<!-- Design Tokens & Theme -->
+	<link rel="stylesheet" href="../assets/bgs-modern-theme.css"/>
+	<!-- Dedicated Stylesheet -->
+	<link rel="stylesheet" href="../assets/services-app.css"/>
+<link rel="stylesheet" href="../assets/amphora-reference.css">
+<link rel="stylesheet" href="../assets/amphora-bgs.css">
+<script defer src="../assets/amphora-bgs.js"></script>
+<link rel="stylesheet" href="../assets/architecture-layers.css">
+<script defer src="../assets/architecture-layers.js"></script>
+</head>
+
+<body class="amphora-theme bg-surface font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+
+	<!-- GLOBAL STICKY HEADER -->
+	<!-- Reusable Navbar Component -->
+	<div id="navbar"></div>
+
+
+
+
+
+		<main class="w-full pt-20 bg-surface min-h-screen">
+		<div class="flex flex-col w-full overflow-hidden">
+
+			<!-- 1. HERO SECTION WITH MOBILE TELEMETRY DECK -->
+			<section class="relative w-full max-w-[1320px] mx-auto px-6 md:px-12 pt-12 pb-16 md:pb-24">
+				<!-- Atmospheric Glows -->
+				<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[650px] pointer-events-none -z-10 overflow-hidden">
+					<div class="absolute top-0 right-10 w-[550px] h-[550px] rounded-full blur-3xl opacity-60" style="background: radial-gradient(circle, rgba(139, 92, 246, 0.22) 0%, rgba(235, 87, 55, 0.12) 40%, rgba(255, 120, 73, 0.05) 75%, transparent 100%);"></div>
+					<div class="absolute top-20 -left-20 w-[500px] h-[500px] rounded-full blur-3xl opacity-50" style="background: radial-gradient(circle, rgba(235, 87, 55, 0.15) 0%, rgba(139, 92, 246, 0.08) 50%, transparent 80%);"></div>
+				</div>
+
+				<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+					<!-- Hero Left Column -->
+					<div class="lg:col-span-6 flex flex-col items-start space-y-6">
+						<div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-surface-container-low shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
+							<span class="relative flex h-2 w-2">
+								<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-violet-600 opacity-75"></span>
+								<span class="relative inline-flex rounded-full h-2 w-2 bg-violet-600"></span>
+							</span>
+							<span class="font-label-eyebrow text-label-eyebrow text-violet-700 uppercase tracking-widest">App Development Services</span>
+						</div>
+
+						<h1 class="font-display-hero text-display-hero text-on-surface tracking-tight leading-[1.08]">
+							Smart App Solutions <span class="text-primary italic font-semibold">Focused</span> on Measurable Impact
+						</h1>
+
+						<p class="font-body-lg text-body-lg text-secondary max-w-xl leading-relaxed">
+							Bridge Group Solutions delivers scalable and high-performance mobile applications tailored for startups, enterprises, and global clients. We specialize in Android and cross-platform app development with a strong focus on user experience, performance, and security. Our CLIENTS ensures your app aligns with your business goals while maintaining industry standards. From idea validation to deployment and maintenance, we handle everything end-to-end. We build apps that drive engagement, retention, and revenue growth.
+						</p>
+
+						<!-- Dual CTAs -->
+						<div class="flex flex-wrap items-center gap-4 pt-2">
+							<a class="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full text-white font-label-pill text-label-pill shadow-[0_8px_25px_rgba(235,87,55,0.4)] hover:shadow-[0_14px_35px_rgba(235,87,55,0.55)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 border border-white/25 font-semibold" href="../contact.html" style="background: linear-gradient(135deg, #ad2b0e 0%, #eb5737 60%, #ff7849 100%);">
+								<span>Start Your Project &rarr;</span>
+							</a>
+							<a class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-surface-container-lowest text-on-surface font-label-pill text-label-pill shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_24px_rgba(139,92,246,0.15)] hover:border-violet-400 hover:-translate-y-0.5 transition-all duration-200 border border-surface-container-high" href="#services">
+								<span class="font-semibold">Explore Services</span>
+								<span class="material-symbols-outlined text-[18px] text-violet-700">arrow_downward</span>
+							</a>
+						</div>
+					</div>
+
+					<!-- Hero Right Column: Mobile Engineering Telemetry Deck -->
+					<div class="lg:col-span-6 relative w-full flex items-center justify-center">
+						<div class="w-full max-w-[560px] p-6 sm:p-8 rounded-3xl bg-surface-container-lowest shadow-[0_25px_60px_rgba(139,92,246,0.12),0_10px_30px_rgba(15,23,42,0.06)] relative overflow-hidden flex flex-col gap-6 border border-violet-200">
+							<!-- Header -->
+							<div class="flex items-center justify-between border-b border-surface-container-high pb-4">
+								<div class="flex items-center gap-2.5">
+									<div class="flex gap-1.5">
+										<span class="w-3 h-3 rounded-full bg-red-400 inline-block"></span>
+										<span class="w-3 h-3 rounded-full bg-amber-400 inline-block"></span>
+										<span class="w-3 h-3 rounded-full bg-emerald-400 inline-block"></span>
+									</div>
+									<span class="font-headline-sm text-[15px] font-bold text-on-surface ml-2">Native Runtime Telemetry</span>
+								</div>
+								<div class="flex items-center gap-2 px-3 py-1 rounded-full shadow-sm border border-emerald-200 bg-emerald-50">
+									<span class="h-2 w-2 rounded-full bg-emerald-500 animate-ping"></span>
+									<span class="font-label-code text-[11px] font-bold text-emerald-800">60 FPS LOCKED</span>
+								</div>
+							</div>
+
+							<!-- 3 Metrics -->
+							<div class="grid grid-cols-3 gap-3">
+								<div class="p-3.5 rounded-2xl bg-surface-container-low border border-surface-container-high/60 flex flex-col">
+									<span class="font-label-eyebrow text-[10px] text-secondary uppercase font-bold">FRAME RATE</span>
+									<span class="font-stat-metric text-[22px] sm:text-[24px] font-extrabold text-violet-600 mt-1">120 FPS</span>
+									<span class="text-[11px] text-secondary mt-0.5">Smooth Gestures</span>
+								</div>
+								<div class="p-3.5 rounded-2xl bg-surface-container-low border border-surface-container-high/60 flex flex-col">
+									<span class="font-label-eyebrow text-[10px] text-secondary uppercase font-bold">COLD BOOT</span>
+									<span class="font-stat-metric text-[22px] sm:text-[24px] font-extrabold text-emerald-600 mt-1">&lt;0.4s</span>
+									<span class="text-[11px] text-secondary mt-0.5">Instant Launch</span>
+								</div>
+								<div class="p-3.5 rounded-2xl bg-surface-container-low border border-surface-container-high/60 flex flex-col">
+									<span class="font-label-eyebrow text-[10px] text-secondary uppercase font-bold">CRASH FREE</span>
+									<span class="font-stat-metric text-[22px] sm:text-[24px] font-extrabold text-primary mt-1">99.98%</span>
+									<span class="text-[11px] text-secondary mt-0.5">Enterprise Grade</span>
+								</div>
+							</div>
+
+							<!-- Offline SQLite Engine Visualization -->
+							<div class="p-4 rounded-2xl bg-slate-900 text-white flex flex-col gap-2 shadow-inner">
+								<div class="flex items-center justify-between text-[11px] font-label-code text-slate-400">
+									<span>OFFLINE SQLITE ENGINE</span>
+									<span class="text-emerald-400 font-bold flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>SYNC ACTIVE</span>
+								</div>
+								<div class="flex items-center justify-between font-label-code text-[12px]">
+									<span class="text-slate-200">Biometric Keychain &amp; Secure Enclave</span>
+									<span class="text-violet-300 font-bold">Zero Data Loss</span>
+								</div>
+								<div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden mt-1">
+									<div class="bg-violet-500 h-full rounded-full" style="width: 100%;"></div>
+								</div>
+							</div>
+
+							<div class="flex items-center justify-between text-secondary font-label-code text-[11px] pt-1">
+								<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-violet-600">verified</span>App Store &amp; Play Store Verified</span>
+								<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-violet-600">fingerprint</span>Biometric Sec</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 2. STATS STRIP -->
+			<section class="w-full bg-surface-container-low py-8 md:py-10 border-y border-surface-container-high/60">
+				<div class="max-w-[1100px] mx-auto px-6 md:px-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+					<div class="flex flex-col items-center">
+						<span class="font-display-hero text-[34px] sm:text-[40px] md:text-[44px] font-bold text-primary tracking-tight leading-none">500+</span>
+						<span class="font-body-sm text-secondary font-medium mt-2">Apps Delivered Worldwide</span>
+					</div>
+					<div class="flex flex-col items-center">
+						<span class="font-display-hero text-[34px] sm:text-[40px] md:text-[44px] font-bold text-violet-600 tracking-tight leading-none">98%</span>
+						<span class="font-body-sm text-secondary font-medium mt-2">Client Satisfaction Rate</span>
+					</div>
+					<div class="flex flex-col items-center">
+						<span class="font-display-hero text-[34px] sm:text-[40px] md:text-[44px] font-bold text-emerald-600 tracking-tight leading-none">12+</span>
+						<span class="font-body-sm text-secondary font-medium mt-2">Years of Experience</span>
+					</div>
+					<div class="flex flex-col items-center">
+						<span class="font-display-hero text-[34px] sm:text-[40px] md:text-[44px] font-bold text-primary tracking-tight leading-none">40+</span>
+						<span class="font-body-sm text-secondary font-medium mt-2">Global Markets Served</span>
+					</div>
+				</div>
+			</section>
+
+			<!-- 3. SERVICES SECTION -->
+			<section id="services" class="w-full max-w-[1320px] mx-auto px-6 md:px-12 py-20 md:py-24">
+				<div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
+					<span class="font-label-eyebrow text-label-eyebrow text-violet-700 uppercase tracking-widest">What We Offer</span>
+					<h2 class="font-headline-lg text-[32px] md:text-[40px] text-on-surface font-bold tracking-tight mt-1">
+						Full-Spectrum Mobile <span class="text-primary italic font-semibold">Development Services</span>
+					</h2>
+					<p class="font-body-md text-body-md text-secondary mt-3">
+						Every service designed to deliver business outcomes — not just working software.
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+					<!-- Card 1 -->
+					<div class="p-8 rounded-3xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(20,184,166,0.18)] hover:border-teal-400 hover:-translate-y-1.5 transition-all duration-300 border border-surface-container-high flex flex-col justify-between group" data-card-color="teal">
+						<div>
+							<div class="w-12 h-12 rounded-2xl bg-teal-500/10 text-teal-700 flex items-center justify-center text-2xl mb-6">📱</div>
+							<h3 class="font-headline-sm text-[18px] font-bold text-on-surface mb-2 group-hover:text-teal-600 transition-colors">Custom Android &amp; iOS Development</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">Native applications built to take full advantage of each platform's capabilities — delivering the best possible user experience and store performance.</p>
+						</div>
+					</div>
+
+					<!-- Card 2 -->
+					<div class="p-8 rounded-3xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.18)] hover:border-primary/40 hover:-translate-y-1.5 transition-all duration-300 border border-surface-container-high flex flex-col justify-between group" data-card-color="primary">
+						<div>
+							<div class="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center text-2xl mb-6">⚡</div>
+							<h3 class="font-headline-sm text-[18px] font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">Cross-Platform Development</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">Flutter and React Native solutions that deploy to both iOS and Android from a single codebase — cutting time-to-market and maintenance overhead significantly.</p>
+						</div>
+					</div>
+
+					<!-- Card 3 -->
+					<div class="p-8 rounded-3xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(139,92,246,0.18)] hover:border-violet-400 hover:-translate-y-1.5 transition-all duration-300 border border-surface-container-high flex flex-col justify-between group" data-card-color="violet">
+						<div>
+							<div class="w-12 h-12 rounded-2xl bg-violet-100 text-violet-700 flex items-center justify-center text-2xl mb-6">🎨</div>
+							<h3 class="font-headline-sm text-[18px] font-bold text-on-surface mb-2 group-hover:text-violet-600 transition-colors">UI/UX Design &amp; Prototyping</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">Research-driven, visually refined interfaces that drive engagement and reduce churn. We prototype early, test often, and iterate until it's right.</p>
+						</div>
+					</div>
+
+					<!-- Card 4 -->
+					<div class="p-8 rounded-3xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(16,185,129,0.18)] hover:border-emerald-400 hover:-translate-y-1.5 transition-all duration-300 border border-surface-container-high flex flex-col justify-between group" data-card-color="emerald">
+						<div>
+							<div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-2xl mb-6">🔧</div>
+							<h3 class="font-headline-sm text-[18px] font-bold text-on-surface mb-2 group-hover:text-emerald-600 transition-colors">Maintenance &amp; Performance Optimization</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">Ongoing support, OS compatibility updates, performance tuning, crash monitoring, and feature iterations that keep your app competitive long-term.</p>
+						</div>
+					</div>
+
+					<!-- Card 5 -->
+					<div class="p-8 rounded-3xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(14,165,233,0.18)] hover:border-sky-400 hover:-translate-y-1.5 transition-all duration-300 border border-surface-container-high flex flex-col justify-between group" data-card-color="sky">
+						<div>
+							<div class="w-12 h-12 rounded-2xl bg-sky-100 text-sky-700 flex items-center justify-center text-2xl mb-6">🌐</div>
+							<h3 class="font-headline-sm text-[18px] font-bold text-on-surface mb-2 group-hover:text-sky-600 transition-colors">Progressive Web Apps (PWA)</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">App-like speed and offline functionality delivered directly through modern browsers — expanding discoverability without store friction.</p>
+						</div>
+					</div>
+
+					<!-- Card 6 -->
+					<div class="p-8 rounded-3xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(99,102,241,0.18)] hover:border-indigo-400 hover:-translate-y-1.5 transition-all duration-300 border border-surface-container-high flex flex-col justify-between group" data-card-color="indigo">
+						<div>
+							<div class="w-12 h-12 rounded-2xl bg-indigo-100 text-indigo-700 flex items-center justify-center text-2xl mb-6">☁️</div>
+							<h3 class="font-headline-sm text-[18px] font-bold text-on-surface mb-2 group-hover:text-indigo-600 transition-colors">Mobile Backend &amp; Cloud APIs</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">High-throughput microservices, real-time GraphQL endpoints, push notifications, and resilient cloud architectures supporting millions of concurrent mobile sessions.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 4. KEY FEATURES & DEVELOPMENT LIFECYCLE SECTION -->
+			<section id="features" class="w-full bg-surface-container-low/60 py-20 md:py-24 border-y border-surface-container-high/60">
+				<div class="max-w-[1320px] mx-auto px-6 md:px-12">
+					<div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-stretch">
+						<!-- Features List Left -->
+						<div class="flex flex-col">
+							<div class="mb-8">
+								<span class="font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-widest">Key Features</span>
+								<h2 class="font-headline-lg text-[28px] sm:text-[34px] md:text-[38px] text-on-surface font-bold tracking-tight mt-1 leading-tight">
+									Every App We Ship Is Built to <span class="text-primary italic font-semibold">Enterprise Standards</span>
+								</h2>
+								<p class="font-body-md text-body-md text-secondary mt-3">
+									Scalability, security, and speed aren't premium add-ons — they're defaults in everything we build.
+								</p>
+							</div>
+
+							<div class="flex flex-col gap-4 flex-1">
+								<!-- Item 1 -->
+								<div class="p-4 sm:p-5 rounded-2xl bg-surface-container-lowest border border-surface-container-high hover:border-primary/40 shadow-sm hover:shadow-[0_10px_30px_rgba(235,87,55,0.08)] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-4 min-h-[96px] group">
+									<div class="w-11 h-11 rounded-xl bg-primary/10 border border-primary/20 text-primary font-label-code text-[13px] font-bold flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
+										01
+									</div>
+									<div class="flex-1 min-w-0">
+										<h4 class="font-headline-sm text-[15px] sm:text-[16px] font-bold text-on-surface mb-1 group-hover:text-primary transition-colors">
+											Scalable Architecture for Future Growth
+										</h4>
+										<p class="font-body-sm text-[13px] text-secondary leading-relaxed">
+											Modular, loosely coupled systems that scale horizontally as your user base expands — without costly rewrites.
+										</p>
+									</div>
+								</div>
+
+								<!-- Item 2 -->
+								<div class="p-4 sm:p-5 rounded-2xl bg-surface-container-lowest border border-surface-container-high hover:border-primary/40 shadow-sm hover:shadow-[0_10px_30px_rgba(235,87,55,0.08)] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-4 min-h-[96px] group">
+									<div class="w-11 h-11 rounded-xl bg-primary/10 border border-primary/20 text-primary font-label-code text-[13px] font-bold flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
+										02
+									</div>
+									<div class="flex-1 min-w-0">
+										<h4 class="font-headline-sm text-[15px] sm:text-[16px] font-bold text-on-surface mb-1 group-hover:text-primary transition-colors">
+											Seamless API &amp; Third-Party Integrations
+										</h4>
+										<p class="font-body-sm text-[13px] text-secondary leading-relaxed">
+											Clean integration layer for payment gateways, CRMs, analytics platforms, and any backend services your business needs.
+										</p>
+									</div>
+								</div>
+
+								<!-- Item 3 -->
+								<div class="p-4 sm:p-5 rounded-2xl bg-surface-container-lowest border border-surface-container-high hover:border-primary/40 shadow-sm hover:shadow-[0_10px_30px_rgba(235,87,55,0.08)] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-4 min-h-[96px] group">
+									<div class="w-11 h-11 rounded-xl bg-primary/10 border border-primary/20 text-primary font-label-code text-[13px] font-bold flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
+										03
+									</div>
+									<div class="flex-1 min-w-0">
+										<h4 class="font-headline-sm text-[15px] sm:text-[16px] font-bold text-on-surface mb-1 group-hover:text-primary transition-colors">
+											High-End Data Security Standards
+										</h4>
+										<p class="font-body-sm text-[13px] text-secondary leading-relaxed">
+											End-to-end encryption, OAuth2 / biometric authentication, GDPR-compliant data handling, and penetration testing protocols.
+										</p>
+									</div>
+								</div>
+
+								<!-- Item 4 -->
+								<div class="p-4 sm:p-5 rounded-2xl bg-surface-container-lowest border border-surface-container-high hover:border-primary/40 shadow-sm hover:shadow-[0_10px_30px_rgba(235,87,55,0.08)] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-4 min-h-[96px] group">
+									<div class="w-11 h-11 rounded-xl bg-primary/10 border border-primary/20 text-primary font-label-code text-[13px] font-bold flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
+										04
+									</div>
+									<div class="flex-1 min-w-0">
+										<h4 class="font-headline-sm text-[15px] sm:text-[16px] font-bold text-on-surface mb-1 group-hover:text-primary transition-colors">
+											Fast Loading &amp; Optimized Performance
+										</h4>
+										<p class="font-body-sm text-[13px] text-secondary leading-relaxed">
+											Sub-second render times, lazy loading, efficient state management, and profiled builds that respect device constraints.
+										</p>
+									</div>
+								</div>
+
+								<!-- Item 5 -->
+								<div class="p-4 sm:p-5 rounded-2xl bg-surface-container-lowest border border-surface-container-high hover:border-primary/40 shadow-sm hover:shadow-[0_10px_30px_rgba(235,87,55,0.08)] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-4 min-h-[96px] group">
+									<div class="w-11 h-11 rounded-xl bg-primary/10 border border-primary/20 text-primary font-label-code text-[13px] font-bold flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
+										05
+									</div>
+									<div class="flex-1 min-w-0">
+										<h4 class="font-headline-sm text-[15px] sm:text-[16px] font-bold text-on-surface mb-1 group-hover:text-primary transition-colors">
+											User-Friendly &amp; Intuitive Interface
+										</h4>
+										<p class="font-body-sm text-[13px] text-secondary leading-relaxed">
+											Accessibility-first, tested with real users — interfaces that minimize friction and maximize session depth.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Development Lifecycle Right -->
+						<div class="flex flex-col">
+							<div class="mb-8">
+								<span class="font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-widest">Development Lifecycle</span>
+								<h2 class="font-headline-lg text-[28px] sm:text-[34px] md:text-[38px] text-on-surface font-bold tracking-tight mt-1 leading-tight">
+									Agile Delivery with Proven <span class="text-primary italic font-semibold">Sprint Cadence</span>
+								</h2>
+								<p class="font-body-md text-body-md text-secondary mt-3">
+									Two-week iterations with continuous delivery, verified QA benchmarks, and direct stakeholder demos.
+								</p>
+							</div>
+
+							<div class="flex flex-col gap-4 flex-1">
+								<!-- Phase 1 -->
+								<div class="p-4 sm:p-5 rounded-2xl bg-surface-container-lowest border border-surface-container-high hover:border-primary/40 shadow-sm hover:shadow-[0_10px_30px_rgba(235,87,55,0.08)] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-4 min-h-[96px] group">
+									<div class="w-11 h-11 rounded-xl bg-primary/10 border border-primary/20 text-primary font-label-code text-[13px] font-bold flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
+										01
+									</div>
+									<div class="flex-1 min-w-0">
+										<div class="flex items-center gap-2 mb-1 flex-wrap">
+											<h4 class="font-headline-sm text-[15px] sm:text-[16px] font-bold text-on-surface group-hover:text-primary transition-colors">
+												Discovery &amp; Requirements
+											</h4>
+											<span class="px-2 py-0.5 rounded-md bg-surface-container-low text-primary border border-primary/20 font-label-code text-[10px] font-bold uppercase tracking-wider shrink-0">
+												Week 1&ndash;2
+											</span>
+										</div>
+										<p class="font-body-sm text-[13px] text-secondary leading-relaxed">
+											Business goals, user research, technical feasibility, and architecture planning.
+										</p>
+									</div>
+								</div>
+
+								<!-- Phase 2 -->
+								<div class="p-4 sm:p-5 rounded-2xl bg-surface-container-lowest border border-surface-container-high hover:border-primary/40 shadow-sm hover:shadow-[0_10px_30px_rgba(235,87,55,0.08)] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-4 min-h-[96px] group">
+									<div class="w-11 h-11 rounded-xl bg-primary/10 border border-primary/20 text-primary font-label-code text-[13px] font-bold flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
+										02
+									</div>
+									<div class="flex-1 min-w-0">
+										<div class="flex items-center gap-2 mb-1 flex-wrap">
+											<h4 class="font-headline-sm text-[15px] sm:text-[16px] font-bold text-on-surface group-hover:text-primary transition-colors">
+												Design &amp; Prototype
+											</h4>
+											<span class="px-2 py-0.5 rounded-md bg-surface-container-low text-primary border border-primary/20 font-label-code text-[10px] font-bold uppercase tracking-wider shrink-0">
+												Week 3&ndash;4
+											</span>
+										</div>
+										<p class="font-body-sm text-[13px] text-secondary leading-relaxed">
+											Wireframes, high-fidelity UI, interactive prototype, and stakeholder sign-off.
+										</p>
+									</div>
+								</div>
+
+								<!-- Phase 3 -->
+								<div class="p-4 sm:p-5 rounded-2xl bg-surface-container-lowest border border-surface-container-high hover:border-primary/40 shadow-sm hover:shadow-[0_10px_30px_rgba(235,87,55,0.08)] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-4 min-h-[96px] group">
+									<div class="w-11 h-11 rounded-xl bg-primary/10 border border-primary/20 text-primary font-label-code text-[13px] font-bold flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
+										03
+									</div>
+									<div class="flex-1 min-w-0">
+										<div class="flex items-center gap-2 mb-1 flex-wrap">
+											<h4 class="font-headline-sm text-[15px] sm:text-[16px] font-bold text-on-surface group-hover:text-primary transition-colors">
+												Agile Development Sprints
+											</h4>
+											<span class="px-2 py-0.5 rounded-md bg-surface-container-low text-primary border border-primary/20 font-label-code text-[10px] font-bold uppercase tracking-wider shrink-0">
+												Week 5&ndash;12
+											</span>
+										</div>
+										<p class="font-body-sm text-[13px] text-secondary leading-relaxed">
+											Two-week sprints with continuous delivery, QA testing, and client demos.
+										</p>
+									</div>
+								</div>
+
+								<!-- Phase 4 -->
+								<div class="p-4 sm:p-5 rounded-2xl bg-surface-container-lowest border border-surface-container-high hover:border-primary/40 shadow-sm hover:shadow-[0_10px_30px_rgba(235,87,55,0.08)] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-4 min-h-[96px] group">
+									<div class="w-11 h-11 rounded-xl bg-primary/10 border border-primary/20 text-primary font-label-code text-[13px] font-bold flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
+										04
+									</div>
+									<div class="flex-1 min-w-0">
+										<div class="flex items-center gap-2 mb-1 flex-wrap">
+											<h4 class="font-headline-sm text-[15px] sm:text-[16px] font-bold text-on-surface group-hover:text-primary transition-colors">
+												Testing &amp; Store Deployment
+											</h4>
+											<span class="px-2 py-0.5 rounded-md bg-surface-container-low text-primary border border-primary/20 font-label-code text-[10px] font-bold uppercase tracking-wider shrink-0">
+												Week 13&ndash;14
+											</span>
+										</div>
+										<p class="font-body-sm text-[13px] text-secondary leading-relaxed">
+											Performance benchmarking, security audit, and app store submission.
+										</p>
+									</div>
+								</div>
+
+								<!-- Phase 5 -->
+								<div class="p-4 sm:p-5 rounded-2xl bg-surface-container-lowest border border-surface-container-high hover:border-primary/40 shadow-sm hover:shadow-[0_10px_30px_rgba(235,87,55,0.08)] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-4 min-h-[96px] group">
+									<div class="w-11 h-11 rounded-xl bg-primary/10 border border-primary/20 text-primary font-label-code text-[13px] font-bold flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
+										05
+									</div>
+									<div class="flex-1 min-w-0">
+										<div class="flex items-center gap-2 mb-1 flex-wrap">
+											<h4 class="font-headline-sm text-[15px] sm:text-[16px] font-bold text-on-surface group-hover:text-primary transition-colors">
+												Maintenance &amp; Growth
+											</h4>
+											<span class="px-2 py-0.5 rounded-md bg-surface-container-low text-primary border border-primary/20 font-label-code text-[10px] font-bold uppercase tracking-wider shrink-0">
+												Ongoing
+											</span>
+										</div>
+										<p class="font-body-sm text-[13px] text-secondary leading-relaxed">
+											Monitoring, updates, feature development, and performance optimization.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 5. PROCESS / HOW WE WORK -->
+			<section id="process" class="w-full max-w-[1320px] mx-auto px-6 md:px-12 py-20 md:py-24">
+				<div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
+					<span class="font-label-eyebrow text-label-eyebrow text-violet-700 uppercase tracking-widest">How We Work</span>
+					<h2 class="font-headline-lg text-[32px] md:text-[40px] text-on-surface font-bold tracking-tight mt-1">
+						A Proven Process That <span class="text-primary italic font-semibold">Delivers on Time</span>
+					</h2>
+				</div>
+
+				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+					<!-- Step 1 -->
+					<div class="p-6 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-sm hover:border-amber-400 hover:shadow-[0_20px_45px_rgba(245,158,11,0.18)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-card-color="amber">
+						<div>
+							<div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl mb-4 group-hover:scale-110 group-hover:bg-amber-600 group-hover:text-white transition-all">💡</div>
+							<span class="font-label-code text-[12px] font-bold text-amber-600/40 group-hover:text-amber-600 transition-colors">01</span>
+							<h4 class="font-headline-sm text-[17px] font-bold text-on-surface mt-2 mb-2 group-hover:text-amber-600 transition-colors">Discover</h4>
+							<p class="font-body-sm text-[13px] text-secondary leading-relaxed">Deep-dive into your goals, users, and technical landscape before a single line of code is written.</p>
+						</div>
+					</div>
+
+					<!-- Step 2 -->
+					<div class="p-6 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-sm hover:border-primary/40 hover:shadow-[0_20px_45px_rgba(235,87,55,0.18)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-card-color="primary">
+						<div>
+							<div class="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center text-xl mb-4 group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all">✏️</div>
+							<span class="font-label-code text-[12px] font-bold text-primary/40 group-hover:text-primary transition-colors">02</span>
+							<h4 class="font-headline-sm text-[17px] font-bold text-on-surface mt-2 mb-2 group-hover:text-primary transition-colors">Design</h4>
+							<p class="font-body-sm text-[13px] text-secondary leading-relaxed">Prototype-first approach — validate UX flows before committing to full development.</p>
+						</div>
+					</div>
+
+					<!-- Step 3 -->
+					<div class="p-6 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-sm hover:border-emerald-400 hover:shadow-[0_20px_45px_rgba(16,185,129,0.18)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-card-color="emerald">
+						<div>
+							<div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-xl mb-4 group-hover:scale-110 group-hover:bg-emerald-600 group-hover:text-white transition-all">⚙️</div>
+							<span class="font-label-code text-[12px] font-bold text-emerald-600/40 group-hover:text-emerald-600 transition-colors">03</span>
+							<h4 class="font-headline-sm text-[17px] font-bold text-on-surface mt-2 mb-2 group-hover:text-emerald-600 transition-colors">Develop</h4>
+							<p class="font-body-sm text-[13px] text-secondary leading-relaxed">Agile sprints with transparent progress tracking, code reviews, and continuous integration.</p>
+						</div>
+					</div>
+
+					<!-- Step 4 -->
+					<div class="p-6 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-sm hover:border-sky-400 hover:shadow-[0_20px_45px_rgba(14,165,233,0.18)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-card-color="sky">
+						<div>
+							<div class="w-12 h-12 rounded-2xl bg-sky-100 text-sky-700 flex items-center justify-center text-xl mb-4 group-hover:scale-110 group-hover:bg-sky-600 group-hover:text-white transition-all">🧪</div>
+							<span class="font-label-code text-[12px] font-bold text-sky-600/40 group-hover:text-sky-600 transition-colors">04</span>
+							<h4 class="font-headline-sm text-[17px] font-bold text-on-surface mt-2 mb-2 group-hover:text-sky-600 transition-colors">Test</h4>
+							<p class="font-body-sm text-[13px] text-secondary leading-relaxed">Automated + manual QA, performance profiling, security auditing, and user acceptance testing.</p>
+						</div>
+					</div>
+
+					<!-- Step 5 -->
+					<div class="p-6 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-sm hover:border-violet-400 hover:shadow-[0_20px_45px_rgba(139,92,246,0.18)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-card-color="violet">
+						<div>
+							<div class="w-12 h-12 rounded-2xl bg-violet-100 text-violet-700 flex items-center justify-center text-xl mb-4 group-hover:scale-110 group-hover:bg-violet-600 group-hover:text-white transition-all">🚀</div>
+							<span class="font-label-code text-[12px] font-bold text-violet-600/40 group-hover:text-violet-600 transition-colors">05</span>
+							<h4 class="font-headline-sm text-[17px] font-bold text-on-surface mt-2 mb-2 group-hover:text-violet-600 transition-colors">Launch</h4>
+							<p class="font-body-sm text-[13px] text-secondary leading-relaxed">Store submissions, phased rollouts, monitoring setup, and post-launch support guarantee.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 6. WHY CHOOSE US / THE BRIDGE GROUP DIFFERENCE -->
+			<section id="why" class="w-full bg-surface-container-low/60 py-20 md:py-24 border-y border-surface-container-high/60">
+				<div class="max-w-[1320px] mx-auto px-6 md:px-12">
+					<div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
+						<span class="font-label-eyebrow text-label-eyebrow text-violet-700 uppercase tracking-widest">Why Choose Us</span>
+						<h2 class="font-headline-lg text-[32px] md:text-[40px] text-on-surface font-bold tracking-tight mt-1">
+							The Bridge Group <span class="text-primary italic font-semibold">Difference</span>
+						</h2>
+						<p class="font-body-md text-body-md text-secondary mt-3">
+							We're not a vendor — we're a long-term technology partner invested in your growth.
+						</p>
+					</div>
+
+					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+						<!-- Why Card 1 -->
+						<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-sm hover:shadow-md hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden group" data-card-color="violet">
+							<span class="absolute top-6 right-6 font-display-hero text-[48px] font-bold text-violet-600/15 group-hover:text-violet-600/30 transition-colors leading-none">01</span>
+							<span class="inline-block px-3 py-1 rounded-full bg-violet-50 text-violet-700 border border-violet-200 font-label-code text-[11px] font-bold mb-4 uppercase tracking-wider">Expertise</span>
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-2 group-hover:text-violet-600 transition-colors">Global Development Experience</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">Our engineers have shipped apps across 40+ markets — understanding regional compliance, performance expectations, and user behavior nuances that generic CLIENTSs miss.</p>
+						</div>
+
+						<!-- Why Card 2 -->
+						<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-sm hover:shadow-md hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden group" data-card-color="primary">
+							<span class="absolute top-6 right-6 font-display-hero text-[48px] font-bold text-primary/15 group-hover:text-primary/30 transition-colors leading-none">02</span>
+							<span class="inline-block px-3 py-1 rounded-full bg-primary-fixed/40 text-primary border border-primary/20 font-label-code text-[11px] font-bold mb-4 uppercase tracking-wider">Value</span>
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">Cost-Effective, High ROI</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">Transparent pricing, no scope creep surprises. We make architecture decisions that minimize future maintenance costs — maximizing return on your development investment.</p>
+						</div>
+
+						<!-- Why Card 3 -->
+						<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-sm hover:shadow-md hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden group" data-card-color="sky">
+							<span class="absolute top-6 right-6 font-display-hero text-[48px] font-bold text-sky-600/15 group-hover:text-sky-600/30 transition-colors leading-none">03</span>
+							<span class="inline-block px-3 py-1 rounded-full bg-sky-50 text-sky-700 border border-sky-200 font-label-code text-[11px] font-bold mb-4 uppercase tracking-wider">Speed</span>
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-2 group-hover:text-sky-600 transition-colors">Agile Delivery &amp; Faster Time to Market</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">Two-week sprint cycles with working demos mean you see real progress constantly — not a six-month black box before your first look at the product.</p>
+						</div>
+
+						<!-- Why Card 4 -->
+						<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-sm hover:shadow-md hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden group" data-card-color="emerald">
+							<span class="absolute top-6 right-6 font-display-hero text-[48px] font-bold text-emerald-600/15 group-hover:text-emerald-600/30 transition-colors leading-none">04</span>
+							<span class="inline-block px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 font-label-code text-[11px] font-bold mb-4 uppercase tracking-wider">Cadence</span>
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-2 group-hover:text-emerald-600 transition-colors">Rapid 2-Week Sprint Cadence</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">Continuous integration and deployment pipelines ensure testable, verified builds are in your hands at the close of every sprint with total visibility.</p>
+						</div>
+
+						<!-- Why Card 5 -->
+						<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-sm hover:shadow-md hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden group" data-card-color="rose">
+							<span class="absolute top-6 right-6 font-display-hero text-[48px] font-bold text-rose-600/15 group-hover:text-rose-600/30 transition-colors leading-none">05</span>
+							<span class="inline-block px-3 py-1 rounded-full bg-rose-50 text-rose-700 border border-rose-200 font-label-code text-[11px] font-bold mb-4 uppercase tracking-wider">Security</span>
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-2 group-hover:text-rose-600 transition-colors">Bank-Grade Mobile Security</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">OWASP Mobile Top 10 compliance, end-to-end payload encryption, biometric authentication, and strict tamper protection baked into every release.</p>
+						</div>
+
+						<!-- Why Card 6 -->
+						<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-sm hover:shadow-md hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden group" data-card-color="amber">
+							<span class="absolute top-6 right-6 font-display-hero text-[48px] font-bold text-amber-600/15 group-hover:text-amber-600/30 transition-colors leading-none">06</span>
+							<span class="inline-block px-3 py-1 rounded-full bg-amber-50 text-amber-700 border border-amber-200 font-label-code text-[11px] font-bold mb-4 uppercase tracking-wider">Reliability</span>
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-2 group-hover:text-amber-600 transition-colors">Zero-Downtime Store Releases</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">Hands-on Apple App Store and Google Play compliance management, staged rollouts, and rapid hotfix channels ensuring 99.9% crash-free sessions.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 7. TECHNICAL EXCELLENCE / MODERN STACK -->
+			<section id="architecture-layers" aria-labelledby="al-heading"><div class="al-shell"><header class="al-heading"><span class="al-eyebrow">TECHNOLOGIES WE WORK WITH</span><h2 id="al-heading">Modern Stack, <em>Proven Tools</em></h2></header><div class="al-network"><svg class="al-connectors" aria-hidden="true"><g></g></svg><div class="al-layers"><article class="al-layer" style="--assembly:2"><div class="al-surface" aria-hidden="true"></div><h3><span>01</span>Applications</h3><ul><li class="al-pill al-mobile" style="--brand:#0ea5e9;--pill-index:0"><span class="al-logo"><i class="ti ti-brand-flutter text-sky-500" aria-hidden="true"></i></span><span>Flutter</span></li><li class="al-pill al-mobile" style="--brand:#2563eb;--pill-index:1"><span class="al-logo"><i class="ti ti-brand-react text-blue-600" aria-hidden="true"></i></span><span>React Native</span></li><li class="al-pill al-mobile" style="--brand:#9333ea;--pill-index:2"><span class="al-logo"><i class="ti ti-brand-kotlin text-purple-600" aria-hidden="true"></i></span><span>Android / Kotlin</span></li><li class="al-pill al-mobile" style="--brand:#f97316;--pill-index:3"><span class="al-logo"><i class="ti ti-brand-swift text-orange-500" aria-hidden="true"></i></span><span>iOS / Swift</span></li></ul></article><article class="al-layer" style="--assembly:1"><div class="al-surface" aria-hidden="true"></div><h3><span>02</span>Services</h3><ul><li class="al-pill al-connection" style="--brand:#059669;--pill-index:0"><span class="al-logo"><i class="ti ti-brand-nodejs text-emerald-600" aria-hidden="true"></i></span><span>Node.js</span></li><li class="al-pill al-connection" style="--brand:#7c3aed;--pill-index:1"><span class="al-logo"><i class="ti ti-api text-violet-600" aria-hidden="true"></i></span><span>REST APIs</span></li><li class="al-pill al-connection" style="--brand:#db2777;--pill-index:2"><span class="al-logo"><i class="ti ti-brand-graphql text-pink-600" aria-hidden="true"></i></span><span>GraphQL</span></li></ul></article><article class="al-layer" style="--assembly:0"><div class="al-surface" aria-hidden="true"></div><h3><span>03</span>Data &amp; Infrastructure</h3><ul><li class="al-pill al-database" style="--brand:#059669;--pill-index:0"><span class="al-logo"><i class="ti ti-brand-mongodb text-emerald-600" aria-hidden="true"></i></span><span>MongoDB</span></li><li class="al-pill al-database" style="--brand:#2563eb;--pill-index:1"><span class="al-logo"><i class="ti ti-database text-blue-600" aria-hidden="true"></i></span><span>PostgreSQL</span></li><li class="al-pill al-database" style="--brand:#f59e0b;--pill-index:2"><span class="al-logo"><i class="ti ti-brand-firebase text-amber-500" aria-hidden="true"></i></span><span>Firebase</span></li><li class="al-pill al-cloud" style="--brand:#ea580c;--pill-index:3"><span class="al-logo"><i class="ti ti-brand-aws text-orange-600" aria-hidden="true"></i></span><span>AWS</span></li><li class="al-pill al-cloud" style="--brand:#3b82f6;--pill-index:4"><span class="al-logo"><i class="ti ti-brand-docker text-blue-500" aria-hidden="true"></i></span><span>Docker</span></li></ul></article></div></div></div></section>
+
+			<!-- 8. CTA SECTION -->
+			<section class="w-full max-w-[1320px] mx-auto px-6 md:px-12 py-20 md:py-24" id="cta">
+				<div class="p-10 md:p-16 rounded-3xl bg-surface-container-lowest border border-primary/20 shadow-[0_20px_50px_rgba(235,87,55,0.1)] text-center relative overflow-hidden flex flex-col items-center">
+					<!-- Atmospheric Glow -->
+					<div class="absolute -top-24 -right-24 w-80 h-80 rounded-full blur-3xl opacity-40 pointer-events-none" style="background: radial-gradient(circle, rgba(235, 87, 55, 0.3) 0%, transparent 70%);"></div>
+					<div class="absolute -bottom-24 -left-24 w-80 h-80 rounded-full blur-3xl opacity-30 pointer-events-none" style="background: radial-gradient(circle, rgba(139, 92, 246, 0.25) 0%, transparent 70%);"></div>
+
+					<h2 class="font-headline-lg text-[32px] md:text-[48px] lg:text-[54px] text-white font-bold tracking-tight relative z-10 max-w-3xl leading-[1.1] text-center">
+						Build Exceptional Apps.<br />
+						<span class="text-primary italic font-semibold">Accelerated Growth.</span>
+					</h2>
+					<p class="font-body-lg text-body-lg text-secondary max-w-xl mt-4 mb-8 relative z-10 leading-relaxed">
+						Tell us your idea. We'll get back within 24 hours with a clear plan and honest timeline — no obligations, no sales pitch.
+					</p>
+					<div class="flex flex-wrap justify-center gap-4 relative z-10">
+						<a class="inline-flex items-center gap-3 px-9 py-4 rounded-full text-white font-label-pill text-label-pill shadow-[0_8px_25px_rgba(235,87,55,0.4)] hover:shadow-[0_14px_35px_rgba(235,87,55,0.55)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 border border-white/25 text-base font-semibold" href="../contact.html" style="background: linear-gradient(135deg, #ad2b0e 0%, #eb5737 60%, #ff7849 100%);">
+							<span>Get Started &rarr;</span>
+						</a>
+					</div>
+					<p class="font-body-sm text-[12px] text-secondary mt-6 relative z-10">
+						No credit card required &bull; Free initial consultation &bull; Response within 24h
+					</p>
+				</div>
+			</section>
+
+		</div>
+	</main>
+
+	<!-- GLOBAL HIGH-CONTRAST FOOTER -->
+	<!-- Reusable Footer Component -->
+	<div id="footer"></div>
+
+
+
+
+
+	<!-- Interactive Scripts -->
+	<script>
+		function toggleMobileMenu() {
+			var menu = document.getElementById("mobile-nav-menu");
+			var icon = document.getElementById("mobile-menu-icon");
+			if (menu) {
+				var isHidden = menu.classList.toggle("hidden");
+				if (icon) {
+					icon.textContent = isHidden ? "menu" : "close";
+				}
+			}
+		}
+
+		function toggleMobileServices() {
+			var dropdown = document.getElementById("mobile-services-dropdown");
+			var arrow = document.getElementById("mobile-services-arrow");
+			var btn = document.getElementById("mobile-services-btn");
+			if (dropdown) {
+				var isHidden = dropdown.classList.toggle("hidden");
+				if (arrow) {
+					if (isHidden) {
+						arrow.classList.remove("rotate-180");
+					} else {
+						arrow.classList.add("rotate-180");
+					}
+				}
+				if (btn) {
+					btn.setAttribute("aria-expanded", isHidden ? "false" : "true");
+				}
+			}
+		}
+
+		function toggleFaq(el) {
+			var isActive = el.classList.contains('active');
+			var allFaqs = document.querySelectorAll('.faq-item');
+			allFaqs.forEach(function(item) {
+				item.classList.remove('active');
+				var chev = item.querySelector('.faq-chevron');
+				if (chev) {
+					chev.classList.remove('text-violet-700');
+					chev.classList.add('text-secondary');
+				}
+			});
+			if (!isActive) {
+				el.classList.add('active');
+				var chev = el.querySelector('.faq-chevron');
+				if (chev) {
+					chev.classList.remove('text-secondary');
+					chev.classList.add('text-violet-700');
+				}
+			}
+		}
+	</script>
+	<!-- Reusable Component Loader (Navbar & Footer) -->
+	<script src="../assets/bgs-components.js"></script>
+</body>
+</html>

@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Core typography preload -->
+<link rel="preload" href="../assets/amphora-fonts/The%20Future/TheFuture-Regular.subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/amphora-fonts/The%20Future/TheFuture-Medium.subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/amphora-fonts/The%20Future/TheFuture-Bold.subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/amphora-fonts/Tiempos%20Headline/TiemposHeadline-400-Regular-Italic.woff2" as="font" type="font/woff2" crossorigin>
+
+
+<!-- Reveal the finished layout without showing a loading animation. -->
+<style>html.layout-pending body { visibility:hidden !important; }</style>
+<script>
+(() => {
+  const root = document.documentElement;
+  root.classList.add('layout-pending');
+  let observer;
+  const reveal = () => {
+    root.classList.remove('layout-pending');
+    if (observer) observer.disconnect();
+  };
+  const ready = () => {
+    if (root.classList.contains('bgs-layout-ready') && document.querySelector('.bgs-main-navbar')) reveal();
+  };
+  observer = new MutationObserver(ready);
+  observer.observe(root, {childList:true, subtree:true, attributes:true, attributeFilter:['class']});
+  document.addEventListener('DOMContentLoaded', ready, {once:true});
+  setTimeout(reveal, 2500);
+})();
+</script>
+
+
+
+	<meta charset="utf-8"/>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
+	<title>Enterprise Custom CRM Solutions | Bridge Group Solutions</title>
+	<meta name="description" content="Custom CRM platforms and automated workflow systems engineered to accelerate lead velocity, customer lifetime value, and sales performance." />
+	<meta name="keywords" content="Enterprise CRM solutions, custom CRM software, sales automation systems, customer relationship management, Bridge Group Solutions CRM" />
+	
+			<!-- Open Graph Meta Tags -->
+	<meta property="og:title" content="Enterprise Custom CRM Solutions | Bridge Group Solutions" />
+	<meta property="og:description" content="Custom CRM platforms and automated workflow systems engineered to accelerate lead velocity, customer lifetime value, and sales performance." />
+	<meta property="og:url" content="https://www.bridgegroupsolutions.com/services/crm.html" />
+	<meta property="og:image" content="https://www.bridgegroupsolutions.com/assets/logo.webp" />
+	<meta property="og:type" content="website" />
+
+	<!-- X (Twitter) Meta Tags -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Enterprise Custom CRM Solutions | Bridge Group Solutions" />
+	<meta name="twitter:description" content="Custom CRM platforms and automated workflow systems engineered to accelerate lead velocity, customer lifetime value, and sales performance." />
+	<meta name="twitter:image" content="https://www.bridgegroupsolutions.com/assets/logo.webp" />
+	<link rel="canonical" href="https://www.bridgegroupsolutions.com/services/crm.html"/>
+	<link rel="icon" type="image/webp" href="../assets/logo.webp"/>
+
+	<!-- Schema.org Structured Data (JSON-LD) -->
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://www.bridgegroupsolutions.com/services/crm.html#service",
+      "serviceType": "Custom CRM Solutions & Architecture",
+      "name": "Enterprise Custom CRM Solutions | Bridge Group Solutions",
+      "description": "Custom CRM platforms and automated workflow systems engineered to accelerate lead velocity, customer lifetime value, and sales performance.",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://www.bridgegroupsolutions.com/#organization",
+        "name": "Bridge Group Solutions",
+        "url": "https://www.bridgegroupsolutions.com",
+        "logo": "https://www.bridgegroupsolutions.com/assets/logo.webp"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.bridgegroupsolutions.com/services/crm.html#webpage",
+      "url": "https://www.bridgegroupsolutions.com/services/crm.html",
+      "name": "Enterprise Custom CRM Solutions | Bridge Group Solutions",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.bridgegroupsolutions.com/#website",
+        "url": "https://www.bridgegroupsolutions.com",
+        "name": "Bridge Group Solutions"
+      }
+    }
+  ]
+}
+	</script>
+
+
+	<!-- Fonts matching index.html -->
+	<link rel="preconnect" href="https://fonts.googleapis.com"/>
+	<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+	<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+	<!-- Tabler Icons CDN -->
+	<link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" rel="stylesheet"/>
+
+	<!-- Base Layer Styles -->
+	<style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style>
+
+	<!-- Tailwind CSS CDN + Design Tokens -->
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script id="tailwind-config">
+		tailwind.config = {
+			darkMode: "class",
+			theme: {
+				extend: {
+					colors: {
+						"surface-container-highest": "#e2e2e4",
+						"on-secondary-container": "#5c647a",
+						"on-surface": "#1a1c1d",
+						"on-error": "#ffffff",
+						"primary-fixed": "#ffdad3",
+						"background": "#f9f9fb",
+						"primary-fixed-dim": "#ffb4a4",
+						"inverse-primary": "#ffb4a4",
+						"surface-bright": "#f9f9fb",
+						"on-tertiary-fixed-variant": "#424656",
+						"tertiary-fixed-dim": "#c3c6d8",
+						"tertiary-fixed": "#dfe1f5",
+						"outline-variant": "#e2bfb7",
+						"error-container": "#ffdad6",
+						"on-primary-container": "#fffbff",
+						"on-tertiary-container": "#fefcff",
+						"error": "#ba1a1a",
+						"tertiary": "#585b6b",
+						"secondary": "#565e74",
+						"surface-container-lowest": "#ffffff",
+						"surface-container-low": "#f3f3f5",
+						"secondary-fixed": "#dae2fd",
+						"secondary-fixed-dim": "#bec6e0",
+						"on-background": "#1a1c1d",
+						"on-secondary": "#ffffff",
+						"on-surface-variant": "#5a413b",
+						"outline": "#8e706a",
+						"secondary-container": "#dae2fd",
+						"surface": "#f9f9fb",
+						"surface-container": "#eeeef0",
+						"inverse-surface": "#2f3132",
+						"tertiary-container": "#707485",
+						"on-tertiary": "#ffffff",
+						"surface-tint": "#b12e11",
+						"inverse-on-surface": "#f0f0f2",
+						"on-primary-fixed": "#3d0600",
+						"surface-dim": "#d9dadc",
+						"on-error-container": "#93000a",
+						"on-primary": "#ffffff",
+						"on-primary-fixed-variant": "#8c1800",
+						"on-secondary-fixed": "#131b2e",
+						"primary-container": "#d04426",
+						"surface-container-high": "#e8e8ea",
+						"primary": "#ad2b0e",
+						"on-secondary-fixed-variant": "#3f465c",
+						"on-tertiary-fixed": "#171b29",
+						"surface-variant": "#e2e2e4"
+					},
+					borderRadius: {
+						"DEFAULT": "0.25rem",
+						"lg": "0.5rem",
+						"xl": "0.75rem",
+						"full": "9999px"
+					},
+					spacing: {
+						"space-sm": "0.5rem",
+						"space-md": "1rem",
+						"space-xs": "0.25rem",
+						"gutter": "1.5rem",
+						"space-lg": "1.5rem",
+						"margin-mobile": "1.25rem",
+						"gutter-mobile": "1rem",
+						"space-xl": "2.5rem",
+						"margin": "3rem"
+					},
+					fontFamily: {
+						"body-md": ["Plus Jakarta Sans"],
+						"body-sm": ["Plus Jakarta Sans"],
+						"label-pill": ["Plus Jakarta Sans"],
+						"display-hero": ["Plus Jakarta Sans"],
+						"headline-lg": ["Plus Jakarta Sans"],
+						"headline-md": ["Plus Jakarta Sans"],
+						"label-eyebrow": ["Space Grotesk"],
+						"body-lg": ["Plus Jakarta Sans"],
+						"display-hero-mobile": ["Plus Jakarta Sans"],
+						"headline-sm": ["Plus Jakarta Sans"],
+						"stat-metric": ["Plus Jakarta Sans"],
+						"label-code": ["Space Grotesk"]
+					},
+					fontSize: {
+						"body-md": ["15px", {"lineHeight": "24px", "fontWeight": "400"}],
+						"body-sm": ["13px", {"lineHeight": "20px", "fontWeight": "400"}],
+						"label-pill": ["12px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+						"display-hero": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+						"headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+						"headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+						"label-eyebrow": ["11px", {"lineHeight": "14px", "letterSpacing": "0.12em", "fontWeight": "700"}],
+						"body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+						"display-hero-mobile": ["36px", {"lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+						"headline-sm": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+						"stat-metric": ["40px", {"lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+						"label-code": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}]
+					}
+				}
+			}
+		}
+	</script>
+
+	<!-- Design Tokens & Theme -->
+	<link rel="stylesheet" href="../assets/bgs-modern-theme.css"/>
+	<!-- Dedicated Stylesheet -->
+	<link rel="stylesheet" href="../assets/services-crm.css"/>
+<link rel="stylesheet" href="../assets/amphora-reference.css">
+<link rel="stylesheet" href="../assets/amphora-bgs.css">
+<script defer src="../assets/amphora-bgs.js"></script>
+</head>
+
+<body class="amphora-theme bg-surface font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+
+	<!-- GLOBAL STICKY HEADER -->
+	<!-- Reusable Navbar Component -->
+	<div id="navbar"></div>
+
+
+
+
+
+	<main class="w-full pt-20 bg-surface min-h-screen">
+		<div class="flex flex-col w-full overflow-hidden">
+
+			<!-- 1. HERO SECTION WITH STATS STRIP -->
+			<section class="relative w-full max-w-[1320px] mx-auto px-6 md:px-12 pt-12 pb-16 md:pb-24">
+				<!-- Atmospheric Glows -->
+				<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[650px] pointer-events-none -z-10 overflow-hidden">
+					<div class="absolute top-0 right-10 w-[550px] h-[550px] rounded-full blur-3xl opacity-60" style="background: radial-gradient(circle, rgba(92, 147, 159, 0.22) 0%, rgba(235, 87, 55, 0.12) 40%, rgba(245, 158, 11, 0.05) 75%, transparent 100%);"></div>
+					<div class="absolute top-20 -left-20 w-[500px] h-[500px] rounded-full blur-3xl opacity-50" style="background: radial-gradient(circle, rgba(235, 87, 55, 0.15) 0%, rgba(92, 147, 159, 0.08) 50%, transparent 80%);"></div>
+				</div>
+
+				<div class="flex flex-col items-center text-center max-w-4xl mx-auto space-y-6">
+					<!-- Badge -->
+					<div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-surface-container-low border border-outline-variant/30 shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
+						<span class="relative flex h-2 w-2">
+							<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+							<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+						</span>
+						<span class="font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-widest font-semibold">Custom CRM Solutions for Growing Businesses</span>
+					</div>
+
+					<!-- Headline -->
+					<h1 class="font-display-hero text-display-hero text-on-surface tracking-tight leading-[1.08]">
+						Manage Customers.<br />
+						Close Deals <span class="text-primary italic font-semibold">Faster</span>.
+					</h1>
+
+					<!-- Description -->
+					<p class="font-body-lg text-body-lg text-secondary max-w-2xl mx-auto leading-relaxed">
+						Fully customized CRM systems built around your unique workflow — from lead capture to conversion tracking. One platform, total visibility.
+					</p>
+
+					<!-- Dual CTAs -->
+					<div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+						<a class="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full text-white font-label-pill text-label-pill shadow-[0_8px_25px_rgba(235,87,55,0.4)] hover:shadow-[0_14px_35px_rgba(235,87,55,0.55)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 border border-white/25 font-semibold" href="#cta" style="background: linear-gradient(135deg, #ad2b0e 0%, #eb5737 60%, #ff7849 100%);">
+							<span>Start Your CRM &rarr;</span>
+						</a>
+						<a class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-surface-container-lowest text-on-surface font-label-pill text-label-pill shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_24px_rgba(235,87,55,0.15)] hover:border-primary/40 hover:-translate-y-0.5 transition-all duration-200 border border-surface-container-high font-semibold" href="#features">
+							<span>Explore Features</span>
+							<span class="material-symbols-outlined text-[18px] text-primary">arrow_forward</span>
+						</a>
+					</div>
+
+					<!-- Hero Stats -->
+					<div class="w-full pt-10 mt-6 border-t border-surface-container-high/80">
+						<div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+							<div class="p-4 sm:p-5 rounded-2xl bg-surface-container-low/70 border border-surface-container-high/60 flex flex-col items-center">
+								<span class="font-stat-metric text-[32px] sm:text-[40px] font-extrabold text-on-surface tracking-tight">3&times;</span>
+								<span class="text-xs sm:text-sm font-medium text-secondary mt-1">Sales Productivity</span>
+							</div>
+							<div class="p-4 sm:p-5 rounded-2xl bg-surface-container-low/70 border border-surface-container-high/60 flex flex-col items-center">
+								<span class="font-stat-metric text-[32px] sm:text-[40px] font-extrabold text-on-surface tracking-tight">98%</span>
+								<span class="text-xs sm:text-sm font-medium text-secondary mt-1">Client Retention</span>
+							</div>
+							<div class="p-4 sm:p-5 rounded-2xl bg-surface-container-low/70 border border-surface-container-high/60 flex flex-col items-center">
+								<span class="font-stat-metric text-[32px] sm:text-[40px] font-extrabold text-on-surface tracking-tight">500+</span>
+								<span class="text-xs sm:text-sm font-medium text-secondary mt-1">Businesses Served</span>
+							</div>
+							<div class="p-4 sm:p-5 rounded-2xl bg-surface-container-low/70 border border-surface-container-high/60 flex flex-col items-center">
+								<span class="font-stat-metric text-[32px] sm:text-[40px] font-extrabold text-on-surface tracking-tight">24/7</span>
+								<span class="text-xs sm:text-sm font-medium text-secondary mt-1">Support &amp; Maintenance</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 2. TICKER SECTION -->
+			<section class="w-full py-4 overflow-hidden relative" style="background: linear-gradient(135deg, #1a1c1d 0%, #2f3132 100%);">
+				<div class="flex items-center space-x-8 whitespace-nowrap animate-marquee">
+					<div class="inline-flex items-center gap-8 text-[13px] sm:text-[14px] font-medium tracking-wide text-white/90">
+						<span>&#10022; Custom CRM Development</span>
+						<span class="text-white/30">&mdash;</span>
+						<span>&#10022; Sales &amp; Lead Management</span>
+						<span class="text-white/30">&mdash;</span>
+						<span>&#10022; CRM Integration Services</span>
+						<span class="text-white/30">&mdash;</span>
+						<span>&#10022; Automated Workflows</span>
+						<span class="text-white/30">&mdash;</span>
+						<span>&#10022; Cloud-Based Access</span>
+						<span class="text-white/30">&mdash;</span>
+						<span>&#10022; Role-Based Control</span>
+						<span class="text-white/30">&mdash;</span>
+						<!-- Duplicate for loop -->
+						<span>&#10022; Custom CRM Development</span>
+						<span class="text-white/30">&mdash;</span>
+						<span>&#10022; Sales &amp; Lead Management</span>
+						<span class="text-white/30">&mdash;</span>
+						<span>&#10022; CRM Integration Services</span>
+						<span class="text-white/30">&mdash;</span>
+						<span>&#10022; Automated Workflows</span>
+						<span class="text-white/30">&mdash;</span>
+						<span>&#10022; Cloud-Based Access</span>
+						<span class="text-white/30">&mdash;</span>
+						<span>&#10022; Role-Based Control</span>
+					</div>
+				</div>
+			</section>
+
+			<!-- 3. WHAT WE OFFER SECTION -->
+			<section id="offers" class="w-full bg-surface-container-low/60 py-20 md:py-24 border-y border-surface-container-high/60">
+				<div class="max-w-[1320px] mx-auto px-6 md:px-12">
+					<!-- Section Header -->
+					<div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
+						<span class="font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-widest">WHAT WE OFFER</span>
+						<h2 class="font-headline-lg text-[32px] md:text-[40px] text-on-surface font-bold tracking-tight mt-2">
+							Everything Your <span class="text-primary italic font-semibold">Business Needs</span>
+						</h2>
+						<p class="font-body-md text-body-md text-secondary mt-3 max-w-xl mx-auto">
+							Six core services built to take your customer management from chaotic to seamless.
+						</p>
+					</div>
+
+					<!-- 6 Core Offers Grid -->
+					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+						<!-- Card 1 -->
+						<div class="p-8 rounded-3xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(139,92,246,0.18)] hover:border-violet-400 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between border border-surface-container-high group" data-card-color="violet">
+							<div>
+								<div class="w-14 h-14 rounded-2xl bg-violet-100 text-violet-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-violet-600 group-hover:text-white transition-all">
+									🛠️
+								</div>
+								<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-3 group-hover:text-violet-600 transition-colors">
+									Custom CRM Development
+								</h3>
+								<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+									We build CRM systems from scratch, tailored exactly to your processes, team structure, and growth goals — nothing generic, nothing off-the-shelf.
+								</p>
+							</div>
+						</div>
+
+						<!-- Card 2 -->
+						<div class="p-8 rounded-3xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(20,184,166,0.18)] hover:border-teal-400 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between border border-surface-container-high group" data-card-color="teal">
+							<div>
+								<div class="w-14 h-14 rounded-2xl bg-teal-500/10 text-teal-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-teal-600 group-hover:text-white transition-all">
+									📈
+								</div>
+								<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-3 group-hover:text-teal-600 transition-colors">
+									Sales &amp; Lead Management
+								</h3>
+								<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+									Track every lead from first contact to closed deal. Pipeline visibility, follow-up automation, and conversion analytics all in one place.
+								</p>
+							</div>
+						</div>
+
+						<!-- Card 3 -->
+						<div class="p-8 rounded-3xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(14,165,233,0.18)] hover:border-sky-400 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between border border-surface-container-high group" data-card-color="sky">
+							<div>
+								<div class="w-14 h-14 rounded-2xl bg-sky-100 text-sky-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-sky-600 group-hover:text-white transition-all">
+									🔗
+								</div>
+								<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-3 group-hover:text-sky-600 transition-colors">
+									CRM Integration Services
+								</h3>
+								<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+									Connect your CRM to existing tools — email, accounting, marketing, ERP — for a single unified view of your customer data across all platforms.
+								</p>
+							</div>
+						</div>
+
+						<!-- Card 4 -->
+						<div class="p-8 rounded-3xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(16,185,129,0.18)] hover:border-emerald-400 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between border border-surface-container-high group" data-card-color="emerald">
+							<div>
+								<div class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-emerald-600 group-hover:text-white transition-all">
+									🔧
+								</div>
+								<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-3 group-hover:text-emerald-600 transition-colors">
+									Support &amp; Maintenance
+								</h3>
+								<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+									We don't disappear after launch. Ongoing technical support, updates, performance monitoring, and feature additions as your business evolves.
+								</p>
+							</div>
+						</div>
+
+						<!-- Card 5 -->
+						<div class="p-8 rounded-3xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(245,158,11,0.18)] hover:border-amber-400 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between border border-surface-container-high group" data-card-color="amber">
+							<div>
+								<div class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-amber-600 group-hover:text-white transition-all">
+									💬
+								</div>
+								<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-3 group-hover:text-amber-600 transition-colors">
+									Omnichannel Ticketing &amp; Support
+								</h3>
+								<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+									Unify customer requests across WhatsApp, email, live chat, and voice into SLA-driven queues with intelligent routing and ticket escalation.
+								</p>
+							</div>
+						</div>
+
+						<!-- Card 6 -->
+						<div class="p-8 rounded-3xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(99,102,241,0.18)] hover:border-indigo-400 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between border border-surface-container-high group" data-card-color="indigo">
+							<div>
+								<div class="w-14 h-14 rounded-2xl bg-indigo-100 text-indigo-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-indigo-600 group-hover:text-white transition-all">
+									🔄
+								</div>
+								<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-3 group-hover:text-indigo-600 transition-colors">
+									ERP &amp; Financial Ecosystem Sync
+								</h3>
+								<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+									Bi-directional synchronization with SAP, Tally, Zoho, and billing systems, keeping customer order histories and accounts receivable accurate in real time.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 4. KEY FEATURES SECTION WITH ACTIVE LEADS & PIPELINE VISUAL DECK -->
+			<section id="features" class="w-full py-20 md:py-24">
+				<div class="max-w-[1320px] mx-auto px-6 md:px-12">
+					<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+					<!-- Left Column: Key Features List -->
+					<div class="lg:col-span-6 flex flex-col">
+						<span class="font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-widest mb-2">KEY FEATURES</span>
+						<h2 class="font-headline-lg text-[32px] md:text-[40px] text-on-surface font-bold tracking-tight mb-4">
+							Built to <span class="text-primary italic font-semibold">Drive Results</span>
+						</h2>
+						<p class="font-body-md text-body-md text-secondary leading-relaxed mb-8">
+							Every feature is designed with one purpose: making your sales team faster, smarter, and more organized.
+						</p>
+
+						<div class="flex flex-col gap-3.5">
+							<!-- Feat 1 -->
+							<div class="flex gap-4 items-start p-4 sm:p-4.5 rounded-2xl bg-surface-container-low/60 border border-surface-container-high/60 hover:bg-surface-container-low transition-colors">
+								<div class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+									<svg class="w-4 h-4 stroke-primary fill-none stroke-[2.5]" viewBox="0 0 16 16"><polyline points="2,9 6,13 14,4"/></svg>
+								</div>
+								<div>
+									<h4 class="font-headline-sm text-base font-bold text-on-surface">
+										Centralized Customer Database
+									</h4>
+									<p class="font-body-sm text-body-sm text-secondary mt-1 leading-relaxed">
+										All contacts, history, notes, and interactions in one searchable hub.
+									</p>
+								</div>
+							</div>
+
+							<!-- Feat 2 -->
+							<div class="flex gap-4 items-start p-4 sm:p-4.5 rounded-2xl bg-surface-container-low/60 border border-surface-container-high/60 hover:bg-surface-container-low transition-colors">
+								<div class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+									<svg class="w-4 h-4 stroke-primary fill-none stroke-[2.5]" viewBox="0 0 16 16"><polyline points="2,9 6,13 14,4"/></svg>
+								</div>
+								<div>
+									<h4 class="font-headline-sm text-base font-bold text-on-surface">
+										Automated Workflows &amp; Reminders
+									</h4>
+									<p class="font-body-sm text-body-sm text-secondary mt-1 leading-relaxed">
+										Auto-assign tasks, send follow-up emails, and trigger actions on deal stages.
+									</p>
+								</div>
+							</div>
+
+							<!-- Feat 3 -->
+							<div class="flex gap-4 items-start p-4 sm:p-4.5 rounded-2xl bg-surface-container-low/60 border border-surface-container-high/60 hover:bg-surface-container-low transition-colors">
+								<div class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+									<svg class="w-4 h-4 stroke-primary fill-none stroke-[2.5]" viewBox="0 0 16 16"><polyline points="2,9 6,13 14,4"/></svg>
+								</div>
+								<div>
+									<h4 class="font-headline-sm text-base font-bold text-on-surface">
+										Sales Tracking &amp; Reporting
+									</h4>
+									<p class="font-body-sm text-body-sm text-secondary mt-1 leading-relaxed">
+										Live dashboards and custom reports to understand where revenue comes from.
+									</p>
+								</div>
+							</div>
+
+							<!-- Feat 4 -->
+							<div class="flex gap-4 items-start p-4 sm:p-4.5 rounded-2xl bg-surface-container-low/60 border border-surface-container-high/60 hover:bg-surface-container-low transition-colors">
+								<div class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+									<svg class="w-4 h-4 stroke-primary fill-none stroke-[2.5]" viewBox="0 0 16 16"><polyline points="2,9 6,13 14,4"/></svg>
+								</div>
+								<div>
+									<h4 class="font-headline-sm text-base font-bold text-on-surface">
+										Role-Based Access Control
+									</h4>
+									<p class="font-body-sm text-body-sm text-secondary mt-1 leading-relaxed">
+										Define who sees what — keep sensitive data secure with granular permissions.
+									</p>
+								</div>
+							</div>
+
+							<!-- Feat 5 -->
+							<div class="flex gap-4 items-start p-4 sm:p-4.5 rounded-2xl bg-surface-container-low/60 border border-surface-container-high/60 hover:bg-surface-container-low transition-colors">
+								<div class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+									<svg class="w-4 h-4 stroke-primary fill-none stroke-[2.5]" viewBox="0 0 16 16"><polyline points="2,9 6,13 14,4"/></svg>
+								</div>
+								<div>
+									<h4 class="font-headline-sm text-base font-bold text-on-surface">
+										Cloud-Based Accessibility
+									</h4>
+									<p class="font-body-sm text-body-sm text-secondary mt-1 leading-relaxed">
+										Access your CRM from anywhere, any device. Mobile-ready and always online.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Right Column: Visual Telemetry Deck (Active Leads & Pipeline) -->
+					<div class="lg:col-span-6 relative flex justify-center">
+						<div class="absolute -inset-2 rounded-3xl bg-gradient-to-r from-primary/15 to-teal-500/10 blur-xl opacity-60 pointer-events-none"></div>
+						<div class="w-full max-w-[560px] p-6 sm:p-8 rounded-3xl bg-surface-container-lowest shadow-[0_20px_50px_rgba(0,0,0,0.06),0_1px_3px_rgba(0,0,0,0.04)] border border-surface-container-high relative overflow-hidden flex flex-col gap-6">
+								<!-- Active Leads Header -->
+								<div class="flex items-center justify-between border-b border-surface-container-high pb-3.5">
+									<span class="font-label-eyebrow text-xs uppercase tracking-wider font-bold text-secondary">Active Leads</span>
+									<span class="text-xs px-2.5 py-0.5 rounded-full bg-surface-container-low text-primary font-semibold">Live Feed</span>
+								</div>
+
+								<!-- Leads List -->
+								<div class="divide-y divide-surface-container-high/60 -my-2">
+									<!-- Lead 1 -->
+									<div class="py-3 flex items-center justify-between gap-3">
+										<div class="flex items-center gap-3">
+											<div class="w-9 h-9 rounded-full bg-primary/15 text-primary font-bold text-xs flex items-center justify-center shrink-0">
+												RK
+											</div>
+											<div>
+												<h5 class="text-sm font-semibold text-on-surface leading-tight">Rahul Kapoor</h5>
+												<p class="text-xs text-secondary">TechVista Pvt Ltd</p>
+											</div>
+										</div>
+										<span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-rose-50 text-rose-700 border border-rose-200">Hot</span>
+									</div>
+
+									<!-- Lead 2 -->
+									<div class="py-3 flex items-center justify-between gap-3">
+										<div class="flex items-center gap-3">
+											<div class="w-9 h-9 rounded-full bg-amber-500/15 text-amber-700 font-bold text-xs flex items-center justify-center shrink-0">
+												PS
+											</div>
+											<div>
+												<h5 class="text-sm font-semibold text-on-surface leading-tight">Priya Sharma</h5>
+												<p class="text-xs text-secondary">NovaBuild Inc</p>
+											</div>
+										</div>
+										<span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-amber-50 text-amber-700 border border-amber-200">Warm</span>
+									</div>
+
+									<!-- Lead 3 -->
+									<div class="py-3 flex items-center justify-between gap-3">
+										<div class="flex items-center gap-3">
+											<div class="w-9 h-9 rounded-full bg-emerald-500/15 text-emerald-700 font-bold text-xs flex items-center justify-center shrink-0">
+												AM
+											</div>
+											<div>
+												<h5 class="text-sm font-semibold text-on-surface leading-tight">Arjun Mehta</h5>
+												<p class="text-xs text-secondary">Meridian Exports</p>
+											</div>
+										</div>
+										<span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">New</span>
+									</div>
+
+									<!-- Lead 4 -->
+									<div class="py-3 flex items-center justify-between gap-3">
+										<div class="flex items-center gap-3">
+											<div class="w-9 h-9 rounded-full bg-blue-500/15 text-blue-700 font-bold text-xs flex items-center justify-center shrink-0">
+												SJ
+											</div>
+											<div>
+												<h5 class="text-sm font-semibold text-on-surface leading-tight">Sara Joshi</h5>
+												<p class="text-xs text-secondary">CloudBase Solutions</p>
+											</div>
+										</div>
+										<span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-blue-50 text-blue-700 border border-blue-200">Nurture</span>
+									</div>
+								</div>
+
+								<!-- Pipeline Sub-section -->
+								<div class="pt-4 border-t border-surface-container-high">
+									<span class="font-label-eyebrow text-xs uppercase tracking-wider font-bold text-secondary block mb-3.5">Sales Pipeline</span>
+									<div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+										<!-- Col 1: Prospect -->
+										<div class="flex flex-col gap-2">
+											<span class="text-[11px] font-semibold text-secondary uppercase tracking-wider">Prospect</span>
+											<div class="p-2.5 rounded-xl bg-surface-container-low border border-surface-container-high/70 flex flex-col">
+												<span class="text-xs font-medium text-on-surface">TechVista</span>
+												<span class="text-xs font-bold text-primary mt-0.5">&#8377;3.2L</span>
+											</div>
+											<div class="p-2.5 rounded-xl bg-surface-container-low border border-surface-container-high/70 flex flex-col">
+												<span class="text-xs font-medium text-on-surface">BlueWave</span>
+												<span class="text-xs font-bold text-primary mt-0.5">&#8377;1.8L</span>
+											</div>
+										</div>
+
+										<!-- Col 2: Proposal -->
+										<div class="flex flex-col gap-2">
+											<span class="text-[11px] font-semibold text-secondary uppercase tracking-wider">Proposal</span>
+											<div class="p-2.5 rounded-xl bg-surface-container-low border border-surface-container-high/70 flex flex-col">
+												<span class="text-xs font-medium text-on-surface">NovaBuild</span>
+												<span class="text-xs font-bold text-primary mt-0.5">&#8377;5.1L</span>
+											</div>
+										</div>
+
+										<!-- Col 3: Negotiation -->
+										<div class="flex flex-col gap-2">
+											<span class="text-[11px] font-semibold text-secondary uppercase tracking-wider">Negotiation</span>
+											<div class="p-2.5 rounded-xl bg-surface-container-low border border-surface-container-high/70 flex flex-col">
+												<span class="text-xs font-medium text-on-surface">Meridian</span>
+												<span class="text-xs font-bold text-primary mt-0.5">&#8377;8.4L</span>
+											</div>
+										</div>
+
+										<!-- Col 4: Won -->
+										<div class="flex flex-col gap-2">
+											<span class="text-[11px] font-semibold text-emerald-700 uppercase tracking-wider">Won &check;</span>
+											<div class="p-2.5 rounded-xl bg-emerald-50 border border-emerald-200 flex flex-col shadow-sm">
+												<span class="text-xs font-medium text-emerald-950">CloudBase</span>
+												<span class="text-xs font-bold text-emerald-700 mt-0.5">&#8377;12L</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 5. WHY CHOOSE US SECTION -->
+			<section id="why" class="w-full bg-surface-container-low/60 py-20 md:py-24 border-y border-surface-container-high/60">
+				<div class="max-w-[1320px] mx-auto px-6 md:px-12">
+					<!-- Section Header -->
+					<div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
+						<span class="font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-widest">WHY CHOOSE US</span>
+						<h2 class="font-headline-lg text-[32px] md:text-[40px] text-on-surface font-bold tracking-tight mt-1">
+							The CRM Partner That <span class="text-primary italic font-semibold">Grows With You</span>
+						</h2>
+						<p class="font-body-md text-body-md text-secondary mt-3 max-w-xl mx-auto">
+							We don't just build software — we build the system your team will actually use and love.
+						</p>
+					</div>
+
+					<!-- 6 Why Choose Us Cards Grid -->
+					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+						<!-- Card 01 -->
+						<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-sm hover:shadow-[0_20px_45px_rgba(20,184,166,0.18)] hover:border-teal-400 hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden group" data-card-color="teal">
+							<span class="absolute top-6 right-6 font-display-hero text-[48px] font-bold text-teal-600/15 group-hover:text-teal-600/30 transition-colors leading-none">01</span>
+							<div class="w-14 h-14 rounded-2xl bg-teal-500/10 text-teal-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-teal-600 group-hover:text-white transition-all">🎯</div>
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-3 group-hover:text-teal-600 transition-colors">
+								Fully Customizable
+							</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+								No templates, no compromise. Every field, workflow, and report is built around how you actually work.
+							</p>
+						</div>
+
+						<!-- Card 02 -->
+						<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-sm hover:shadow-[0_20px_45px_rgba(235,87,55,0.18)] hover:border-primary/40 hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden group" data-card-color="primary">
+							<span class="absolute top-6 right-6 font-display-hero text-[48px] font-bold text-primary/15 group-hover:text-primary/30 transition-colors leading-none">02</span>
+							<div class="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all">📐</div>
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-3 group-hover:text-primary transition-colors">
+								Scalable Architecture
+							</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+								Built to handle 10 users today and 1,000 tomorrow. Cloud infrastructure that scales with your growth.
+							</p>
+						</div>
+
+						<!-- Card 03 -->
+						<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-sm hover:shadow-[0_20px_45px_rgba(14,165,233,0.18)] hover:border-sky-400 hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden group" data-card-color="sky">
+							<span class="absolute top-6 right-6 font-display-hero text-[48px] font-bold text-sky-600/15 group-hover:text-sky-600/30 transition-colors leading-none">03</span>
+							<div class="w-14 h-14 rounded-2xl bg-sky-100 text-sky-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-sky-600 group-hover:text-white transition-all">🖥️</div>
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-3 group-hover:text-sky-600 transition-colors">
+								Easy-to-Use Interface
+							</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+								Powerful functionality wrapped in an intuitive UI. Your team gets productive in days, not months.
+							</p>
+						</div>
+
+						<!-- Card 04 -->
+						<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-sm hover:shadow-[0_20px_45px_rgba(16,185,129,0.18)] hover:border-emerald-400 hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden group" data-card-color="emerald">
+							<span class="absolute top-6 right-6 font-display-hero text-[48px] font-bold text-emerald-600/15 group-hover:text-emerald-600/30 transition-colors leading-none">04</span>
+							<div class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-emerald-600 group-hover:text-white transition-all">🔒</div>
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-3 group-hover:text-emerald-600 transition-colors">
+								Secure &amp; Compliant
+							</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+								Enterprise-grade data security with role-based access and full audit trails for every action.
+							</p>
+						</div>
+
+						<!-- Card 05 -->
+						<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-sm hover:shadow-[0_20px_45px_rgba(139,92,246,0.18)] hover:border-violet-400 hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden group" data-card-color="violet">
+							<span class="absolute top-6 right-6 font-display-hero text-[48px] font-bold text-violet-600/15 group-hover:text-violet-600/30 transition-colors leading-none">05</span>
+							<div class="w-14 h-14 rounded-2xl bg-violet-100 text-violet-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-violet-600 group-hover:text-white transition-all">⚡</div>
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-3 group-hover:text-violet-600 transition-colors">
+								Seamless Integration
+							</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+								Connects with email, WhatsApp, ERP, billing, and marketing tools you already use.
+							</p>
+						</div>
+
+						<!-- Card 06 -->
+						<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-sm hover:shadow-[0_20px_45px_rgba(245,158,11,0.18)] hover:border-amber-400 hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden group" data-card-color="amber">
+							<span class="absolute top-6 right-6 font-display-hero text-[48px] font-bold text-amber-600/15 group-hover:text-amber-600/30 transition-colors leading-none">06</span>
+							<div class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-amber-600 group-hover:text-white transition-all">🤝</div>
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-3 group-hover:text-amber-600 transition-colors">
+								Dedicated Support
+							</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+								A real team that knows your system, answers quickly, and helps you evolve over time.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 6. OUR PROCESS SECTION -->
+			<section id="process" class="w-full max-w-[1320px] mx-auto px-6 md:px-12 py-20 md:py-24">
+				<!-- Section Header -->
+				<div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
+					<span class="font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-widest">OUR PROCESS</span>
+					<h2 class="font-headline-lg text-[32px] md:text-[40px] text-on-surface font-bold tracking-tight mt-1">
+						From Discovery to <span class="text-primary italic font-semibold">Launch</span>
+					</h2>
+					<p class="font-body-md text-body-md text-secondary mt-3 max-w-xl mx-auto">
+						A clear, collaborative process so you always know exactly what's happening and when.
+					</p>
+				</div>
+
+				<!-- 5 Steps Grid -->
+				<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+					<!-- Step 1 -->
+					<div class="p-7 rounded-3xl bg-surface-container-lowest border border-surface-container-high hover:border-sky-400 shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(14,165,233,0.18)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center group" data-card-color="sky">
+						<div class="w-14 h-14 rounded-2xl bg-sky-100 border border-sky-200 text-sky-700 font-bold text-lg flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-sky-600 group-hover:text-white transition-all font-headline-sm">
+							01
+						</div>
+						<h4 class="font-headline-sm text-base font-bold text-on-surface mb-2 group-hover:text-sky-600 transition-colors">Discovery</h4>
+						<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+							We map your sales process, workflows, and data requirements in depth.
+						</p>
+					</div>
+
+					<!-- Step 2 -->
+					<div class="p-7 rounded-3xl bg-surface-container-lowest border border-surface-container-high hover:border-emerald-400 shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(16,185,129,0.18)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center group" data-card-color="emerald">
+						<div class="w-14 h-14 rounded-2xl bg-emerald-100 border border-emerald-200 text-emerald-700 font-bold text-lg flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-emerald-600 group-hover:text-white transition-all font-headline-sm">
+							02
+						</div>
+						<h4 class="font-headline-sm text-base font-bold text-on-surface mb-2 group-hover:text-emerald-600 transition-colors">Design</h4>
+						<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+							Wireframes, data models, and architecture reviewed with your team.
+						</p>
+					</div>
+
+					<!-- Step 3 -->
+					<div class="p-7 rounded-3xl bg-surface-container-lowest border border-surface-container-high hover:border-violet-400 shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(139,92,246,0.18)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center group" data-card-color="violet">
+						<div class="w-14 h-14 rounded-2xl bg-violet-100 border border-violet-200 text-violet-700 font-bold text-lg flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-violet-600 group-hover:text-white transition-all font-headline-sm">
+							03
+						</div>
+						<h4 class="font-headline-sm text-base font-bold text-on-surface mb-2 group-hover:text-violet-600 transition-colors">Development</h4>
+						<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+							Agile sprints with regular demos — you see progress every week.
+						</p>
+					</div>
+
+					<!-- Step 4 -->
+					<div class="p-7 rounded-3xl bg-surface-container-lowest border border-surface-container-high hover:border-amber-400 shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(245,158,11,0.18)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center group" data-card-color="amber">
+						<div class="w-14 h-14 rounded-2xl bg-amber-100 border border-amber-200 text-amber-700 font-bold text-lg flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-amber-600 group-hover:text-white transition-all font-headline-sm">
+							04
+						</div>
+						<h4 class="font-headline-sm text-base font-bold text-on-surface mb-2 group-hover:text-amber-600 transition-colors">Integration</h4>
+						<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+							Connect existing systems and migrate your historical data cleanly.
+						</p>
+					</div>
+
+					<!-- Step 5 -->
+					<div class="p-7 rounded-3xl bg-surface-container-lowest border border-surface-container-high hover:border-primary/40 shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(235,87,55,0.18)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center group" data-card-color="primary">
+						<div class="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/20 text-primary font-bold text-lg flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all font-headline-sm">
+							05
+						</div>
+						<h4 class="font-headline-sm text-base font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">Launch &amp; Support</h4>
+						<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+							Training, go-live support, and ongoing maintenance post-launch.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- 7. CALL TO ACTION SECTION -->
+			<section id="cta" class="w-full max-w-[1320px] mx-auto px-6 md:px-12 py-20 md:py-24">
+				<div class="p-10 md:p-16 rounded-3xl bg-surface-container-lowest border border-primary/20 shadow-[0_20px_50px_rgba(235,87,55,0.1)] text-center relative overflow-hidden flex flex-col items-center">
+					<!-- Atmospheric Glow -->
+					<div class="absolute -top-24 -right-24 w-80 h-80 rounded-full blur-3xl opacity-40 pointer-events-none" style="background: radial-gradient(circle, rgba(235, 87, 55, 0.3) 0%, transparent 70%);"></div>
+					<div class="absolute -bottom-24 -left-24 w-80 h-80 rounded-full blur-3xl opacity-30 pointer-events-none" style="background: radial-gradient(circle, rgba(92, 147, 159, 0.25) 0%, transparent 70%);"></div>
+
+					<span class="font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-widest relative z-10 mb-3">GET STARTED</span>
+					<h2 class="font-headline-lg text-[32px] md:text-[48px] lg:text-[54px] text-white font-bold tracking-tight relative z-10 max-w-3xl leading-[1.1] text-center">
+						Simplify Customer Management.<br />
+						<span class="text-primary italic font-semibold">Accelerated Growth.</span>
+					</h2>
+					<p class="font-body-lg text-body-lg text-secondary max-w-xl mt-4 mb-8 relative z-10 leading-relaxed">
+						Join 500+ businesses that replaced spreadsheet chaos with a CRM built just for them. Let's build yours.
+					</p>
+
+					<form action="../contact.html" method="GET" class="flex flex-col sm:flex-row items-center justify-center gap-3 w-full max-w-md mx-auto relative z-10">
+						<input type="email" name="email" placeholder="Your business email" class="w-full px-5 py-3.5 rounded-full bg-surface-container-low border border-surface-container-high focus:border-primary focus:outline-none text-on-surface text-sm transition-colors shadow-sm" />
+						<button type="submit" class="w-full sm:w-auto shrink-0 inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-white font-label-pill text-label-pill shadow-[0_8px_25px_rgba(235,87,55,0.4)] hover:shadow-[0_14px_35px_rgba(235,87,55,0.55)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 border border-white/25 font-semibold" style="background: linear-gradient(135deg, #ad2b0e 0%, #eb5737 60%, #ff7849 100%);">
+							<span>Book a Session &rarr;</span>
+						</button>
+					</form>
+				</div>
+			</section>
+
+		</div>
+	</main>
+
+	<!-- GLOBAL HIGH-CONTRAST FOOTER -->
+	<!-- Reusable Footer Component -->
+	<div id="footer"></div>
+
+
+
+
+
+	<!-- Interactive Scripts -->
+	<script>
+		function toggleMobileMenu() {
+			var menu = document.getElementById("mobile-nav-menu");
+			var icon = document.getElementById("mobile-menu-icon");
+			if (menu) {
+				var isHidden = menu.classList.toggle("hidden");
+				if (icon) {
+					icon.textContent = isHidden ? "menu" : "close";
+				}
+			}
+		}
+
+		function toggleMobileServices() {
+			var dropdown = document.getElementById("mobile-services-dropdown");
+			var arrow = document.getElementById("mobile-services-arrow");
+			var btn = document.getElementById("mobile-services-btn");
+			if (dropdown) {
+				var isHidden = dropdown.classList.toggle("hidden");
+				if (arrow) {
+					if (isHidden) {
+						arrow.classList.remove("rotate-180");
+					} else {
+						arrow.classList.add("rotate-180");
+					}
+				}
+				if (btn) {
+					btn.setAttribute("aria-expanded", isHidden ? "false" : "true");
+				}
+			}
+		}
+
+		function toggleFaq(el) {
+			var isActive = el.classList.contains('active');
+			var allFaqs = document.querySelectorAll('.faq-item');
+			allFaqs.forEach(function(item) {
+				item.classList.remove('active');
+				var chev = item.querySelector('.faq-chevron');
+				if (chev) {
+					chev.classList.remove('text-primary');
+					chev.classList.add('text-secondary');
+				}
+			});
+			if (!isActive) {
+				el.classList.add('active');
+				var chev = el.querySelector('.faq-chevron');
+				if (chev) {
+					chev.classList.remove('text-secondary');
+					chev.classList.add('text-primary');
+				}
+			}
+		}
+	</script>
+	<!-- Reusable Component Loader (Navbar & Footer) -->
+	<script src="../assets/bgs-components.js"></script>
+</body>
+</html>

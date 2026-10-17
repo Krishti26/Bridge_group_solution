@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Core typography preload -->
+<link rel="preload" href="../assets/amphora-fonts/The%20Future/TheFuture-Regular.subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/amphora-fonts/The%20Future/TheFuture-Medium.subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/amphora-fonts/The%20Future/TheFuture-Bold.subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/amphora-fonts/Tiempos%20Headline/TiemposHeadline-400-Regular-Italic.woff2" as="font" type="font/woff2" crossorigin>
+
+
+<!-- Reveal the finished layout without showing a loading animation. -->
+<style>html.layout-pending body { visibility:hidden !important; }</style>
+<script>
+(() => {
+  const root = document.documentElement;
+  root.classList.add('layout-pending');
+  let observer;
+  const reveal = () => {
+    root.classList.remove('layout-pending');
+    if (observer) observer.disconnect();
+  };
+  const ready = () => {
+    if (root.classList.contains('bgs-layout-ready') && document.querySelector('.bgs-main-navbar')) reveal();
+  };
+  observer = new MutationObserver(ready);
+  observer.observe(root, {childList:true, subtree:true, attributes:true, attributeFilter:['class']});
+  document.addEventListener('DOMContentLoaded', ready, {once:true});
+  setTimeout(reveal, 2500);
+})();
+</script>
+
+
+
+	<meta charset="utf-8"/>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
+	<title>Custom Web Development Services | Bridge Group Solutions</title>
+	<meta name="description" content="High-performance, secure, and SEO-optimized web applications engineered for modern scale. Enterprise web development by Bridge Group Solutions." />
+	<meta name="keywords" content="Custom web development, enterprise web applications, responsive website engineering, high performance web apps, Bridge Group Solutions web" />
+	
+			<!-- Open Graph Meta Tags -->
+	<meta property="og:title" content="Custom Web Development Services | Bridge Group Solutions" />
+	<meta property="og:description" content="High-performance, secure, and SEO-optimized web applications engineered for modern scale. Enterprise web development by Bridge Group Solutions." />
+	<meta property="og:url" content="https://www.bridgegroupsolutions.com/services/web.html" />
+	<meta property="og:image" content="https://www.bridgegroupsolutions.com/assets/logo.webp" />
+	<meta property="og:type" content="website" />
+
+	<!-- X (Twitter) Meta Tags -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Custom Web Development Services | Bridge Group Solutions" />
+	<meta name="twitter:description" content="High-performance, secure, and SEO-optimized web applications engineered for modern scale. Enterprise web development by Bridge Group Solutions." />
+	<meta name="twitter:image" content="https://www.bridgegroupsolutions.com/assets/logo.webp" />
+	<link rel="canonical" href="https://www.bridgegroupsolutions.com/services/web.html"/>
+	<link rel="icon" type="image/webp" href="../assets/logo.webp"/>
+
+	<!-- Schema.org Structured Data (JSON-LD) -->
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://www.bridgegroupsolutions.com/services/web.html#service",
+      "serviceType": "Custom Web Application Development",
+      "name": "Custom Web Application Development | Bridge Group Solutions",
+      "description": "Full-stack web apps, cloud portals, and SaaS platforms engineered with sub-second speeds, modern frameworks, and fault-tolerant architecture.",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://www.bridgegroupsolutions.com/#organization",
+        "name": "Bridge Group Solutions",
+        "url": "https://www.bridgegroupsolutions.com",
+        "logo": "https://www.bridgegroupsolutions.com/assets/logo.webp"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.bridgegroupsolutions.com/services/web.html#webpage",
+      "url": "https://www.bridgegroupsolutions.com/services/web.html",
+      "name": "Custom Web Application Development | Bridge Group Solutions",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.bridgegroupsolutions.com/#website",
+        "url": "https://www.bridgegroupsolutions.com",
+        "name": "Bridge Group Solutions"
+      }
+    }
+  ]
+}
+	</script>
+
+
+	<!-- Fonts matching index.html -->
+	<link rel="preconnect" href="https://fonts.googleapis.com"/>
+	<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+	<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+	<!-- Tabler Icons CDN -->
+	<link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" rel="stylesheet"/>
+
+	<!-- Base Layer Styles -->
+	<style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style>
+
+	<!-- Tailwind CSS CDN + Design Tokens -->
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script id="tailwind-config">
+		tailwind.config = {
+			darkMode: "class",
+			theme: {
+				extend: {
+					colors: {
+						"surface-container-highest": "#e2e2e4",
+						"on-secondary-container": "#5c647a",
+						"on-surface": "#1a1c1d",
+						"on-error": "#ffffff",
+						"primary-fixed": "#ffdad3",
+						"background": "#f9f9fb",
+						"primary-fixed-dim": "#ffb4a4",
+						"inverse-primary": "#ffb4a4",
+						"surface-bright": "#f9f9fb",
+						"on-tertiary-fixed-variant": "#424656",
+						"tertiary-fixed-dim": "#c3c6d8",
+						"tertiary-fixed": "#dfe1f5",
+						"outline-variant": "#e2bfb7",
+						"error-container": "#ffdad6",
+						"on-primary-container": "#fffbff",
+						"on-tertiary-container": "#fefcff",
+						"error": "#ba1a1a",
+						"tertiary": "#585b6b",
+						"secondary": "#565e74",
+						"surface-container-lowest": "#ffffff",
+						"surface-container-low": "#f3f3f5",
+						"secondary-fixed": "#dae2fd",
+						"secondary-fixed-dim": "#bec6e0",
+						"on-background": "#1a1c1d",
+						"on-secondary": "#ffffff",
+						"on-surface-variant": "#5a413b",
+						"outline": "#8e706a",
+						"secondary-container": "#dae2fd",
+						"surface": "#f9f9fb",
+						"surface-container": "#eeeef0",
+						"inverse-surface": "#2f3132",
+						"tertiary-container": "#707485",
+						"on-tertiary": "#ffffff",
+						"surface-tint": "#b12e11",
+						"inverse-on-surface": "#f0f0f2",
+						"on-primary-fixed": "#3d0600",
+						"surface-dim": "#d9dadc",
+						"on-error-container": "#93000a",
+						"on-primary": "#ffffff",
+						"on-primary-fixed-variant": "#8c1800",
+						"on-secondary-fixed": "#131b2e",
+						"primary-container": "#d04426",
+						"surface-container-high": "#e8e8ea",
+						"primary": "#ad2b0e",
+						"on-secondary-fixed-variant": "#3f465c",
+						"on-tertiary-fixed": "#171b29",
+						"surface-variant": "#e2e2e4"
+					},
+					borderRadius: {
+						"DEFAULT": "0.25rem",
+						"lg": "0.5rem",
+						"xl": "0.75rem",
+						"full": "9999px"
+					},
+					spacing: {
+						"space-sm": "0.5rem",
+						"space-md": "1rem",
+						"space-xs": "0.25rem",
+						"gutter": "1.5rem",
+						"space-lg": "1.5rem",
+						"margin-mobile": "1.25rem",
+						"gutter-mobile": "1rem",
+						"space-xl": "2.5rem",
+						"margin": "3rem"
+					},
+					fontFamily: {
+						"body-md": ["Plus Jakarta Sans"],
+						"body-sm": ["Plus Jakarta Sans"],
+						"label-pill": ["Plus Jakarta Sans"],
+						"display-hero": ["Plus Jakarta Sans"],
+						"headline-lg": ["Plus Jakarta Sans"],
+						"headline-md": ["Plus Jakarta Sans"],
+						"label-eyebrow": ["Space Grotesk"],
+						"body-lg": ["Plus Jakarta Sans"],
+						"display-hero-mobile": ["Plus Jakarta Sans"],
+						"headline-sm": ["Plus Jakarta Sans"],
+						"stat-metric": ["Plus Jakarta Sans"],
+						"label-code": ["Space Grotesk"]
+					},
+					fontSize: {
+						"body-md": ["15px", {"lineHeight": "24px", "fontWeight": "400"}],
+						"body-sm": ["13px", {"lineHeight": "20px", "fontWeight": "400"}],
+						"label-pill": ["12px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+						"display-hero": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+						"headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+						"headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+						"label-eyebrow": ["11px", {"lineHeight": "14px", "letterSpacing": "0.12em", "fontWeight": "700"}],
+						"body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+						"display-hero-mobile": ["36px", {"lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+						"headline-sm": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+						"stat-metric": ["40px", {"lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+						"label-code": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}]
+					}
+				}
+			}
+		}
+	</script>
+
+	<!-- Design Tokens & Theme -->
+	<link rel="stylesheet" href="../assets/bgs-modern-theme.css"/>
+	<!-- Dedicated Stylesheet -->
+	<link rel="stylesheet" href="../assets/services-web.css"/>
+<link rel="stylesheet" href="../assets/amphora-reference.css">
+<link rel="stylesheet" href="../assets/amphora-bgs.css">
+<script defer src="../assets/amphora-bgs.js"></script>
+</head>
+
+<body class="amphora-theme bg-surface font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+
+	<!-- GLOBAL STICKY HEADER -->
+	<!-- Reusable Navbar Component -->
+	<div id="navbar"></div>
+
+
+
+
+
+	<main class="w-full pt-20 bg-surface min-h-screen">
+		<div class="flex flex-col w-full overflow-hidden">
+
+			<!-- 1. HERO SECTION -->
+			<section class="relative w-full max-w-[1320px] mx-auto px-6 md:px-12 pt-12 pb-16 md:pb-24">
+				<!-- Atmospheric Radial Glows -->
+				<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[650px] pointer-events-none -z-10 overflow-hidden">
+					<div class="absolute top-0 right-10 w-[550px] h-[550px] rounded-full blur-3xl opacity-60" style="background: radial-gradient(circle, rgba(235, 87, 55, 0.22) 0%, rgba(255, 120, 73, 0.12) 40%, rgba(92, 147, 159, 0.08) 75%, transparent 100%);"></div>
+					<div class="absolute top-20 -left-20 w-[500px] h-[500px] rounded-full blur-3xl opacity-50" style="background: radial-gradient(circle, rgba(92, 147, 159, 0.2) 0%, rgba(235, 87, 55, 0.08) 50%, transparent 80%);"></div>
+				</div>
+
+				<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+					<!-- Hero Left Content -->
+					<div class="lg:col-span-6 flex flex-col items-start space-y-6">
+						<div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-surface-container-low shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
+							<span class="relative flex h-2 w-2">
+								<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+								<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+							</span>
+							<span class="font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-widest">Web Development Services</span>
+						</div>
+
+						<h1 class="font-display-hero text-display-hero text-on-surface tracking-tight leading-[1.08]">
+							Building Websites<br class="hidden sm:inline">
+							<span class="text-secondary">That Actually</span>
+							<span class="text-primary italic font-semibold">Drive Results.</span>
+						</h1>
+
+						<p class="font-body-lg text-body-lg text-secondary max-w-xl leading-relaxed">
+							Modern, responsive, and SEO-optimized websites engineered for performance. From corporate sites to full e-commerce platforms — we build digital experiences that convert.
+						</p>
+
+						<!-- Dual CTAs -->
+						<div class="flex flex-wrap items-center gap-4 pt-2">
+							<a class="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full text-white font-label-pill text-label-pill shadow-[0_8px_25px_rgba(235,87,55,0.4)] hover:shadow-[0_14px_35px_rgba(235,87,55,0.55)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 border border-white/25" href="../contact.html" style="background: linear-gradient(135deg, #ad2b0e 0%, #eb5737 60%, #ff7849 100%);">
+								<span>Launch Your Website &rarr;</span>
+							</a>
+							<a class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-surface-container-lowest text-on-surface font-label-pill text-label-pill shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_24px_rgba(235,87,55,0.15)] hover:border-primary/40 hover:-translate-y-0.5 transition-all duration-200 border border-surface-container-high" href="#services">
+								<span class="font-semibold">Explore Services</span>
+								<span class="material-symbols-outlined text-[18px] text-primary">arrow_downward</span>
+							</a>
+						</div>
+					</div>
+
+					<!-- Hero Right Visual: High-Performance Web Platform Image Showcase -->
+					<div class="lg:col-span-6 relative w-full flex items-center justify-center">
+						<div class="w-full max-w-[540px] relative group">
+							<!-- Ambient Radial Glow -->
+							<div class="absolute -inset-2 rounded-3xl bg-gradient-to-r from-primary/20 to-amber-500/15 blur-xl opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
+
+							<!-- Image Container Frame -->
+							<div class="relative overflow-hidden rounded-3xl border border-surface-container-high bg-surface-container-lowest shadow-[0_25px_60px_rgba(235,87,55,0.12),0_10px_30px_rgba(15,23,42,0.06)]">
+								<img src="../assets/webd.webp" alt="Modern Web Development and Architecture" loading="eager" class="w-full h-auto max-h-[420px] object-cover transition-transform duration-700 ease-out group-hover:scale-105 block" />
+								<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none"></div>
+								<div class="absolute bottom-4 left-5 right-5 flex items-center justify-between text-white pointer-events-none">
+									<div class="flex flex-col">
+										<span class="font-label-code text-[11px] uppercase tracking-wider text-white/80 font-bold">Scalable Web Architecture</span>
+										<span class="text-sm font-bold text-white">Full-Stack Modern Platforms</span>
+									</div>
+									<span class="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-xs font-semibold border border-white/30 text-white">
+										Production Ready
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 2. STATS STRIP -->
+			<section class="w-full bg-surface-container-low py-8 md:py-10 border-y border-surface-container-high/60">
+				<div class="max-w-[1100px] mx-auto px-6 md:px-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+					<div class="flex flex-col items-center">
+						<span class="font-display-hero text-[34px] sm:text-[40px] md:text-[44px] font-bold text-primary tracking-tight leading-none">200+</span>
+						<span class="font-body-sm text-secondary font-medium mt-2">Projects Delivered</span>
+					</div>
+					<div class="flex flex-col items-center">
+						<span class="font-display-hero text-[34px] sm:text-[40px] md:text-[44px] font-bold text-primary tracking-tight leading-none">98%</span>
+						<span class="font-body-sm text-secondary font-medium mt-2">Client Satisfaction</span>
+					</div>
+					<div class="flex flex-col items-center">
+						<span class="font-display-hero text-[34px] sm:text-[40px] md:text-[44px] font-bold text-primary tracking-tight leading-none">5x</span>
+						<span class="font-body-sm text-secondary font-medium mt-2">Avg. Traffic Growth</span>
+					</div>
+					<div class="flex flex-col items-center">
+						<span class="font-display-hero text-[34px] sm:text-[40px] md:text-[44px] font-bold text-primary tracking-tight leading-none">24/7</span>
+						<span class="font-body-sm text-secondary font-medium mt-2">Support &amp; Maintenance</span>
+					</div>
+				</div>
+			</section>
+
+			<!-- 3. OVERVIEW / WHAT WE DO -->
+			<section id="overview" class="w-full max-w-[1320px] mx-auto px-6 md:px-12 py-20 md:py-24">
+				<div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
+					<span class="font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-widest">WHAT WE DO</span>
+					<h2 class="font-headline-lg text-[32px] md:text-[40px] text-on-surface font-bold tracking-tight mt-2">
+						A Complete Digital <span class="text-primary italic font-semibold">Web Presence</span>
+					</h2>
+					<p class="font-body-md text-body-md text-secondary mt-3">
+						We deliver performance-driven web solutions built to scale. Every project is custom-engineered — no templates, no shortcuts — crafted to match your business goals and audience.
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+					<!-- Bento Card 01 -->
+					<div class="p-8 rounded-3xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(20,184,166,0.18)] hover:border-teal-400 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between border border-surface-container-high group" data-card-color="teal">
+						<div>
+							<div class="flex items-center justify-between mb-6">
+								<span class="font-label-code text-[28px] font-bold text-teal-600/40 group-hover:text-teal-600 transition-colors">01</span>
+								<div class="w-12 h-12 rounded-2xl bg-teal-500/10 text-teal-700 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">🎯</div>
+							</div>
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-3 group-hover:text-teal-600 transition-colors">Conversion-First Design</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">We design with one goal — turning visitors into customers. Every layout and CTA is strategically placed for maximum lead generation.</p>
+						</div>
+					</div>
+
+					<!-- Bento Card 02 -->
+					<div class="p-8 rounded-3xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(245,158,11,0.18)] hover:border-amber-400 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between border border-surface-container-high group" data-card-color="amber">
+						<div>
+							<div class="flex items-center justify-between mb-6">
+								<span class="font-label-code text-[28px] font-bold text-amber-600/40 group-hover:text-amber-600 transition-colors">02</span>
+								<div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">⚡</div>
+							</div>
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-3 group-hover:text-amber-600 transition-colors">Speed &amp; Performance</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">Blazing-fast load times with optimized code, compressed assets, and smart caching strategies that keep bounce rates low.</p>
+						</div>
+					</div>
+
+					<!-- Bento Card 03 -->
+					<div class="p-8 rounded-3xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(14,165,233,0.18)] hover:border-sky-400 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between border border-surface-container-high group" data-card-color="sky">
+						<div>
+							<div class="flex items-center justify-between mb-6">
+								<span class="font-label-code text-[28px] font-bold text-sky-600/40 group-hover:text-sky-600 transition-colors">03</span>
+								<div class="w-12 h-12 rounded-2xl bg-sky-100 text-sky-700 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">📐</div>
+							</div>
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-3 group-hover:text-sky-600 transition-colors">Scale-Ready Architecture</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">Built on solid foundations that grow with your business — whether you need 10 pages today or 10,000 tomorrow.</p>
+						</div>
+					</div>
+
+					<!-- Bento Card 04 -->
+					<div class="p-8 rounded-3xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(16,185,129,0.18)] hover:border-emerald-400 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between border border-surface-container-high group" data-card-color="emerald">
+						<div>
+							<div class="flex items-center justify-between mb-6">
+								<span class="font-label-code text-[28px] font-bold text-emerald-600/40 group-hover:text-emerald-600 transition-colors">04</span>
+								<div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">📈</div>
+							</div>
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-3 group-hover:text-emerald-600 transition-colors">SEO &amp; Discoverability</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">Built from day one for search visibility with semantic schema markup, clean URLs, and Google Core Web Vitals optimization.</p>
+						</div>
+					</div>
+
+					<!-- Bento Card 05 -->
+					<div class="p-8 rounded-3xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(139,92,246,0.18)] hover:border-violet-400 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between border border-surface-container-high group" data-card-color="violet">
+						<div>
+							<div class="flex items-center justify-between mb-6">
+								<span class="font-label-code text-[28px] font-bold text-violet-600/40 group-hover:text-violet-600 transition-colors">05</span>
+								<div class="w-12 h-12 rounded-2xl bg-violet-100 text-violet-700 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">📱</div>
+							</div>
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-3 group-hover:text-violet-600 transition-colors">Mobile-First Experience</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">100% fluid, responsive layouts optimized for touch interaction, ensuring a seamless user experience across smartphones, tablets, and desktops.</p>
+						</div>
+					</div>
+
+					<!-- Bento Card 06 -->
+					<div class="p-8 rounded-3xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(99,102,241,0.18)] hover:border-indigo-400 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between border border-surface-container-high group" data-card-color="indigo">
+						<div>
+							<div class="flex items-center justify-between mb-6">
+								<span class="font-label-code text-[28px] font-bold text-indigo-600/40 group-hover:text-indigo-600 transition-colors">06</span>
+								<div class="w-12 h-12 rounded-2xl bg-indigo-100 text-indigo-700 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">🛡️</div>
+							</div>
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-3 group-hover:text-indigo-600 transition-colors">Ironclad Security &amp; Uptime</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">Enterprise-grade SSL encryption, automated security patches, DDoS mitigation, and high-availability hosting for 99.99% reliability.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 4. SERVICES / WHAT WE OFFER -->
+			<section id="services" class="w-full bg-surface-container-low/60 py-20 md:py-24 border-y border-surface-container-high/60">
+				<div class="max-w-[1320px] mx-auto px-6 md:px-12 flex flex-col gap-12">
+					<div class="flex flex-col items-center text-center max-w-3xl mx-auto">
+						<span class="font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-widest">WHAT WE OFFER</span>
+						<h2 class="font-headline-lg text-[32px] md:text-[40px] text-on-surface font-bold tracking-tight mt-1">
+							Our <span class="text-primary italic font-semibold">Core Services</span>
+						</h2>
+					</div>
+
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+						<!-- Service 1 -->
+						<div class="p-8 rounded-3xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(14,165,233,0.18)] hover:border-sky-400 hover:-translate-y-1.5 transition-all duration-300 border border-surface-container-high flex gap-6 items-start group" data-card-color="sky">
+							<div class="w-14 h-14 rounded-2xl bg-sky-100 text-sky-700 flex items-center justify-center text-2xl shrink-0 group-hover:bg-sky-600 group-hover:text-white transition-colors">💻</div>
+							<div class="flex flex-col">
+								<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-2 group-hover:text-sky-600 transition-colors">Custom Website Development</h3>
+								<p class="font-body-sm text-body-sm text-secondary leading-relaxed">Bespoke websites built from scratch, tailored to your brand identity, goals, and target audience — no cookie-cutter templates.</p>
+							</div>
+						</div>
+
+						<!-- Service 2 -->
+						<div class="p-8 rounded-3xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(16,185,129,0.18)] hover:border-emerald-400 hover:-translate-y-1.5 transition-all duration-300 border border-surface-container-high flex gap-6 items-start group" data-card-color="emerald">
+							<div class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-2xl shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-colors">🛒</div>
+							<div class="flex flex-col">
+								<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-2 group-hover:text-emerald-600 transition-colors">E-Commerce Development</h3>
+								<p class="font-body-sm text-body-sm text-secondary leading-relaxed">Full-featured online stores with seamless payment gateways, inventory management, and optimized product pages that sell.</p>
+							</div>
+						</div>
+
+						<!-- Service 3 -->
+						<div class="p-8 rounded-3xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(139,92,246,0.18)] hover:border-violet-400 hover:-translate-y-1.5 transition-all duration-300 border border-surface-container-high flex gap-6 items-start group" data-card-color="violet">
+							<div class="w-14 h-14 rounded-2xl bg-violet-100 text-violet-700 flex items-center justify-center text-2xl shrink-0 group-hover:bg-violet-600 group-hover:text-white transition-colors">⚙️</div>
+							<div class="flex flex-col">
+								<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-2 group-hover:text-violet-600 transition-colors">CMS-Based Websites</h3>
+								<p class="font-body-sm text-body-sm text-secondary leading-relaxed">WordPress and PHP-powered sites giving you full content control — easy to update, manage, and scale without technical expertise.</p>
+							</div>
+						</div>
+
+						<!-- Service 4 -->
+						<div class="p-8 rounded-3xl bg-surface-container-lowest shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(20,184,166,0.18)] hover:border-teal-400 hover:-translate-y-1.5 transition-all duration-300 border border-surface-container-high flex gap-6 items-start group" data-card-color="teal">
+							<div class="w-14 h-14 rounded-2xl bg-teal-500/10 text-teal-700 flex items-center justify-center text-2xl shrink-0 group-hover:bg-teal-600 group-hover:text-white transition-colors">🔧</div>
+							<div class="flex flex-col">
+								<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-2 group-hover:text-teal-600 transition-colors">Maintenance &amp; Optimization</h3>
+								<p class="font-body-sm text-body-sm text-secondary leading-relaxed">Ongoing support, performance audits, security patches, and continuous improvements to keep your site running at peak condition.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 5. FEATURES / KEY FEATURES -->
+			<section id="features" class="w-full max-w-[1320px] mx-auto px-6 md:px-12 py-20 md:py-24">
+				<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+					<!-- Visual / Image -->
+					<div class="lg:col-span-6 flex justify-center">
+						<img src="../assets/solutions.jpg" alt="Web Development Features" class="w-full max-w-[500px] h-auto rounded-2xl shadow-[0_15px_40px_rgba(0,0,0,0.08)] block mx-auto object-cover border border-surface-container-high" />
+					</div>
+
+					<!-- Features List -->
+					<div class="lg:col-span-6 flex flex-col items-start text-left">
+						<div class="text-left mb-2">
+							<span class="font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-widest text-left block">KEY FEATURES</span>
+							<h2 class="font-headline-lg text-[32px] md:text-[40px] text-on-surface font-bold tracking-tight mt-1 text-left">
+								Everything You Need to <span class="text-primary italic font-semibold">Succeed</span>
+							</h2>
+						</div>
+
+						<div class="flex flex-col gap-5 mt-8 w-full text-left">
+							<!-- Item 1 -->
+							<div class="flex gap-4 items-start p-4 rounded-2xl bg-surface-container-low/60 border border-surface-container-high/60 hover:bg-surface-container-low transition-colors text-left">
+								<div class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+									<svg class="w-4 h-4 stroke-primary fill-none stroke-[2.5]" viewBox="0 0 16 16"><polyline points="2,9 6,13 14,4"/></svg>
+								</div>
+								<div class="flex-1 min-w-0 text-left">
+									<h4 class="font-headline-sm text-[16px] font-bold text-on-surface mb-1 text-left">SEO-Friendly Coding Structure</h4>
+									<p class="font-body-sm text-[13px] text-secondary leading-relaxed text-left">Clean semantic HTML, schema markup, and proper meta architecture for strong Google indexing.</p>
+								</div>
+							</div>
+
+							<!-- Item 2 -->
+							<div class="flex gap-4 items-start p-4 rounded-2xl bg-surface-container-low/60 border border-surface-container-high/60 hover:bg-surface-container-low transition-colors text-left">
+								<div class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+									<svg class="w-4 h-4 stroke-primary fill-none stroke-[2.5]" viewBox="0 0 16 16"><polyline points="2,9 6,13 14,4"/></svg>
+								</div>
+								<div class="flex-1 min-w-0 text-left">
+									<h4 class="font-headline-sm text-[16px] font-bold text-on-surface mb-1 text-left">Mobile-First Responsive Design</h4>
+									<p class="font-body-sm text-[13px] text-secondary leading-relaxed text-left">Flawless rendering across all screens — mobile, tablet, and desktop, built mobile-first.</p>
+								</div>
+							</div>
+
+							<!-- Item 3 -->
+							<div class="flex gap-4 items-start p-4 rounded-2xl bg-surface-container-low/60 border border-surface-container-high/60 hover:bg-surface-container-low transition-colors text-left">
+								<div class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+									<svg class="w-4 h-4 stroke-primary fill-none stroke-[2.5]" viewBox="0 0 16 16"><polyline points="2,9 6,13 14,4"/></svg>
+								</div>
+								<div class="flex-1 min-w-0 text-left">
+									<h4 class="font-headline-sm text-[16px] font-bold text-on-surface mb-1 text-left">Secure Hosting &amp; Deployment</h4>
+									<p class="font-body-sm text-[13px] text-secondary leading-relaxed text-left">SSL certificates, secure infrastructure, and guided deployment to get your site live safely.</p>
+								</div>
+							</div>
+
+							<!-- Item 4 -->
+							<div class="flex gap-4 items-start p-4 rounded-2xl bg-surface-container-low/60 border border-surface-container-high/60 hover:bg-surface-container-low transition-colors text-left">
+								<div class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+									<svg class="w-4 h-4 stroke-primary fill-none stroke-[2.5]" viewBox="0 0 16 16"><polyline points="2,9 6,13 14,4"/></svg>
+								</div>
+								<div class="flex-1 min-w-0 text-left">
+									<h4 class="font-headline-sm text-[16px] font-bold text-on-surface mb-1 text-left">Third-Party Integrations</h4>
+									<p class="font-body-sm text-[13px] text-secondary leading-relaxed text-left">CRM, analytics, payment gateways, marketing tools — seamlessly connected to your workflow.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 6. WHY US / WHY CHOOSE US -->
+			<section id="why" class="w-full bg-surface-container-low/60 py-20 md:py-24 border-y border-surface-container-high/60">
+				<div class="max-w-[1320px] mx-auto px-6 md:px-12">
+					<div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
+						<span class="font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-widest">WHY CHOOSE US</span>
+						<h2 class="font-headline-lg text-[32px] md:text-[40px] text-on-surface font-bold tracking-tight mt-1">
+							Built Different, Built <span class="text-primary italic font-semibold">Better</span>
+						</h2>
+					</div>
+
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+						<!-- Why Card 01 -->
+						<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-sm hover:shadow-[0_20px_45px_rgba(20,184,166,0.18)] hover:border-teal-400 hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden group" data-card-color="teal">
+							<span class="absolute top-6 right-6 font-display-hero text-[48px] font-bold text-teal-600/15 group-hover:text-teal-600/30 transition-colors leading-none">01</span>
+							<div class="ref-card-header-flex flex items-center gap-4 mb-4">
+								<div class="w-12 h-12 rounded-2xl bg-teal-500/15 border border-teal-500/30 text-teal-500 flex items-center justify-center shrink-0 shadow-[0_0_15px_rgba(45,212,191,0.2)]">
+									<span class="material-symbols-outlined text-[24px]">travel_explore</span>
+								</div>
+								<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-0 group-hover:text-teal-600 transition-colors">SEO &amp; Google Indexing</h3>
+							</div>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">We obsess over search rankings. Our sites are architected from the ground up to rank, index, and perform in search results from day one.</p>
+						</div>
+
+						<!-- Why Card 02 -->
+						<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-sm hover:shadow-[0_20px_45px_rgba(235,87,55,0.18)] hover:border-primary/40 hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden group" data-card-color="primary">
+							<span class="absolute top-6 right-6 font-display-hero text-[48px] font-bold text-primary/15 group-hover:text-primary/30 transition-colors leading-none">02</span>
+							<div class="ref-card-header-flex flex items-center gap-4 mb-4">
+								<div class="w-12 h-12 rounded-2xl bg-primary/15 border border-primary/30 text-primary flex items-center justify-center shrink-0 shadow-[0_0_15px_rgba(235,87,55,0.2)]">
+									<span class="material-symbols-outlined text-[24px]">support_agent</span>
+								</div>
+								<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-0 group-hover:text-primary transition-colors">Dedicated Support</h3>
+							</div>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">Ongoing maintenance, rapid response, and a dedicated team that treats your website like their own. We don't disappear after launch.</p>
+						</div>
+
+						<!-- Why Card 03 -->
+						<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-sm hover:shadow-[0_20px_45px_rgba(14,165,233,0.18)] hover:border-sky-400 hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden group" data-card-color="sky">
+							<span class="absolute top-6 right-6 font-display-hero text-[48px] font-bold text-sky-600/15 group-hover:text-sky-600/30 transition-colors leading-none">03</span>
+							<div class="ref-card-header-flex flex items-center gap-4 mb-4">
+								<div class="w-12 h-12 rounded-2xl bg-sky-500/15 border border-sky-500/30 text-sky-500 flex items-center justify-center shrink-0 shadow-[0_0_15px_rgba(14,165,233,0.2)]">
+									<span class="material-symbols-outlined text-[24px]">code_blocks</span>
+								</div>
+								<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-0 group-hover:text-sky-600 transition-colors">Custom-Built Only</h3>
+							</div>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">Zero templates. Every project is engineered from scratch, ensuring your site is unique, performant, and perfectly aligned to your brand.</p>
+						</div>
+
+						<!-- Why Card 04 -->
+						<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-sm hover:shadow-[0_20px_45px_rgba(245,158,11,0.18)] hover:border-amber-400 hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden group" data-card-color="amber">
+							<span class="absolute top-6 right-6 font-display-hero text-[48px] font-bold text-amber-600/15 group-hover:text-amber-600/30 transition-colors leading-none">04</span>
+							<div class="ref-card-header-flex flex items-center gap-4 mb-4">
+								<div class="w-12 h-12 rounded-2xl bg-amber-500/15 border border-amber-500/30 text-amber-500 flex items-center justify-center shrink-0 shadow-[0_0_15px_rgba(245,158,11,0.2)]">
+									<span class="material-symbols-outlined text-[24px]">bolt</span>
+								</div>
+								<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-0 group-hover:text-amber-600 transition-colors">Sub-Second Load Speeds</h3>
+							</div>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">Optimized critical rendering paths, intelligent asset compression, and edge CDN delivery ensure instant page loads that maximize user retention.</p>
+						</div>
+
+						<!-- Why Card 05 -->
+						<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-sm hover:shadow-[0_20px_45px_rgba(16,185,129,0.18)] hover:border-emerald-400 hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden group" data-card-color="emerald">
+							<span class="absolute top-6 right-6 font-display-hero text-[48px] font-bold text-emerald-600/15 group-hover:text-emerald-600/30 transition-colors leading-none">05</span>
+							<div class="ref-card-header-flex flex items-center gap-4 mb-4">
+								<div class="w-12 h-12 rounded-2xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-500 flex items-center justify-center shrink-0 shadow-[0_0_15px_rgba(16,185,129,0.2)]">
+									<span class="material-symbols-outlined text-[24px]">handshake</span>
+								</div>
+								<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-0 group-hover:text-emerald-600 transition-colors">Transparent Collaboration</h3>
+							</div>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">Sprint-based agile execution with weekly staging demos, clear milestones, and direct communication with senior engineering leads throughout.</p>
+						</div>
+
+						<!-- Why Card 06 -->
+						<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-sm hover:shadow-[0_20px_45px_rgba(139,92,246,0.18)] hover:border-violet-400 hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden group" data-card-color="violet">
+							<span class="absolute top-6 right-6 font-display-hero text-[48px] font-bold text-violet-600/15 group-hover:text-violet-600/30 transition-colors leading-none">06</span>
+							<div class="ref-card-header-flex flex items-center gap-4 mb-4">
+								<div class="w-12 h-12 rounded-2xl bg-violet-500/15 border border-violet-500/30 text-violet-500 flex items-center justify-center shrink-0 shadow-[0_0_15px_rgba(139,92,246,0.2)]">
+									<span class="material-symbols-outlined text-[24px]">rocket_launch</span>
+								</div>
+								<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-0 group-hover:text-violet-600 transition-colors">Future-Proof Scalability</h3>
+							</div>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">Modular codebase and cloud-native architecture ready to handle exponential traffic surges, global expansion, and new feature integrations effortlessly.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 7. CTA SECTION -->
+			<section id="contact" class="w-full max-w-[1320px] mx-auto px-6 md:px-12 py-20 md:py-24">
+				<div class="p-10 md:p-16 rounded-3xl bg-surface-container-lowest border border-primary/20 shadow-[0_20px_50px_rgba(235,87,55,0.1)] text-center relative overflow-hidden flex flex-col items-center">
+					<!-- Atmospheric Glow -->
+					<div class="absolute -top-24 -right-24 w-80 h-80 rounded-full blur-3xl opacity-40 pointer-events-none" style="background: radial-gradient(circle, rgba(235, 87, 55, 0.3) 0%, transparent 70%);"></div>
+					<div class="absolute -bottom-24 -left-24 w-80 h-80 rounded-full blur-3xl opacity-30 pointer-events-none" style="background: radial-gradient(circle, rgba(92, 147, 159, 0.25) 0%, transparent 70%);"></div>
+
+					<span class="font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-widest relative z-10 mb-3">READY TO LAUNCH?</span>
+					<h2 class="font-headline-lg text-[32px] md:text-[48px] lg:text-[54px] text-white font-bold tracking-tight relative z-10 max-w-3xl leading-[1.1] text-center">
+						Engineered Web Platforms.<br />
+						<span class="text-primary italic font-semibold">Accelerated Growth.</span>
+					</h2>
+					<p class="font-body-lg text-body-lg text-secondary max-w-xl mt-4 mb-8 relative z-10 leading-relaxed">
+						Launch a powerful, high-performance website built for your business goals. Let's start with a conversation.
+					</p>
+					<div class="flex flex-wrap justify-center gap-4 relative z-10">
+						<a class="inline-flex items-center gap-3 px-9 py-4 rounded-full text-white font-label-pill text-label-pill shadow-[0_8px_25px_rgba(235,87,55,0.4)] hover:shadow-[0_14px_35px_rgba(235,87,55,0.55)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 border border-white/25 text-base font-semibold" href="../contact.html" style="background: linear-gradient(135deg, #ad2b0e 0%, #eb5737 60%, #ff7849 100%);">
+							<span>Start Your Project &rarr;</span>
+						</a>
+					</div>
+				</div>
+			</section>
+
+		</div>
+	</main>
+
+	<!-- GLOBAL HIGH-CONTRAST FOOTER -->
+	<!-- Reusable Footer Component -->
+	<div id="footer"></div>
+
+
+
+
+
+	<!-- Interactive Scripts -->
+	<script>
+		function toggleMobileMenu() {
+			var menu = document.getElementById("mobile-nav-menu");
+			var icon = document.getElementById("mobile-menu-icon");
+			if (menu) {
+				var isHidden = menu.classList.toggle("hidden");
+				if (icon) {
+					icon.textContent = isHidden ? "menu" : "close";
+				}
+			}
+		}
+
+		function toggleMobileServices() {
+			var dropdown = document.getElementById("mobile-services-dropdown");
+			var arrow = document.getElementById("mobile-services-arrow");
+			var btn = document.getElementById("mobile-services-btn");
+			if (dropdown) {
+				var isHidden = dropdown.classList.toggle("hidden");
+				if (arrow) {
+					if (isHidden) {
+						arrow.classList.remove("rotate-180");
+					} else {
+						arrow.classList.add("rotate-180");
+					}
+				}
+				if (btn) {
+					btn.setAttribute("aria-expanded", isHidden ? "false" : "true");
+				}
+			}
+		}
+
+		function toggleFaq(el) {
+			var isActive = el.classList.contains('active');
+			var allFaqs = document.querySelectorAll('.faq-item');
+			allFaqs.forEach(function(item) {
+				item.classList.remove('active');
+				var chev = item.querySelector('.faq-chevron');
+				if (chev) {
+					chev.classList.remove('text-primary');
+					chev.classList.add('text-secondary');
+				}
+			});
+			if (!isActive) {
+				el.classList.add('active');
+				var chev = el.querySelector('.faq-chevron');
+				if (chev) {
+					chev.classList.remove('text-secondary');
+					chev.classList.add('text-primary');
+				}
+			}
+		}
+
+	</script>
+	<!-- Reusable Component Loader (Navbar & Footer) -->
+	<script src="../assets/bgs-components.js"></script>
+</body>
+</html>

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Core typography preload -->
+<link rel="preload" href="../assets/amphora-fonts/The%20Future/TheFuture-Regular.subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/amphora-fonts/The%20Future/TheFuture-Medium.subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/amphora-fonts/The%20Future/TheFuture-Bold.subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/amphora-fonts/Tiempos%20Headline/TiemposHeadline-400-Regular-Italic.woff2" as="font" type="font/woff2" crossorigin>
+
+
+<!-- Reveal the finished layout without showing a loading animation. -->
+<style>html.layout-pending body { visibility:hidden !important; }</style>
+<script>
+(() => {
+  const root = document.documentElement;
+  root.classList.add('layout-pending');
+  let observer;
+  const reveal = () => {
+    root.classList.remove('layout-pending');
+    if (observer) observer.disconnect();
+  };
+  const ready = () => {
+    if (root.classList.contains('bgs-layout-ready') && document.querySelector('.bgs-main-navbar')) reveal();
+  };
+  observer = new MutationObserver(ready);
+  observer.observe(root, {childList:true, subtree:true, attributes:true, attributeFilter:['class']});
+  document.addEventListener('DOMContentLoaded', ready, {once:true});
+  setTimeout(reveal, 2500);
+})();
+</script>
+
+
+
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	<title>Terms and Conditions of Service | Bridge Group Solutions</title>
+	<meta name="description" content="Official Terms and Conditions governing access, intellectual property, platform usage, and legal compliance for Bridge Group Solutions services." />
+	<meta name="keywords" content="Bridge Group Solutions terms and conditions, terms of service, acceptable use policy, IP rights, legal terms, contract governance" />
+	<!-- Open Graph Meta Tags -->
+	<meta property="og:title" content="Terms and Conditions of Service | Bridge Group Solutions" />
+	<meta property="og:description" content="Official Terms and Conditions governing access, intellectual property, platform usage, and legal compliance for Bridge Group Solutions services." />
+	<meta property="og:url" content="https://www.bridgegroupsolutions.com/legal/terms-and-conditions.html" />
+	<meta property="og:image" content="https://www.bridgegroupsolutions.com/assets/logo.webp" />
+	<meta property="og:type" content="website" />
+
+	<!-- X (Twitter) Meta Tags -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Terms and Conditions of Service | Bridge Group Solutions" />
+	<meta name="twitter:description" content="Official Terms and Conditions governing access, intellectual property, platform usage, and legal compliance for Bridge Group Solutions services." />
+	<meta name="twitter:image" content="https://www.bridgegroupsolutions.com/assets/logo.webp" />
+	<link rel="canonical" href="https://www.bridgegroupsolutions.com/legal/terms-and-conditions.html" />
+	<link rel="icon" type="image/svg+xml" href="../assets/logo.webp" />
+
+	<!-- Schema.org Structured Data (JSON-LD) -->
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.bridgegroupsolutions.com/legal/terms-and-conditions.html#webpage",
+      "url": "https://www.bridgegroupsolutions.com/legal/terms-and-conditions.html",
+      "name": "Terms and Conditions of Service | Bridge Group Solutions",
+      "description": "Review the contractual terms, intellectual property protections, service standards, and legal conditions governing Bridge Group Solutions.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.bridgegroupsolutions.com/#website",
+        "url": "https://www.bridgegroupsolutions.com",
+        "name": "Bridge Group Solutions"
+      }
+    }
+  ]
+}
+	</script>
+
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com" rel="preconnect">
+	<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+	<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+
+	<!-- Base Layer Styles -->
+	<style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style>
+
+	<!-- Design Tokens & Modern Theme -->
+	<link rel="stylesheet" href="../assets/bgs-modern-theme.css" />
+
+	<!-- Tailwind CSS CDN & Custom Config -->
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script id="tailwind-config">
+		tailwind.config = {
+			darkMode: "class",
+			theme: {
+				extend: {
+					colors: {
+						"surface-container-highest": "#e2e2e4",
+						"on-secondary-container": "#5c647a",
+						"on-surface": "#1a1c1d",
+						"on-error": "#ffffff",
+						"primary-fixed": "#ffdad3",
+						"background": "#f9f9fb",
+						"primary-fixed-dim": "#ffb4a4",
+						"inverse-primary": "#ffb4a4",
+						"surface-bright": "#f9f9fb",
+						"on-tertiary-fixed-variant": "#424656",
+						"tertiary-fixed-dim": "#c3c6d8",
+						"tertiary-fixed": "#dfe1f5",
+						"outline-variant": "#e2bfb7",
+						"error-container": "#ffdad6",
+						"on-primary-container": "#fffbff",
+						"on-tertiary-container": "#fefcff",
+						"error": "#ba1a1a",
+						"tertiary": "#585b6b",
+						"secondary": "#565e74",
+						"surface-container-lowest": "#ffffff",
+						"surface-container-low": "#f3f3f5",
+						"secondary-fixed": "#dae2fd",
+						"secondary-fixed-dim": "#bec6e0",
+						"on-background": "#1a1c1d",
+						"on-secondary": "#ffffff",
+						"on-surface-variant": "#5a413b",
+						"outline": "#8e706a",
+						"secondary-container": "#dae2fd",
+						"surface": "#f9f9fb",
+						"surface-container": "#eeeef0",
+						"inverse-surface": "#2f3132",
+						"tertiary-container": "#707485",
+						"on-tertiary": "#ffffff",
+						"surface-tint": "#b12e11",
+						"inverse-on-surface": "#f0f0f2",
+						"on-primary-fixed": "#3d0600",
+						"surface-dim": "#d9dadc",
+						"on-error-container": "#93000a",
+						"on-primary": "#ffffff",
+						"on-primary-fixed-variant": "#8c1800",
+						"on-secondary-fixed": "#131b2e",
+						"primary-container": "#d04426",
+						"surface-container-high": "#e8e8ea",
+						"primary": "#ad2b0e",
+						"on-secondary-fixed-variant": "#3f465c",
+						"on-tertiary-fixed": "#171b29",
+						"surface-variant": "#e2e2e4"
+					},
+					borderRadius: {
+						"DEFAULT": "0.25rem",
+						"lg": "0.5rem",
+						"xl": "0.75rem",
+						"full": "9999px"
+					},
+					spacing: {
+						"space-sm": "0.5rem",
+						"space-md": "1rem",
+						"space-xs": "0.25rem",
+						"gutter": "1.5rem",
+						"space-lg": "1.5rem",
+						"margin-mobile": "1.25rem",
+						"gutter-mobile": "1rem",
+						"space-xl": "2.5rem",
+						"margin": "3rem"
+					},
+					fontFamily: {
+						"body-md": ["Plus Jakarta Sans"],
+						"body-sm": ["Plus Jakarta Sans"],
+						"label-pill": ["Plus Jakarta Sans"],
+						"display-hero": ["Plus Jakarta Sans"],
+						"headline-lg": ["Plus Jakarta Sans"],
+						"headline-md": ["Plus Jakarta Sans"],
+						"label-eyebrow": ["Space Grotesk"],
+						"body-lg": ["Plus Jakarta Sans"],
+						"display-hero-mobile": ["Plus Jakarta Sans"],
+						"headline-sm": ["Plus Jakarta Sans"],
+						"stat-metric": ["Plus Jakarta Sans"],
+						"label-code": ["Space Grotesk"]
+					},
+					fontSize: {
+						"body-md": ["15px", {"lineHeight": "24px", "fontWeight": "400"}],
+						"body-sm": ["13px", {"lineHeight": "20px", "fontWeight": "400"}],
+						"label-pill": ["12px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+						"display-hero": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+						"headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+						"headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+						"label-eyebrow": ["11px", {"lineHeight": "14px", "letterSpacing": "0.12em", "fontWeight": "700"}],
+						"body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+						"display-hero-mobile": ["36px", {"lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+						"headline-sm": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+						"stat-metric": ["40px", {"lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+						"label-code": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}]
+					}
+				}
+			}
+		}
+	</script>
+<link rel="stylesheet" href="../assets/amphora-reference.css">
+<link rel="stylesheet" href="../assets/amphora-bgs.css">
+<script defer src="../assets/amphora-bgs.js"></script>
+</head>
+<body class="amphora-theme bg-surface font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+
+<!-- Reusable Navbar Component -->
+	<div id="navbar"></div>
+
+<main class="w-full pt-24 md:pt-28 pb-20 bg-surface min-h-screen relative overflow-hidden">
+	<!-- Atmospheric Glow Accents to eliminate empty void -->
+	<div class="absolute top-10 right-0 w-[500px] h-[500px] rounded-full blur-3xl opacity-30 pointer-events-none -z-10" style="background: radial-gradient(circle, rgba(235, 87, 55, 0.25) 0%, rgba(255, 120, 73, 0.1) 50%, transparent 80%);"></div>
+	<div class="absolute top-40 left-0 w-[400px] h-[400px] rounded-full blur-3xl opacity-20 pointer-events-none -z-10" style="background: radial-gradient(circle, rgba(92, 100, 122, 0.2) 0%, transparent 70%);"></div>
+
+	<!-- Hero Section -->
+	<section class="max-w-[1200px] mx-auto px-6 md:px-12 pt-4 pb-8">
+		<!-- Breadcrumbs -->
+		<nav class="flex items-center gap-2 text-[12px] font-label-code text-secondary mb-5">
+			<a href="../index.html" class="hover:text-primary transition-colors flex items-center gap-1">
+				<span class="material-symbols-outlined text-[14px]">home</span>
+				<span>Home</span>
+			</a>
+			<span class="text-secondary/40">/</span>
+			<span class="text-secondary/70">Legal</span>
+			<span class="text-secondary/40">/</span>
+			<span class="text-primary font-semibold">Terms &amp; Conditions</span>
+		</nav>
+
+		<!-- 2-Column Hero Grid: Left Content + Right Legal Telemetry/Verification Card -->
+		<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+			
+			<!-- Left Column: Primary Legal Heading & Metadata -->
+			<div class="lg:col-span-7 flex flex-col items-start gap-4">
+				<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-low text-primary font-label-eyebrow text-label-eyebrow uppercase tracking-widest border border-surface-container-high shadow-sm">
+					<span class="material-symbols-outlined text-[15px]">gavel</span>
+					<span>STATUTORY LEGAL FRAMEWORK &bull; CONTRACT ACT &bull; IT ACT</span>
+				</div>
+				<h1 class="font-display-hero text-display-hero-mobile md:text-display-hero font-bold tracking-tight text-on-surface leading-[1.08]">
+					Terms and <span class="text-primary italic">Conditions.</span>
+				</h1>
+				<p class="font-body-lg text-body-lg text-secondary leading-relaxed max-w-xl">
+					By accessing and using the services, platforms, and content provided by Bridge Group Solutions ("BGS"), you agree to comply with the following Terms &amp; Conditions.
+				</p>
+				
+				<!-- Metadata Badges -->
+				<div class="flex flex-wrap items-center gap-2.5 pt-1 font-label-code text-[11px] text-secondary">
+					<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low border border-surface-container-high font-semibold text-on-surface">
+						<span class="material-symbols-outlined text-[14px] text-primary">calendar_today</span>
+						<span>EFFECTIVE: MARCH 2026</span>
+					</span>
+					<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low border border-surface-container-high font-semibold text-on-surface">
+						<span class="material-symbols-outlined text-[14px] text-primary">balance</span>
+						<span>GOVERNING LAW: REPUBLIC OF INDIA</span>
+					</span>
+					<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low border border-surface-container-high font-semibold text-on-surface">
+						<span class="material-symbols-outlined text-[14px] text-primary">format_list_numbered</span>
+						<span>13 ENFORCEABLE CLAUSES</span>
+					</span>
+				</div>
+			</div>
+
+			<!-- Right Column: Corporate Compliance & Verification Instrument -->
+			<div class="lg:col-span-5 w-full">
+				<div class="p-6 rounded-3xl bg-surface-container-lowest/90 backdrop-blur-xl border border-primary/20 shadow-[0_20px_50px_rgba(235,87,55,0.08),0_10px_25px_rgba(15,23,42,0.04)] flex flex-col gap-4 relative overflow-hidden">
+					<div class="flex items-center justify-between border-b border-surface-container-high/80 pb-3.5">
+						<div class="flex items-center gap-2.5">
+							<div class="w-8 h-8 rounded-xl flex items-center justify-center text-white shadow-sm" style="background: linear-gradient(135deg, #ad2b0e 0%, #eb5737 100%);">
+								<span class="material-symbols-outlined text-[18px]">handshake</span>
+							</div>
+							<div>
+								<div class="font-headline-sm text-[14px] font-bold text-on-surface">MSA &amp; Contract Terms</div>
+								<div class="font-label-code text-[11px] text-secondary">Bridge Group Legal Operations</div>
+							</div>
+						</div>
+						<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200">
+							<span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+							<span class="font-label-code text-[10px] font-bold text-emerald-800 tracking-wider">ACTIVE &amp; ENFORCED</span>
+						</div>
+					</div>
+
+					<!-- 2x2 Mini Fact Matrix -->
+					<div class="grid grid-cols-2 gap-2.5">
+						<div class="p-3 rounded-2xl bg-surface-container-low/70 border border-surface-container-high/60 flex flex-col">
+							<span class="font-label-eyebrow text-[10px] text-secondary uppercase font-bold tracking-wider">Jurisdiction</span>
+							<span class="font-headline-sm text-[13px] font-bold text-on-surface mt-0.5">High Court of Delhi</span>
+							<span class="text-[11px] text-secondary">Exclusive Forum</span>
+						</div>
+						<div class="p-3 rounded-2xl bg-surface-container-low/70 border border-surface-container-high/60 flex flex-col">
+							<span class="font-label-eyebrow text-[10px] text-secondary uppercase font-bold tracking-wider">Arbitration</span>
+							<span class="font-headline-sm text-[13px] font-bold text-on-surface mt-0.5">Arbitration Act 1996</span>
+							<span class="text-[11px] text-secondary">Expedited Tribunal</span>
+						</div>
+					</div>
+
+					<!-- Quick Action Buttons -->
+					<div class="flex items-center gap-2 pt-1 border-t border-surface-container-high/60">
+						<button type="button" onclick="window.print()" class="flex-1 inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-surface-container-low hover:bg-surface-container hover:text-primary text-on-surface font-label-pill text-[12px] font-semibold border border-surface-container-high transition-colors">
+							<span class="material-symbols-outlined text-[15px]">print</span>
+							<span>Print Terms</span>
+						</button>
+						<a href="mailto:contactus@bridgegroupsolutions.com" class="flex-1 inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl text-white font-label-pill text-[12px] font-semibold shadow-sm hover:opacity-95 transition-opacity text-center" style="background: linear-gradient(135deg, rgb(173, 43, 14) 0%, rgb(235, 87, 55) 100%);">
+							<span class="material-symbols-outlined text-[15px]">mail</span>
+							<span>Counsel Contact</span>
+						</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- Legal Navigation Tabs (Sleek Segmented Pill Bar) -->
+		<div class="pt-8 mt-4 border-t border-surface-container-high/70">
+			<div class="legal-nav-tabs-bar w-full sm:w-auto grid grid-cols-2 sm:inline-flex sm:flex-wrap items-center gap-1.5 sm:gap-1 p-1.5 rounded-2xl bg-surface-container-low/90 border border-surface-container-high/80 shadow-sm">
+				<a href="disclaimer.html" class="legal-nav-tab-btn flex items-center justify-center gap-1.5 w-full sm:w-auto py-2.5 sm:py-2 px-2 sm:px-4 rounded-xl font-label-pill text-[11.5px] sm:text-label-pill font-semibold text-secondary hover:text-primary bg-white/80 sm:bg-transparent border border-surface-container-high/60 sm:border-transparent hover:bg-white transition-all text-center">
+					<span class="material-symbols-outlined text-[15px] shrink-0">verified</span>
+					<span class="whitespace-nowrap">Disclaimer</span>
+				</a>
+				<a href="privacy-policy.html" class="legal-nav-tab-btn flex items-center justify-center gap-1.5 w-full sm:w-auto py-2.5 sm:py-2 px-2 sm:px-4 rounded-xl font-label-pill text-[11.5px] sm:text-label-pill font-semibold text-secondary hover:text-primary bg-white/80 sm:bg-transparent border border-surface-container-high/60 sm:border-transparent hover:bg-white transition-all text-center">
+					<span class="material-symbols-outlined text-[15px] shrink-0">lock</span>
+					<span class="whitespace-nowrap">Privacy Policy</span>
+				</a>
+				<a href="terms-and-conditions.html" class="legal-nav-tab-btn active flex items-center justify-center gap-1.5 w-full sm:w-auto py-2.5 sm:py-2 px-2 sm:px-4 rounded-xl font-label-pill text-[11.5px] sm:text-label-pill font-semibold bg-primary text-white shadow-sm transition-all text-center">
+					<span class="material-symbols-outlined text-[15px] shrink-0">description</span>
+					<span class="whitespace-nowrap">Terms &amp; Conditions</span>
+				</a>
+				<a href="cookie-policy.html" class="legal-nav-tab-btn flex items-center justify-center gap-1.5 w-full sm:w-auto py-2.5 sm:py-2 px-2 sm:px-4 rounded-xl font-label-pill text-[11.5px] sm:text-label-pill font-semibold text-secondary hover:text-primary bg-white/80 sm:bg-transparent border border-surface-container-high/60 sm:border-transparent hover:bg-white transition-all text-center">
+					<span class="material-symbols-outlined text-[15px] shrink-0">cookie</span>
+					<span class="whitespace-nowrap">Cookie Policy</span>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Legal Document Container -->
+	<section class="max-w-[1200px] mx-auto px-4 sm:px-6 md:px-12">
+		<div class="bg-surface-container-lowest rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-14 border border-surface-container-high shadow-[0_12px_40px_rgba(0,0,0,0.03)] space-y-6 sm:space-y-8">
+			
+			<!-- Preamble Callout -->
+			<div class="p-6 rounded-2xl bg-surface-container-low border border-surface-container-high">
+				<p class="font-body-sm text-sm text-on-surface leading-relaxed font-medium">
+					By accessing and using the services, platforms, and content provided by Bridge Group Solutions ("BGS"), you agree to comply with the following Terms &amp; Conditions. These rules are designed to protect the integrity, reputation, and digital assets of BGS and its users.
+				</p>
+			</div>
+
+			<!-- 13 Standard Numbered Terms Cards -->
+			<div class="space-y-4">
+
+				<!-- 01 -->
+				<div class="p-5 sm:p-6 rounded-2xl border border-surface-container-high hover:border-primary/30 transition-colors">
+					<div class="flex items-start gap-4">
+						<span class="w-8 h-8 rounded-xl bg-surface-container-low text-primary font-label-code text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">01</span>
+						<div class="min-w-0">
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-1">Authorized Use</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+								You are permitted to use BGS systems and websites only for lawful, authorized, and ethical business activities. Any misuse will result in immediate revocation of access and possible legal action.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 02 -->
+				<div class="p-5 sm:p-6 rounded-2xl border border-surface-container-high hover:border-primary/30 transition-colors">
+					<div class="flex items-start gap-4">
+						<span class="w-8 h-8 rounded-xl bg-surface-container-low text-primary font-label-code text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">02</span>
+						<div class="min-w-0">
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-1">Intellectual Property</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+								All designs, code, documents, text, and brand assets appearing on BGS platforms are the exclusive intellectual property of Bridge Group Solutions. Unauthorized use is forbidden.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 03 -->
+				<div class="p-5 sm:p-6 rounded-2xl border border-surface-container-high hover:border-primary/30 transition-colors">
+					<div class="flex items-start gap-4">
+						<span class="w-8 h-8 rounded-xl bg-surface-container-low text-primary font-label-code text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">03</span>
+						<div class="min-w-0">
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-1">Content Usage</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+								Copying, reproducing, modifying, or redistributing company content or internal documents without prior written authorization is strictly prohibited.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 04 -->
+				<div class="p-5 sm:p-6 rounded-2xl border border-surface-container-high hover:border-primary/30 transition-colors">
+					<div class="flex items-start gap-4">
+						<span class="w-8 h-8 rounded-xl bg-surface-container-low text-primary font-label-code text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">04</span>
+						<div class="min-w-0">
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-1">Platform Misuse</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+								Misuse of BGS digital platforms—whether through automation, scraping, abuse of access, or exploiting vulnerabilities—is grounds for immediate suspension and legal action.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 05 -->
+				<div class="p-5 sm:p-6 rounded-2xl border border-surface-container-high hover:border-primary/30 transition-colors">
+					<div class="flex items-start gap-4">
+						<span class="w-8 h-8 rounded-xl bg-surface-container-low text-primary font-label-code text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">05</span>
+						<div class="min-w-0">
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-1">Prohibited Communications</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+								Users may not use BGS platforms to send spam, phishing messages, unsolicited offers, or misrepresent their identity or intentions.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 06 -->
+				<div class="p-5 sm:p-6 rounded-2xl border border-surface-container-high hover:border-primary/30 transition-colors">
+					<div class="flex items-start gap-4">
+						<span class="w-8 h-8 rounded-xl bg-surface-container-low text-primary font-label-code text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">06</span>
+						<div class="min-w-0">
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-1">False Identity</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+								Impersonating BGS employees, clients, or third-party affiliates for any reason is a breach of trust and will trigger disciplinary and legal consequences.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 07 -->
+				<div class="p-5 sm:p-6 rounded-2xl border border-surface-container-high hover:border-primary/30 transition-colors">
+					<div class="flex items-start gap-4">
+						<span class="w-8 h-8 rounded-xl bg-surface-container-low text-primary font-label-code text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">07</span>
+						<div class="min-w-0">
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-1">Site Updates</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+								Content on BGS digital platforms is subject to change without prior notice. We do not guarantee uninterrupted access, accuracy, or real-time availability.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 08 -->
+				<div class="p-5 sm:p-6 rounded-2xl border border-surface-container-high hover:border-primary/30 transition-colors">
+					<div class="flex items-start gap-4">
+						<span class="w-8 h-8 rounded-xl bg-surface-container-low text-primary font-label-code text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">08</span>
+						<div class="min-w-0">
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-1">No Guarantees</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+								All services are provided "as is" without warranties of any kind. We disclaim responsibility for any damages arising from use or reliance on our systems.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 09 -->
+				<div class="p-5 sm:p-6 rounded-2xl border border-surface-container-high hover:border-primary/30 transition-colors">
+					<div class="flex items-start gap-4">
+						<span class="w-8 h-8 rounded-xl bg-surface-container-low text-primary font-label-code text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">09</span>
+						<div class="min-w-0">
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-1">Liability Disclaimer</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+								Bridge Group Solutions is not liable for direct, indirect, incidental, or consequential damages resulting from site use, including loss of data or service interruptions.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 10 -->
+				<div class="p-5 sm:p-6 rounded-2xl border border-surface-container-high hover:border-primary/30 transition-colors">
+					<div class="flex items-start gap-4">
+						<span class="w-8 h-8 rounded-xl bg-surface-container-low text-primary font-label-code text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">10</span>
+						<div class="min-w-0">
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-1">Consent to Terms</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+								By continuing to use any BGS digital or internal platform, you consent to these Terms &amp; Conditions and acknowledge responsibility for regularly reviewing them.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 11 -->
+				<div class="p-5 sm:p-6 rounded-2xl border border-surface-container-high hover:border-primary/30 transition-colors">
+					<div class="flex items-start gap-4">
+						<span class="w-8 h-8 rounded-xl bg-surface-container-low text-primary font-label-code text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">11</span>
+						<div class="min-w-0">
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-1">Governing Law</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+								These Terms and Conditions shall be governed by and construed in accordance with the applicable laws of the Republic of India, including but not limited to the Indian Contract Act, 1872, and the Information Technology Act, 2000, along with any rules, regulations, or amendments made thereunder. Any disputes arising out of or in connection with these Terms shall be subject to the exclusive jurisdiction of the competent courts located in India.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 12 -->
+				<div class="p-5 sm:p-6 rounded-2xl border border-surface-container-high hover:border-primary/30 transition-colors">
+					<div class="flex items-start gap-4">
+						<span class="w-8 h-8 rounded-xl bg-surface-container-low text-primary font-label-code text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">12</span>
+						<div class="min-w-0">
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-1">Enforcement</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+								Violations of these terms will lead to strict consequences including access termination, employee disciplinary action, and civil or criminal prosecution, as applicable.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 13 -->
+				<div class="p-5 sm:p-6 rounded-2xl border border-surface-container-high hover:border-primary/30 transition-colors">
+					<div class="flex items-start gap-4">
+						<span class="w-8 h-8 rounded-xl bg-surface-container-low text-primary font-label-code text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">13</span>
+						<div class="min-w-0">
+							<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-1">Unauthorized Project Listing</h3>
+							<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+								Any unauthorized use, claim, or display of Bridge Group Solutions projects on personal platforms (LinkedIn, portfolios, resumes, or any other medium) without explicit prior written consent is a serious breach of company policy. Offenders will face immediate termination, aggressive legal prosecution, and will be held fully liable for all damages. This misconduct will be dealt with severely and without exception.
+							</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- Legal Contact Box -->
+			<div class="pt-6 border-t border-surface-container-high">
+				<div class="legal-contact-box flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 sm:p-6 rounded-2xl bg-surface-container-low border border-surface-container-high">
+					<div class="text-left min-w-0">
+						<h4 class="font-headline-sm text-base sm:text-headline-sm font-bold text-on-surface">Questions Regarding These Terms?</h4>
+						<p class="font-body-sm text-xs sm:text-body-sm text-secondary mt-1">Contact the Bridge Group Solutions corporate legal counsel.</p>
+					</div>
+					<a href="mailto:contactus@bridgegroupsolutions.com" class="legal-contact-btn inline-flex items-center justify-center gap-2 px-3.5 sm:px-5 py-2.5 rounded-full bg-white text-on-surface font-label-pill text-[11.5px] sm:text-label-pill font-semibold border border-surface-container-high hover:border-primary hover:text-primary transition-colors shadow-sm w-full sm:w-auto shrink-0 max-w-full">
+						<span class="material-symbols-outlined text-[15px] sm:text-[16px] text-primary shrink-0">mail</span>
+						<span class="break-all sm:break-normal">contactus@bridgegroupsolutions.com</span>
+					</a>
+				</div>
+			</div>
+
+		</div>
+	</section>
+</main>
+
+<!-- Reusable Footer Component -->
+	<div id="footer"></div>
+
+<script>
+	function toggleMobileMenu() {
+			var menu = document.getElementById("mobile-nav-menu");
+			var icon = document.getElementById("mobile-menu-icon");
+			if (menu) {
+				var isHidden = menu.classList.toggle("hidden");
+				if (icon) {
+					icon.textContent = isHidden ? "menu" : "close";
+				}
+			}
+		}
+
+		function toggleMobileServices() {
+			var dropdown = document.getElementById("mobile-services-dropdown");
+			var arrow = document.getElementById("mobile-services-arrow");
+			var btn = document.getElementById("mobile-services-btn");
+			if (dropdown) {
+				var isHidden = dropdown.classList.toggle("hidden");
+				if (arrow) {
+					if (isHidden) {
+						arrow.classList.remove("rotate-180");
+					} else {
+						arrow.classList.add("rotate-180");
+					}
+				}
+				if (btn) {
+					btn.setAttribute("aria-expanded", isHidden ? "false" : "true");
+				}
+			}
+		}
+</script>
+
+	<!-- Reusable Component Loader (Navbar & Footer) -->
+	<script src="../assets/bgs-components.js"></script>
+</body>
+</html>

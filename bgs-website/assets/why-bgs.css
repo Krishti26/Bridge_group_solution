@@ -1,0 +1,117 @@
+/* ===================================================================
+   BRIDGE GROUP SOLUTIONS - WHY BGS PAGE STYLESHEET
+   Dedicated stylesheet for why-bgs.html
+   Visual Design System: Aligned with Home Page (index.html) & BGS Alpha
+   =================================================================== */
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Glassmorphism & Surface Tokens */
+.glass-header {
+  background: rgba(249, 249, 251, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(226, 226, 228, 0.8);
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Bento Card Transitions */
+.bento-card {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+
+.bento-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(235, 87, 55, 0.14);
+  border-color: rgba(235, 87, 55, 0.4);
+}
+
+/* Card Lift Physics matching web.html */
+.hover-lift {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(235, 87, 55, 0.14);
+}
+
+/* Certificate Image Container Styling */
+.cert-card-img {
+  width: 100%;
+  max-height: 260px;
+  object-fit: contain;
+  border-radius: 12px;
+  background-color: #f3f3f5;
+  transition: transform 0.3s ease;
+}
+
+.bento-card:hover .cert-card-img {
+  transform: scale(1.02);
+}
+
+/* Partner Card Premium Styling */
+.partner-card {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.partner-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(235, 87, 55, 0.14), 0 0 25px -5px rgba(235, 87, 55, 0.12);
+}
+
+.partner-point {
+  transition: all 0.2s ease;
+}
+
+.partner-point:hover {
+  background-color: rgba(243, 244, 246, 0.9);
+  transform: translateX(2px);
+}
+
+/* 4 Pillars Bento Cards (10+ Years Section) */
+.pillar-card {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.pillar-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(235, 87, 55, 0.14) !important;
+}
+
+.pillar-card .pillar-icon-box {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.pillar-card:hover .pillar-icon-box {
+  transform: scale(1.08) rotate(-2deg);
+}
+
+.pillar-card .pillar-arrow {
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.pillar-card:hover .pillar-arrow {
+  transform: translateX(3px);
+}
