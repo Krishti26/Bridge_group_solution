@@ -305,7 +305,7 @@ body.amphora-theme .ref-accent-pill:has(.ref-tech-phrase) .ref-tech-phrase{backg
 @media(max-width:520px){body.amphora-theme .ref-tech-phrase{gap:.12em}}
 /* Scroll overlap applies to card groups without changing their content or column count. */
 body.amphora-theme .ref-stack-group{position:relative;isolation:isolate;align-items:start!important;overflow:visible!important;padding-bottom:40px}
-body.amphora-theme .ref-stack-group>.ref-stack-card:not(#founders *){position:sticky!important;top:var(--stack-top,126px);z-index:var(--stack-layer,1);scale:var(--stack-scale,1);transform-origin:center top;box-shadow:0 20px 60px -35px #15122370,inset 0 1px #fffffff2!important;background:linear-gradient(138deg,#fff,#f7f7fa) padding-box,var(--edge) border-box!important;transition:scale .12s linear,transform .32s,opacity .65s!important}
+body.amphora-theme .ref-stack-group>.ref-stack-card{position:sticky!important;top:var(--stack-top,126px);z-index:var(--stack-layer,1);scale:var(--stack-scale,1);transform-origin:center top;box-shadow:0 20px 60px -35px #15122370,inset 0 1px #fffffff2!important;background:linear-gradient(138deg,#fff,#f7f7fa) padding-box,var(--edge) border-box!important;transition:scale .12s linear,transform .32s,opacity .65s!important}
 body.amphora-theme .ref-section:has(.ref-stack-group){overflow:visible!important}
 body.amphora-theme .ref-dark .ref-stack-card{background:#16161b!important}
 body.amphora-theme .ref-stack-group>.ref-stack-card:after{content:'';position:absolute;inset:0;border-radius:inherit;background:rgba(20,20,22,var(--stack-shade,0));pointer-events:none;z-index:3}
@@ -2974,9 +2974,12 @@ body.amphora-theme #headquarters-details-card#headquarters-details-card#headquar
   html:has(link[rel="canonical"][href$="/services/app.html"]) body.amphora-theme #cta p { color:#ffffffd1 !important; }
   html:has(link[rel="canonical"][href$="/services/app.html"]) body.amphora-theme #cta a {
     background:white !important; color:#17171b !important; box-shadow:none !important;
-    border-radius:12px !important;
+    -webkit-text-fill-color:#17171b !important; border-radius:12px !important;
   }
-  html:has(link[rel="canonical"][href$="/services/app.html"]) body.amphora-theme #cta a span { color:inherit !important; }
+  html:has(link[rel="canonical"][href$="/services/app.html"]) body.amphora-theme #cta a span {
+    display:inline !important; visibility:visible !important; opacity:1 !important;
+    color:#17171b !important; -webkit-text-fill-color:#17171b !important;
+  }
   html:has(link[rel="canonical"][href$="/services/app.html"]) body.amphora-theme #process .grid > div { border-radius:26px 26px 58px 26px !important; }
   @media(min-width:768px) {
     html:has(link[rel="canonical"][href$="/services/app.html"]) body.amphora-theme #services .ref-card-grid { grid-template-columns:repeat(2,minmax(0,1fr)) !important; gap:32px !important; }
@@ -3999,7 +4002,7 @@ body.amphora-theme .ref-stack-group {
   padding-bottom: 50px !important;
 }
 
-body.amphora-theme .ref-stack-group > .ref-stack-card:not(#founders *) {
+body.amphora-theme .ref-stack-group > .ref-stack-card {
   position: sticky !important;
   top: var(--stack-top, 126px) !important;
   z-index: var(--stack-layer, 1) !important;
@@ -4024,17 +4027,15 @@ body.amphora-theme #why .ref-card-grid > .ref-card {
 
 /* Dark mode stacked cards (like founders pillars on why-bgs) keep rich dark gradient */
 body.amphora-theme .ref-dark .ref-stack-card,
-body.amphora-theme #founders .pillar-card,
-body.amphora-theme #founders #founders-pillars .pillar-card {
+body.amphora-theme #founders .pillar-card {
   background: linear-gradient(180deg, #181928 0%, #12131e 100%) !important;
   border: 1px solid rgba(255, 255, 255, 0.08) !important;
-  border-top: 3px solid #ea580c !important;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 20px 40px -15px rgba(0, 0, 0, 0.6) !important;
 }
 
 @layer bgs-mobile {
   @media (max-width: 767px) {
-    body.amphora-theme .ref-stack-group > .ref-stack-card:not(#founders *) {
+    body.amphora-theme .ref-stack-group > .ref-stack-card {
       position: sticky !important;
       top: var(--stack-top, 106px) !important;
       z-index: var(--stack-layer, 1) !important;
@@ -4043,20 +4044,6 @@ body.amphora-theme #founders #founders-pillars .pillar-card {
       box-shadow: 0 12px 32px -12px rgba(20, 18, 35, 0.2) !important;
       border: 1px solid rgba(0, 0, 0, 0.08) !important;
       border-radius: 20px !important;
-      margin-bottom: 16px !important;
-    }
-
-    body.amphora-theme #founders .pillar-card,
-    body.amphora-theme #founders #founders-pillars .pillar-card {
-      position: sticky !important;
-      top: var(--stack-top, 106px) !important;
-      z-index: var(--stack-layer, 1) !important;
-      scale: var(--stack-scale, 1) !important;
-      background: linear-gradient(180deg, #181928 0%, #12131e 100%) !important;
-      border: 1px solid rgba(255, 255, 255, 0.08) !important;
-      border-top: 3px solid #ea580c !important;
-      border-radius: 20px !important;
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 20px 40px -15px rgba(0, 0, 0, 0.6) !important;
       margin-bottom: 16px !important;
     }
   }
@@ -4142,6 +4129,168 @@ html:has(link[rel="canonical"][href$="/services/project.html"]) body.amphora-the
 html:has(link[rel="canonical"][href$="/services/project.html"]) body.amphora-theme #process .ref-card h3 { font-size:24px !important; }
 html:has(link[rel="canonical"][href$="/services/project.html"]) body.amphora-theme #process .ref-card p { font-size:16px !important; }
 }
+
+/* Keep service benefit headings readable in narrow layouts across every service page. */
+@layer bgs-mobile {
+@media(max-width:767px) {
+  html:has(link[rel="canonical"][href*="/services/"]) body.amphora-theme #why .ref-card-header-flex h3 {
+    display:block !important;
+    flex:1 1 0% !important;
+    width:auto !important;
+    min-width:0 !important;
+    writing-mode:horizontal-tb !important;
+    white-space:normal !important;
+    overflow-wrap:normal !important;
+    word-break:normal !important;
+    hyphens:none !important;
+    letter-spacing:normal !important;
+  }
+  html:has(link[rel="canonical"][href*="/services/"]) body.amphora-theme #why .ref-card-grid > .ref-card {
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:stretch !important;
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+    box-sizing:border-box !important;
+    grid-template-columns:minmax(0,1fr) !important;
+    gap:16px !important;
+    overflow:visible !important;
+  }
+  html:has(link[rel="canonical"][href*="/services/"]) body.amphora-theme #why .ref-card-grid > .ref-card > * {
+    min-width:0 !important;
+    max-width:100% !important;
+    box-sizing:border-box !important;
+  }
+  html:has(link[rel="canonical"][href*="/services/"]) body.amphora-theme #why .ref-card-grid > .ref-card .ref-card-header-flex {
+    display:flex !important;
+    flex-direction:row !important;
+    align-items:center !important;
+    justify-content:flex-start !important;
+    gap:16px !important;
+    width:100% !important;
+    margin:0 !important;
+  }
+  html:has(link[rel="canonical"][href*="/services/"]) body.amphora-theme #why .ref-card-grid > .ref-card .ref-card-header-flex > div:has(> .material-symbols-outlined) {
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    place-items:center !important;
+    padding:0 !important;
+    flex:0 0 auto !important;
+  }
+  html:has(link[rel="canonical"][href*="/services/"]) body.amphora-theme #why .ref-card-grid > .ref-card .ref-card-header-flex > div:has(> .material-symbols-outlined) > .material-symbols-outlined {
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    line-height:1 !important;
+    margin:0 !important;
+  }
+  html:has(link[rel="canonical"][href*="/services/"]) body.amphora-theme #why .ref-card-grid > .ref-card p {
+    display:block !important;
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+    grid-column:1 !important;
+    grid-row:auto !important;
+    margin:0 !important;
+    padding:0 !important;
+    white-space:normal !important;
+    overflow-wrap:break-word !important;
+    word-break:normal !important;
+    line-height:1.65 !important;
+  }
+  html:has(link[rel="canonical"][href$="/services/project.html"]) body.amphora-theme #process .ref-card h3 {
+    width:100% !important;
+    min-width:0 !important;
+    writing-mode:horizontal-tb !important;
+    white-space:normal !important;
+    overflow-wrap:normal !important;
+    word-break:normal !important;
+    hyphens:none !important;
+    letter-spacing:normal !important;
+  }
+  html:has(link[rel="canonical"][href$="/services/project.html"]) body.amphora-theme #process .ref-card {
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:stretch !important;
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+    box-sizing:border-box !important;
+    gap:14px !important;
+  }
+  html:has(link[rel="canonical"][href$="/services/project.html"]) body.amphora-theme #process .ref-card p {
+    display:block !important;
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+    margin:0 !important;
+    grid-column:1 !important;
+    line-height:1.65 !important;
+  }
+  html:has(link[rel="canonical"][href$="/services/project.html"]) body.amphora-theme #process .ref-card > div:first-child > div:has(> .material-symbols-outlined) {
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    place-items:center !important;
+    padding:0 !important;
+  }
+  html:has(link[rel="canonical"][href$="/services/project.html"]) body.amphora-theme #process .ref-card > div:first-child > div:has(> .material-symbols-outlined) > .material-symbols-outlined {
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    line-height:1 !important;
+    margin:0 !important;
+  }
+
+  /* Override generic mobile rules that pin service icons to the top-left of their tiles. */
+  html:has(link[rel="canonical"][href*="/services/"]) body.amphora-theme #why#why#why#why .ref-card-grid > .ref-card .ref-card-header-flex > div:has(> .material-symbols-outlined) {
+    position:relative !important;
+    display:grid !important;
+    place-items:center !important;
+    justify-items:center !important;
+    align-items:center !important;
+  }
+  html:has(link[rel="canonical"][href*="/services/"]) body.amphora-theme #why#why#why#why .ref-card-grid > .ref-card .ref-card-header-flex > div:has(> .material-symbols-outlined) > .material-symbols-outlined {
+    position:static !important;
+    display:block !important;
+    place-self:center !important;
+    width:1em !important;
+    height:1em !important;
+    line-height:1 !important;
+    transform:none !important;
+  }
+  html:has(link[rel="canonical"][href$="/services/project.html"]) body.amphora-theme #process#process#process#process .ref-card > div:first-child > div:has(> .material-symbols-outlined) {
+    position:relative !important;
+    display:grid !important;
+    place-items:center !important;
+    justify-items:center !important;
+    align-items:center !important;
+  }
+  html:has(link[rel="canonical"][href$="/services/project.html"]) body.amphora-theme #process#process#process#process .ref-card > div:first-child > div:has(> .material-symbols-outlined) > .material-symbols-outlined {
+    position:static !important;
+    display:block !important;
+    place-self:center !important;
+    width:1em !important;
+    height:1em !important;
+    line-height:1 !important;
+    transform:none !important;
+  }
+}
+
+/* The founders cards use white copy, so retain their dark surface after mobile stack styling. */
+@media(max-width:767px) {
+  html:has(link[rel="canonical"][href$="/why-bgs.html"]) body.amphora-theme #founders .pillar-card {
+    background:linear-gradient(180deg,#181928 0%,#12131e 100%) !important;
+    border-color:rgba(255,255,255,.12) !important;
+  }
+  html:has(link[rel="canonical"][href$="/why-bgs.html"]) body.amphora-theme #founders .pillar-card h3 {
+    color:#fff !important;
+    -webkit-text-fill-color:#fff !important;
+  }
+}
+
 }
 
 @layer bgs-mobile {
@@ -4330,13 +4479,9 @@ body.amphora-theme .bgs-main-navbar{position:fixed}
 /* Ensure pillar headings remain legible against their dark card backgrounds. */
 @layer bgs-mobile {
  body.amphora-theme #founders #founders-pillars .pillar-card h3,
- body.amphora-theme #founders #founders-pillars .pillar-card h3 *,
- body.amphora-theme #founders .pillar-card h3,
- body.amphora-theme #founders .pillar-card h3 * {
+ body.amphora-theme #founders #founders-pillars .pillar-card h3 * {
   color:#fff!important;
   -webkit-text-fill-color:#fff!important;
-  opacity: 1 !important;
-  visibility: visible !important;
  }
 }
 /* Consistent description typography throughout the Why BGS cards. */
@@ -4474,4 +4619,45 @@ body.amphora-theme .bgs-main-navbar{position:fixed}
  body.amphora-theme :is(.bgs-values-partners-divider, .bgs-awards-values-divider, .bgs-section-divider){display:block!important;padding:8px 32px!important;margin:0!important;background:#faf9fd!important;width:100%!important}
  body.amphora-theme :is(.bgs-values-partners-divider, .bgs-awards-values-divider, .bgs-section-divider) hr{display:block!important;height:1px!important;max-width:1180px!important;width:100%!important;margin:0 auto!important;border:0!important;background:linear-gradient(90deg,transparent,#cbb9e6 25%,#e4c1d6 60%,#ebd4bf 80%,transparent)!important}
  @media(max-width:767px){body.amphora-theme :is(.bgs-values-partners-divider, .bgs-awards-values-divider, .bgs-section-divider){padding-inline:20px!important}}
+
+/* CRM benefit cards: keep the sequence number left and the icon in the upper-right corner. */
+html:has(link[rel="canonical"][href$="/services/crm.html"]) body.amphora-theme #why#why#why#why#why#why#why#why#why#why#why#why#why#why#why#why#why#why#why#why .ref-card-grid > .ref-card {
+  display:block !important; position:relative !important;
+  padding:84px 24px 24px !important; min-height:0 !important;
+}
+html:has(link[rel="canonical"][href$="/services/crm.html"]) body.amphora-theme #why#why#why#why#why#why#why#why#why#why#why#why#why#why#why#why#why#why#why#why .ref-card-grid > .ref-card > span:first-child {
+  position:absolute !important; top:20px !important; left:24px !important; right:auto !important;
+  margin:0 !important; font-size:20px !important; line-height:1 !important;
+}
+html:has(link[rel="canonical"][href$="/services/crm.html"]) body.amphora-theme #why#why#why#why#why#why#why#why#why#why#why#why#why#why#why#why#why#why#why#why .ref-card-grid > .ref-card > div:first-of-type {
+  position:absolute !important; top:14px !important; right:16px !important; left:auto !important;
+  display:flex !important; width:52px !important; height:52px !important; margin:0 !important;
+  align-items:center !important; justify-content:center !important;
+}
+html:has(link[rel="canonical"][href$="/services/crm.html"]) body.amphora-theme #why#why#why#why#why#why#why#why#why#why#why#why#why#why#why#why#why#why#why#why .ref-card-grid > .ref-card h3,
+html:has(link[rel="canonical"][href$="/services/crm.html"]) body.amphora-theme #why#why#why#why#why#why#why#why#why#why#why#why#why#why#why#why#why#why#why#why .ref-card-grid > .ref-card p {
+  display:block !important; width:auto !important; margin-inline:0 !important;
+}
+html:has(link[rel="canonical"][href$="/services/crm.html"]) body.amphora-theme #why#why#why#why#why#why#why#why#why#why#why#why#why#why#why#why#why#why#why#why .ref-card-grid > .ref-card h3 {
+  text-align:center !important;
+}
+@media(max-width:767px) {
+  html:has(link[rel="canonical"][href$="/services/crm.html"]) body.amphora-theme #why#why#why#why#why#why#why#why#why#why#why#why#why#why#why#why#why#why#why#why { padding-bottom:64px !important; }
+  html:has(link[rel="canonical"][href$="/services/crm.html"]) body.amphora-theme #process#process#process#process#process#process#process#process#process#process#process#process#process#process#process#process#process#process#process#process {
+    position:relative !important; z-index:1 !important; margin-top:0 !important;
+    padding-top:80px !important; transform:none !important; translate:none !important;
+  }
+}
+}
+
+/* Prevent the careers ethos heading from flashing displaced text during its entrance animation. */
+@layer bgs-mobile {
+  html:has(link[rel="canonical"][href$="/careers.html"]) body.amphora-theme #engineering-ethos .ee-heading h2,
+  html:has(link[rel="canonical"][href$="/careers.html"]) body.amphora-theme #engineering-ethos .ee-heading h2 .ee-phrase,
+  html:has(link[rel="canonical"][href$="/careers.html"]) body.amphora-theme #engineering-ethos .ee-heading h2 em {
+    animation:none !important;
+    opacity:1 !important;
+    transform:none !important;
+    translate:none !important;
+  }
 }

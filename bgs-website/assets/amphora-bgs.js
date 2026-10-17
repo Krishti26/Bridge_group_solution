@@ -144,6 +144,9 @@
   // Group card icons and headings into a vertically centered flex row
   $$('.ref-card-grid > .ref-card, .ref-card',main).forEach(card=>{
     if(card.closest('#focus-industries,#founders-pillars,#company-timeline') || card.classList.contains('pillar-card') || card.classList.contains('ref-timeline-card')) return;
+    // CRM benefit cards use separate corner positions for their number and icon,
+    // with the heading on its own centered row below them.
+    if(card.closest('#why') && document.querySelector('link[rel="canonical"][href$="/services/crm.html"]')) return;
     const h=card.querySelector(':scope > h3, :scope > h4');
     if(!h || h.closest('#b2b-tech-modules'))return;
     const prev=h.previousElementSibling;
