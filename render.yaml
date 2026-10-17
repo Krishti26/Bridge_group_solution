@@ -1,7 +1,7 @@
 services:
   - type: web
     name: bridge-group-solution
-    env: static
+    runtime: static
     buildCommand: echo "Static site ready"
     staticPublishPath: bgs-website
     routes:
